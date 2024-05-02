@@ -25,7 +25,7 @@ The dataset is updated in JSON format with the following structure for each entr
 ## Requirements
 - Ensure you have Python and datasets installed on your machine.
 ```bash
-pip install datasets
+pip install requirements.txt
 ```
 - You need to set Hugging Face login through tokens:
 ** For Windows: `set HF_TOKEN=your_actual_token_here`
