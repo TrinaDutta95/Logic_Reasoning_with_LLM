@@ -32,7 +32,14 @@ Prover9 works only on Linux and mac os x right now. So, for those devices follow
 ```bash
 pip install nltk, amrlib
 ```
+### amrlib Installation
+Please check the original [repository](https://github.com/bjascob/amrlib) to install amrlib models
 ## Usage 
+To run example Prover9 inference
 ```bash
 python Inference_Prover9.py
+```
+To convert NL to AMR to FOL, you will need openai==0.28.0 and openai_key
+```bash
+python NL_to_FOL.py
 ```
