@@ -9,7 +9,9 @@ We have considered `FOLIO` and `LOGICINFERENCE` dataset.
 We are using [Prover9](https://www.cs.unm.edu/~mccune/prover9/) extension from NLTK. For more details on installation [check here](https://www.nltk.org/howto/inference.html).
 
 ## Prerequisites and Installation
-You will need Python installed. Prover9 works only on Linux and mac os x right now. So, for those devices follow these steps to install Prover9
+You will need Python installed. 
+### Prover9 installation
+Prover9 works only on Linux and mac os x right now. So, for those devices follow these steps to install Prover9
 - Download [Prover9](https://www.cs.unm.edu/~mccune/prover9/download/)
 - Run the following commands
 ```bash
@@ -26,9 +28,9 @@ You will need Python installed. Prover9 works only on Linux and mac os x right n
  '/usr/local/prover9',
  '/usr/local/share/prover9']
 ```
-- You will also need NLTK library
+- You will also need NLTK library and amrlib
 ```bash
-pip install nltk
+pip install nltk, amrlib
 ```
 ## Usage 
 ```bash

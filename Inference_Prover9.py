@@ -1,4 +1,3 @@
-# from nltk.sem import Expression
 from nltk import *
 
 read_expr = Expression.fromstring
