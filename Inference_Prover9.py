@@ -1,6 +1,7 @@
 from nltk import *
 import json
 from NL_to_FOL import processing_fol
+import csv
 
 
 def ex_inference():
@@ -45,27 +46,35 @@ def preprocess_fol(data):
     return [processed_data]
 
 
-def infer_fol(fol_data):
+def infer_fol(fol_data, actual_label):
     read_expr = Expression.fromstring
     # Accessing data from the dictionary
     premise_fol = preprocess_fol(fol_data["premise-FOL"])
     conclusion_fol = preprocess_fol(fol_data["conclusion-FOL"])
     # print(premise_fol, "\n", conclusion_fol)
-    premise_fol = [read_expr(premise) for premise in premise_fol]
-    conclusion_fol = read_expr(conclusion_fol[0])  # Assuming only one conclusion
+    premise_fol_data = [read_expr(premise) for premise in premise_fol]
+    conclusion_fol_data = read_expr(conclusion_fol[0])  # Assuming only one conclusion
     # print(premise_fol, "\n", conclusion_fol)
     # Proving the conclusion based on the premise
     # Prover9 instance
     prover = Prover9()
     try:
-        proof_result = prover.prove(conclusion_fol, assumptions=premise_fol)
-        return proof_result
+        proof_result = prover.prove(conclusion_fol_data, assumptions=premise_fol_data)
+
     except Exception as e:
         print("Error in proving:", e)
-        return None
+        proof_result = None
+    return {
+        "premises": " | ".join(premise_fol),
+        "conclusion": conclusion_fol[0],
+        "predicted_label": proof_result,
+        "actual_label": actual_label
+    }
 
 
 if __name__ == '__main__':
-    for fol_data in processing_fol("FOL dataset/test_folio.json"):
-        print(json.dumps(fol_data, indent=2))
-        print(infer_fol(fol_data))
+    with open('result.json', 'w', newline='') as file:
+        for fol_data,actual_label in processing_fol("FOL dataset/test_folio.json"):
+            result = infer_fol(fol_data, actual_label)
+            file.write(json.dumps(result))
+            file.write('\n')

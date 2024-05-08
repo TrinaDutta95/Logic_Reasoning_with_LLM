@@ -7,7 +7,6 @@ import openai
 
 def read_json_file(file_path):
     # reading file in source
-    examplelist = []
     with open(file_path) as user_file:
         data = user_file.read()
 
@@ -57,7 +56,7 @@ def fol_conversion(p_graph, c_graph):
     openai.api_key = "provide_api_key"
     # applying first prompt to generate questions
     prompt_1 = f"""
-              For the given premise amr graph and conclusion amr graph, convert them to First Order
+              For the given premise amr graph and conclusion amr graph, convert them to explicit First Order
               Logic (fol) covering all the implicit relations. Use the following format for your response. "premise-FOL":"response", "conclusion-FOL":"response"
               {p_graph},{c_graph}
               """
@@ -75,13 +74,15 @@ def processing_fol(file_path):
         conclusion = example["conclusion"]
         conclusion = [conclusion]
         print("conclusion:", conclusion)
+        actual_label = example["label"]
+        print("actual_label:", actual_label)
         p_graph, c_graph = amr_conversion(premise, conclusion)
         fol = "{" + fol_conversion(p_graph, c_graph) + "}"
         # Parse the string into a Python dictionary to ensure it is valid JSON
         try:
             fol_data = json.loads(fol)
             print("JSON parsed successfully!")
-            yield fol_data
+            yield fol_data, actual_label
         except json.JSONDecodeError as e:
             print("Failed to parse JSON:", e)
 
