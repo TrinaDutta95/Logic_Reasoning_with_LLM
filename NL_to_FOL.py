@@ -54,7 +54,7 @@ def get_completion(prompt, model="gpt-4"):
 def fol_conversion(p_graph, c_graph):
     # upload openai key
     openai.api_key = "provide_api_key"
-    # applying first prompt to generate questions
+    # applying first prompt to generate fol
     prompt_1 = f"""
               For the given premise amr graph and conclusion amr graph, convert them to explicit First Order
               Logic (fol) covering all the implicit relations. Use the following format for your response. "premise-FOL":"response", "conclusion-FOL":"response"
