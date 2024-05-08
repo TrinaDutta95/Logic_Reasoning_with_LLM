@@ -54,20 +54,20 @@ def get_completion(prompt, model="gpt-4"):
 
 def fol_conversion(p_graph, c_graph):
     # upload openai key
-    openai.api_key =  "provide_api_key"
+    openai.api_key = "provide_api_key"
     # applying first prompt to generate questions
     prompt_1 = f"""
-              For the given premise amr graph and conclusion amr graph, convert them to explicit First Order
-              Logic (fol). Use the following format for your response. "premise-FOL":"response", "conclusion-FOL":"response"
+              For the given premise amr graph and conclusion amr graph, convert them to First Order
+              Logic (fol) covering all the implicit relations. Use the following format for your response. "premise-FOL":"response", "conclusion-FOL":"response"
               {p_graph},{c_graph}
               """
     response_q = get_completion(prompt_1)
-    print(response_q)
+    return response_q
 
 
-if __name__ == '__main__':
+def processing_fol(file_path):
     # reading json file to get list of examples
-    json_list = read_json_file("FOL dataset/test_folio.json")
+    json_list = read_json_file(file_path)
     for example in json_list:
         premise = example["premises"]
         premise = [premise]
@@ -76,4 +76,15 @@ if __name__ == '__main__':
         conclusion = [conclusion]
         print("conclusion:", conclusion)
         p_graph, c_graph = amr_conversion(premise, conclusion)
-        fol_conversion(p_graph, c_graph)
+        fol = "{" + fol_conversion(p_graph, c_graph) + "}"
+        # Parse the string into a Python dictionary to ensure it is valid JSON
+        try:
+            fol_data = json.loads(fol)
+            print("JSON parsed successfully!")
+            yield fol_data
+        except json.JSONDecodeError as e:
+            print("Failed to parse JSON:", e)
+
+
+
+
