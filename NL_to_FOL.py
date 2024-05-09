@@ -53,14 +53,16 @@ def get_completion(prompt, model="gpt-4"):
 
 def fol_conversion(p_graph, c_graph):
     # upload openai key
-    openai.api_key = "provide_api_key"
+    openai.api_key =  "provide_api_key"
     # applying first prompt to generate fol
     prompt_1 = f"""
+              Consider the given example: "premises":"Books contain tons of knowledge.\nWhen a person reads a book, that person gains knowledge. \nIf a person gains knowledge, they become smarter.\nHarry read the book \u201cWalden\u201d by Henry Thoreau.","premises-FOL":"\u2200x (Book(x) \u2192 Contains(x, knowledge))\n\u2200x \u2200y (ReadBook(x, y) \u2192 Gains(x, knowledge))\n\u2200x (Gains(x, knowledge) \u2192 Smarter(x))\nReadBook(harry, walden) \u2227 Book(walden)","conclusion":"Harry is smarter than before.","conclusion-FOL":"Smarter(harry)","label":"True"
               For the given premise amr graph and conclusion amr graph, convert them to explicit First Order
-              Logic (fol) covering all the implicit relations. Use the following format for your response. "premise-FOL":"response", "conclusion-FOL":"response"
+              Logic (fol) covering all the implicit relations following the same structure of the given example. Use the json format for your response with keys "premise-FOL" and "conclusion-FOL"
               {p_graph},{c_graph}
               """
     response_q = get_completion(prompt_1)
+    print(response_q)
     return response_q
 
 
@@ -77,10 +79,11 @@ def processing_fol(file_path):
         actual_label = example["label"]
         print("actual_label:", actual_label)
         p_graph, c_graph = amr_conversion(premise, conclusion)
-        fol = "{" + fol_conversion(p_graph, c_graph) + "}"
+        fol_dict = fol_conversion(p_graph, c_graph)
         # Parse the string into a Python dictionary to ensure it is valid JSON
         try:
-            fol_data = json.loads(fol)
+            fol_json = json.dumps(fol_dict)  # Serialize dictionary to JSON
+            fol_data = json.loads(fol_json)
             print("JSON parsed successfully!")
             yield fol_data, actual_label
         except json.JSONDecodeError as e:

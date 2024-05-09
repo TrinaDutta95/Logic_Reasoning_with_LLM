@@ -20,11 +20,18 @@ def ex_inference():
     p = Prover9().prove(c, [p1,p2,p3,p4])
     q = Prover9().prove(d, [q1])
     print(p,q)
+    print(type(p))
 
 
 def preprocess_fol(data):
     # First replace '∧' with '&'
     processed_data = data.replace("∧", "&")
+
+    # Second replace '→' with '->'
+    processed_data = processed_data.replace("→", "->")
+
+    # Third replace '∀' with 'all'
+    processed_data = processed_data.replace("∀", "all")
 
     # Then check for commas to split into multiple premises
     if "," in processed_data:
@@ -47,6 +54,9 @@ def preprocess_fol(data):
 
 
 def infer_fol(fol_data, actual_label):
+    if isinstance(fol_data, str):
+        fol_data = fol_data.replace("\n","")
+        fol_data = json.loads(fol_data)  # Convert JSON string to dictionary
     read_expr = Expression.fromstring
     # Accessing data from the dictionary
     premise_fol = preprocess_fol(fol_data["premise-FOL"])
@@ -60,10 +70,12 @@ def infer_fol(fol_data, actual_label):
     prover = Prover9()
     try:
         proof_result = prover.prove(conclusion_fol_data, assumptions=premise_fol_data)
-
+        proof_result = "True" if proof_result else "False"
+        print(proof_result, type(proof_result))
     except Exception as e:
         print("Error in proving:", e)
-        proof_result = None
+        proof_result = "None"
+
     return {
         "premises": " | ".join(premise_fol),
         "conclusion": conclusion_fol[0],
@@ -73,8 +85,11 @@ def infer_fol(fol_data, actual_label):
 
 
 if __name__ == '__main__':
-    with open('result.json', 'w', newline='') as file:
-        for fol_data,actual_label in processing_fol("FOL dataset/test_folio.json"):
+    with open('result.json', 'w', newline='', encoding='utf-8') as file:
+        for fol_data, actual_label in processing_fol("FOL dataset/updated_folio_validation.json"):
+            print(fol_data, type(fol_data))
             result = infer_fol(fol_data, actual_label)
-            file.write(json.dumps(result))
-            file.write('\n')
+            json_output = json.dumps(result)
+            print(json_output)  # Print to console for debugging
+            file.write(json_output + '\n')
+    file.close()
