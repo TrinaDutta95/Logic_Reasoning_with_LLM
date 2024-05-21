@@ -34,6 +34,12 @@ pip install nltk, amrlib
 ```
 ### amrlib Installation
 Please check the original [repository](https://github.com/bjascob/amrlib) to install amrlib models
+### AMR to FOL
+- You will need to install AMR to FOL converter
+```bash
+pip install amr-logic-converter
+```
+
 ## Usage 
 To run example Prover9 inference with proof steps (need to move prooftrans into '/usr/local/bin/'), and there are two methods (Prover9Command and ResolutionProver) can do same task.
 ```bash

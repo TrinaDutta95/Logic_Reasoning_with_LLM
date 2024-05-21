@@ -3,7 +3,7 @@ import json
 import re
 from amrlib_master import amrlib
 import openai
-
+import amr_logic_converter import AmrLogicConverter
 
 def read_json_file(file_path):
     # reading file in source
@@ -40,6 +40,10 @@ def amr_conversion(premise, conclusion):
     print("conclusion_graph:", conclusion_graph)
     return premise_graphs, conclusion_graph
 
+def amr_to_fol(amr):
+    converter = AmrLogicConverter()
+    logic = converter.convert(amr)
+    return logic
 
 def get_completion(prompt, model="gpt-4"):
     messages = [{"role": "user", "content": prompt}]
