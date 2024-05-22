@@ -21,7 +21,7 @@ print("------Using Prover9Command to prove and get proof steps-------")
 p = Prover9Command(c, assumptions=[p1,p2,p3,p4])
 q = Prover9Command(d, assumptions=[q1])
 
-q2 = read_expr('Person(heinrich_schmidt)')
+q2 = read_expr('Cat(heinrich_schmidt)')
 q3 = read_expr('all x.(Person(x) | NaziPolitician(x) -> German(x))')
 q.add_assumptions([q2, q3])
 q.print_assumptions()

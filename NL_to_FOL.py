@@ -3,7 +3,7 @@ import json
 import re
 from amrlib_master import amrlib
 import openai
-import amr_logic_converter import AmrLogicConverter
+from amr_logic_converter import AmrLogicConverter
 
 def read_json_file(file_path):
     # reading file in source
