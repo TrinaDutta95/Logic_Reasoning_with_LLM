@@ -1,5 +1,7 @@
 from nltk.sem import Expression
 from nltk import *
+from nltk.inference.api import ModelBuilder
+from nltk.inference import Mace
 
 # Prover9 example
 read_expr = Expression.fromstring
@@ -54,3 +56,23 @@ print(resolution_q.proof())
 print(resolution_q.assumptions())
 print(resolution_q.goal())
 
+
+
+# Code:
+mace = Mace()
+#q6 = read_expr('all x.(NaziGermanPolitician(x) -> German(x))& NaziGermanPolitician(HeinrichSchmidt)')
+q6 = read_expr('all x.(NaziGermanPolitician(x) -> German(x))')
+q7 = read_expr('NaziGermanPolitician(HeinrichSchmidt)')
+e = read_expr('German(HeinrichSchmidt)')
+print("##########-third-example-###########")
+# prove result from mace4
+print(mace.build_model(None, [q6,q7,e]))
+print(mace.build_model(e,[q6,q7]))
+# prove result from prover9
+p = Prover9().prove(e, [q6, q7])
+print(p)
+# Finding a model
+mb = MaceCommand(assumptions=[q6, q7])
+print(mb.build_model())
+
+print(mb.model(format='cooked'))
