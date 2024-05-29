@@ -77,12 +77,14 @@ def get_completion(prompt, model="gpt-4"):
 
 def fol_conversion(premise_graphs_list, conclusion_graphs_list):
     # upload openai key
-    openai.api_key = "provide api key"
+    openai.api_key = "provide api key here"
     # applying first prompt to generate fol
     prompt_1 = f"""
-    Using common sense, convert the given AMR to First Order Logic (FOL) as shown in the above example that will be acceptable by Prover9 
-              /with the NLTK extension and ensure the FOL uses the following syntax: Logical AND: `&`, Logical OR: `|`,
-              /Logical NOT: `~`, Implication: `->`.
+    Consider this example: "premises":"When the Monkeypox virus occurs in a being, it may get Monkeypox. \nMonkeypox virus can occur in certain animals.\nHumans are mammals.\nMammals are animals.\nSymptoms of Monkeypox include fever, headache, muscle pains, and tiredness. \nPeople feel tired when they get the flu.","premises-FOL":"exist x (OccurIn(monkeypoxVirus, x) & Get(x, monkeypoxVirus))\nexist x (Animal(x) & OccurIn(monkeypoxVirus, x))\nall x (Human(x) -> Mammal(x))\nall x (Mammal(x) -> Animal(x))\nexist x (SymptomOf(x, monkeypoxVirus) & (Fever(x) | Headache(x) | MusclePain(x) | Tired(x)))\nall x (Human(x) & Get(x, flu) -> Feel(x, tired)).","conclusion":"There is an animal.","conclusion-FOL":"exist x (Animal(x))"
+    Using common sense, convert the given AMR to First Order Logic (FOL) with balanced parentheses as shown in the above example that will be acceptable by Prover9 
+              /with the NLTK extension and ensure the FOL is well-formed and uses the following syntax: Logical AND: `&`, Logical OR: `|`,
+              /Logical NOT: `~`, Implication: `->`. 
+              /Apply negation to the entire quantified expression, not just to the variable.
             /Your output should be in JSON format with the keys "premise-fol" for {premise_graphs_list} with all FOL expressions in a single list and 
             /"conclusion-fol" for {conclusion_graphs_list} with all FOL expressions in a single list.
               """
