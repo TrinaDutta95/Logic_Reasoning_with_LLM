@@ -77,7 +77,7 @@ def get_completion(prompt, model="gpt-4"):
 
 def fol_conversion(premise_graphs_list, conclusion_graphs_list):
     # upload openai key
-    openai.api_key = "provide api key here"
+    openai.api_key = "provide key here"
     # applying first prompt to generate fol
     prompt_1 = f"""
     Consider this example: "premises":"When the Monkeypox virus occurs in a being, it may get Monkeypox. \nMonkeypox virus can occur in certain animals.\nHumans are mammals.\nMammals are animals.\nSymptoms of Monkeypox include fever, headache, muscle pains, and tiredness. \nPeople feel tired when they get the flu.","premises-FOL":"exist x (OccurIn(monkeypoxVirus, x) & Get(x, monkeypoxVirus))\nexist x (Animal(x) & OccurIn(monkeypoxVirus, x))\nall x (Human(x) -> Mammal(x))\nall x (Mammal(x) -> Animal(x))\nexist x (SymptomOf(x, monkeypoxVirus) & (Fever(x) | Headache(x) | MusclePain(x) | Tired(x)))\nall x (Human(x) & Get(x, flu) -> Feel(x, tired)).","conclusion":"There is an animal.","conclusion-FOL":"exist x (Animal(x))"
@@ -130,7 +130,8 @@ def processing_fol(file_path):
 
 
 if __name__ == '__main__':
-    processing_fol("FOL dataset/test.json")
+    for fol_data, actual_label in processing_fol("FOL dataset/test.json"):
+        print(fol_data, type(fol_data))
 
 
 
