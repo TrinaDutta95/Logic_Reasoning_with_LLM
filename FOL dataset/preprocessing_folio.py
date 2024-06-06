@@ -5,6 +5,7 @@ import pandas as pd
 
 
 def preprocess():
+    os.environ['HF_TOKEN'] = 'add hf token here'
     # Authenticate using the HF token from the environment variable
     token = os.getenv('HF_TOKEN')
     if not token:
@@ -19,8 +20,8 @@ def preprocess():
     validation = dataset['validation'].remove_columns(['example_id', 'story_id'])
 
     # Save the modified datasets as JSON
-    train.to_json('updated_folio_train.json')
-    validation.to_json('updated_folio_validation.json')
+    train.to_json('folio_train.json')
+    validation.to_json('folio_validation.json')
     print("Datasets saved as 'train.json' and 'validation.json'")
 
 
@@ -36,6 +37,4 @@ def convert_json_to_csv(json_filepath, csv_filepath):
 if __name__ == "__main__":
     # creating json files
     preprocess()
-    # creating csv from json files
-    convert_json_to_csv('updated_folio_train.json', 'updated_folio_train.csv')
-    convert_json_to_csv('updated_folio_validation.json', 'updated_folio_validation.csv')
+
