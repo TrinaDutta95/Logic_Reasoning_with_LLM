@@ -7,8 +7,9 @@ class FolioDatasetUpdater:
 
     def reformat_fol_samples(self, dataset):
         def reformat_fol_sample(sample):
+            sample["premises"] = sample["premises"].split('\n')
             sample["premises-FOL"] = [
-                convert_to_nltk_rep(sample["premises-FOL"])
+                convert_to_nltk_rep(premise) for premise in sample["premises-FOL"].split('\n')
             ]
             sample["conclusion-FOL"] = convert_to_nltk_rep(sample["conclusion-FOL"])
             try:
@@ -16,8 +17,6 @@ class FolioDatasetUpdater:
                 label = evaluate(sample["premises-FOL"], sample["conclusion-FOL"])
                 assert sample["label"] == label
             except Exception as e:
-                # print(f"Error in parsing FOL: {e}")
-                # print(sample)
                 sample["label"] = self.ERROR_TOKEN
             return sample
 
