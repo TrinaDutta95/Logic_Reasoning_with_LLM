@@ -1,39 +1,5 @@
-from datasets import load_dataset
-import os, json
-from huggingface_hub import HfApi, HfFolder
-import pandas as pd
+import json
 from utils import convert_to_nltk_rep, evaluate
-
-
-def preprocess():
-    os.environ['HF_TOKEN'] = 'add hf token here'
-    # Authenticate using the HF token from the environment variable
-    token = os.getenv('HF_TOKEN')
-    if not token:
-        raise ValueError("No Hugging Face token found. Set the HF_TOKEN environment variable.")
-
-    HfFolder.save_token(token)  # Saves token to Hugging Face folder for subsequent requests
-    # Load the dataset from Hugging Face
-    dataset = load_dataset("yale-nlp/FOLIO")
-
-    # Removing unwanted columns
-    train = dataset['train'].remove_columns(['example_id', 'story_id'])
-    validation = dataset['validation'].remove_columns(['example_id', 'story_id'])
-
-    # Save the modified datasets as JSON
-    train.to_json('folio_train.json')
-    validation.to_json('folio_validation.json')
-    print("Datasets saved as 'train.json' and 'validation.json'")
-
-
-def convert_json_to_csv(json_filepath, csv_filepath):
-    # Load the JSON file into a DataFrame
-    df = pd.read_json(json_filepath, lines=True)  # use lines=True if your JSON is in jsonl format
-
-    # Save the DataFrame to a CSV file
-    df.to_csv(csv_filepath, index=False)
-    print(f"Converted {json_filepath} to {csv_filepath}")
-
 
 class FolioDatasetUpdater:
     def __init__(self, error_token):
@@ -42,7 +8,7 @@ class FolioDatasetUpdater:
     def reformat_fol_samples(self, dataset):
         def reformat_fol_sample(sample):
             sample["premises-FOL"] = [
-                convert_to_nltk_rep(premise) for premise in sample["premises-FOL"]
+                convert_to_nltk_rep(sample["premises-FOL"])
             ]
             sample["conclusion-FOL"] = convert_to_nltk_rep(sample["conclusion-FOL"])
             try:
@@ -58,8 +24,16 @@ class FolioDatasetUpdater:
         return [reformat_fol_sample(sample) for sample in dataset if sample["label"] != self.ERROR_TOKEN]
 
     def load_dataset(self, file_path):
+        dataset = []
         with open(file_path, 'r') as file:
-            return json.load(file)
+            content = file.read()
+            # Split the content into individual JSON objects
+            objects = content.strip().split('\n')
+            for obj in objects:
+                # Parse each JSON object separately
+                dataset.append(json.loads(obj))
+        return dataset
+
 
     def save_dataset(self, dataset, file_path):
         with open(file_path, 'w') as file:
@@ -70,8 +44,8 @@ if __name__ == "__main__":
     # creating json files
     # preprocess()
     updater = FolioDatasetUpdater(error_token="ERROR")
-    input_train_path = '/folio_train.json'
-    output_train_path = '/updated_folio_train.json'
+    input_train_path = 'folio_train.json'
+    output_train_path = 'updated_folio_train.json'
     input_val_path = 'folio_validation.json'
     output_val_path = 'updated_folio_validation.json'
 
@@ -88,4 +62,3 @@ if __name__ == "__main__":
     updater.save_dataset(updated_val, output_val_path)
 
     print(f"Dataset has been updated and saved to {output_train_path}{output_val_path}")
-
