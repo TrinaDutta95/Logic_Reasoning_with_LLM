@@ -1,35 +1,22 @@
-from datasets import load_dataset
-import os
-import pandas as pd
-from huggingface_hub import HfApi, HfFolder
+import requests
 
 def preprocess():
-    os.environ['HF_TOKEN'] = 'add hf token here'
-    # Authenticate using the HF token from the environment variable
-    token = os.getenv('HF_TOKEN')
-    if not token:
-        raise ValueError("No Hugging Face token found. Set the HF_TOKEN environment variable.")
+    val_url = "https://raw.githubusercontent.com/Yale-LILY/FOLIO/main/data/v0.0/folio-validation.jsonl"
+    train_url = "https://raw.githubusercontent.com/Yale-LILY/FOLIO/main/data/v0.0/folio-train.jsonl"
 
-    HfFolder.save_token(token)  # Saves token to Hugging Face folder for subsequent requests
-    # Load the dataset from Hugging Face
-    dataset = load_dataset("yale-nlp/FOLIO")
+    val_filename = 'folio_validation.json'
+    train_filename = 'folio_train.json'
 
-    # Removing unwanted columns
-    train = dataset['train'].remove_columns(['example_id', 'story_id'])
-    validation = dataset['validation'].remove_columns(['example_id', 'story_id'])
+    # Download the file
+    response = requests.get(val_url)
+    with open(val_filename, 'wb') as f:
+        f.write(response.content)
 
-    # Save the modified datasets as JSON
-    train.to_json('folio_train.json')
-    validation.to_json('folio_validation.json')
-    print("Datasets saved as 'train.json' and 'validation.json'")
+    response = requests.get(train_url)
+    with open(train_filename, 'wb') as f:
+        f.write(response.content)
 
-def convert_json_to_csv(json_filepath, csv_filepath):
-    # Load the JSON file into a DataFrame
-    df = pd.read_json(json_filepath, lines=True)  # use lines=True if your JSON is in jsonl format
-
-    # Save the DataFrame to a CSV file
-    df.to_csv(csv_filepath, index=False)
-    print(f"Converted {json_filepath} to {csv_filepath}")
+    print(f"Downloaded {train_filename}")
 
 
 if __name__ == "__main__":
