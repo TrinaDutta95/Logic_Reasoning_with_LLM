@@ -96,6 +96,7 @@ def convert_to_nltk_rep(logic_formula):
 
     return logic_formula
 
+
 def get_all_variables(text):
     pattern = r'\([^()]+\)'
     matches = re.findall(pattern, text)
@@ -105,6 +106,7 @@ def get_all_variables(text):
         m = m.split(",")
         all_variables += [i.strip() for i in m]
     return list(set(all_variables))
+
 
 def reformat_fol(fol):
     translation_map = {
