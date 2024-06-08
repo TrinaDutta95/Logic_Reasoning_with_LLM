@@ -30,6 +30,7 @@ def convert_to_nltk_rep(logic_formula):
         "∃": "exists ",
         "→": "->",
         "¬": "-",
+        "~": "-",
         "∧": "&",
         "∨": "|",
         "⟷": "<->",
