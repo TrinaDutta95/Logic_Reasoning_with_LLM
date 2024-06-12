@@ -195,9 +195,6 @@ def main(fol_data):
                 fol_data = json.loads(fol_json)
                 print(type(fol_data))
                 proof_result, premise_fol, conclusion_fol = get_result(fol_data)
-            else:
-                print("Pass1-3")
-                proof_result = predicted_label
         elif predicted_label == "ERROR":
             print("Pass2")
             fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
@@ -207,7 +204,7 @@ def main(fol_data):
             proof_result, premise_fol, conclusion_fol = get_result(fol_data)
             if proof_result == "Uncertain":
                 print("Pass2-1")
-                proof_result, premise, conclusion, premise_fol, conclusion_fol = iter_inference_with_mace(premises, conclusion, actual_label, predicted_label, error, api_key)
+                proof_result, premise, conclusion, premise_fol, conclusion_fol = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
             elif proof_result == "ERROR":
                 print("Pass2-2")
                 fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
@@ -216,9 +213,6 @@ def main(fol_data):
                 fol_data = json.loads(fol_json)
                 print(type(fol_data))
                 proof_result, premise_fol, conclusion_fol = get_result(fol_data)
-            else:
-                print("Pass2-3")
-                proof_result = predicted_label
         else:
             print("Pass3")
             proof_result = predicted_label
