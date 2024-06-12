@@ -1,0 +1,773 @@
+[
+  {
+"premise-fol": ["all x. (PerformsInSchoolTalentShowsOften(x) -> (AttendsSchoolEvents(x) & VeryEngagedWithSchoolEvents(x)))", "all x. (PerformsInSchoolTalentShowsOften(x) | (InactiveMember(x) & DisinterestedMember(x)))", "all x. (ChaperonesHighSchoolDances(x) -> -StudentAtSchool(x))", "all x. ((InactiveMember(x) & DisinterestedMember(x)) -> ChaperonesHighSchoolDances(x))", "all x. ((YoungChild(x) | Teenager(x)) & WishesToFurtherAcademicCareer(x) & WishesToFurtherEducationalOpportunities(x) -> StudentAtSchool(x))", "(AttendsSchoolEvents(Bonnie) & VeryEngagedWithSchoolEvents(Bonnie) & StudentAtSchool(Bonnie)) | (-AttendsSchoolEvents(Bonnie) & -VeryEngagedWithSchoolEvents(Bonnie) & -StudentAtSchool(Bonnie))"],
+"conclusion-fol": ["PerformsInSchoolTalentShowsOften(Bonnie)"]
+},
+{
+  "premise-fol": ["all x. (PerformsInSchoolTalentShowsOften(x) -> (AttendsSchoolEvents(x) & VeryEngagedWithSchoolEvents(x)))", "all x. (PerformsInSchoolTalentShowsOften(x) | (InactiveMemberOfCommunity(x) & DisinterestedMemberOfCommunity(x)))", "all x. (ChaperonesHighSchoolDances(x) -> -StudentWhoAttendsSchool(x))", "all x. (InactiveAndDisinterestedMemberOfCommunity(x) -> ChaperonesHighSchoolDances(x))", "all x. ((YoungChild(x) | Teenager(x)) & WishesToFurtherAcademicCareerAndEducationalOpportunities(x) -> StudentWhoAttendsSchool(x))", "(AttendsAndVeryEngagedWithSchoolEvents(Bonnie) & StudentWhoAttendsSchool(Bonnie)) | (-AttendsAndVeryEngagedWithSchoolEvents(Bonnie) & -StudentWhoAttendsSchool(Bonnie))", "-(DependentOnCaffeineAndStudent(Bonnie)) -> ((DependentOnCaffeineAndStudent(Bonnie)) | (-DependentOnCaffeineAndStudent(Bonnie)))"], 
+  "conclusion-fol": ["((YoungChildOrTeenagerWhoWishesToFurtherAcademicCareerAndEducationalOpportunities(Bonnie) & ChaperonesHighSchoolDances(Bonnie)) | -YoungChildOrTeenagerWhoWishesToFurtherAcademicCareerAndEducationalOpportunities(Bonnie)) -> (StudentWhoAttendsSchool(Bonnie) | InactiveAndDisinterestedMemberOfCommunity(Bonnie))"]
+},
+{
+  "premise-fol": ["all x. (PerformsInSchoolTalentShowsOften(x) -> (AttendsSchoolEvents(x) & VeryEngagedWithSchoolEvents(x)))", "all x. (PerformsInSchoolTalentShowsOften(x) | (InactiveMember(x) & DisinterestedMember(x)))", "all x. (ChaperonesHighSchoolDances(x) -> -StudentAtSchool(x))", "all x. (InactiveMember(x) & DisinterestedMember(x) -> ChaperonesHighSchoolDances(x))", "all x. ((YoungChild(x) | Teenager(x)) & WishesToFurtherAcademicCareer(x) & WishesToFurtherEducationalOpportunities(x) -> StudentAtSchool(x))", "(AttendsSchoolEvents(Bonnie) & VeryEngagedWithSchoolEvents(Bonnie) & StudentAtSchool(Bonnie)) | (-AttendsSchoolEvents(Bonnie) & -VeryEngagedWithSchoolEvents(Bonnie) & -StudentAtSchool(Bonnie))"], 
+  "conclusion-fol": ["(ChaperonesHighSchoolDances(Bonnie) | PerformsInSchoolTalentShowsOften(Bonnie)) -> ((YoungChild(Bonnie) | Teenager(Bonnie)) & WishesToFurtherAcademicCareer(Bonnie) & WishesToFurtherEducationalOpportunities(Bonnie) & InactiveMember(Bonnie) & DisinterestedMember(Bonnie))"]
+},
+{
+"premise-fol": ["all x. (employee(x) & schedules_meeting_with_customer(x) -> appears_in_company_today(x))", "all x. (has_lunch_in_company(x) -> schedules_meeting_with_customer(x))", "all x. (employee(x) -> (has_lunch_in_company(x) | has_lunch_at_home(x)))", "all x. (employee(x) & has_lunch_at_home(x) -> works_remotely_from_home(x))", "all x. (employee(x) & in_other_country(x) -> works_remotely_from_home(x))", "all x. (manager(x) -> -works_remotely_from_home(x))", "(manager(James) & appears_in_company_today(James)) | (-manager(James) & -appears_in_company_today(James))"],
+"conclusion-fol": ["has_lunch_in_company(James)"]
+},
+{
+"premise-fol": ["all x. (employee(x) & schedules_meeting_with_customer(x) -> appears_in_company_today(x))", "all x. (has_lunch_in_company(x) -> schedules_meeting_with_customer(x))", "all x. (employee(x) -> (has_lunch_in_company(x) | has_lunch_at_home(x)))", "all x. (employee(x) & has_lunch_at_home(x) -> works_remotely_from_home(x))", "all x. (employee(x) & in_other_country(x) -> works_remotely_from_home(x))", "all x. (manager(x) -> -works_remotely_from_home(x))", "(manager(James) & appears_in_company_today(James)) | (-manager(James) & -appears_in_company_today(James))"],
+"conclusion-fol": ["-has_lunch_in_company(James)"]
+},
+{
+"premise-fol": ["all x. (employee(x) & schedules_meeting_with_customer(x) -> appears_in_company_today(x))", "all x. (has_lunch_in_company(x) -> schedules_meeting_with_customer(x))", "all x. (employee(x) -> (has_lunch_in_company(x) | has_lunch_at_home(x)))", "all x. (employee(x) & has_lunch_at_home(x) -> works_remotely_from_home(x))", "all x. (employee(x) & in_other_countries(x) -> works_remotely_from_home(x))", "all x. (manager(x) -> -works_remotely_from_home(x))", "(manager(James) & appears_in_company_today(James)) | (-manager(James) & -appears_in_company_today(James))"],
+"conclusion-fol": ["(manager(James) | in_other_countries(James)) -> ((has_lunch_at_home(James) & works_remotely_from_home(James)) | (-has_lunch_at_home(James) & -works_remotely_from_home(James)))"]
+},
+{"premise-fol": ["all x. (Monkeypox(x) -> InfectiousDisease(x) & CausedBy(x, MonkeypoxVirus))", "exists x. (Animal(x) & CanOccur(MonkeypoxVirus, x) & Include(x, Human))", "all x. (Human(x) -> Mammal(x))", "all x. (Mammal(x) -> Animal(x))", "all x. (Monkeypox(x) -> Include(Symptoms(x), Fever) & Include(Symptoms(x), Headache) & Include(Symptoms(x), MusclePains) & Include(Symptoms(x), FeelingTired))", "all x. (Person(x) & Get(x, Glu) -> Feel(x, Tired))"], "conclusion-fol": ["exists x. (Animal(x))"]},
+{
+"premise-fol": ["all x. (Monkeypox(x) -> InfectiousDisease(x) & CausedBy(x, MonkeypoxVirus))", "exists x. (Animal(x) & CanOccur(MonkeypoxVirus, x) & Include(x, Human))", "all x. (Human(x) -> Mammal(x))", "all x. (Mammal(x) -> Animal(x))", "all x. (Monkeypox(x) -> Include(Symptoms(x), Fever) & Include(Symptoms(x), Headache) & Include(Symptoms(x), MusclePains) & Include(Symptoms(x), FeelingTired))", "all x. (Person(x) & Get(x, Flu) -> Feel(x, Tired))"],
+"conclusion-fol": ["all x. (Person(x) -> -Get(x, Flu))"]
+},
+{
+"premise-fol": ["all x. (Monkeypox(x) -> InfectiousDisease(x) & CausedBy(x, MonkeypoxVirus))", "exists x. (Animal(x) & CanOccur(MonkeypoxVirus, x) & Include(x, Human))", "all x. (Human(x) -> Mammal(x))", "all x. (Mammal(x) -> Animal(x))", "Include(Symptoms(Monkeypox), Fever) & Include(Symptoms(Monkeypox), Headache) & Include(Symptoms(Monkeypox), MusclePains) & Include(Symptoms(Monkeypox), FeelingTired)", "all x. (Person(x) & Get(x, Glu) -> Feel(x, Tired))"],
+"conclusion-fol": ["Include(Symptoms(Monkeypox), Coughing)"]
+},
+{
+"premise-fol": ["exists x. (wild_turkey(x) & (eastern_wild_turkey(x) | osceola_wild_turkey(x) | goulds_wild_turkey(x) | merriams_wild_turkey(x) | rio_grande_wild_turkey(x) | ocellated_wild_turkey(x)))", "-eastern_wild_turkey(Tom)", "-osceola_wild_turkey(Tom)", "-goulds_wild_turkey(Tom)", "-merriams_wild_turkey(Tom)", "-rio_grande_wild_turkey(Tom)", "wild_turkey(Tom)"],
+"conclusion-fol": ["ocellated_wild_turkey(Tom)"]
+},
+{
+"premise-fol": ["exists x. (wild_turkey(x) & (eastern_wild_turkey(x) | osceola_wild_turkey(x) | goulds_wild_turkey(x) | merriams_wild_turkey(x) | rio_grande_wild_turkey(x) | ocellated_wild_turkey(x)))", "-eastern_wild_turkey(Tom)", "-osceola_wild_turkey(Tom)", "-(goulds_wild_turkey(Tom) | merriams_wild_turkey(Tom) | rio_grande_wild_turkey(Tom))", "wild_turkey(Tom)"],
+"conclusion-fol": ["eastern_wild_turkey(Tom)"]
+},
+{
+"premise-fol": ["exists x. (type(x) & wild_turkey(x) & include(x, 'Eastern wild turkey', 'Osceola wild turkey', 'Gould’s wild turkey', 'Merriam’s wild turkey', 'Rio Grande wild turkey', 'Ocellated wild turkey'))", "-Eastern_wild_turkey(Tom)", "-Osceola_wild_turkey(Tom)", "-(Goulds_wild_turkey(Tom) | Merriams_wild_turkey(Tom) | Rio_Grande_wild_turkey(Tom))", "wild_turkey(Tom)"],
+"conclusion-fol": ["wild_turkey(Joey)"]
+},
+{
+"premise-fol": ["create(JapaneseGameCompany, LegendOfZelda)", "all x. (Top10Game(x) -> MadeByJapaneseGameCompany(x))", "all x. (SellMoreThanMillionCopies(x) -> SelectedIntoTop10(x))", "SellMoreThanMillionCopies(LegendOfZelda)"],
+"conclusion-fol": ["Top10Game(LegendOfZelda)"]
+},
+{
+"premise-fol": ["create(Japanese_game_company, Legend_of_Zelda)", "all x. (game(x) & in_top_10_list(x) -> made_by_Japanese_game_company(x))", "all x. (game(x) & sells_more_than_one_million_copies(x) -> in_top_10_list(x))", "sells_more_than_one_million_copies(Legend_of_Zelda)"],
+"conclusion-fol": ["made_by_Japanese_game_company(FIFA_22)"]
+},
+{
+"premise-fol": ["create(JapaneseGameCompany, TheLegendOfZelda)", "all x. (Top10Game(x) -> MadeByJapaneseGameCompany(x))", "all x. (SellMoreThanMillionCopies(x) -> Top10Game(x))", "SellMoreThanMillionCopies(TheLegendOfZelda)"],
+"conclusion-fol": ["-Top10Game(TheLegendOfZelda)"]
+},
+{
+"premise-fol": ["all x. (square(x) -> has_four_sides(x))", "all x. (has_four_sides(x) -> shape(x))"],
+"conclusion-fol": ["all x. (square(x) -> shape(x))"]
+},
+{
+"premise-fol": ["all x. (rabbit(x) -> cute(x))", "exists x. (turtle(x))", "all x. (animal(x) -> (rabbit(x) | squirrel(x)))", "all x. (skittish(x) -> -still(x))", "all x. (squirrel(x) -> skittish(x))", "still(rock)"],
+"conclusion-fol": ["turtle(rock)"]
+},
+{
+"premise-fol": ["all x. (rabbit(x) -> cute(x))", "exists x. (turtle(x))", "all x. (animal(x) -> (rabbit(x) | squirrel(x)))", "all x. (skittish(x) -> -still(x))", "all x. (squirrel(x) -> skittish(x))", "still(rock)"],
+"conclusion-fol": ["-turtle(rock)"]
+},
+{
+"premise-fol": ["all x. (rabbit(x) -> cute(x))", "exists x. (turtle(x))", "all x. (animal(x) -> (rabbit(x) | squirrel(x)))", "all x. (skittish(x) -> -still(x))", "all x. (squirrel(x) -> skittish(x))", "still(rock)"],
+"conclusion-fol": ["turtle(rock) | cute(rock)"]
+},
+{
+"premise-fol": ["all x. (rabbit(x) -> cute(x))", "exists x. (turtle(x))", "all x. (animal(x) -> (rabbit(x) | squirrel(x)))", "all x. (skittish(x) -> -still(x))", "all x. (squirrel(x) -> skittish(x))", "still(rock)"],
+"conclusion-fol": ["-((turtle(rock) & squirrel(rock)) -> (cute(rock) | skittish(rock)))"]
+},
+{
+"premise-fol": ["all x. (rabbit(x) -> cute(x))", "exists x. (turtle(x))", "all x. (animal(x) -> (rabbit(x) | squirrel(x)))", "all x. (skittish(x) -> -still(x))", "all x. (squirrel(x) -> skittish(x))", "still(rock)"],
+"conclusion-fol": ["(cute(rock) & still(rock)) -> (turtle(rock) & skittish(rock))"]
+},
+{
+"premise-fol": ["NetflixShow(StrangerThings) & Popular(StrangerThings)", "all x. (NetflixShow(x) & Popular(x) -> BingeWatch(Karen, x))", "all x. (NetflixShow(x) -> (BingeWatch(Karen, x) <-> Download(Karen, x)))", "-Download(Karen, BlackMirror)", "NetflixShow(BlackMirror)", "all x. (NetflixShow(x) & BingeWatch(Karen, x) -> Share(Karen, x, Lisa))"],
+"conclusion-fol": ["Share(Karen, StrangerThings, Lisa)"]
+},
+{
+"premise-fol": ["PopularShow(StrangerThings, Netflix)", "all x. (PopularShow(x, Netflix) -> BingeWatch(Karen, x))", "all x. (BingeWatch(Karen, x) <-> Download(Karen, x))", "-Download(Karen, BlackMirror)", "NetflixShow(BlackMirror)", "all x. (BingeWatch(Karen, x) -> Share(Karen, Lisa, x))"],
+"conclusion-fol": ["PopularShow(BlackMirror, Netflix)"]
+},
+{
+"premise-fol": ["PopularShow(StrangerThings, Netflix)", "all x. (PopularShow(x, Netflix) -> BingeWatch(Karen, x))", "all x. (BingeWatch(Karen, x) <-> Download(Karen, x))", "-Download(Karen, BlackMirror)", "Show(BlackMirror, Netflix)", "all x. (BingeWatch(Karen, x) -> Share(Karen, x, Lisa))"],
+"conclusion-fol": ["Share(Karen, BlackMirror, Lisa)"]
+},
+{
+"premise-fol": ["CapitalOf(Beijing, PeoplesRepublicOfChina)", "MostPopulousCapital(Beijing)", "LocatedIn(Beijing, NorthernChina)", "Hosted(Beijing, SummerOlympics2008)", "Hosted(Beijing, SummerParalympics2008)", "Hosted(Beijing, SummerOlympics)", "Hosted(Beijing, WinterOlympics)", "Hosted(Beijing, SummerParalympics)", "Hosted(Beijing, WinterParalympics)", "TopUniversities(Beijing)"],
+"conclusion-fol": ["Hosted(Beijing, SummerOlympics2008)", "Hosted(Beijing, WinterOlympics)"]
+},
+{
+"premise-fol": ["CapitalOf(Beijing, PeoplesRepublicOfChina)", "MostPopulousCapital(Beijing)", "LocatedIn(Beijing, NorthernChina)", "HostedOlympics(Beijing, 2008, Summer)", "HostedParalympics(Beijing, 2008, Summer)", "HostedOlympics(Beijing, _, Summer)", "HostedOlympics(Beijing, _, Winter)", "HostedParalympics(Beijing, _, Summer)", "HostedParalympics(Beijing, _, Winter)", "TopUniversitiesIn(Beijing, AsiaPacific, World)"],
+"conclusion-fol": ["LocatedIn(Beijing, SouthernChina)"]
+},
+{
+"premise-fol": ["CapitalOf(Beijing, PeoplesRepublicOfChina)", "MostPopulousCapital(Beijing)", "LocatedIn(Beijing, NorthernChina)", "HostedOlympics(Beijing, 2008, Summer)", "HostedParalympics(Beijing, 2008, Summer)", "HostedOlympics(Beijing, _, Summer)", "HostedOlympics(Beijing, _, Winter)", "HostedParalympics(Beijing, _, Summer)", "HostedParalympics(Beijing, _, Winter)", "all x. (University(x) & InCity(x, Beijing) -> RankAmongBest(x, AsiaPacific) & RankAmongBest(x, World))"],
+"conclusion-fol": ["SecondLargestChineseCityByUrbanPopulation(Beijing)"]
+},
+{
+"premise-fol": ["all x. (alien(x) -> extraterrestrial(x))", "all x. (from_mars(x) -> alien(x))", "all x. (extraterrestrial(x) -> -human(x))", "all x. (from_earth(x) -> human(x))", "-possible(from_earth(marvin) & from_mars(marvin))", "all x. (-from_earth(x) -> extraterrestrial(x))"],
+"conclusion-fol": ["alien(marvin)"]
+},
+{
+"premise-fol": ["all x. (alien(x) -> extraterrestrial(x))", "all x. (from_mars(x) -> alien(x))", "all x. (extraterrestrial(x) -> -human(x))", "all x. (from_earth(x) -> human(x))", "-possible(from_earth(marvin) & from_mars(marvin))", "-from_earth(marvin) -> extraterrestrial(marvin)"],
+"conclusion-fol": ["-human(marvin) & -from_mars(marvin)"]
+},
+{
+"premise-fol": ["all x. (alien(x) -> extraterrestrial(x))", "all x. (from_mars(x) -> alien(x))", "all x. (extraterrestrial(x) -> -human(x))", "all x. (from_earth(x) -> human(x))", "-possible(from_earth(marvin) & from_mars(marvin))", "all x. (-from_earth(x) -> extraterrestrial(x))"],
+"conclusion-fol": ["all x. (-from_mars(x) -> human(x))"]
+},
+{
+"premise-fol": ["all x. (person(x) -> (GrandSlamChampion(x) | OscarNominatedActor(x)))", "all x. (GrandSlamChampion(x) -> ProfessionalTennisPlayer(x))", "all x. (OscarNominatedActor(x) -> Celebrity(x))", "all x. (ProfessionalTennisPlayer(x) -> Athlete(x))", "all x. (Celebrity(x) -> WellPaid(x))", "all x. (Athlete(x) -> Famous(x))", "all x. (WellPaid(x) -> LivesInTaxHaven(x))", "(Famous(Djokovic) & Athlete(Djokovic)) -> LivesInWellPaid(Djokovic)"],
+"conclusion-fol": ["GrandSlamChampion(Djokovic)"]
+},
+{
+"premise-fol": ["all x. (person(x) -> (GrandSlamChampion(x) | OscarNominatedActor(x)))", "all x. (GrandSlamChampion(x) -> ProfessionalTennisPlayer(x))", "all x. (OscarNominatedActor(x) -> Celebrity(x))", "all x. (ProfessionalTennisPlayer(x) -> Athlete(x))", "all x. (Celebrity(x) -> WellPaid(x))", "all x. (Athlete(x) -> Famous(x))", "all x. (WellPaid(x) -> LivesInTaxHaven(x))", "(Famous(Djokovic) & Athlete(Djokovic)) -> LivesInWellPaid(Djokovic)"],
+"conclusion-fol": ["LivesInTaxHaven(Djokovic)"]
+},
+{
+"premise-fol": ["all x. (person(x) -> (GrandSlamChampion(x) | OscarNominatedActor(x)))", "all x. (GrandSlamChampion(x) -> ProfessionalTennisPlayer(x))", "all x. (OscarNominatedActor(x) -> Celebrity(x))", "all x. (ProfessionalTennisPlayer(x) -> Athlete(x))", "all x. (Celebrity(x) -> WellPaid(x))", "all x. (Athlete(x) -> Famous(x))", "all x. (WellPaid(x) -> LivesInTaxHaven(x))", "(Famous(Djokovic) & Athlete(Djokovic)) -> LivesInWellPaid(Djokovic)"],
+"conclusion-fol": ["-LivesInTaxHaven(Djokovic)"]
+},
+{
+"premise-fol": ["ProfessionalWrestlingStable(DiamondMine, WWE)", "Leads(RoderickStrong, DiamondMine)", "Includes(DiamondMine, CreedBrothers) & Includes(DiamondMine, IvyNile)", "Feud(Imperium, DiamondMine)"],
+"conclusion-fol": ["Leads(RoderickStrong, ProfessionalWrestlingStable)"]
+},
+{
+"premise-fol": ["ProfessionalWrestlingStable(DiamondMine, WWE)", "Leads(RoderickStrong, DiamondMine)", "Includes(DiamondMine, CreedBrothers) & Includes(DiamondMine, IvyNile)", "Feud(Imperium, DiamondMine)"],
+"conclusion-fol": ["Leads(RoderickStrong, CreedBrothers)"]
+},
+{
+"premise-fol": ["ProfessionalWrestlingStable(DiamondMine, WWE)", "Leads(RoderickStrong, DiamondMine)", "Includes(DiamondMine, CreedBrothers) & Includes(DiamondMine, IvyNile)", "Feud(Imperium, DiamondMine)"],
+"conclusion-fol": ["-Feud(Imperium, ProfessionalWrestlingStableThatIncludes(DiamondMine, IvyNile))"]
+},
+{
+"premise-fol": ["music_piece(Symphony_No_9)", "all x. (composer(x) -> writes_music_pieces(x))", "wrote(Beethoven, Symphony_No_9)", "premiered(Vienna_Music_Society, Symphony_No_9)", "orchestra(Vienna_Music_Society)", "leads(Beethoven, Vienna_Music_Society)", "all x. (orchestra(x) -> led_by_conductor(x))"],
+"conclusion-fol": ["composer(Beethoven)"]
+},
+{
+"premise-fol": ["music_piece(Symphony_No_9)", "all x. (composer(x) -> writes_music_pieces(x))", "wrote(Beethoven, Symphony_No_9)", "premiered(Vienna_Music_Society, Symphony_No_9)", "orchestra(Vienna_Music_Society)", "leads(Beethoven, Vienna_Music_Society)", "all x. (orchestra(x) -> exists y. (conductor(y) & led_by(x, y)))"],
+"conclusion-fol": ["exists x. (orchestra(x) & exists y. (music_piece(y) & premiered(x, y)))"]
+},
+{
+"premise-fol": ["music_piece(Symphony_No_9)", "all x. (composer(x) -> writes_music_pieces(x))", "wrote(Beethoven, Symphony_No_9)", "premiered(Vienna_Music_Society, Symphony_No_9)", "orchestra(Vienna_Music_Society)", "leads(Beethoven, Vienna_Music_Society)", "all x. (orchestra(x) -> exists y. (conductor(y) & led_by(x, y)))"],
+"conclusion-fol": ["-conductor(Beethoven)"]
+},
+{
+"premise-fol": ["all x. (DesignStyle(x, 'Zaha Hadid') -> Timeless(x))", "all x. (MassProductDesign(x) -> -Timeless(x))", "DesignStyle('Zaha Hadid') | DesignStyle('Kelly Wearstler')", "all x. (DesignStyle(x, 'Kelly Wearstler') -> Evocative(x))", "all x. (DesignStyle(x, 'Kelly Wearstler') -> Dreamy(x))", "all x. (DesignBy(x, 'Max') & Timeless(x) -> (MassProductDesign(x) & Evocative(x)))"],
+"conclusion-fol": ["exists x. (DesignBy(x, 'Max') & MassProductDesign(x))"]
+},
+{
+"premise-fol": ["all x. (design_style(x, 'Zaha Hadid') -> timeless(x))", "all x. (mass_product_design(x) -> -timeless(x))", "design_style('Zaha Hadid') | design_style('Kelly Wearstler')", "all x. (design_style(x, 'Kelly Wearstler') -> evocative(x))", "all x. (design_style(x, 'Kelly Wearstler') -> dreamy(x))", "all x. (design_by_max(x) & timeless(x) -> (mass_product_design(x) & evocative(x)))"],
+"conclusion-fol": ["exists x. (design_by_max(x) & evocative(x) & dreamy(x))"]
+},
+{
+"premise-fol": ["all x. (DesignStyleOf(x, 'Zaha Hadid') -> Timeless(x))", "all x. (MassProductDesign(x) -> -Timeless(x))", "DesignStyleOf('Zaha Hadid') | DesignStyleOf('Kelly Wearstler')", "all x. (DesignStyleOf(x, 'Kelly Wearstler') -> Evocative(x))", "all x. (DesignStyleOf(x, 'Kelly Wearstler') -> Dreamy(x))", "all x. (DesignBy(x, 'Max') & Timeless(x) -> (MassProductDesign(x) & Evocative(x)))"],
+"conclusion-fol": ["DesignBy('Max') & (Evocative('Max') | Dreamy('Max'))"]
+},
+{"premise-fol": ["all x. (RankedHighlyByWTA(x) -> AmongMostActivePlayers(x))", "all x. (LostToIga(x) -> RankedHighlyByWTA(x))", "all x. (FemaleTennisPlayerAtRG2022(x) -> LostToIga(x))", "all x. (FemaleTennisPlayerAtRG2022(x) | MaleTennisPlayerAtRG2022(x))", "all x. (MaleTennisPlayerAtRG2022(x) -> LostToRafael(x))", "((RankedHighlyByWTA(Coco) | LostToRafael(Coco)) -> -MaleTennisPlayerAtRG2022(Coco))"], "conclusion-fol": ["AmongMostActivePlayers(Coco)"]},
+{
+"premise-fol": ["all x. (RankedHighlyByWTA(x) -> AmongMostActivePlayers(x))", "all x. (LostToIga(x) -> RankedHighlyByWTA(x))", "all x. (FemaleTennisPlayerAtRG2022(x) -> LostToIga(x))", "all x. (FemaleTennisPlayerAtRG2022(x) | MaleTennisPlayerAtRG2022(x))", "all x. (MaleTennisPlayerAtRG2022(x) -> LostToRafael(x))", "all x. ((RankedHighlyByWTA(Coco) | LostToRafael(Coco)) -> -MaleTennisPlayerAtRG2022(Coco))"],
+"conclusion-fol": ["LostToRafael(Coco)"]
+},
+{
+"premise-fol": ["all x. (RankedHighlyByWTA(x) -> AmongMostActivePlayers(x))", "all x. (LostToIga(x) -> RankedHighlyByWTA(x))", "all x. (FemaleTennisPlayerAtRG2022(x) -> LostToIga(x))", "all x. (FemaleTennisPlayerAtRG2022(x) | MaleTennisPlayerAtRG2022(x))", "all x. (MaleTennisPlayerAtRG2022(x) -> LostToRafael(x))", "all x. ((RankedHighlyByWTA(Coco) | LostToRafael(Coco)) -> -MaleTennisPlayerAtRG2022(Coco))"],
+"conclusion-fol": ["-LostToIga(Coco) & -AmongMostActivePlayers(Coco)"]
+},
+{
+"premise-fol": ["all x. (cat(x) -> mammal(x))", "exists x. (pet(x) & -mammal(x))"],
+"conclusion-fol": ["all x. (pet(x) -> -cat(x))"]
+},
+{
+"premise-fol": ["Season(spring) & Season(summer) & Season(fall) & Season(winter)", "all x. (Student(x) & WantsLongVacation(x) -> LovesMost(x, summer))", "FavouriteSeason(Emma, summer)", "-SameFavouriteSeason(Mia, Emma)", "WantsLongVacation(James)"],
+"conclusion-fol": ["FavouriteSeason(James, summer)"]
+},
+{
+"premise-fol": ["Season(spring) & Season(summer) & Season(fall) & Season(winter)", "all x. (Student(x) & WantsLongVacation(x) -> LovesMost(x, summer))", "FavouriteSeason(Emma, summer)", "-SameFavouriteSeason(Mia, Emma)", "WantsLongVacation(James)"],
+"conclusion-fol": ["FavouriteSeason(James, fall)"]
+},
+{
+"premise-fol": ["SeasonInYear(spring) & SeasonInYear(summer) & SeasonInYear(fall) & SeasonInYear(winter)", "all x. (Student(x) & WantsLongVacation(x) -> LovesMost(x, summer))", "FavouriteSeason(Emma, summer)", "-SameFavouriteSeason(Mia, Emma)", "WantsLongVacation(James)"],
+"conclusion-fol": ["FavouriteSeason(Mia, spring)"]
+},
+{
+"premise-fol": ["all x. (digital_media(x) -> -analog(x))", "all x. (printed_text(x) -> analog(x))", "all x. (streaming_service(x) -> digital(x))", "all x. (hardcover_book(x) -> printed_text(x))", "streaming_service(1984) -> hardcover_book(1984)"],
+"conclusion-fol": ["printed_text(1984)"]
+},
+{
+"premise-fol": ["all x. (digital_media(x) -> -analog(x))", "all x. (printed_text(x) -> analog(x))", "all x. (streaming_service(x) -> digital(x))", "all x. (hardcover_book(x) -> printed_text(x))", "(streaming_service(1984) -> hardcover_book(1984))"],
+"conclusion-fol": ["streaming_service(1984)"]
+},
+{
+"premise-fol": ["all x. (digital_media(x) -> -analog(x))", "all x. (printed_text(x) -> analog(x))", "all x. (streaming_service(x) -> digital(x))", "all x. (hardcover_book(x) -> printed_text(x))", "(streaming_service(1984) -> hardcover_book(1984))"],
+"conclusion-fol": ["-streaming_service(1984)"]
+},
+{
+"premise-fol": ["all x. (RomanceLanguage(x) -> IndoEuropeanLanguage(x))", "LanguageFamily(RomanceLanguage)", "all x. (LanguageFamily(x) -> Related(x, x))", "RomanceLanguage(French) & RomanceLanguage(Spanish)", "Related(German, Spanish)", "all x. (Language(x) -> -Related(Basque, x))"],
+"conclusion-fol": ["RomanceLanguage(Basque)"]
+},
+{
+"premise-fol": ["all x. (RomanceLanguage(x) -> IndoEuropeanLanguage(x))", "LanguageFamily(RomanceLanguage)", "all x. (LanguageFamily(x) -> Related(x, x))", "RomanceLanguage(French) & RomanceLanguage(Spanish)", "Related(German, Spanish)", "-exists x. (Related(Basque, x))"],
+"conclusion-fol": ["RomanceLanguage(German)"]
+},
+{
+"premise-fol": ["all x. (RomanceLanguage(x) -> IndoEuropeanLanguage(x))", "LanguageFamily(RomanceLanguage)", "all x. (LanguageFamily(x) -> Related(x))", "RomanceLanguage(French) & RomanceLanguage(Spanish)", "Related(German, Spanish)", "-Related(Basque, OtherLanguage)"],
+"conclusion-fol": ["IndoEuropeanLanguage(French)"]
+},
+{
+"premise-fol": ["striker(Robert_Lewandowski)", "all x. (striker(x) -> soccer_player(x))", "left(Robert_Lewandowski, Bayern_Munchen)", "all x. all y. (left(x, y) -> -play_for(x, y))"],
+"conclusion-fol": ["soccer_player(Robert_Lewandowski)"]
+},
+{
+"premise-fol": ["striker(Robert_Lewandowski)", "all x. (striker(x) -> soccer_player(x))", "left(Robert_Lewandowski, Bayern_Munchen)", "all x. all y. (left(x, y) -> -plays_for(x, y))"],
+"conclusion-fol": ["plays_for(Robert_Lewandowski, Bayern_Munchen)"]
+},
+{
+"premise-fol": ["striker(Robert_Lewandowski)", "all x. (striker(x) -> soccer_player(x))", "left(Robert_Lewandowski, Bayern_Munchen)", "all x. all y. (left(x, y) -> -play_for(x, y))"],
+"conclusion-fol": ["star(Robert_Lewandowski)"]
+},
+{
+"premise-fol": ["CityInState(Billings, Montana)", "IncludeCities(Montana, [Butte, Helena, Missoula])", "SameState(WhiteSulphurSprings, Butte)", "-CityInState(Pierre, Montana)", "all x. (CityInButte(x) -> -CityInPierre(x))"],
+"conclusion-fol": ["SameState(Butte, Pierre)"]
+},
+{
+"premise-fol": ["CityInState(Billings, Montana)", "IncludesCities(Montana, [Butte, Helena, Missoula])", "SameState(WhiteSulphurSprings, Butte)", "-CityInState(Pierre, Montana)", "all x. (CityInButte(x) -> -CityInPierre(x))"],
+"conclusion-fol": ["SameState(Pierre, Bismarck)"]
+},
+{
+"premise-fol": ["CityInState(Billings, Montana)", "IncludesCities(Montana, [Butte, Helena, Missoula])", "SameState(WhiteSulphurSprings, Butte)", "-CityInState(Pierre, Montana)", "all x. (CityInButte(x) -> -CityInPierre(x))"],
+"conclusion-fol": ["HomeToCity(Montana, Missoula)"]
+},
+{
+"premise-fol": ["all x. (InternationalStudentInUS(x) -> (HasF1Visa(x) | HasJ1Visa(x)))", "all x. (InternationalStudentInUSWithF1Visa(x) -> (NeedsToApplyForCPT(x) | NeedsToApplyForOPT(x)))", "InternationalStudent(mike)", "NeedsToApplyForCPT(mike)"],
+"conclusion-fol": ["HasF1Visa(mike)"]
+},
+{
+"premise-fol": ["all x. (InternationalStudentInUS(x) -> (HasF1Visa(x) | HasJ1Visa(x)))", "all x. (InternationalStudentInUS(x) & HasF1Visa(x) -> (NeedsToApplyForCPT(x) | NeedsToApplyForOPT(x)))", "InternationalStudentInUS(Mike)", "NeedsToApplyForCPT(Mike)"],
+"conclusion-fol": ["HasJ1Visa(Mike)"]
+},
+{
+"premise-fol": ["all x. (cow(x) -> bovine(x))", "exists x. (pet(x) & cow(x))", "all x. (bovine(x) -> domesticated(x))", "all x. (domesticated(x) -> -alligator(x))", "alligator(Ted)"],
+"conclusion-fol": ["pet(Ted)"]
+},
+{
+"premise-fol": ["all x. (cow(x) -> bovine(x))", "exists x. (pet(x) & cow(x))", "all x. (bovine(x) -> domesticated(x))", "all x. (domesticated(x) -> -alligator(x))", "alligator(Ted)"],
+"conclusion-fol": ["pet(Ted) & cow(Ted)"]
+},
+{
+"premise-fol": ["all x. (cow(x) -> bovine(x))", "exists x. (pet(x) & cow(x))", "all x. (bovine(x) -> domesticated(x))", "all x. (domesticated(x) -> -alligator(x))", "alligator(Ted)"],
+"conclusion-fol": ["all x. (cow(x) -> -pet(x))"]
+},
+{
+"premise-fol": ["PrivateIvyLeagueResearchUniversity(Yale)", "MovedTo(Yale, NewHaven, 1716)", "EndowmentValue(Yale, 423000000000)", "OrganizedInto(Yale, 27, [ResidentialColleges, YaleGraduateSchoolOfArtsAndSciences, ProfessionalSchools])", "ResidentialCollegesAtYale([BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege])"],
+"conclusion-fol": ["PrivateIvyLeagueResearchUniversityMovedTo(NewHaven)"]
+},
+{
+"premise-fol": ["PrivateUniversity(Yale)", "MoveTo(Yale, New_Haven, 1716)", "EndowmentValue(Yale, 423000000000)", "OrganizedInto(Yale, 27, [ResidentialColleges, Yale_Graduate_School_of_Arts_and_Sciences, ProfessionalSchools])", "ResidentialColleges(Yale, [Benjamin_Franklin_College, Berkeley_College, Branford_College, Davenport_College, Ezra_Stiles_College, Grace_Hopper_College, Jonathan_Edwards_College, Morse_College, Pauli_Murray_College, Pierson_College, Saybrook_College, Silliman_College, Timothy_Dwight_College, Trumbull_College])"],
+"conclusion-fol": ["LargestEndowment(Yale)"]
+},
+{
+"premise-fol": ["PrivateIvyLeagueResearchUniversity(Yale)", "MovedTo(Yale, NewHaven, 1716)", "EndowmentValue(Yale, 423000000000)", "OrganizedInto(Yale, 27, [ResidentialColleges, YaleGraduateSchoolOfArtsAndSciences, 12ProfessionalSchools])", "ResidentialCollegesAtYale([BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege])"],
+"conclusion-fol": ["ResidentialCollegeAtYale(PiersonCollege)"]
+},
+{
+"premise-fol": ["BritishSitcom(Badults) & Starring(Badults, Pappys)", "Piloted(Badults, July2013, BBCThree)", "WorkingTitle(Badults, TheSecretDudeSociety)", "ScriptEditor(Badults, AndrewCollins)"],
+"conclusion-fol": ["ScriptEditor(TheSecretDudeSociety, AndrewCollins)"]
+},
+{
+"premise-fol": ["BritishSitcom(Badults) & Starring(Badults, Pappys)", "Piloted(Badults, July2013, BBCThree)", "WorkingTitle(Badults, TheSecretDudeSociety)", "ScriptEditor(Badults, AndrewCollins)"],
+"conclusion-fol": ["all x. (MemberOfPappys(x) -> -StarredInShowPilotingOnBBC(x))"]
+},
+{
+"premise-fol": ["all x. (growth_company_stock(x) -> volatile(x))", "all x. (volatile(x) -> -suitable_for_retirement_fund(x))", "exists x. (company_stock(x) & growth_company_stock(x))", "all x. (mature_company_stock(x) -> suitable_for_retirement_fund(x))", "mature_company_stock(KO)"],
+"conclusion-fol": ["company_stock(KO)"]
+},
+{
+"premise-fol": ["all x. (growth_company_stock(x) -> volatile(x))", "all x. (volatile(x) -> -suitable_for_retirement_fund(x))", "exists x. (company_stock(x) & growth_company_stock(x))", "all x. (mature_company_stock(x) -> suitable_for_retirement_fund(x))", "mature_company_stock(KO)"],
+"conclusion-fol": ["company_stock(KO) & growth_company_stock(KO)"]
+},
+{
+"premise-fol": ["all x. (growth_company(x) -> volatile_stock(x))", "all x. (volatile_price(x) -> -suitable_for_retirement_fund(x))", "exists x. (company(x) & growth_company_stock(x))", "all x. (mature_company(x) -> suitable_for_retirement_fund(x))", "mature_company_stock(KO)"],
+"conclusion-fol": ["(growth_company_stock(KO) | volatile_price(KO)) -> (-company_stock(KO) & -volatile_price(KO))"]
+},
+{
+"premise-fol": ["all x. (VehiclePlateInIstanbul(x) -> BeginsWith34(x))", "all x. (Plate(x) & -BeginsWith34(x) -> -FromIstanbul(x))", "FromIstanbul(JoePlate)", "BeginsWith35(TomPlate)", "all x. (BeginsWith35(x) -> -BeginsWith34(x))"],
+"conclusion-fol": ["BeginsWith34(JoePlate)"]
+},
+{
+"premise-fol": ["all x. (VehicleRegPlateInIstanbul(x) -> BeginsWith34(x))", "all x. (Plate(x) & -BeginsWith34(x) -> -FromIstanbul(x))", "FromIstanbul(JoesVehicleRegPlate)", "BeginsWith35(TomsLicensePlate)", "all x. (LicensePlate(x) & BeginsWith35(x) -> -BeginsWith34(x))"],
+"conclusion-fol": ["FromIstanbul(TomsLicensePlate)"]
+},
+{
+"premise-fol": ["all x. (WorksInStudentJobsOnCampus(x) -> NeedsToEarnMoneyForTuition(x))", "all x. (OrdersTakeoutFrequentlyInCollege(x) -> WorksInStudentJobsOnCampus(x))", "all x. (OrdersTakeoutFrequentlyInCollege(x) | EnjoysDiningHallMealsAndRecipes(x))", "all x. (EnjoysDiningHallMealsAndRecipes(x) -> -PickyEater(x))", "all x. (EnjoysDiningHallMealsAndRecipes(x) -> SpendsTimeEatingAndCatchingUpWithFriendsInDiningHalls(x))", "-(WorksInStudentJobsOnCampus(Mary) & NeedsToEarnMoneyForTuition(Mary)) -> ((-PickyEater(Mary) & -NeedsToEarnMoneyForTuition(Mary)) | (PickyEater(Mary) & NeedsToEarnMoneyForTuition(Mary)))"],
+"conclusion-fol": ["NeedsToEarnMoneyForTuition(Mary)"]
+},
+{"premise-fol": ["all x. (WorksOnCampus(x) -> NeedsToEarnMoney(x))", "all x. (OrdersTakeoutFrequently(x) -> WorksOnCampus(x))", "all x. (OrdersTakeoutFrequently(x) | EnjoysDiningHallMeals(x))", "all x. (EnjoysDiningHallMeals(x) -> -PickyEater(x))", "all x. (EnjoysDiningHallMeals(x) -> SpendsTimeEatingWithFriends(x))", "all x. ((WorksOnCampus(Mary) & NeedsToEarnMoney(Mary)) -> (-PickyEater(Mary) & -NeedsToEarnMoney(Mary)))"], "conclusion-fol": ["-PickyEater(Mary) & SpendsTimeEatingWithFriends(Mary)"]},
+{"premise-fol": ["all x. (WorksInStudentJobsOnCampus(x) -> NeedsToEarnMoneyForTuition(x))", "all x. (OrdersTakeoutFrequentlyInCollege(x) -> WorksInStudentJobsOnCampus(x))", "all x. (OrdersTakeoutFrequentlyInCollege(x) | EnjoysDiningHallMealsAndRecipes(x))", "all x. (EnjoysDiningHallMealsAndRecipes(x) -> -PickyEater(x))", "all x. (EnjoysDiningHallMealsAndRecipes(x) -> SpendsTimeEatingAndCatchingUpWithFriendsInDiningHalls(x))", "-(WorksInStudentJobsOnCampus(Mary) & NeedsToEarnMoneyForTuition(Mary)) -> ((-PickyEater(Mary) | -NeedsToEarnMoneyForTuition(Mary)))"], "conclusion-fol": ["-PickyEater(Mary) | (PickyEater(Mary) -> SpendsTimeEatingAndCatchingUpWithFriendsInDiningHalls(Mary))"]},
+{
+"premise-fol": ["all x. (bakery(x) -> -spicy(x))", "all x. (cupcake(x) -> bakery(x))", "all x. (hotpot(x) -> spicy(x))", "all x. (product_of_Baked_by_Melissa(x) -> cupcake(x))", "all x. (dried_Thai_chili(x) & (spicy(x) | bakery(x)) -> (hotpot(x) | spicy(x)))"],
+"conclusion-fol": ["exists x. (dried_Thai_chili(x) & product_of_Baked_by_Melissa(x))"]
+},
+{
+"premise-fol": ["all x. (bakery(x) -> -spicy(x))", "all x. (cupcake(x) -> bakery(x))", "all x. (hotpot(x) -> spicy(x))", "all x. (product_of_Baked_by_Melissa(x) -> cupcake(x))", "all x. (dried_Thai_chili(x) & (spicy(x) | bakery(x))) -> (hotpot(x) | spicy(x))"],
+"conclusion-fol": ["-product_of_Baked_by_Melissa(dried_Thai_chili)"]
+},
+{
+"premise-fol": ["all x. (bakery(x) -> -spicy(x))", "all x. (cupcake(x) -> bakery(x))", "all x. (hotpot(x) -> spicy(x))", "all x. (product_of_Baked_by_Melissa(x) -> cupcake(x))", "all x. (dried_Thai_chili(x) & (spicy(x) | bakery(x)) -> (hotpot(x) | spicy(x)))"],
+"conclusion-fol": ["hotpot(dried_Thai_chili)"]
+},
+{
+"premise-fol": ["all x. (bakery(x) -> -spicy(x))", "all x. (cupcake(x) -> bakery(x))", "all x. (hotpot(x) -> spicy(x))", "all x. (product_of_Baked_by_Melissa(x) -> cupcake(x))", "all x. (dried_Thai_chili(x) & (spicy(x) | bakery(x)) -> (hotpot(x) | spicy(x)))"],
+"conclusion-fol": ["all x. (dried_Thai_chili(x) -> -product_of_Baked_by_Melissa(x) & -bakery(x))"]
+},
+{
+"premise-fol": ["all x. (bakery(x) -> -spicy(x))", "all x. (cupcake(x) -> bakery(x))", "all x. (hotpot(x) -> spicy(x))", "all x. (product_of_Baked_by_Melissa(x) -> cupcake(x))", "(all x (dried_Thai_chili(x) & (spicy(x) | bakery(x))) -> (hotpot(x) | spicy(x)))"],
+"conclusion-fol": ["exists x. (dried_Thai_chili(x) & cupcake(x) & product_of_Baked_by_Melissa(x))"]
+},
+{
+"premise-fol": ["all x. (ListedInYelp(x) -> -ReceiveManyNegativeReviews(x))", "all x. (Restaurant(x) & RatingGreaterThan9(x) -> ListedInYelp(x))", "exists x. (Restaurant(x) & -ProvideTakeOutService(x) & ReceiveManyNegativeReviews(x))", "all x. (Restaurant(x) & PopularAmongLocalResidents(x) -> RatingGreaterThan9(x))", "(RatingGreaterThan9(Subway) | PopularAmongLocalResidents(Subway))"],
+"conclusion-fol": ["(ProvideTakeOutService(Subway) & ReceiveManyNegativeReviews(Subway)) -> (RatingGreaterThan9(Subway) & -ProvideTakeOutService(Subway))"]
+},
+{
+"premise-fol": ["all x. (ListedInYelp(x) -> -ReceiveNegativeReviews(x))", "all x. (Restaurant(x) & RatingGreaterThan9(x) -> ListedInYelp(x))", "exists x. (Restaurant(x) & -ProvideTakeOut(x) & ReceiveNegativeReviews(x))", "all x. (Restaurant(x) & PopularAmongLocalResidents(x) -> RatingGreaterThan9(x))", "(RatingGreaterThan9(Subway) | PopularAmongLocalResidents(Subway))"],
+"conclusion-fol": ["ProvideTakeOut(Subway) & -ReceiveNegativeReviews(Subway)"]
+},
+{
+"premise-fol": ["all x. (ListedInYelpRecommendations(x) -> -ReceiveManyNegativeReviews(x))", "all x. (RestaurantWithRatingGreaterThan9(x) -> ListedInYelpRecommendations(x))", "exists x. (-ProvideTakeOutService(x) & ReceiveManyNegativeReviews(x))", "all x. (PopularAmongLocalResidents(x) -> RatingGreaterThan9(x))", "(RatingGreaterThan9(Subway) | PopularAmongLocalResidents(Subway))"],
+"conclusion-fol": ["-ProvideTakeOutService(Subway)"]
+},
+{
+"premise-fol": ["all x. (superhero_movie(x) -> (good_guys(x) -> always_win(x)))", "superhero_movie('The Surprising Adventures of Sir Digby Chicken Caesar')", "all x. all y. (good_guy(x) & bad_guy(y) -> (fight(x, y) & fight(y, x)))", "fight('Sir Digby', 'nemesis')", "all x. all y. (superhero_movie(x) & named_after(x, y) -> good_guy(y))", "named_after('The Surprising Adventures of Sir Digby Chicken Caesar', 'Sir Digby')", "all x. all y. (win(x, y) -> lose(y, x))", "all x. all y. (superhero_movie(x) & named_after(x, y) -> appear_in_movie(y, x))"],
+"conclusion-fol": ["lose('nemesis')"]
+},
+{
+"premise-fol": ["all x. (book(x) -> contains_knowledge(x))", "all x. all y. (person(x) & book(y) & reads(x, y) -> gains_knowledge(x))", "all x. (person(x) & gains_knowledge(x) -> becomes_smarter(x))", "reads(Harry, Walden)"],
+"conclusion-fol": ["contains_knowledge(Walden)"]
+},
+{
+"premise-fol": ["all x. (book(x) -> contains_knowledge(x))", "all x. all y. (person(x) & book(y) & reads(x, y) -> gains_knowledge(x))", "all x. (person(x) & gains_knowledge(x) -> becomes_smarter(x))", "reads(Harry, Walden)"],
+"conclusion-fol": ["smarter_than_before(Harry)"]
+},
+{
+"premise-fol": ["all x. (book(x) -> contains_knowledge(x))", "all x. all y. (person(x) & book(y) & reads(x, y) -> gains_knowledge(x))", "all x. (person(x) & gains_knowledge(x) -> becomes_smarter(x))", "reads(Harry, Walden)"],
+"conclusion-fol": ["exists x. (person(x) & smarter(x) -> gained_knowledge(x))"]
+},
+{"premise-fol": ["all x. (NLP_Task(x) -> (LanguageGenerationTask(x) | LanguageUnderstandingTask(x)))", "all x. (NLP_Task(x) & OutputIsTextSequence(x) -> LanguageGenerationTask(x))", "NLP_Task(MachineTranslation)", "OutputIsTextSequence(MachineTranslation)"], "conclusion-fol": ["LanguageGenerationTask(MachineTranslation)"]},
+{
+"premise-fol": ["all x. (NLP_Task(x) -> (LanguageGenerationTask(x) | LanguageUnderstandingTask(x)))", "all x. (NLP_Task(x) & OutputIsTextSequence(x) -> LanguageGenerationTask(x))", "NLP_Task(MachineTranslation)", "OutputIsTextSequence(MachineTranslation)"],
+"conclusion-fol": ["LanguageUnderstandingTask(MachineTranslation)"]
+},
+{
+"premise-fol": ["exists x. (allow(pet, x) & managed_building(x))", "require(deposit, rent(apartment, managed_building))", "possible(equal(security_deposit, at_least(one_month_rent)) | more(security_deposit, one_month_rent))", "cat(Fluffy) & owner(Tom, Fluffy)", "all x. (cat(x) -> pet(x))", "managed_building(Olive_Garden)", "rent(Olive_Garden, 2000, per_month)", "all x. (rent(Tom, apartment, managed_building(x)) <-> (allow(move_in_with_Fluffy, x) & security_deposit(x, no_more_than_1500)))", "more(2000, 1500)"],
+"conclusion-fol": ["rent(Tom, apartment, Olive_Garden)"]
+},
+{
+"premise-fol": ["all x. (ManagedBuilding(x) -> AllowsPets(x))", "all x. (RentApartmentInManagedBuilding(x) -> RequiresDeposit(x))", "SecurityDeposit = OneMonthRent | SecurityDeposit > OneMonthRent", "Cat(Fluffy) & Owner(Fluffy, Tom)", "all x. (Cat(x) -> Pet(x))", "ManagedBuilding(OliveGarden)", "MonthlyRent(OliveGarden) = 2000", "RentApartmentInManagedBuilding(Tom) <-> (AllowedToMoveInWithPet(Tom, Fluffy) & SecurityDeposit <= 1500)", "2000 > 1500"],
+"conclusion-fol": ["AllowedToMoveInWithPet(Tom, Fluffy, OliveGarden)"]
+},
+{
+"premise-fol": ["exists x. (building(x) & managed(x) & allow(pets, x))", "all x. (apartment(x) & in_building(x) & managed(in_building(x)) -> require(deposit, rent(x)))", "possible(equal(security_deposit, at_least(one_month_rent)) | more(security_deposit, one_month_rent))", "cat(Fluffy) & owner(Fluffy, Tom)", "all x. (cat(x) -> pet(x))", "building(Olive_Garden) & managed(Olive_Garden)", "rent(Olive_Garden, 2000, per_month)", "(rent(Tom, apartment_in_managed_building) <-> (allow(move_in_with_Fluffy, Tom) & deposit(security, no_more_than_1500)))", "more_than(2000, 1500)"],
+"conclusion-fol": ["deposit(Olive_Garden, at_least_2000) | deposit(Olive_Garden, more_than_2000)"]
+},
+{
+"premise-fol": ["all x. (animal(x) & loved_by_tourists(x) -> max_favorite_animal(x))", "all x. (animal_from_australia(x) -> loved_by_tourists(x))", "all x. (quokka(x) -> animal_from_australia(x))", "all x. (max_favorite_animal(x) -> very_fluffy(x))", "all x. (max_favorite_animal(x) -> love_to_sleep(x))", "all x. (koala(x) & very_fluffy(x) -> -quokka(x))"],
+"conclusion-fol": ["all x. (koala(x) -> love_to_sleep(x))"]
+},
+{
+"premise-fol": ["all x. (animal(x) & loved_by_tourists(x) -> max_favorite_animal(x))", "all x. (animal_from_australia(x) -> loved_by_tourists(x))", "all x. (quokka(x) -> animal_from_australia(x))", "all x. (max_favorite_animal(x) -> very_fluffy(x))", "all x. (max_favorite_animal(x) -> love_to_sleep(x))", "all x. (koala(x) & very_fluffy(x) -> -quokka(x))"],
+"conclusion-fol": ["all x. (koala(x) -> (love_to_sleep(x) & quokka(x)))"]
+},
+{
+"premise-fol": ["all x. (animal(x) & loved_by_tourists(x) -> max_favorite_animal(x))", "all x. (animal_from_australia(x) -> loved_by_tourists(x))", "all x. (quokka(x) -> animal_from_australia(x))", "all x. (max_favorite_animal(x) -> very_fluffy(x))", "all x. (max_favorite_animal(x) -> loves_to_sleep(x))", "all x. (koala(x) & very_fluffy(x) -> -quokka(x))"],
+"conclusion-fol": ["all x. (koala(x) & quokka(x) -> (loves_to_sleep(x) | very_fluffy(x)))"]
+},
+{
+"premise-fol": ["all x. (man(x) -> (kind(x) | evil(x)))", "all x. (ugly(x) -> -handsome(x))", "all x. (evil(x) -> ugly(x))", "all x. (gentleman(x) -> handsome(x))", "all x. (CEO(x) -> gentleman(x))", "gentleman(Harry)"],
+"conclusion-fol": ["CEO(Harry)"]
+},
+{
+"premise-fol": ["all x. (man(x) -> (kind(x) | evil(x)))", "all x. (ugly(x) -> -handsome(x))", "all x. (evil(x) -> ugly(x))", "all x. (gentleman(x) -> handsome(x))", "all x. (CEO(x) -> gentleman(x))", "gentleman(Harry)"],
+"conclusion-fol": ["kind(Harry) | CEO(Harry)"]
+},
+{
+"premise-fol": ["all x. (man(x) -> (kind(x) | evil(x)))", "all x. (ugly(x) -> -handsome(x))", "all x. (evil(x) -> ugly(x))", "all x. (gentleman(x) -> handsome(x))", "all x. (CEO(x) -> gentleman(x))", "gentleman(Harry)"],
+"conclusion-fol": ["(evil(Harry) & ugly(Harry)) | (-evil(Harry) & -ugly(Harry)) -> (-kind(Harry) & -CEO(Harry))"]
+},
+{
+"premise-fol": ["all x. ((twin(x) | triplet(x)) -> spends_time_with_siblings(x))", "all x. (same_age_siblings(x) -> (twin(x) | triplet(x)))", "all x. (complains_about_siblings(x) -> same_age_siblings(x))", "all x. (-lives_at_home_regularly(x) -> -strong_bonds_with_family(x))", "all x. (spends_time_with_siblings(x) -> -lives_at_home_regularly(x))", "(twin(Luke) & strong_bonds_with_family(Luke)) | (-twin(Luke) & -strong_bonds_with_family(Luke))"],
+"conclusion-fol": ["spends_time_with_siblings(Luke)"]
+},
+{
+"premise-fol": ["all x. ((twin(x) | triplet(x)) -> spends_time_with_siblings(x))", "all x. (same_age_siblings(x) -> (twin(x) | triplet(x)))", "all x. (complains_about_siblings(x) -> same_age_siblings(x))", "all x. (-lives_at_home_regularly(x) -> -strong_bonds_with_family(x))", "all x. (spends_time_with_siblings(x) -> -lives_at_home_regularly(x))", "(twin(Luke) & strong_bonds_with_family(Luke)) | (-twin(Luke) & -strong_bonds_with_family(Luke))"],
+"conclusion-fol": ["complains_about_siblings(Luke)"]
+},
+{
+"premise-fol": ["all x. ((twin(x) | triplet(x)) -> spends_time_with_siblings(x))", "all x. (same_age_siblings(x) -> (twin(x) | triplet(x)))", "all x. (complains_about_siblings(x) -> same_age_siblings(x))", "all x. (-lives_at_home_regularly(x) -> -strong_bonds_with_family(x))", "all x. (spends_time_with_siblings(x) -> -lives_at_home_regularly(x))", "(twin(Luke) & strong_bonds_with_family(Luke)) | (-twin(Luke) & -strong_bonds_with_family(Luke))"],
+"conclusion-fol": ["-twin(Luke) & -triplet(Luke) & -complains_about_siblings(Luke)"]
+},
+{"premise-fol": ["Costs(Take(GRE_test), 205, US_dollar)", "Provides(ETS, FinancialAid, GRE_applicants, Prove(EconomicHardship))", "Refers(EconomicHardship, Difficulty(CausedBy(Have(TooLittle(Money)) | Have(TooFew(Resources)))))", "LivesIn(Tom, SingleParentFamily)", "OutOf(Work, Dad, MoreThan(1, Year))"], "conclusion-fol": ["Possible(Apply(Tom, FinancialAid(ETS, Take(GRE_test))))"]},
+{"premise-fol": ["Cost(take(GRE_test), 205, US_dollar)", "ProvideAid(ETS, financial, GRE_applicants, Prove(economic_hardship))", "Refer(economic_hardship, Cause(difficulty, Have(too_little_money | too_few_resources)))", "Live(Tom, single_parent_family)", "OutOfWork(Tom_dad, more_than_one_year)"], "conclusion-fol": ["Cost(take(GRE_test), below_300, US_dollar)"]},
+{
+"premise-fol": ["Costs(Take(GRE_test), 205, US_dollar)", "Provides(ETS, FinancialAid, GRE_applicants, Prove(EconomicHardship))", "Refers(EconomicHardship, Difficulty(CausedBy(Have(TooLittle(Money)) | Have(TooFew(Resources)))))", "LivesIn(Tom, SingleParentFamily)", "BeenOutOf(Work, Dad, MoreThan(1, Year))"],
+"conclusion-fol": ["-Available(FinancialAid, GRE_test)"]
+},
+{"premise-fol": ["all x. (SpillsFoodOnClothing(x) -> (NotTidySpaces(x) & EnjoysCleaning(x)))", "all x. (FoodieGoesOut(x) -> SpillsFoodOnClothing(x))", "all x. (GrewUpOnlyChild(x) -> (TidySpaces(x) & EnjoysCleaning(x)))", "all x. (HasBusyParents(x) -> GrewUpOnlyChild(x))", "all x. (HighIncomeHousehold(x) -> HasBusyParents(x))", "(SpillsFoodOnClothing(Peter) & GrewUpOnlyChild(Peter)) | (-SpillsFoodOnClothing(Peter) & -GrewUpOnlyChild(Peter))"], "conclusion-fol": ["TidySpaces(Peter) & EnjoysCleaning(Peter)"]},
+{"premise-fol": ["all x. (SpillsFoodOnClothing(x) -> (-TidiesSpacesConsistently(x) & EnjoysCleaning(x)))", "all x. (Foodie(x) & GoesOutFrequently(x) -> SpillsFoodOnClothing(x))", "all x. (GrewUpAsOnlyChild(x) -> (TidiesSpacesConsistently(x) & EnjoysCleaning(x)))", "all x. (HasBusyParents(x) -> GrewUpAsOnlyChild(x))", "all x. (HighNetIncomeHousehold(x) -> HasBusyParents(x))", "(SpillsFoodOnClothing(Peter) & GrewUpAsOnlyChild(Peter)) | (-SpillsFoodOnClothing(Peter) & -GrewUpAsOnlyChild(Peter))"], "conclusion-fol": ["(Foodie(Peter) & GoesOutFrequently(Peter)) | HighNetIncomeHousehold(Peter)"]},
+{"premise-fol": ["all x. (SpillFoodOnClothing(x) -> (-TidySpacesConsistently(x) & EnjoyCleaning(x)))", "all x. (Foodie(x) & GoOutFrequently(x) -> SpillFoodOnClothing(x))", "all x. (GrewUpOnlyChild(x) -> (TidySpacesConsistently(x) & EnjoyCleaning(x)))", "all x. (HaveBusyParents(x) -> GrewUpOnlyChild(x))", "all x. (HighNetIncomeHousehold(x) -> HaveBusyParents(x))", "(SpillFoodOnClothing(Peter) & GrewUpOnlyChild(Peter)) | (-SpillFoodOnClothing(Peter) & -GrewUpOnlyChild(Peter))"], "conclusion-fol": ["(Foodie(Peter) & GoOutFrequently(Peter) & HighNetIncomeHousehold(Peter)) | (Foodie(Peter) & GoOutFrequently(Peter) & -HighNetIncomeHousehold(Peter))"]},
+{
+"premise-fol": ["all x. (fir_tree(x) -> evergreen(x))", "exists x. (object_of_worship(x) & fir_tree(x))"],
+"conclusion-fol": ["exists x. (evergreen(x) & -object_of_worship(x))"]
+},
+{
+"premise-fol": ["(MountainRange(PicurisMountains) & (Location(PicurisMountains, NewMexico) | Location(PicurisMountains, Texas)))", "Visited(JuanDeOnate, PicurisMountains)", "Donated(HardingPegmatiteMine) & Location(HardingPegmatiteMine, PicurisMountains)", "-exists x. (MountainRange(x) & Location(x, Texas) & exists y. (Mine(y) & Donated(y) & Location(y, x)))"],
+"conclusion-fol": ["Visited(JuanDeOnate, x) & MountainRange(x) & Location(x, NewMexico)"]
+},
+{
+"premise-fol": ["(MountainRange(PicurisMountains) & (Location(PicurisMountains, NewMexico) | Location(PicurisMountains, Texas)))", "Visited(JuanDeOnate, PicurisMountains)", "Donated(HardingPegmatiteMine) & Location(HardingPegmatiteMine, PicurisMountains)", "-exists x. (MountainRange(x) & Location(x, Texas) & exists y. (Mine(y) & Donated(y) & Location(y, x)))"],
+"conclusion-fol": ["Visited(JuanDeOnate, x) & MountainRange(x) & Location(x, Texas)"]
+},
+{
+"premise-fol": ["(MountainRange(PicurisMountains) & (LocatedIn(PicurisMountains, NewMexico) | LocatedIn(PicurisMountains, Texas)))", "Visited(JuanDeOnate, PicurisMountains)", "Donated(HardingPegmatiteMine) & LocatedIn(HardingPegmatiteMine, PicurisMountains)", "-Exists x. (MountainRange(x) & LocatedIn(x, Texas) & Exists y. (Mine(y) & Donated(y) & LocatedIn(y, x)))"],
+"conclusion-fol": ["-LocatedIn(HardingPegmatiteMine, MountainRangeIn(NewMexico))"]
+},
+{"premise-fol": ["all x. all y. (Man(x) & Man(y) & Taller(x, y) -> CanBlock(x, y))", "Man(Michael) & all x. (InClass(x, Michael) -> Taller(Michael, x))", "all x. all y. all z. (Taller(x, y) & Taller(y, z) -> Taller(x, z))", "Man(Peter) & Taller(Peter, Michael)", "all x. (CanShoot(x) -> (CanBlock(Michael, x) | -CanJumpWhenShooting(x)))", "-CanBlock(Michael, Windy)", "all x. (CanShoot(x) & CanJumpWhenShooting(x) -> GreatShooter(x))"], "conclusion-fol": ["exists x. (Man(x) & InClass(x, Michael) & Shorter(Peter, x))"]},
+{
+"premise-fol": ["all x. all y. (Man(x) & Man(y) & Taller(x, y) -> CanBlock(x, y))", "Man(Michael) & forall y. (InClass(y, Michael) -> Taller(Michael, y))", "all x. all y. all z. (Taller(x, y) & Taller(y, z) -> Taller(x, z))", "Man(Peter) & Taller(Peter, Michael)", "forall x. (Man(x) & NotJumpWhenShooting(x) -> CanBlock(Michael, x))", "-CanBlock(Michael, Windy)", "forall x. (Shooter(x) & CanJumpWhenShooting(x) -> GreatShooter(x))"],
+"conclusion-fol": ["GreatShooter(Windy)"]
+},
+{
+"premise-fol": ["all x. all y. (Man(x) & Man(y) & Taller(x, y) -> CanBlock(x, y))", "Man(Michael) & all x. (InClass(x, Michael) -> Taller(Michael, x))", "all x. all y. all z. (Taller(x, y) & Taller(y, z) -> Taller(x, z))", "Man(Peter) & Taller(Peter, Michael)", "all x. (CanBlock(Michael, x) -> -JumpWhenShooting(x))", "-CanBlock(Michael, Windy)", "all x. (Shooter(x) & CanJumpWhenShooting(x) -> GreatShooter(x))"],
+"conclusion-fol": ["CanBlock(Peter, Windy)"]
+},
+{
+"premise-fol": ["NamedAfter(BarutinCove, BarutinSettlement)", "LocatedAt(BarutinCove, SouthwestCoastOfSnowIsland)", "Includes(SouthShetlandIslands, SnowIsland) & Includes(SouthShetlandIslands, GreenwichIsland) & Includes(SouthShetlandIslands, DeceptionIsland)", "PartOf(SouthShetlandIslands, Antarctica)", "all x. all y. all z. ((LocatedAt(x, y) & LocatedAt(y, z)) -> LocatedAt(x, z))"],
+"conclusion-fol": ["all x. (Island(x) & LocatedIn(x, Antarctica) -> NamedAfter(Barutin, x))"]
+},
+{
+"premise-fol": ["NamedAfter(BarutinCove, Barutin, Bulgaria)", "LocatedAt(BarutinCove, SouthwestCoast, SnowIsland)", "Includes(SouthShetlandIslands, SnowIsland, GreenwichIsland, DeceptionIsland)", "PartOf(SouthShetlandIslands, Antarctica)", "all x. all y. all z. ((LocatedAt(x, y) & LocatedAt(y, z)) -> LocatedAt(x, z))"],
+"conclusion-fol": ["exists x. (Cove(x) & LocatedAt(x, Antarctica) & NamedAfter(x, _, Bulgaria))"]
+},
+{
+"premise-fol": ["NamedAfter(BarutinCove, Barutin, Bulgaria)", "LocatedAt(BarutinCove, SouthwestCoast, SnowIsland)", "Includes(SouthShetlandIslands, SnowIsland, GreenwichIsland, DeceptionIsland)", "PartOf(SouthShetlandIslands, Antarctica)", "all x. all y. all z. ((LocatedIn(x, y) & LocatedIn(y, z)) -> LocatedIn(x, z))"],
+"conclusion-fol": ["-LocatedIn(Barutin, Antarctica)"]
+},
+{
+"premise-fol": ["exists x. (affection(x) & love(x))", "exists x. (love(x) & positive(x))"],
+"conclusion-fol": ["exists x. (affection(x) & positive(x))"]
+},
+{
+"premise-fol": ["all x. (can_transport_multiple_passengers(x) -> -empty(x))", "all x. (airline(x) -> can_transport_multiple_passengers(x))", "all x. (plane(x) -> empty(x))", "all x. (boeing_707(x) -> plane(x))", "-airline(Greyhound) -> -exists x. (plane(x) & Greyhound(x))"],
+"conclusion-fol": ["airline(Greyhound)"]
+},
+{
+"premise-fol": ["all x. (CanTransportMultiplePassengers(x) -> -Empty(x))", "all x. (Airline(x) -> CanTransportMultiplePassengers(x))", "all x. (Plane(x) -> Empty(x))", "all x. (Boeing707(x) -> Plane(x))", "-Airline(Greyhound) -> -Exists x. (Plane(x) & Greyhound(x))"],
+"conclusion-fol": ["Boeing707(Greyhound)"]
+},
+{
+"premise-fol": ["all x. (CanTransportMultiplePassengers(x) -> -Empty(x))", "all x. (Airline(x) -> CanTransportMultiplePassengers(x))", "all x. (Plane(x) -> Empty(x))", "all x. (Boeing707(x) -> Plane(x))", "-Airline(Greyhound) -> -Exists x. (Plane(x) & Greyhound(x))"],
+"conclusion-fol": ["-Boeing707(Greyhound)"]
+},
+{
+"premise-fol": ["all x. (mammal(x) -> animal(x))", "all x. (monkey(x) -> mammal(x))", "all x. (animal(x) -> (monkey(x) | bird(x)))", "all x. (bird(x) -> fly(x))", "all x. (animal(x) -> breathe(x))", "all x. (fly(x) -> has_wings(x))", "all x. ((-fly(x) & -bird(x)) -> (-fly(x) & -breathe(x)))"],
+"conclusion-fol": ["monkey(Rock)"]
+},
+{
+"premise-fol": ["all x. (mammal(x) -> animal(x))", "all x. (monkey(x) -> mammal(x))", "all x. (animal(x) -> (monkey(x) | bird(x)))", "all x. (bird(x) -> fly(x))", "all x. (animal(x) -> breathe(x))", "all x. (fly(x) -> has_wings(x))", "all x. ((-fly(x) & -bird(x)) -> (-fly(x) & -breathe(x)))"],
+"conclusion-fol": ["has_wings(rock)"]
+},
+{
+"premise-fol": ["all x. (mammal(x) -> animal(x))", "all x. (monkey(x) -> mammal(x))", "all x. (animal(x) -> (monkey(x) | bird(x)))", "all x. (bird(x) -> fly(x))", "all x. (animal(x) -> breathe(x))", "all x. (fly(x) -> has_wings(x))", "all x. ((-fly(x) & -bird(x)) -> (-fly(x) & -breathe(x)))"],
+"conclusion-fol": ["-has_wings(Rock)"]
+},
+{
+"premise-fol": ["all x. (HasWedding(x) -> HasChild(x))", "all x. (TravelsToParisForHoneymoon(x) -> HasWedding(x))", "all x. (WeddingInJuly(x) -> TravelsToParisForHoneymoon(x))", "exists x. (WeddingInJuly(x) & WellAttended(x))", "(HasChild(John) -> -TravelsToParisForHoneymoon(John) & -HasWedding(John))", "(WellAttendedWedding(John) -> WeddingInJuly(John) | (not WeddingInJuly(John) & TravelsToParisForHoneymoon(John)))"],
+"conclusion-fol": ["WellAttendedWedding(John)"]
+},
+{
+"premise-fol": ["all x. (HasWedding(x) -> HasChild(x))", "all x. (TravelsToParisForHoneymoon(x) -> HasWedding(x))", "all x. (WeddingInJuly(x) -> TravelsToParisForHoneymoon(x))", "exists x. (WeddingInJuly(x) & WellAttended(x))", "(HasChild(John) -> -TravelsToParisForHoneymoon(John) & -HasWedding(John))", "(HasWellAttendedWedding(John) -> (WeddingInJuly(John) | TravelsToParisForHoneymoon(John)))"],
+"conclusion-fol": ["-HasWellAttendedWedding(John)"]
+},
+{
+"premise-fol": ["all x. (HasWedding(x) -> HasChild(x))", "all x. (TravelsToParisForHoneymoon(x) -> HasWedding(x))", "all x. (WeddingInJuly(x) -> TravelsToParisForHoneymoon(x))", "exists x. (WeddingInJuly(x) & WellAttended(x))", "(HasChild(John) -> -TravelsToParisForHoneymoon(John) & -HasWedding(John))", "(WellAttendedWedding(John) -> WeddingInJuly(John) | (TravelsToParisForHoneymoon(John) & -WeddingInJuly(John)))"],
+"conclusion-fol": ["HasChild(John)"]
+},
+{
+"premise-fol": ["all x. (HasWedding(x) -> HasChild(x))", "all x. (TravelsToParisForHoneymoon(x) -> HasWedding(x))", "all x. (WeddingInJuly(x) -> TravelsToParisForHoneymoon(x))", "exists x. (WeddingInJuly(x) & WellAttended(x))", "HasChild(John) -> (-TravelsToParisForHoneymoon(John) & -HasWedding(John))", "(HasWedding(John) & WellAttended(John)) -> (WeddingInJuly(John) | TravelsToParisForHoneymoon(John))"],
+"conclusion-fol": ["-HasWedding(John) & -TravelsToParisForHoneymoon(John)"]
+},
+{
+"premise-fol": ["exists x. (mammal(x) & have_teeth(x))", "-have_teeth(platypus)", "mammal(platypus)", "have_teeth(human)"],
+"conclusion-fol": ["mammal(platypus) & -have_teeth(platypus)"]
+},
+{
+"premise-fol": ["exists x. (mammal(x) & have_teeth(x))", "-have_teeth(platypus)", "mammal(platypus)", "have_teeth(human)"],
+"conclusion-fol": ["reptile(platypus)"]
+},
+{
+"premise-fol": ["exists x. (mammal(x) & have_teeth(x))", "-have_teeth(platypus)", "mammal(platypus)", "have_teeth(human)"],
+"conclusion-fol": ["mammal(human)"]
+},
+{
+"premise-fol": ["suck(plungers)", "suck(vacuums)", "suck(vampires)", "vacuum(space)", "-suck(duster)"],
+"conclusion-fol": ["suck(space)"]
+},
+{
+"premise-fol": ["suck(plungers)", "suck(vacuums)", "suck(vampires)", "vacuum(space)", "-suck(duster)"],
+"conclusion-fol": ["vampire(space)"]
+},
+{
+"premise-fol": ["suck(plungers)", "suck(vacuums)", "suck(vampires)", "vacuum(space)", "all x. (household_appliance(x) -> -suck(x))"],
+"conclusion-fol": ["all x. (household_appliance(x) -> suck(x))"]
+},
+{
+"premise-fol": ["Possible(Categorize(algorithm, And(SupervisedLearning, UnsupervisedLearning, ReinforcementLearning)))", "-Require(UnsupervisedLearning, LabelledData)", "Train(StateOfTheArtModel, MachineLearningAlgorithm)", "-Use(ReinforcementLearning, Train(StateOfTheArtModel))", "Require(MachineLearningAlgorithm, LabelledData)"],
+"conclusion-fol": ["Use(SupervisedLearning, Train(StateOfTheArtModel))"]
+},
+{
+"premise-fol": ["Possible(Categorize(MachineLearningAlgorithms, SupervisedLearning, UnsupervisedLearning, ReinforcementLearning))", "-Require(UnsupervisedLearning, LabelledData)", "Train(StateOfTheArtTextSummarizationModel, MachineLearningAlgorithms)", "-Use(ReinforcementLearning, Train(StateOfTheArtTextSummarizationModel))", "Require(MachineLearningAlgorithmForTrainingTextSummarizationModel, LabelledData)"],
+"conclusion-fol": ["Use(UnsupervisedLearning, Train(StateOfTheArtTextSummarizationModel))"]
+},
+{
+"premise-fol": ["all x. (cartoon_character(x) & funny(x) -> popular(x))", "all x. (cartoon_character(x) & ugly(x) -> -popular(x))", "all x. (cartoon_character(x) & loved_by_children(x) -> funny(x))", "all x. (cartoon_character(x) & from_simpsons(x) -> loved_by_children(x))", "all x. (cartoon_character(x) & yellow(x) -> from_simpsons(x))", "(from_simpsons(Ben) | funny(Ben))"],
+"conclusion-fol": ["loved_by_children(Ben)"]
+},
+{
+"premise-fol": ["all x. (cartoon_character(x) & funny(x) -> popular(x))", "all x. (cartoon_character(x) & ugly(x) -> -popular(x))", "all x. (cartoon_character(x) & loved_by_children(x) -> funny(x))", "all x. (cartoon_character(x) & from_simpsons(x) -> loved_by_children(x))", "all x. (cartoon_character(x) & yellow(x) -> from_simpsons(x))", "from_simpsons(Ben) | funny(Ben)"],
+"conclusion-fol": ["ugly(Ben) | yellow(Ben)"]
+},
+{
+"premise-fol": ["all x. (cartoon_character(x) & funny(x) -> popular(x))", "all x. (cartoon_character(x) & ugly(x) -> -popular(x))", "all x. (cartoon_character(x) & loved_by_children(x) -> funny(x))", "all x. (cartoon_character(x) & from_simpsons(x) -> loved_by_children(x))", "all x. (cartoon_character(x) & yellow(x) -> from_simpsons(x))", "(from_simpsons(Ben) | funny(Ben))"],
+"conclusion-fol": ["(yellow(Ben) & ugly(Ben)) | (-yellow(Ben) & -ugly(Ben))"]
+},
+{
+"premise-fol": ["all x. (breeding_back(x) -> (artificial_selection(x) & selective_breeding(x, domestic_animals)))", "exists x. (heck_cattle(x) & bred_back(x, 1920s) & resemble(x, aurochs))", "all x. (heck_cattle(x) -> animal(x))", "all x. (aurochs(x) -> animal(x))", "exists x. (animal(x) & bred_back(x) & resemble(x, extinct_animals))"],
+"conclusion-fol": ["exists x. (heck_cattle(x) & artificially_selected(x))"]
+},
+{
+"premise-fol": ["all x. (breeding_back(x) -> (artificial_selection(x) & selective_breeding(x, domestic_animals)))", "exists x. (heck_cattle(x) & bred_back(x, 1920s) & resemble(x, aurochs))", "heck_cattle(animals)", "aurochs(animals)", "exists x. (animal(x) & bred_back(x) & resemble(x, extinct_animals))"],
+"conclusion-fol": ["extinct(aurochs)"]
+},
+{
+"premise-fol": ["all x. (student(x) -> human(x))", "all x. (studies(x) -> student(x))", "all x. (person(x) -> (studies(x) | teaches(x)))", "all x. (young(x) -> -teaches(x))", "-teaches(Jerry) & -manager(Jerry)", "young(Rose) | student(Rose)"],
+"conclusion-fol": ["young(Jerry)"]
+},
+{
+"premise-fol": ["all x. (student(x) -> human(x))", "all x. (studies(x) -> student(x))", "all x. (person(x) -> (studies(x) | teaches(x)))", "all x. (young(x) -> -teaches(x))", "-teaches(Jerry) & -manager(Jerry)", "young(Rose) | student(Rose)"],
+"conclusion-fol": ["-young(Jerry)"]
+},
+{
+"premise-fol": ["all x. (student(x) -> human(x))", "all x. (studies(x) -> student(x))", "all x. (person(x) -> (studies(x) | teaches(x)))", "all x. (young(x) -> -teaches(x))", "-teaches(Jerry) & -manager(Jerry)", "young(Rose) | student(Rose)"],
+"conclusion-fol": ["human(Rose) | manager(Rose)"]
+},
+{
+"premise-fol": ["all x. (student(x) -> human(x))", "all x. (studies(x) -> student(x))", "all x. (studies(x) | teaches(x))", "all x. (young(x) -> -teaches(x))", "-teaches(Jerry) & -manager(Jerry)", "young(Rose) | student(Rose)"],
+"conclusion-fol": ["human(Rose) | manager(Jerry)"]
+},
+{
+"premise-fol": ["all x. (student(x) -> human(x))", "all x. (studies(x) -> student(x))", "all x. (person(x) -> (studies(x) | teaches(x)))", "all x. (young(x) -> -teaches(x))", "-teaches(Jerry) & -manager(Jerry)", "young(Rose) | student(Rose)"],
+"conclusion-fol": ["-((student(Rose) & human(Jerry)))"]
+},
+{
+"premise-fol": ["publishing_house(New_Vessel_Press) & specializes_in_translating(New_Vessel_Press, foreign_literature, English)", "all x. (published_by(x, New_Vessel_Press) -> in_English(x))", "published_by(Neapolitan_Chronicles, New_Vessel_Press)", "translated_from(Neapolitan_Chronicles, Italian)", "published_by(Palace_of_Flies, New_Vessel_Press)"],
+"conclusion-fol": ["in_English(Neapolitan_Chronicles)"]
+},
+{
+"premise-fol": ["publishing_house(New_Vessel_Press) & specializes_in_translating_foreign_literature_into_English(New_Vessel_Press)", "all x. (published_by_New_Vessel_Press(x) -> book(x) & in_English(x))", "book(Neapolitan_Chronicles) & published_by_New_Vessel_Press(Neapolitan_Chronicles)", "translated_from_Italian(Neapolitan_Chronicles)", "book(Palace_of_Flies) & published_by_New_Vessel_Press(Palace_of_Flies)"],
+"conclusion-fol": ["published_by_New_Vessel_Press(Harry_Potter)"]
+},
+{
+"premise-fol": ["publishing_house(New_Vessel_Press) & specializes_in_translating(New_Vessel_Press, foreign_literature, English)", "all x. (published_by(x, New_Vessel_Press) -> in_English(x))", "book(Neapolitan_Chronicles) & published_by(Neapolitan_Chronicles, New_Vessel_Press)", "translated_from(Neapolitan_Chronicles, Italian)", "book(Palace_of_Flies) & published_by(Palace_of_Flies, New_Vessel_Press)"],
+"conclusion-fol": ["translated_from(Palace_of_Flies, Italian)"]
+},
+{
+"premise-fol": ["all x. (OwnsLargeDesktopMonitorAtHome(x) -> (WorksRegularlyAtHome(x) & OftenWorksAtHome(x)))", "all x. (HasFullyStockedImpressiveHomeOffice(x) -> OwnsLargeDesktopMonitorAtHome(x))", "all x. (WorksRegularlyAtHome(x) & OftenWorksAtHome(x) -> SpendsFreeTimeTidyingOrganizingHome(x))", "all x. (WorksRegularlyAtHome(x) & OftenWorksAtHome(x) -> VisitsOfficeSupplyStoreRegularly(x))", "all x. (SpendsFreeTimeTidyingOrganizingHome(x) -> -GoesToBedLateAndWakesUpAfterNoon(x))", "(GoesToBedLateAndWakesUpAfterNoon(Remy) & SpendsFreeTimeTidyingOrganizingHome(Remy)) | (-GoesToBedLateAndWakesUpAfterNoon(Remy) & -SpendsFreeTimeTidyingOrganizingHome(Remy))"],
+"conclusion-fol": ["VisitsOfficeSupplyStoreRegularly(Remy)"]
+},
+{"premise-fol": ["all x. (OwnsLargeDesktopMonitorAtHome(x) -> (WorksRegularlyAtHome(x) & OftenWorksAtHome(x)))", "all x. (HasFullyStockedImpressiveHomeOffice(x) -> OwnsLargeDesktopMonitorAtHome(x))", "all x. (WorksRegularlyAtHome(x) & OftenWorksAtHome(x) -> SpendsFreeTimeTidyingOrganizingHome(x))", "all x. (WorksRegularlyAtHome(x) & OftenWorksAtHome(x) -> RegularlyVisitsOfficeSupplyStore(x))", "all x. (SpendsFreeTimeTidyingOrganizingHome(x) -> -(GoesToBedLate(x) & WakesUpAfterNoon(x)))", "(GoesToBedLate(Remy) & WakesUpAfterNoon(Remy) & SpendsFreeTimeTidyingOrganizingHome(Remy)) | (-(GoesToBedLate(Remy) & WakesUpAfterNoon(Remy)) & -SpendsFreeTimeTidyingOrganizingHome(Remy))"], "conclusion-fol": ["HasFullyStockedImpressiveHomeOffice(Remy) & RegularlyVisitsOfficeSupplyStore(Remy)"]},
+{"premise-fol": ["all x. (OwnsLargeDesktopMonitorAtHome(x) -> (RegularlyWorksAtHome(x) & OftenWorksAtHome(x)))", "all x. (HasFullyStockedImpressiveHomeOffice(x) -> OwnsLargeDesktopMonitorAtHome(x))", "all x. (RegularlyWorksAtHome(x) & OftenWorksAtHome(x) -> SpendsFreeTimeTidyingAndOrganizingHome(x))", "all x. (RegularlyWorksAtHome(x) & OftenWorksAtHome(x) -> RegularlyVisitsOfficeSupplyStore(x))", "all x. (SpendsFreeTimeTidyingAndOrganizingHome(x) -> - (GoesToBedLate(x) & WakesUpAfterNoon(x)))", "((GoesToBedLate(Remy) & WakesUpAfterNoon(Remy) & SpendsFreeTimeTidyingAndOrganizingHome(Remy)) | - (GoesToBedLate(Remy) & WakesUpAfterNoon(Remy) & SpendsFreeTimeTidyingAndOrganizingHome(Remy)))", "- (DependentOnCaffeine(Remy) & Student(Remy)) -> ((DependentOnCaffeine(Remy) & Student(Remy)) | (- DependentOnCaffeine(Remy) & - Student(Remy)))"], "conclusion-fol": ["((GoesToBedLate(Remy) & WakesUpAfterNoon(Remy)) | RegularlyVisitsOfficeSupplyStore(Remy)) -> - (SpendsFreeTimeTidyingAndOrganizingHome(Remy) & HasFullyStockedImpressiveHomeOffice(Remy))"]},
+{
+"premise-fol": ["all x. (human(x) -> mortal(x))", "all x. (greek(x) -> human(x))"],
+"conclusion-fol": ["exists x. (greek(x) & mortal(x))"]
+},
+{
+"premise-fol": ["all x. (student(x) & works_in_library(x) -> -from_computer_science_department(x))", "all x. (student(x) & has_part_time_job(x) -> works_in_library(x))", "all x. (student(x) & takes_database_course(x) -> from_computer_science_department(x))", "all x. (student(x) & instructed_by_david(x) -> takes_database_course(x))", "all x. (student(x) & works_in_lab(x) -> instructed_by_david(x))", "student(James) & works_in_lab(James)", "-(has_part_time_job(Jack) | works_in_lab(Jack))"],
+"conclusion-fol": ["has_part_time_job(James)"]
+},
+{
+"premise-fol": ["all x. (Student(x) & WorksInLibrary(x) -> -FromComputerScienceDepartment(x))", "all x. (Student(x) & HasPartTimeJob(x) -> WorksInLibrary(x))", "all x. (Student(x) & TakesDatabaseCourse(x) -> FromComputerScienceDepartment(x))", "all x. (Student(x) & InstructedByDavid(x) -> TakesDatabaseCourse(x))", "all x. (Student(x) & WorksInLab(x) -> InstructedByDavid(x))", "Student(James) & WorksInLab(James)", "-(HasPartTimeJob(Jack) | WorksInLab(Jack))"],
+"conclusion-fol": ["-HasPartTimeJob(James)"]
+},
+{
+"premise-fol": ["all x. (Student(x) & WorksInLibrary(x) -> -FromComputerScienceDepartment(x))", "all x. (Student(x) & HasPartTimeJob(x) -> WorksInLibrary(x))", "all x. (Student(x) & TakesDatabaseCourse(x) -> FromComputerScienceDepartment(x))", "all x. (Student(x) & InstructedByDavid(x) -> TakesDatabaseCourse(x))", "all x. (Student(x) & WorksInLab(x) -> InstructedByDavid(x))", "Student(James) & WorksInLab(James)", "-(HasPartTimeJob(Jack) | WorksInLab(Jack))"],
+"conclusion-fol": ["(TakesDatabaseCourse(James) | HasPartTimeJob(James))"]
+},
+{
+"premise-fol": ["all x. (student(x) & works_in_library(x) -> -from_CS_department(x))", "all x. (student(x) & has_university_part_time_job(x) -> works_in_library(x))", "all x. (student(x) & takes_database_course(x) -> from_CS_department(x))", "all x. (student(x) & instructed_by_David(x) -> takes_database_course(x))", "all x. (student(x) & works_in_lab(x) -> instructed_by_David(x))", "student(James) & works_in_lab(James)", "-(has_university_part_time_job(Jack) | works_in_lab(Jack))"],
+"conclusion-fol": ["takes_database_course(Jack)"]
+},
+{
+"premise-fol": ["likes_music(George) -> wants_to_compose(George)", "has_access_to_program(George) -> can_compose(George)", "(can_compose(George) & wants_to_compose(George)) -> will_compose(George)"],
+"conclusion-fol": ["(likes_music(George) & has_access_to_program(George)) -> will_compose(George)"]
+},
+{
+"premise-fol": ["likes_music(George) -> wants_to_compose(George)", "has_access_to_program(George) -> can_compose(George)", "(can_compose(George) & wants_to_compose(George)) -> will_compose(George)"],
+"conclusion-fol": ["-will_compose(George) -> -can_compose(George)"]
+},
+{
+"premise-fol": ["all x. (hawk(x) -> -lands(x))", "exists x. (bird(x) & hawk(x))"],
+"conclusion-fol": ["all x. (bird(x) -> lands(x))"]
+},
+{
+"premise-fol": ["exists x. (MondayAt8PM(x) & GivenOutOnTV(x, roses))", "all x. (GivenOutOnTV(x, roses) -> OnTheBachelor(x))", "all x. (OnTheBachelor(x) -> PortraysRealPeopleLives(x))", "all x. (PortraysRealPeopleLives(x) -> RealityTVShow(x))", "-RealityTVShow(BreakingBad)"],
+"conclusion-fol": ["MondayAt8PM(BreakingBad)"]
+},
+{
+"premise-fol": ["exists x. (MondayAt8PM(x) & GivenOutOnTV(x, roses))", "all x. (GivenOutOnTV(x, roses) -> OnTheBachelor(x))", "all x. (OnTheBachelor(x) -> PortraysRealPeopleLives(x))", "all x. (PortraysRealPeopleLives(x) -> RealityTVShow(x))", "-RealityTVShow(BreakingBad)"],
+"conclusion-fol": ["TVShow(BreakingBad) & exists x. (MondayAt8PM(x) & GivenOutOnTV(x, roses))"]
+},
+{
+"premise-fol": ["exists x. (rose(x) & given_on_tv(x) & on_some_mondays_at_8pm(x))", "all x. (rose(x) & given_on_tv(x) -> on_the_bachelor(x))", "all x. (on_the_bachelor(x) -> portrays_lives_of_real_people(x))", "all x. (portrays_lives_of_real_people(x) -> reality_tv_show(x))", "-reality_tv_show(breaking_bad)"],
+"conclusion-fol": ["all x. (rose(x) & given_out_during(breaking_bad) -> on_monday_at_8pm(x))"]
+},
+{
+"premise-fol": ["politician(heinrich_schmidt) & nazi(heinrich_schmidt) & german(heinrich_schmidt)", "member(heinrich_schmidt, prussian_state_parliament) & member(heinrich_schmidt, nazi_reichstag)"],
+"conclusion-fol": ["german(heinrich_schmidt) | russian(heinrich_schmidt)"]
+},
+{
+"premise-fol": ["Politician(Heinrich_Schmidt) & Nazi(Heinrich_Schmidt) & German(Heinrich_Schmidt)", "Member(Heinrich_Schmidt, Prussian_State_Parliament) & Member(Heinrich_Schmidt, Nazi_Reichstag)"],
+"conclusion-fol": ["exists x. (Politician(x) & Nazi(x) & German(x) & Member(x, Prussian_State_Parliament) & Member(x, Nazi_Reichstag))"]
+},
+{
+"premise-fol": ["Politician(Heinrich_Schmidt) & Nazi(Heinrich_Schmidt) & German(Heinrich_Schmidt)", "Member(Heinrich_Schmidt, Prussian_State_Parliament) & Member(Heinrich_Schmidt, Nazi_Reichstag)"],
+"conclusion-fol": ["all x. (Politician(x) -> -Member(x, Nazi_Reichstag))"]
+},
+{
+"premise-fol": ["all x. (deadly_disease(x) -> low_survival_rate(x))", "all x. (severe_cancer(x) -> deadly_disease(x))", "severe_cancer(bile_duct_cancer)", "all x. (cholangiocarcinoma(x) -> bile_duct_cancer(x))", "all x. (mild_flu(x) -> -low_survival_rate(x))", "all x. ((bile_duct_cancer(x) & low_survival_rate(x)) -> -bile_duct_cancer(x))"],
+"conclusion-fol": ["severe_cancer(colorectal_cancer)"]
+},
+{
+"premise-fol": ["all x. (deadly_disease(x) -> low_survival_rate(x))", "all x. (severe_cancer(x) -> deadly_disease(x))", "severe_cancer(bile_duct_cancer)", "all x. (cholangiocarcinoma(x) -> bile_duct_cancer(x))", "all x. (mild_flu(x) -> -low_survival_rate(x))", "(bile_duct_cancer(colorectal_cancer) & low_survival_rate(colorectal_cancer)) -> -bile_duct_cancer(colorectal_cancer)"],
+"conclusion-fol": ["(bile_duct_cancer(colorectal_cancer) | cholangiocarcinoma(colorectal_cancer)) -> (bile_duct_cancer(colorectal_cancer) & mild_flu(colorectal_cancer))"]
+},
+{
+"premise-fol": ["all x. (deadly_disease(x) -> low_survival_rate(x))", "all x. (severe_cancer(x) -> deadly_disease(x))", "severe_cancer(bile_duct_cancer)", "all x. (cholangiocarcinoma(x) -> bile_duct_cancer(x))", "all x. (mild_flu(x) -> -low_survival_rate(x))", "all x. (colorectal_cancer(x) & low_survival_rate(x) -> -bile_duct_cancer(x))"],
+"conclusion-fol": ["all x. ((colorectal_cancer(x) & -mild_flu(x) & cholangiocarcinoma(x)) -> (bile_duct_cancer(x) | cholangiocarcinoma(x)))"]
+},
+{
+"premise-fol": ["all x. (RegularlyEatsSalads(x) -> VeryConsciousAboutHealthAndEatingHabits(x))", "all x. (GrewUpInHealthConsciousChildhoodHomes(x) -> RegularlyEatsSalads(x))", "all x. (FulfillsNutritionalDailyIntakes(x) -> GrewUpInHealthConsciousChildhoodHomes(x))", "all x. (GoodRelationshipWithParents(x) -> FulfillsNutritionalDailyIntakes(x))", "all x. (GoodRelationshipWithParents(x) -> -RegularlyEatsSalads(x))", "all x. (VisitsGymAtLeastOnceADay(x) -> AlwaysFulfillsDailyNutritionalIntakes(x))", "(GrewUpInHealthConsciousChildhoodHome(Taylor) & GoodRelationshipWithParents(Taylor)) | (-GrewUpInHealthConsciousChildhoodHome(Taylor) & -GoodRelationshipWithParents(Taylor))"],
+"conclusion-fol": ["RegularlyEatsSalads(Taylor)"]
+},
+{
+"premise-fol": ["all x. (RegularlyEatsSalads(x) -> VeryConsciousAboutHealthAndEatingHabits(x))", "all x. (GrewUpInHealthConsciousHome(x) -> RegularlyEatsSalads(x))", "all x. (FulfillsNutritionalDailyIntakes(x) -> GrewUpInHealthConsciousHome(x))", "all x. (GoodRelationshipWithParents(x) -> FulfillsNutritionalDailyIntakes(x))", "all x. (GoodRelationshipWithParents(x) -> -RegularlyEatsSalads(x))", "all x. (VisitsGymAtLeastOnceADay(x) -> AlwaysFulfillsDailyNutritionalIntakes(x))", "(GrewUpInHealthConsciousHome(Taylor) & GoodRelationshipWithParents(Taylor)) | (-GrewUpInHealthConsciousHome(Taylor) & -GoodRelationshipWithParents(Taylor))"],
+"conclusion-fol": ["VisitsGymAtLeastOnceADay(Taylor)"]
+},
+{
+"premise-fol": ["all x. (RegularlyEatsSalad(x) -> VeryConsciousAboutHealthAndEatingHabits(x))", "all x. (GrewUpInHealthConsciousHome(x) -> RegularlyEatsSalad(x))", "all x. (FulfillsDailyNutritionalIntake(x) -> GrewUpInHealthConsciousHome(x))", "all x. (GoodRelationshipWithParents(x) -> FulfillsDailyNutritionalIntake(x))", "all x. (GoodRelationshipWithParents(x) -> -RegularlyEatsSalad(x))", "all x. (VisitsGymAtLeastOnceADay(x) -> AlwaysFulfillsDailyNutritionalIntake(x))", "(GrewUpInHealthConsciousHome(Taylor) & GoodRelationshipWithParents(Taylor)) | (-GrewUpInHealthConsciousHome(Taylor) & -GoodRelationshipWithParents(Taylor))"],
+"conclusion-fol": ["-GrewUpInHealthConsciousHome(Taylor) & -VisitsGymAtLeastOnceADay(Taylor)"]
+},
+{
+"premise-fol": ["SportingEvent(OlympicGames)", "LastOlympicGames(Tokyo)", "MostMedals(UnitedStates, Tokyo)"],
+"conclusion-fol": ["SportingEvent(WorldChampionships)"]
+},
+{
+"premise-fol": ["SportingEvent(OlympicGames)", "LastEventLocation(OlympicGames, Tokyo)", "MostMedalsWon(UnitedStates, Tokyo)"],
+"conclusion-fol": ["-LastEventLocation(OlympicGames, Tokyo)"]
+},
+{
+"premise-fol": ["SportingEvent(OlympicGames)", "LastEventLocation(OlympicGames, Tokyo)", "MostMedalsWon(UnitedStates, Tokyo)"],
+"conclusion-fol": ["MostMedalsWon(UnitedStates, LastOlympicGames)"]
+},
+{
+"premise-fol": ["all x. (horse(x) -> has_hooves(x))", "all x. (human(x) -> -has_hooves(x))"],
+"conclusion-fol": ["exists x. (human(x) & horse(x))"]
+},
+{
+"premise-fol": ["flies_to(susan, LGA)", "-possible(same(departure_airport, arrival_airport))", "flies_from(john, LGA)"],
+"conclusion-fol": ["flies_from(susan, LGA)"]
+},
+{
+"premise-fol": ["flies_to(susan, LGA_airport)", "-possible(same(departure_airport, arrival_airport))", "flies_from(john, LGA_airport)"],
+"conclusion-fol": ["flies_to(john, LGA_airport)"]
+},
+{
+"premise-fol": ["all x. (nice_to_animals(x) -> -mean_to_animals(x))", "exists x. (grumpy_person(x) & mean_to_animals(x))", "all x. (animal_lover(x) -> nice_to_animals(x))", "all x. (owns_pet(x) -> love_animals(x))", "owns_pet(Tom)"],
+"conclusion-fol": ["grumpy_person(Tom)"]
+},
+{
+"premise-fol": ["all x. (nice_to_animals(x) -> -mean_to_animals(x))", "exists x. (grumpy_person(x) & mean_to_animals(x))", "all x. (animal_lover(x) -> nice_to_animals(x))", "all x. (owns_pet(x) -> love_animals(x))", "owns_pet(Tom)"],
+"conclusion-fol": ["-grumpy_person(Tom) & -mean_to_animals(Tom)"]
+},
+{
+"premise-fol": ["all x. (nice_to_animals(x) -> -mean_to_animals(x))", "exists x. (grumpy_person(x) & mean_to_animals(x))", "all x. (animal_lover(x) -> nice_to_animals(x))", "all x. (owns_pet(x) -> love_animals(x))", "owns_pet(Tom)"],
+"conclusion-fol": ["-((grumpy_person(Tom) & mean_to_animals(Tom)) -> (-grumpy_person(Tom) & -animal_lover(Tom)))"]
+},
+{
+"premise-fol": ["-novel(podcast)", "all x. (born_in_american_city(x) -> american(x))", "all x. all y. ((novel(y) & written_by(x, y)) -> novel_writer(x))", "american(dani_shapiro) & writer(dani_shapiro)", "written_by(dani_shapiro, family_history)", "novel(family_history) & written_in(family_history, 2003)", "created(dani_shapiro, family_secrets)", "american_city(boston)"],
+"conclusion-fol": ["novel_writer(dani_shapiro)"]
+},
+{
+"premise-fol": ["-novel(podcast)", "all x. (born_in_american_city(x) -> american(x))", "all x. all y. ((novel(y) & written_by(x, y)) -> novel_writer(x))", "american_writer(Dani_Shapiro)", "written_by(Dani_Shapiro, Family_History)", "novel(Family_History) & written_in(Family_History, 2003)", "created(Dani_Shapiro, Family_Secrets)", "american_city(Boston)"],
+"conclusion-fol": ["novel(Family_Secrets)"]
+},
+{
+"premise-fol": ["-novel(podcast)", "all x. (born_in_american_city(x) -> american(x))", "all x. all y. ((novel(y) & written_by(x, y)) -> novel_writer(x))", "american_writer(Dani_Shapiro)", "written_by(Dani_Shapiro, Family_History)", "novel(Family_History)", "created(Dani_Shapiro, Family_Secrets)", "american_city(Boston)"],
+"conclusion-fol": ["born_in(Dani_Shapiro, Boston)"]
+},
+{
+"premise-fol": ["exists x. (basketball_player(x) & -American(x))", "all x. (basketball_player(x) -> tall(x))", "all x. (tall(x) -> wears_large_shoes(x))", "all x. (wears_large_shoes(x) -> wears_large_clothes(x))", "-wears_large_clothes(Yuri)"],
+"conclusion-fol": ["American(Yuri)"]
+},
+{
+"premise-fol": ["exists x. (basketball_player(x) & -american(x))", "all x. (basketball_player(x) -> tall(x))", "all x. (tall(x) -> wears_large_shoes(x))", "all x. (wears_large_shoes(x) -> wears_large_clothes(x))", "-wears_large_clothes(Yuri)"],
+"conclusion-fol": ["-american_basketball_player(Yuri)"]
+},
+{
+"premise-fol": ["exists x. (basketball_player(x) & -American(x))", "all x. (basketball_player(x) -> tall(x))", "all x. (tall(x) -> wears_large_shoes(x))", "all x. (wears_large_shoes(x) -> wears_large_clothes(x))", "-wears_large_clothes(Yuri)"],
+"conclusion-fol": ["basketball_player(Yuri) & American(Yuri)"]
+},
+{
+"premise-fol": ["exists x. (basketball_player(x) & -american(x))", "all x. (basketball_player(x) -> tall(x))", "all x. (tall(x) -> wears_large_shoes(x))", "all x. (wears_large_shoes(x) -> wears_large_clothes(x))", "-wears_large_clothes(Yuri)"],
+"conclusion-fol": ["-wears_large_shoes(Yuri) -> (basketball_player(Yuri) & american(Yuri))"]
+},
+{
+"premise-fol": ["exists x. (basketball_player(x) & -American(x))", "all x. (basketball_player(x) -> tall(x))", "all x. (tall(x) -> wears_large_shoes(x))", "all x. (wears_large_shoes(x) -> wears_large_clothes(x))", "-wears_large_clothes(Yuri)"],
+"conclusion-fol": ["-American(Yuri) & basketball_player(Yuri) -> basketball_player(Yuri)"]
+},
+{
+"premise-fol": ["all x. (event(x) -> (happy(x) | sad(x)))", "exists x. (event(x) & happy(x))"],
+"conclusion-fol": ["all x. (event(x) -> sad(x))"]
+},
+{"premise-fol": ["Winner(Steinhauer, du_Maurier_Classic_1992)", "Participated(Steinhauer, du_Maurier_Classic_1992)", "exists x. (SixWayTie(x, Leaderboard) & From(x, Belgium))", "From(Descampe, Belgium) & OnLeaderboard(Descampe, du_Maurier_Classic_1992)", "all x. (OnLeaderboard(x, du_Maurier_Classic_1992) -> Participated(x, du_Maurier_Classic_1992))"], "conclusion-fol": ["-Winner(Steinhauer, du_Maurier_Classic_1992)"]},
+{"premise-fol": ["Winner(Steinhauer, du_Maurier_Classic_1992)", "Participated(Steinhauer, du_Maurier_Classic_1992)", "exists x. (SixWayTie(x) & From(x, Belgium))", "From(Descampe, Belgium) & OnLeaderboard(Descampe, du_Maurier_Classic_1992)", "all x. (OnLeaderboard(x, du_Maurier_Classic_1992) -> Participated(x, du_Maurier_Classic_1992))"], "conclusion-fol": ["InSixWayTie(Descampe, du_Maurier_Classic_1992)"]},
+{
+"premise-fol": ["all x. (barks(x) -> -likes(jane, x))", "all x. (dog(x) -> (animal(x) & barks(x)))", "all x. (jumps(x) -> likes(jane, x))", "all x. (has_legs(x) -> jumps(x))", "all x. (terricolous(x) -> has_legs(x))", "-(jumps(kiki) & has_legs(kiki)) -> (terricolous(kiki) | has_legs(kiki))"],
+"conclusion-fol": ["terricolous(kiki)"]
+},
+{
+"premise-fol": ["all x. (animal(x) & barks(x) -> -likes(jane, x))", "all x. (dog(x) -> (animal(x) & barks(x)))", "all x. (animal(x) & jumps(x) -> likes(jane, x))", "all x. (animal(x) & has_legs(x) -> jumps(x))", "all x. (animal(x) & terricolous(x) -> has_legs(x))", "(-jumps(kiki) & -has_legs(kiki)) -> (terricolous(kiki) | has_legs(kiki))"],
+"conclusion-fol": ["barks(kiki) & dog(kiki)"]
+},
+{
+"premise-fol": ["all x. (animal(x) & barks(x) -> -likes(jane, x))", "all x. (dog(x) -> (animal(x) & barks(x)))", "all x. (animal(x) & jumps(x) -> likes(jane, x))", "all x. (animal(x) & has_legs(x) -> jumps(x))", "all x. (animal(x) & terricolous(x) -> has_legs(x))", "-(jumps(kiki) & has_legs(kiki)) -> (terricolous(kiki) | has_legs(kiki))"],
+"conclusion-fol": ["-barks(kiki) & -dog(kiki)"]
+},
+{
+"premise-fol": ["KnownAs(Ailton_Silva, Ailton)", "FootballPlayer(Ailton) & LoanedTo(Ailton, Braga)", "FootballPlayer(Ailton_Silva) & PlaysFor(Ailton_Silva, Nautico) & Brazilian(Ailton_Silva)", "FootballClub(Nautico) & FootballClub(Braga)", "FootballClub(Fluminense)"],
+"conclusion-fol": ["all x. (PlaysFor(x, Nautico) -> -Brazilian(x))"]
+},
+{
+"premise-fol": ["KnownAs(Ailton_Silva, Ailton)", "FootballPlayer(Ailton) & LoanedTo(Ailton, Braga)", "FootballPlayer(Ailton_Silva) & PlaysFor(Ailton_Silva, Nautico) & Brazilian(Ailton_Silva)", "FootballClub(Nautico) & FootballClub(Braga)", "FootballClub(Fluminense)"],
+"conclusion-fol": ["-PlaysForClub(Ailton_Silva)"]
+},
+{
+"premise-fol": ["KnownAs(Ailton_Silva, Ailton)", "FootballPlayer(Ailton) & LoanedTo(Ailton, Braga)", "FootballPlayer(Ailton_Silva) & PlaysFor(Ailton_Silva, Nautico) & Brazilian(Ailton_Silva)", "FootballClub(Nautico) & FootballClub(Braga)", "FootballClub(Fluminense)"],
+"conclusion-fol": ["-LoanedToClub(Ailton)"]
+},
+{
+"premise-fol": ["KnownAs(Ailton_Silva, Ailton)", "FootballPlayer(Ailton) & LoanedTo(Ailton, Braga)", "FootballPlayer(Ailton_Silva) & PlaysFor(Ailton_Silva, Nautico) & Brazilian(Ailton_Silva)", "FootballClub(Nautico) & FootballClub(Braga)", "FootballClub(Fluminense)"],
+"conclusion-fol": ["PlayedFor(Ailton_Silva, Fluminense)"]
+},
+{
+"premise-fol": ["CommonlyKnownAs(Ailton_Silva, Ailton)", "FootballPlayer(Ailton) & LoanedOutTo(Ailton, Braga)", "Footballer(Ailton_Silva) & PlaysFor(Ailton_Silva, Nautico) & From(Ailton_Silva, Brazilia)", "FootballClub(Nautico) & FootballClub(Braga)", "FootballClub(Fluminense)"],
+"conclusion-fol": ["LoanedOutTo(Ailton_Silva, x) & FootballClub(x)"]
+}
+  ]

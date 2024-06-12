@@ -84,31 +84,32 @@ def fol_conversion(premise_graphs_list, conclusion_graphs_list, api_key):
 
     prompt_1 = f"""
     I will provide you with premises and conclusions in 
-    /AMR, and you will convert them into First Order Logic (FOL) expressions.
+    /AMR, and you will convert them into First Order Logic (FOL) expressions. 
+    /Follow the given examples for format and syntax.
     Examples:
     Example1:
-    "premises":"(p / occur-01\n:ARG1 (m / monkeypox-virus)\n:ARG2 (b / being)\n:ARG3 (g / get-01\n:ARG0 b\n:ARG1 m))\n(a / animal\n:mod (c / certain)\n:domain (m / monkeypox-virus))\n(h / human\n:ARG0-of (m / mammal))\n(m / mammal\n:ARG0-of (a / animal))\n(s / symptom\n:ARG1 (m / monkeypox-virus)\n:ARG2 (f / fever)\n:ARG3 (h / headache)\n:ARG4 (m / muscle-pain)\n:ARG5 (t / tiredness))\n(p / people\n:ARG0-of (t / tired)\n:ARG1 (f / flu))"
-    "premises-FOL":["exist x. (OccurIn(monkeypoxVirus, x) & Get(x, monkeypoxVirus))","exist x. (Animal(x) & OccurIn(monkeypoxVirus, x))","all x (Human(x) -> Mammal(x))","all x (Mammal(x) -> Animal(x))","exist x. (SymptomOf(x, monkeypoxVirus) & (Fever(x) | Headache(x) | MusclePain(x) | Tired(x)))","all x. (Human(x) & Get(x, flu) -> Feel(x, tired))"]
-    "conclusion":"(a / animal)"
-    "conclusion-FOL":["exist x. (Animal(x))"]
+    "premises":['# ::snt A dog never tells the truth.\n(t / tell-01\n      :polarity -\n      :ARG0 (d / dog)\n      :ARG1 (t2 / truth)\n      :time (e / ever))', '# ::snt Some poker players are dogs.\n(d / dog\n      :domain (p / person\n            :ARG0-of (p2 / play-01\n                  :ARG1 (p3 / poker))\n            :quant (s / some)))'] 
+    "premises-FOL":["all x. (dog(x) -> -tells_truth(x))", "exists x. (poker_player(x) & dog(x))"]
+    "conclusion":['# ::snt Some poker players never tell the truth.\n(t / tell-01\n      :polarity -\n      :ARG0 (p / person\n            :ARG0-of (p2 / play-01\n                  :ARG1 (p3 / poker))\n            :quant (s / some))\n      :ARG1 (t2 / truth)\n      :time (e / ever))']
+    "conclusion-FOL":["exists x. (poker_player(x) & -tells_truth(x))"]
     
     Example2:
-    "premises":"(h / human\n:mod (a / all))\n(m / mortal\n:domain h)\n(s / socrates\n:instance-of h)"
-    "premises-FOL":["all x. (Human(x) -> Mortal(x))", "Human(Socrates)"]
-    "conclusion":"(m / mortal\n:instance-of s)"
-    "conclusion-FOL":["Mortal(Socrates)"]
+    "premises":['# ::snt All eels are fish. \n(f / fish\n      :domain (e / eel\n            :mod (a / all)))', '# ::snt No fish are plants. \n(p / plant\n      :domain (f / fish\n            :polarity -))', '# ::snt A thing is either a plant or animal.\n(o / or\n      :op1 (p / plant)\n      :op2 (a / animal)\n      :domain (t / thing))', '# ::snt Nothing that breathes is paper. \n(p / paper\n      :domain (n / nothing\n            :ARG0-of (b / breathe-01)))', '# ::snt All animals breathe.\n(b / breathe-01\n      :ARG0 (a / animal\n            :mod (a2 / all)))', '# ::snt If a sea eel is either an eel or a plant, then a sea eel is an eel or an animal.\n(h / have-condition-91\n      :ARG1 (o / or\n            :op1 (e / eel)\n            :op2 (a / animal)\n            :domain (e2 / eel\n                  :mod (s / sea)))\n      :ARG2 (o2 / or\n            :op1 (e3 / eel)\n            :op2 (p / plant)\n            :domain e2))']
+    "premises-FOL":["all x. (fish(x) -> eel(x))", "all x. (fish(x) -> -plant(x))", "all x. (thing(x) -> (plant(x) | animal(x)))", "all x. (breathes(x) -> -paper(x))", "all x. (animal(x) -> breathes(x))", "(all x (eel(x) & (eel(x) | plant(x))) -> (eel(x) | animal(x)))"]
+    "conclusion":['# ::snt Sea eel is an eel.\n(e / eel\n      :domain (e2 / eel\n            :mod (s / sea)))']
+    "conclusion-FOL":["eel(sea_eel)"]
     
     Example3:
-    "premises":"(r / rain-01\n:ARG0 (w / wet\n:ARG1 (g / ground)))\n(r / rain-01\n:time (n / now))"
-    "premises-FOL":["all x. (Rain(x) -> Wet(Ground))", "Rain(now)"]
-    "conclusion":"(w / wet\n:ARG1 (g / ground))"
-    "conclusion-FOL":["Wet(Ground)"]
+    "premises":['# ::snt Six, seven and eight are real numbers.\n(n / number\n      :ARG1-of (r / real-04)\n      :domain (a / and\n            :op1 6\n            :op2 7\n            :op3 8))', '# ::snt If a real number equals another real number adding one, the first number is larger.\n(h / have-degree-91\n      :ARG1 (n / number\n            :ord (o / ordinal-entity\n                  :value 1))\n      :ARG2 (l / large)\n      :ARG3 (m / more)\n      :condition (e / equal-01\n            :ARG1 (n2 / number\n                  :ARG1-of (r / real-04))\n            :ARG2 (n3 / number\n                  :mod (a / another)\n                  :ARG0-of (a2 / add-02\n                        :ARG1 (o2 / one)))))', '# ::snt If the number x is larger than number y, then y is not larger than x.\n(h / have-condition-91\n      :ARG1 (h2 / have-degree-91\n            :polarity -\n            :ARG1 (y / y)\n            :ARG2 (l / large)\n            :ARG3 (m / more)\n            :ARG4 (n / number\n                  :mod (v / variable\n                        :name (n2 / name\n                              :op1 "x"))))\n      :ARG2 (h3 / have-degree-91\n            :ARG1 (n3 / number\n                  :mod (v2 / variable\n                        :name (n4 / name\n                              :op1 "y")))\n            :ARG2 (l2 / large)\n            :ARG3 (m2 / more)\n            :ARG4 n))', '# ::snt Seven equals six plus one.\n(e / equal-01\n      :ARG1 (d / difference-of\n            :op1 7\n            :op2 6)\n      :ARG2 1)', '# ::snt Eight equals seven plus one.\n(e / equal-01\n      :ARG1 (d / difference-of\n            :op1 7\n            :op2 1)\n      :ARG2 8)', '# ::snt Two is positive.\n(p / positive\n      :domain (t / thing\n            :quant 2))', '# ::snt If a number is positive, then the double of it is also positive.\n(p / positive\n      :domain (d / double-01\n            :ARG1 (n / number))\n      :mod (a / also)\n      :condition (p2 / positive\n            :domain n))', '# ::snt Eight is the double of four.\n(d / double-01\n      :ARG1 (t / temporal-quantity\n            :quant 8\n            :unit (y / year))\n      :ARG3 (t2 / temporal-quantity\n            :quant 4\n            :unit (y2 / year)))', '# ::snt Four is the double of two.\n(d / double-01\n      :ARG1 (t / thing\n            :quant 4)\n      :ARG3 (t2 / thing\n            :quant 2))'] 
+    "premises-FOL":["RealNum(six) & RealNum(seven) & RealNum(eight)", "all x. all y. (RealNum(x) & RealNum(y) & EqualAddOne(x, y) -> Larger(x, y))", "EqualAddOne(seven, six)", "EqualAddOne(eight, seven)", "Positive(two)", "all x. all y. ((Positive(x) & EqualDouble(y, x)) -> Positive(y))", "EqualDouble(eight, four)", "EqualDouble(four, two)"]
+    "conclusion":['# ::snt Eight is positive.\n(p / positive\n      :domain (n / numerical-quantity\n            :quant 8))']
+    "conclusion-FOL":["Positive(eight)"]
     
     Example4:
-    "premise":"(r / when\n:op1 (p / person)\n:op2 (l / listen\n:ARG0 p\n:ARG1 (m / music))\n:op3 (f / feel\n:ARG0 p\n:ARG1 (e / emotion)))\n(l / listen\n:ARG0 (p / person :name "Jack")\n:ARG1 (s / song\n:name (n / name :op "Moonlight Sonata")\n:composer (c / composer\n :name (n2 / name :op "Ludwig Beethoven"))))
-    "premise-FOL":["all x,y. (Person(x) & Music(y) & ListensTo(x,y) -> FeelsEmotion(x))", "ListensTo(Jack, MoonlightSonata)", "Composer(MoonlightSonata, LudwigBeethoven)"]
-    "conclusion":"(f / feel\n:ARG0 (p / person :name "Jack")\n:ARG1 (e / emotion))"
-    "conclusion-FOL":["FeelsEmotion(Jack)"]
+    "premise":['# ::snt All people who regularly drink coffee are dependent on caffeine.\n(d / depend-01\n      :ARG0 (p / person\n            :mod (a / all)\n            :ARG0-of (d2 / drink-01\n                  :ARG1 (c / coffee)\n                  :ARG1-of (r / regular-02)))\n      :ARG1 (c2 / caffeine))', '# ::snt People either regularly drink coffee or joke about being addicted to caffeine.\n(o / or\n      :op1 (d / drink-01\n            :ARG0 (p / person)\n            :ARG1 (c / coffee)\n            :ARG1-of (r / regular-02))\n      :op2 (j / joke-01\n            :ARG0 p\n            :ARG2 (a / addict-01\n                  :ARG1 p\n                  :ARG2 (c2 / caffeine))))', '# ::snt No one who jokes about being addicted to caffeine is unaware that caffeine is a drug.\n(r / realize-01\n      :polarity -\n      :ARG0 (n / no-one\n            :ARG0-of (j / joke-01\n                  :ARG2 (a / addict-01\n                        :ARG1 n\n                        :ARG2 (c / caffeine))))\n      :ARG1 (d / drug\n            :domain c))', '# ::snt Rina is either a student and unaware that caffeine is a drug, or neither a student nor unaware that caffeine is a drug.\n(o / or\n      :op1 (a / and\n            :op1 (p / person\n                  :ARG0-of (s / study-01)\n                  :domain (p2 / person\n                        :name (n / name\n                              :op1 "Rina")))\n            :op2 (r / realize-01\n                  :polarity -\n                  :ARG0 p2\n                  :ARG1 (d / drug\n                        :domain (c / caffeine))))\n      :op2 (a2 / and\n            :op1 (p3 / person\n                  :polarity -\n                  :ARG0-of (s2 / study-01)\n                  :domain p2)\n            :op2 (r2 / realize-01\n                  :polarity -\n                  :ARG0 p2\n                  :ARG1 d)))', '# ::snt If Rina is not a person dependent on caffeine and a student, then Rina is either a person dependent on caffeine and a student, or neither a person dependent on caffeine nor a student. \n(o / or\n      :op1 (d / depend-01\n            :ARG0 (p / person\n                  :name (n / name\n                        :op1 "Rina"))\n            :ARG1 (c / caffeine))\n      :op2 (d2 / depend-01\n            :polarity -\n            :ARG0 p\n            :ARG1 (p2 / person\n                  :ARG0-of (s / study-01)))\n      :op3 (d3 / depend-01\n            :polarity -\n            :ARG0 p\n            :ARG1 c)\n      :condition (d4 / depend-01\n            :polarity -\n            :ARG0 p\n            :ARG1 p2))']
+    "premise-FOL":["all x. (RegularlyDrinksCoffee(x) -> DependentOnCaffeine(x))", "all x. (RegularlyDrinksCoffee(x) | JokesAboutAddiction(x))", "all x. (JokesAboutAddiction(x) -> -UnawareThatCaffeineIsDrug(x))", "(Student(Rina) & UnawareThatCaffeineIsDrug(Rina)) | (-Student(Rina) & -UnawareThatCaffeineIsDrug(Rina))", "-(DependentOnCaffeine(Rina) & Student(Rina)) -> ((DependentOnCaffeine(Rina) & Student(Rina)) | (-DependentOnCaffeine(Rina) & -Student(Rina)))"]
+    "conclusion":['# ::snt Rina is a person who jokes about being addicted to caffeine or unaware that caffeine is a drug.\n(j / joke-01\n      :ARG0 (p / person\n            :name (n / name\n                  :op1 "Rina"))\n      :ARG2 (o / or\n            :op1 (a / addict-01\n                  :ARG1 p\n                  :ARG2 (c / caffeine))\n            :op2 (r / realize-01\n                  :polarity -\n                  :ARG0 p\n                  :ARG1 (d / drug\n                        :domain c))))']
+    "conclusion-FOL":["exists x. (person(x) & (jokes_about_addiction(x) | unaware_of_caffeine_drug(x)))"]
     
     
     Ensure that:
@@ -131,7 +132,7 @@ def fol_conversion(premise_graphs_list, conclusion_graphs_list, api_key):
 
 def processing_fol(file_path):
     # reading json file to get list of examples
-    api_key = "add api key here"
+    api_key = "your key here"
     with open(file_path, 'r') as f:
         json_list = json.load(f)
         for example in json_list:
@@ -160,8 +161,10 @@ def processing_fol(file_path):
 
 
 if __name__ == '__main__':
-    for fol_data, actual_label in processing_fol("data/test.json"):
-        print(fol_data, type(fol_data))
+    with open("data/fol_from_amr_gpt4.json", "a") as f:
+        for fol_data, actual_label in processing_fol("data/updated_folio_validation.json"):
+            print(fol_data, type(fol_data))
+            f.write(fol_data + '\n')
 
 
 
