@@ -239,7 +239,7 @@
             "-Top10Game(TheLegendOfZelda)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -356,7 +356,7 @@
             "-((turtle(rock) & squirrel(rock)) -> (cute(rock) | skittish(rock)))"
         ],
         "actual_label": "True",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -431,7 +431,7 @@
             "PopularShow(BlackMirror, Netflix)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -950,7 +950,7 @@
             "-LostToIga(Coco) & -AmongMostActivePlayers(Coco)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -1199,7 +1199,7 @@
             "plays_for(Robert_Lewandowski, Bayern_Munchen)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -1377,7 +1377,7 @@
             "pet(Ted) & cow(Ted)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -1400,7 +1400,7 @@
             "all x. (cow(x) -> -pet(x))"
         ],
         "actual_label": "True",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -1557,7 +1557,7 @@
             "company_stock(KO) & growth_company_stock(KO)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -1724,7 +1724,7 @@
             "exists x. (dried_Thai_chili(x) & product_of_Baked_by_Melissa(x))"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -2288,31 +2288,6 @@
     },
     {
         "premise": [
-            "If people are twins or triplets, then they spend a lot of time hanging out with and playing with their siblings.",
-            "If people have siblings who are the same age, then they are twins or triplets.",
-            "If people complain often about annoying siblings, then they have siblings who are the same age.",
-            "If people do not live at home regularly, then they do not develop strong bonds with their family members.",
-            "If people spend a lot of time hanging out with and playing with their siblings, then they often did not live at home regularly.",
-            "Luke is either both a twin or triplet and develops strong bonds with his family members, or he neither is a twin or triplet nor develops strong bonds with his family members.   "
-        ],
-        "conclusion": "Luke is neither a twin nor triplet nor complains often about annoying siblings.",
-        "premise-fol": [
-            "all x. ((twin(x) | triplet(x)) -> spends_time_with_siblings(x))",
-            "all x. (same_age_siblings(x) -> (twin(x) | triplet(x)))",
-            "all x. (complains_about_siblings(x) -> same_age_siblings(x))",
-            "all x. (-lives_at_home_regularly(x) -> -strong_bonds_with_family(x))",
-            "all x. (spends_time_with_siblings(x) -> -lives_at_home_regularly(x))",
-            "(twin(Luke) & strong_bonds_with_family(Luke)) | (-twin(Luke) & -strong_bonds_with_family(Luke))"
-        ],
-        "conclusion-fol": [
-            "-twin(Luke) & -triplet(Luke) & -complains_about_siblings(Luke)"
-        ],
-        "actual_label": "True",
-        "predicted_label": "Uncertain",
-        "error": null
-    },
-    {
-        "premise": [
             "All fir trees are evergreens.",
             "Some objects of worship are fir trees."
         ],
@@ -2688,7 +2663,7 @@
             "WellAttendedWedding(John)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -3260,7 +3235,7 @@
             "HasFullyStockedImpressiveHomeOffice(Remy) & RegularlyVisitsOfficeSupplyStore(Remy)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -3330,7 +3305,7 @@
             "has_part_time_job(James)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -3466,7 +3441,7 @@
             "all x. (bird(x) -> lands(x))"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -3586,7 +3561,7 @@
             "all x. (Politician(x) -> -Member(x, Nazi_Reichstag))"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -3699,7 +3674,7 @@
             "-LastEventLocation(OlympicGames, Tokyo)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -3735,7 +3710,7 @@
             "exists x. (human(x) & horse(x))"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -3998,7 +3973,7 @@
             "basketball_player(Yuri) & American(Yuri)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -4021,7 +3996,7 @@
             "-wears_large_shoes(Yuri) -> (basketball_player(Yuri) & american(Yuri))"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -4084,7 +4059,7 @@
             "-Winner(Steinhauer, du_Maurier_Classic_1992)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -4157,7 +4132,7 @@
             "barks(kiki) & dog(kiki)"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {
@@ -4205,7 +4180,7 @@
             "all x. (PlaysFor(x, Nautico) -> -Brazilian(x))"
         ],
         "actual_label": "False",
-        "predicted_label": "Uncertain",
+        "predicted_label": "False",
         "error": null
     },
     {

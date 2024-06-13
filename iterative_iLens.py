@@ -6,6 +6,7 @@ from baseline_iLens import evaluate
 from NL_to_FOL import get_completion, amr_conversion, fol_conversion
 read_expr = Expression.fromstring
 prover = Prover9()
+mace = Mace()
 
 
 def read_json(filepath):
@@ -34,11 +35,12 @@ def gen_counterexample(premise_fol):
         premise = read_expr(premise)
         # print(premise)
         premise_fol_data.append(premise)
-    print(premise_fol_data)
-    mb = MaceCommand(premise_fol_data, max_models=1)
+    print("premise to fol output:", premise_fol_data)
+    mb = MaceCommand(assumptions=premise_fol_data)  # , max_models=1)
     mb.build_model()
-    print("mace model:", mb.model(format='cooked'))
-    return str(mb.model(format='cooked'))
+    result = mb.model(format='cooked')
+    print("mace model:", result)
+    return str(result)
 
 
 def gen_updatednl(counter_example, premises, conclusion, api_key):
@@ -80,7 +82,7 @@ def gen_updatednl(counter_example, premises, conclusion, api_key):
         "conclusion-FOL": "((AcademicCareer(Bonnie) & -Chaperone(Bonnie)) | (-AcademicCareer(Bonnie) & Chaperone(Bonnie))) -> ((AcademicCareer(Bonnie) & -Inactive(Bonnie)) | (-AcademicCareer(Bonnie) & Inactive(Bonnie)))"
     Ensure that:
     - Each FOL expression follows the correct syntax: Logical AND: `&`, Logical OR: `|`, Logical NOT: `-`, Implication: `->`.
-    - Symbols are consistently used as either predicates or functions.
+    - Symbols are consistently used as either predicates or functions with consistent arities.
     - Quantifiers are correctly placed 
     - No quotations are required for any proper noun.
     - The FOL expressions are valid and well-formed for use in theorem provers like Prover9.
@@ -109,13 +111,7 @@ def fix_error(premise_fol, conclusion_fol, error, api_key):
             """
     openai.api_key = api_key
     prompt_3 = f"""Your task is to read and understand the {error} and fix the natural language {premise_fol} and 
-    /{conclusion_fol} such that they do not contain any more errors. Follow the given example for format and syntax.
-    Example:
-    "premises":['# ::snt A dog never tells the truth.\n(t / tell-01\n      :polarity -\n      :ARG0 (d / dog)\n      :ARG1 (t2 / truth)\n      :time (e / ever))', '# ::snt Some poker players are dogs.\n(d / dog\n      :domain (p / person\n            :ARG0-of (p2 / play-01\n                  :ARG1 (p3 / poker))\n            :quant (s / some)))'] 
-    "premises-FOL":["all x. (dog(x) -> -tells_truth(x))", "exists x. (poker_player(x) & dog(x))"]
-    "conclusion":['# ::snt Some poker players never tell the truth.\n(t / tell-01\n      :polarity -\n      :ARG0 (p / person\n            :ARG0-of (p2 / play-01\n                  :ARG1 (p3 / poker))\n            :quant (s / some))\n      :ARG1 (t2 / truth)\n      :time (e / ever))']
-    "conclusion-FOL":["exists x. (poker_player(x) & -tells_truth(x))"]
-    
+    /{conclusion_fol} such that they do not contain any more errors. 
     Ensure that:
     - Each FOL expression follows the correct syntax: Logical AND: `&`, Logical OR: `|`, Logical NOT: `-`, Implication: `->`.
     - Symbols are consistently used as either predicates or functions.
@@ -136,29 +132,31 @@ def fix_error(premise_fol, conclusion_fol, error, api_key):
 
 def iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key):
     counter_example = gen_counterexample(premise_fol)
+    print("hello")
+    print(counter_example)
     fol_dict = gen_updatednl(counter_example, premises, conclusion, api_key)
-    fol_json = json.dumps(fol_dict)
-    print(fol_json)  # Serialize dictionary to JSON
-    fol_data = json.loads(fol_json)
-    proof_result, premise_fol, conclusion_fol = get_result(fol_data)
-    return proof_result, premise_fol, conclusion_fol
+    fol_data = json.loads(fol_dict)
+    print(type(fol_data))
+    proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
+    return proof_result, premises, conclusion, premise_fol, conclusion_fol, error
 
 
 def get_result(fol_data):
-    for example in fol_data:
-        # Accessing data from the dictionary
-        premise_fol = example.get("premise-fol", [])
-        conclusion_fol = example.get("conclusion-fol", [])
-        try:
-            proof_result = evaluate(conclusion_fol, premise_fol)
-            print(proof_result)
-            print("Proved successfully")
-            error = None
-        except Exception as e:
-            print("Error in proving:", e)
-            proof_result = "ERROR"
-            error = str(e)
-    return proof_result, premise_fol, conclusion_fol
+    print(fol_data)
+    # Accessing data from the dictionary
+    premise_fol = fol_data.get("premises-FOL", [])
+    conclusion_fol = fol_data.get("conclusion-FOL", [])
+    print(premise_fol, conclusion_fol)
+    try:
+        proof_result = evaluate(conclusion_fol, premise_fol)
+        print(proof_result)
+        print("Proved successfully")
+        error = None
+    except Exception as e:
+        print("Error in proving:", e)
+        proof_result = "ERROR"
+        error = str(e)
+    return proof_result, premise_fol, conclusion_fol, error
 
 
 def iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key):
@@ -168,7 +166,7 @@ def iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicte
 
 def main(fol_data):
     results = []  # Store results for each example
-    api_key = "add your key here"
+    api_key = "add api key here"
     for item in fol_data:
         # Accessing data from the dictionary
         premises = item.get("premises", [])
@@ -183,40 +181,36 @@ def main(fol_data):
         if predicted_label == "Uncertain" and actual_label != "Uncertain":
             print("Pass1")
             print("premise:", premises, "\n", "conclusion:", conclusion, "\n", "premise_fol:", premise_fol, "\n", "conclusion_fol:", conclusion_fol)
-            proof_result, premise, conclusion, premise_fol, conclusion_fol = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
+            proof_result, premise, conclusion, premise_fol, conclusion_fol, error = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
             if proof_result == "Uncertain":
                 print("Pass1-1")
-                proof_result, premise, conclusion, premise_fol, conclusion_fol = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
+                proof_result, premise, conclusion, premise_fol, conclusion_fol, error = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
             elif proof_result == "ERROR":
                 print("Pass1-2")
                 fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
-                fol_json = json.dumps(fol_dict)
-                print(fol_json)  # Serialize dictionary to JSON
-                fol_data = json.loads(fol_json)
+                fol_data = json.loads(fol_dict)
                 print(type(fol_data))
-                proof_result, premise_fol, conclusion_fol = get_result(fol_data)
+                proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
         elif predicted_label == "ERROR":
             print("Pass2")
             fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
             fol_json = json.dumps(fol_dict)
             print(fol_json)  # Serialize dictionary to JSON
             fol_data = json.loads(fol_json)
-            proof_result, premise_fol, conclusion_fol = get_result(fol_data)
+            proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
             if proof_result == "Uncertain":
                 print("Pass2-1")
-                proof_result, premise, conclusion, premise_fol, conclusion_fol = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
+                proof_result, premise, conclusion, premise_fol, conclusion_fol, error = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
             elif proof_result == "ERROR":
                 print("Pass2-2")
                 fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
-                fol_json = json.dumps(fol_dict)
-                print(fol_json)  # Serialize dictionary to JSON
-                fol_data = json.loads(fol_json)
+                fol_data = json.loads(fol_data)
                 print(type(fol_data))
-                proof_result, premise_fol, conclusion_fol = get_result(fol_data)
+                proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
         else:
             print("Pass3")
             proof_result = predicted_label
-    results.append({"predicted_label": proof_result, "actual_label": actual_label})
+        results.append({"predicted_label": proof_result, "actual_label": actual_label})
     return results
 
 

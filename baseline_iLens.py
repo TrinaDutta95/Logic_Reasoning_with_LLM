@@ -1,9 +1,12 @@
 from nltk import *
 import json
 from data.utils import *
+from nltk.sem import logic
+from nltk.sem import Expression
 
+logic._counter._value = 0
 read_expr = Expression.fromstring
-prover = Prover9()
+prover = nltk.Prover9(10)
 
 
 def read_json(filepath):
@@ -37,8 +40,8 @@ def evaluate(conclusion, premises):
     if truth_value:
         return "True"
     else:
-        neg_c = read_expr("-(" + conclusion[0] + ")")
-        neg_c = read_expr(conclusion[0])
+        n_conclusion = (conclusion[0])
+        neg_c = read_expr("-("+n_conclusion+")")
         print(neg_c)
         negation_true = prover.prove(neg_c, premise_fol_data)
         if negation_true:
@@ -60,29 +63,14 @@ def baseline_infer(fol_data):
         # print(premise_fol, "\n", conclusion_fol)
 
         try:
-            premise_fol_data = []
-            for premise in premise_fol:
-                premise = read_expr(premise)
-                # print(premise)
-                premise_fol_data.append(premise)
-
-            conclusion_fol_data = read_expr(conclusion_fol[0])
-
-            print(premise_fol_data, "\n", conclusion_fol_data)
-
-            try:
-                proof_result = evaluate(conclusion_fol, premise_fol)
-                print(proof_result)
-                print("Proved successfully")
-                error = None
-            except Exception as e:
-                print("Error in proving:", e)
-                proof_result = "ERROR"
-                error = str(e)
-        except KeyError as ke:
-            print("KeyError in accessing premise or conclusion:", ke)
+            proof_result = evaluate(conclusion_fol, premise_fol)
+            print(proof_result)
+            print("Proved successfully")
+            error = None
+        except Exception as e:
+            print("Error in proving:", e)
             proof_result = "ERROR"
-            error = str(ke)
+            error = str(e)
 
         results.append({
             "premise": premises,
