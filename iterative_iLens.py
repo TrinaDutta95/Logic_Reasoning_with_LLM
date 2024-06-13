@@ -82,6 +82,7 @@ def gen_updatednl(counter_example, premises, conclusion, api_key):
         "conclusion-FOL": "((AcademicCareer(Bonnie) & -Chaperone(Bonnie)) | (-AcademicCareer(Bonnie) & Chaperone(Bonnie))) -> ((AcademicCareer(Bonnie) & -Inactive(Bonnie)) | (-AcademicCareer(Bonnie) & Inactive(Bonnie)))"
     Ensure that:
     - Each FOL expression follows the correct syntax: Logical AND: `&`, Logical OR: `|`, Logical NOT: `-`, Implication: `->`.
+    - Do not use symbols/arities as both relation and function.
     - Symbols are consistently used as either predicates or functions with consistent arities.
     - Quantifiers are correctly placed 
     - No quotations are required for any proper noun.
@@ -113,9 +114,17 @@ def fix_error(premise_fol, conclusion_fol, error, api_key):
     prompt_3 = f"""Your task is to fix some errors in first order logic statements. 
     /I will provide you with the {error} and the first order logic {premise_fol} and 
     /{conclusion_fol} such that they do not contain that error. 
-    Follow the given example for format and syntax.
+    Follow the given example for format:
+    Example1:
+    "premises-FOL":["all x. (dog(x) -> -tells_truth(x))", "exists x. (poker_player(x) & dog(x))"]
+    "conclusion-FOL":["exists x. (poker_player(x) & -tells_truth(x))"]
+    
+    Example2:
+    "premises-FOL":["all x. (fish(x) -> eel(x))", "all x. (fish(x) -> -plant(x))", "all x. (thing(x) -> (plant(x) | animal(x)))", "all x. (breathes(x) -> -paper(x))", "all x. (animal(x) -> breathes(x))", "(all x (eel(x) & (eel(x) | plant(x))) -> (eel(x) | animal(x)))"]
+    "conclusion-FOL":["eel(sea_eel)"]
     
     Ensure that:
+    - Do not use symbols/arities as both relation and function.
     - The FOL expressions are valid and well-formed for use in theorem provers like Prover9 with consistent arities..
     - Make sure the FOL expressions are consistent, syntactically correct, and have balanced parentheses.
     - Do not describe your answer like a chat response.
@@ -123,13 +132,12 @@ def fix_error(premise_fol, conclusion_fol, error, api_key):
     /"conclusion-FOL".
 
         """
-    response = get_completion(prompt_3)
-    return response
+    response_t = get_completion(prompt_3)
+    return response_t
 
 
 def iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key):
     counter_example = gen_counterexample(premise_fol)
-    print("hello")
     print(counter_example)
     fol_dict = gen_updatednl(counter_example, premises, conclusion, api_key)
     fol_data = json.loads(fol_dict)
@@ -161,9 +169,7 @@ def iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicte
     print(type(error))
     fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
     print(type(fol_dict))
-    fol_json = json.dumps(fol_dict)
-    print(type(fol_json))
-    fol_data = json.loads(fol_json)
+    fol_data = json.loads(fol_dict)
     print(type(fol_data))
     print(fol_data)
     return fol_data, actual_label
@@ -171,13 +177,13 @@ def iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicte
 
 def main(fol_data):
     results = []  # Store results for each example
-    api_key = "add api key here"
+    api_key = "add your key here"
     for item in fol_data:
         # Accessing data from the dictionary
         premises = item.get("premises", [])
         print(premises)
         conclusion = item.get("conclusion", [])
-        actual_label = item.get("label", [])
+        actual_label = item.get("actual_label", [])
         predicted_label = item.get("predicted_label", [])
         error = item.get("error", [])
         premise_fol = item.get("premise-fol", [])
@@ -185,7 +191,7 @@ def main(fol_data):
 
         if predicted_label == "Uncertain" and actual_label != "Uncertain":
             print("Pass1")
-            print("premise:", premises, "\n", "conclusion:", conclusion, "\n", "premise_fol:", premise_fol, "\n", "conclusion_fol:", conclusion_fol)
+            print("premise:", premises, "\n", "conclusion:", conclusion, "\n", "premise_fol:", premise_fol, "\n", "conclusion_fol:", conclusion_fol, "actual_label:", actual_label, "\n", "predicted_label:", predicted_label, "\n", "error:", error)
             proof_result, premise, conclusion, premise_fol, conclusion_fol, error = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
             if proof_result == "Uncertain":
                 print("Pass1-1")
@@ -197,6 +203,9 @@ def main(fol_data):
                 print(type(fol_data))
                 proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
         elif predicted_label == "ERROR":
+            print("premise:", premises, "\n", "conclusion:", conclusion, "\n", "premise_fol:", premise_fol, "\n",
+                  "conclusion_fol:", conclusion_fol, "actual_label:", actual_label, "\n", "predicted_label:",
+                  predicted_label, "\n", "error:", error)
             print("Pass2")
             fol_data, actual_label = iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
             print(fol_data, actual_label)
@@ -207,7 +216,7 @@ def main(fol_data):
             elif proof_result == "ERROR":
                 print("Pass2-2")
                 fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
-                fol_data = json.loads(fol_data)
+                fol_data = json.loads(fol_dict)
                 print(type(fol_data))
                 proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
         else:
@@ -218,8 +227,8 @@ def main(fol_data):
 
 
 if __name__ == '__main__':
-    with open('results/test_result.json', 'w', encoding='utf-8') as f:
-        fol_data = read_json("data/test.json")
+    with open('results/iter_results_1.json', 'w', encoding='utf-8') as f:
+        fol_data = read_json("data/iter_fol.json")
         results = main(fol_data)
         results_json = json.dumps(results, indent=4)
         f.write(results_json)
