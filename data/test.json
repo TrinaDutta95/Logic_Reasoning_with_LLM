@@ -7,16 +7,16 @@
             "All products of Baked by Melissa are cupcakes.",
             "If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy."
         ],
-        "conclusion": "Dried Thai chilies are a product of Baked by Melissa.",
+        "conclusion": "Dried Thai chilies are cupcakes and a product of Baked by Melissa.",
         "premise-fol": [
             "all x. (bakery(x) -> -spicy(x))",
             "all x. (cupcake(x) -> bakery(x))",
             "all x. (hotpot(x) -> spicy(x))",
             "all x. (product_of_Baked_by_Melissa(x) -> cupcake(x))",
-            "all x. (dried_Thai_chili(x) & (spicy(x) | bakery(x)) -> (hotpot(x) | spicy(x)))"
+            "(all x (dried_Thai_chili(x) & (spicy(x) | bakery(x))) -> (hotpot(x) | spicy(x)))"
         ],
         "conclusion-fol": [
-            "exists x. (dried_Thai_chili(x) & product_of_Baked_by_Melissa(x))"
+            "exists x. (dried_Thai_chili(x) & cupcake(x) & product_of_Baked_by_Melissa(x))"
         ],
         "actual_label": "False",
         "predicted_label": "Uncertain",
