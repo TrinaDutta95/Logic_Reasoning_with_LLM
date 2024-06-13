@@ -81,11 +81,11 @@ def gen_updatednl(counter_example, premises, conclusion, api_key):
         "conclusion": "If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.",
         "conclusion-FOL": "((AcademicCareer(Bonnie) & -Chaperone(Bonnie)) | (-AcademicCareer(Bonnie) & Chaperone(Bonnie))) -> ((AcademicCareer(Bonnie) & -Inactive(Bonnie)) | (-AcademicCareer(Bonnie) & Inactive(Bonnie)))"
     Ensure that:
-    - Each FOL expression follows the correct syntax: Logical AND: `&`, Logical OR: `|`, Logical NOT: `-`, Implication: `->`.
-    - Do not use symbols/arities as both relation and function.
+    - Do not use symbols as both relation and function.
     - Symbols are consistently used as either predicates or functions with consistent arities.
     - Quantifiers are correctly placed 
     - No quotations are required for any proper noun.
+    - Make sure your output has both premise and conclusion expressions
     - The FOL expressions are valid and well-formed for use in theorem provers like Prover9.
     - Make sure the FOL expressions are consistent, syntactically correct, and have balanced parentheses.
     - Make sure the output is not like a chat response.
@@ -114,22 +114,80 @@ def fix_error(premise_fol, conclusion_fol, error, api_key):
     prompt_3 = f"""Your task is to fix some errors in first order logic statements. 
     /I will provide you with the {error} and the first order logic {premise_fol} and 
     /{conclusion_fol} such that they do not contain that error. 
-    Follow the given example for format:
+    Follow the given examples for format and syntax:
     Example1:
-    "premises-FOL":["all x. (dog(x) -> -tells_truth(x))", "exists x. (poker_player(x) & dog(x))"]
-    "conclusion-FOL":["exists x. (poker_player(x) & -tells_truth(x))"]
+    "premises-FOL": [
+            "all x. all y. (LaLigaSoccerTeam(x) & LaLigaSoccerTeam(y) & MorePoints(x, y) -> RankHigherThan(x, y))",
+            "all x. all y. (LaLigaSoccerTeam(x) & LaLigaSoccerTeam(y) & -MorePoints(x, y) & -MorePoints(y, x) & MorePointsInGameBetween(x, y) ->  RankHigherThan(x, y))",
+            "LaLigaSoccerTeam(RealMadrid) & LaLigaSoccerTeam(Barcelona)",
+            "MorePoints(RealMadrid, Barcelona)",
+            "-MorePointsInGameBetween(RealMadrid, Barcelona) & -MorePointsInGameBetween(Barcelona, RealMadrid)"
+        ],
+    "conclusion-FOL": "RankHigherThan(RealMadrid, Barcelona)"
     
     Example2:
-    "premises-FOL":["all x. (fish(x) -> eel(x))", "all x. (fish(x) -> -plant(x))", "all x. (thing(x) -> (plant(x) | animal(x)))", "all x. (breathes(x) -> -paper(x))", "all x. (animal(x) -> breathes(x))", "(all x (eel(x) & (eel(x) | plant(x))) -> (eel(x) | animal(x)))"]
-    "conclusion-FOL":["eel(sea_eel)"]
+    "premises-FOL": [
+            "all x. (ProfessionalAthlete(x) -> SpendOn(x, MostOfTheirTime, Sports))",
+            "all x. (OlympicGoldMedalWinner(x) -> ProfessionalAthlete(x))",
+            "all x. (FullTimeScientist(x) -> -SpendOn(x, MostOfTheirTime, Sports))",
+            "all x. (NobelPhysicsLaureate(x) -> FullTimeScientist(x))",
+            "SpendOn(Amy, MostOfTheirTime, Sports) | OlympicGoldMedalWinner(Amy)",
+            "-NobelPhysicsLaureate(Amy) -> -OlympicGoldMedalWinner(Amy)"
+        ],
+        
+    "conclusion-FOL": "-OlympicGoldMedalWinner(Amy) -> NobelPhysicsLaureate(Amy)",
+    
+    Example3:
+    "premises-FOL": [
+            "all x. (Song(x) -> -Visual(x))",
+            "all x. (FolkSong(x) -> Song(x))",
+            "all x. (Video(x) -> Visual(x))",
+            "all x. (Movie(x) -> Video(x))",
+            "all x. (ScifiMovie(x) -> Movie(x))",
+            "ScifiMovie(Inception)",
+            "-FolkSong(Mac) & -ScifiMovie(Mac)"
+        ],
+    "conclusion-FOL": "FolkSong(Inception)"
+    
+    Example4:
+    "premises-FOL": [
+            "all x. (Chef(x) -> Can(x, Cook))",
+            "exists x. (-Chef(x) & Can(x, Cook))",
+            "all x. (Can(x, Cook) -> (CanMake(x, ScrambledEggs) & CanMake(x, Pasta)))",
+            "all x. (CanMake(x, Cookies) & CanMake(x, Muffins) -> Baker(x))",
+            "all x. ((Baker(x) & CanMake(x, ScrambledEggs)) -> CanMake(x, GoodBreakfast))",
+            "CanMake(Luke, Cookies) & (CanMake(Luke, ScrambledEggs) & CanMake(Luke, Muffins) & -CanMake(Luke, Pasta)"
+        ],
+    "conclusion-FOL": "CanMake(Luke, GoodBreakfast)"
+    
+    Example5:
+    "premises-FOL": [
+            "exists x. exists y. (Develop(eTS, x) & Develop(eTS, y) & StandardizedTest(x) & StandardizedTest(y) & In(x, UnitedState) & In(y, UnitedState) & For(x, kOneTwoAndHigherEducation) & For(y, kOneTwoAndHigherEducation))",
+            "exists x. (Administer(eTS, x) & InternationalTest(x) & (TOEFL(x) | TOEIC(x) | GRE(x) | SubjectTest(x)))",
+            "exists x. (Develop(eTS, x) & AssociatedWith(x, EntryToUSEducationInstitution))",
+            "exists x. (Develop(eTS, x) & StateWideAssesment(x) & UsedFor(x, AccountabilityTesting))"
+        ],
+    "conclusion-FOL": "exists x. exists y. (Develop(eTS, x) & StateWideAssesment(x) & Develop(eTS, y) & AssociatedWith(y, EntryToUSEducationInstitution))",
+    
+    Example6:
+    "premises-FOL": [
+            "Actor(DaveedDiggs) & FilmProducer(DaveedDiggs)",
+            "exists x. exists y.(PlaysIn(DaveedDiggs, x, Hamilton) & (-(x=y)) & PlaysIn(DaveedDiggs, y, Hamilton)) & OnBroadway(Hamilton) & Musical(Hamilton)",
+            "exists x. exists y.(Actor(x) & PlaysIn(x, y, Hamilton) & Wins(x, BestActorAward))",
+            "exists x. (Actor(x) & PlaysIn(x, ThomasJefferson, Hamilton) & Wins(x, BestActorAward))",
+            "Plays(DaveedDiggs, ThomasJefferson)",
+            "all x. ((Musical(x) & OnBroadway(x)) -> -Film(x))"
+        ], 
+    "conclusion-FOL": "Film(Hamilton)"
     
     Ensure that:
     - Do not use symbols/arities as both relation and function.
     - The FOL expressions are valid and well-formed for use in theorem provers like Prover9 with consistent arities..
     - Make sure the FOL expressions are consistent, syntactically correct, and have balanced parentheses.
     - Do not describe your answer like a chat response.
-    - Your output should only contain the fixed fol expressions in dictionary format with keys "premises-FOL" and 
-    /"conclusion-FOL".
+    - Make sure your output has both premise and conclusion expressions
+    Your output should be a dictionary with the keys "premises-FOL" for premises with all FOL expressions
+    /in a single list and "conclusion-FOL" for conclusion with FOL expression in a single list.
 
         """
     response_t = get_completion(prompt_3)
@@ -142,18 +200,20 @@ def iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, 
     fol_dict = gen_updatednl(counter_example, premises, conclusion, api_key)
     fol_data = json.loads(fol_dict)
     print(type(fol_data))
-    proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
+    proof_result, premise_fol, conclusion_fol, error = get_result(fol_data, conclusion_fol)
     return proof_result, premises, conclusion, premise_fol, conclusion_fol, error
 
 
-def get_result(fol_data):
+def get_result(fol_data, conclusion_fol):
     print(fol_data)
     # Accessing data from the dictionary
     premise_fol = fol_data.get("premises-FOL", [])
-    conclusion_fol = fol_data.get("conclusion-FOL", [])
-    print(premise_fol, conclusion_fol)
+    new_conclusion_fol = fol_data.get("conclusion-FOL", [])
+    if len(new_conclusion_fol) == 0:
+        new_conclusion_fol = conclusion_fol
+    print(premise_fol, new_conclusion_fol)
     try:
-        proof_result = evaluate(conclusion_fol, premise_fol)
+        proof_result = evaluate(new_conclusion_fol, premise_fol)
         print(proof_result)
         print("Proved successfully")
         error = None
@@ -161,7 +221,7 @@ def get_result(fol_data):
         print("Error in proving:", e)
         proof_result = "ERROR"
         error = str(e)
-    return proof_result, premise_fol, conclusion_fol, error
+    return proof_result, premise_fol, new_conclusion_fol, error
 
 
 def iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key):
@@ -176,8 +236,9 @@ def iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicte
 
 
 def main(fol_data):
+
     results = []  # Store results for each example
-    api_key = "add your key here"
+    api_key = "add api key here"
     for item in fol_data:
         # Accessing data from the dictionary
         premises = item.get("premises", [])
@@ -187,47 +248,39 @@ def main(fol_data):
         predicted_label = item.get("predicted_label", [])
         error = item.get("error", [])
         premise_fol = item.get("premise-fol", [])
+        len_premise = len(premises)
+        len_new_premise = 0
         conclusion_fol = item.get("conclusion-fol", [])
+        count = 1
+        while count < 5 and len_new_premise < 3*len_premise:
+            if predicted_label == "Uncertain" and actual_label != "Uncertain":
+                print("Pass1")
+                count = count + 1
+                print("premise:", premises, "\n", "conclusion:", conclusion, "\n", "premise_fol:", premise_fol, "\n", "conclusion_fol:", conclusion_fol, "actual_label:", actual_label, "\n", "predicted_label:", predicted_label, "\n", "error:", error)
+                proof_result, premise, conclusion, premise_fol, conclusion_fol, error = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
+                predicted_label = proof_result
+            elif predicted_label == "ERROR":
+                count = count + 1
+                print("premise:", premises, "\n", "conclusion:", conclusion, "\n", "premise_fol:", premise_fol, "\n",
+                      "conclusion_fol:", conclusion_fol, "actual_label:", actual_label, "\n", "predicted_label:",
+                      predicted_label, "\n", "error:", error)
+                print("Pass2")
+                fol_data, actual_label = iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
+                print(fol_data, actual_label)
+                proof_result, premise_fol, conclusion_fol, error = get_result(fol_data, conclusion_fol)
+                predicted_label = proof_result
+            else:
+                print("Pass3")
+                count = count + 1
+                proof_result = predicted_label
+            len_new_premise = len(premise_fol)
+            results.append({"predicted_label": proof_result, "actual_label": actual_label})
 
-        if predicted_label == "Uncertain" and actual_label != "Uncertain":
-            print("Pass1")
-            print("premise:", premises, "\n", "conclusion:", conclusion, "\n", "premise_fol:", premise_fol, "\n", "conclusion_fol:", conclusion_fol, "actual_label:", actual_label, "\n", "predicted_label:", predicted_label, "\n", "error:", error)
-            proof_result, premise, conclusion, premise_fol, conclusion_fol, error = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
-            if proof_result == "Uncertain":
-                print("Pass1-1")
-                proof_result, premise, conclusion, premise_fol, conclusion_fol, error = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
-            elif proof_result == "ERROR":
-                print("Pass1-2")
-                fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
-                fol_data = json.loads(fol_dict)
-                print(type(fol_data))
-                proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
-        elif predicted_label == "ERROR":
-            print("premise:", premises, "\n", "conclusion:", conclusion, "\n", "premise_fol:", premise_fol, "\n",
-                  "conclusion_fol:", conclusion_fol, "actual_label:", actual_label, "\n", "predicted_label:",
-                  predicted_label, "\n", "error:", error)
-            print("Pass2")
-            fol_data, actual_label = iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
-            print(fol_data, actual_label)
-            proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
-            if proof_result == "Uncertain":
-                print("Pass2-1")
-                proof_result, premise, conclusion, premise_fol, conclusion_fol, error = iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, actual_label, predicted_label, error, api_key)
-            elif proof_result == "ERROR":
-                print("Pass2-2")
-                fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
-                fol_data = json.loads(fol_dict)
-                print(type(fol_data))
-                proof_result, premise_fol, conclusion_fol, error = get_result(fol_data)
-        else:
-            print("Pass3")
-            proof_result = predicted_label
-        results.append({"predicted_label": proof_result, "actual_label": actual_label})
     return results
 
 
 if __name__ == '__main__':
-    with open('results/iter_results_1.json', 'w', encoding='utf-8') as f:
+    with open('results/iter_results_2.json', 'w', encoding='utf-8') as f:
         fol_data = read_json("data/iter_fol.json")
         results = main(fol_data)
         results_json = json.dumps(results, indent=4)
