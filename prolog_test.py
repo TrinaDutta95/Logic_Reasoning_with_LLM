@@ -2,7 +2,8 @@ from pyswip import Prolog
 prolog = Prolog()
 prolog.assertz("father(michael,john)")
 prolog.assertz("father(michael,gina)")
-list(prolog.query("father(michael,X)")) == [{'X': 'john'}, {'X': 'gina'}]
+result = list(prolog.query("father(michael,X)")) == [{'X': 'john'}, {'X': 'gina'}]
+print(result)
 for soln in prolog.query("father(X,Y)"):
     print(soln["X"], "is the father of", soln["Y"])
 

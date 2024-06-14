@@ -1,0 +1,2110 @@
+[
+    {
+        "premises-FOL": [
+            "\u2200x (PerformsInSchoolTalentShowsOften(x) \u2192 (AttendsSchoolEvents(x) \u2227 EngagedWithSchoolEvents(x)))",
+            "\u2200x (Person(x) \u2192 (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) \u2227 Disinterested(x))))",
+            "\u2200x (ChaperoneHighSchoolDance(x) \u2192 \u00acStudentAtSchool(x))",
+            "\u2200x (Person(x) \u2227 Inactive(x) \u2227 Disinterested(x) \u2227 CommunityMember(x) \u2192 ChaperonesHighSchoolDances(x))",
+            "\u2200x (YoungChildOrTeenager(x) \u2227 WishesToFurtherAcademicCareer(x) \u2227 SeeksEducationalOpportunities(x) \u2192 StudentWhoAttendsSchool(x))",
+            "\u2200x (Bonnie(x) \u2192 ((AttendsSchoolEvents(x) \u2227 VeryEngaged(x)) \u2228 (\u00acAttendsSchoolEvents(x) \u2227 \u00acVeryEngaged(x))))"
+        ],
+        "conclusion-FOL": "\u2203x (PerformsInSchoolTalentShows(x, Bonnie))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (PerformsInSchoolTalentShowsOften(x) \u2192 (AttendsSchoolEvents(x) \u2227 EngagedWithSchoolEvents(x)))",
+            "\u2200x (Person(x) \u2192 (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) \u2227 Disinterested(x))))",
+            "\u2200x (ChaperoneHighSchoolDance(x) \u2192 \u00acStudentAtSchool(x))",
+            "\u2200x (Person(x) \u2227 Inactive(x) \u2227 Disinterested(x) \u2227 CommunityMember(x) \u2192 ChaperonesHighSchoolDances(x))",
+            "\u2200x (YoungChildOrTeenager(x) \u2227 WishesToFurtherAcademicCareer(x) \u2227 SeeksEducationalOpportunities(x) \u2192 StudentWhoAttendsSchool(x))",
+            "\u2200x (Bonnie(x) \u2192 ((AttendsSchoolEvents(x) \u2227 VeryEngaged(x)) \u2228 (\u00acAttendsSchoolEvents(x) \u2227 \u00acVeryEngaged(x))))"
+        ],
+        "conclusion-FOL": "\u2200x (Bonnie(x) \u2192 ((YoungChild(x) \u2228 Teenager(x)) \u2227 (FurtherAcademicCareer(x) \u2227 EducationalOpportunities(x)) \u2227 (ChaperonesHighSchoolDances(x) \u2228 \u00ac(YoungChild(x) \u2228 Teenager(x))) \u2192 (Student(x) \u2227 AttendsSchool(x) \u2228 (Inactive(x) \u2227 Dis"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (PerformsInSchoolTalentShowsOften(x) \u2192 (AttendsSchoolEvents(x) \u2227 EngagedWithSchoolEvents(x)))",
+            "\u2200x (Person(x) \u2192 (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) \u2227 Disinterested(x))))",
+            "\u2200x (ChaperoneHighSchoolDance(x) \u2192 \u00acStudentAtSchool(x))",
+            "\u2200x (Person(x) \u2227 Inactive(x) \u2227 Disinterested(x) \u2227 CommunityMember(x) \u2192 ChaperonesHighSchoolDances(x))",
+            "\u2200x (YoungChildOrTeenager(x) \u2227 WishesToFurtherAcademicCareer(x) \u2227 SeeksEducationalOpportunities(x) \u2192 StudentWhoAttendsSchool(x))",
+            "\u2200x (Bonnie(x) \u2192 ((AttendsSchoolEvents(x) \u2227 VeryEngaged(x)) \u2228 (\u00acAttendsSchoolEvents(x) \u2227 \u00acVeryEngaged(x))))"
+        ],
+        "conclusion-FOL": "\u2200x (Bonnie(x) \u2192 ((ChaperonesHighSchoolDances(x) \u2228 PerformsInSchoolTalentShows(x)) \u2227 (YoungChildOrTeenager(x) \u2227 WishesToFurtherAcademicCareer(x) \u2227 EducationalOpportunities(x)) \u2227 (InactiveAndDisinterested(x) \u2227 CommunityMember(x))))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x\u2200y (Employee(x) \u2227 Customer(y) \u2227 SchedulesMeeting(x, y) \u2192 AppearsInCompany(x))",
+            "\u2200x (HasLunchInCompany(x) \u2192 SchedulesMeetingsWithCustomers(x))",
+            "\u2200x (Employee(x) \u2192 (HasLunchInCompany(x) \u2295 HasLunchAtHome(x)))",
+            "\u2200x (Employee(x) \u2227 LunchAtHome(x) \u2192 WorkingRemotelyFromHome(x))",
+            "\u2200x (Employee(x) \u2227 \u00acInHomeCountry(x) \u2192 WorksRemotelyFromHome(x))",
+            "\u00ac\u2203x (Manager(x) \u2227 WorksRemotelyFromHome(x))",
+            "\u2200x (James(x) \u2192 (Manager(x) \u2227 AppearsInCompanyToday(x) \u2228 (\u00acManager(x) \u2227 \u00acAppearsInCompanyToday(x))))"
+        ],
+        "conclusion-FOL": "\u2203x (Person(x) \u2227 Company(y) \u2227 LunchIn(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x\u2200y (Employee(x) \u2227 Customer(y) \u2227 SchedulesMeeting(x, y) \u2192 AppearsInCompany(x))",
+            "\u2200x (HasLunchInCompany(x) \u2192 SchedulesMeetingsWithCustomers(x))",
+            "\u2200x (Employee(x) \u2192 (HasLunchInCompany(x) \u2295 HasLunchAtHome(x)))",
+            "\u2200x (Employee(x) \u2227 LunchAtHome(x) \u2192 WorkingRemotelyFromHome(x))",
+            "\u2200x (Employee(x) \u2227 \u00acInHomeCountry(x) \u2192 WorksRemotelyFromHome(x))",
+            "\u00ac\u2203x (Manager(x) \u2227 WorksRemotelyFromHome(x))",
+            "\u2200x (James(x) \u2192 (Manager(x) \u2227 AppearsInCompanyToday(x) \u2228 (\u00acManager(x) \u2227 \u00acAppearsInCompanyToday(x))))"
+        ],
+        "conclusion-FOL": "\u00ac\u2203x (Company(x) \u2227 LunchIn(James, x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x\u2200y (Employee(x) \u2227 Customer(y) \u2227 SchedulesMeeting(x, y) \u2192 AppearsInCompany(x))",
+            "\u2200x (HasLunchInCompany(x) \u2192 SchedulesMeetingsWithCustomers(x))",
+            "\u2200x (Employee(x) \u2192 (HasLunchInCompany(x) \u2295 HasLunchAtHome(x)))",
+            "\u2200x (Employee(x) \u2227 LunchAtHome(x) \u2192 WorkingRemotelyFromHome(x))",
+            "\u2200x (Employee(x) \u2227 \u00acInHomeCountry(x) \u2192 WorksRemotelyFromHome(x))",
+            "\u00ac\u2203x (Manager(x) \u2227 WorksRemotelyFromHome(x))",
+            "\u2200x (James(x) \u2192 (Manager(x) \u2227 AppearsInCompanyToday(x) \u2228 (\u00acManager(x) \u2227 \u00acAppearsInCompanyToday(x))))"
+        ],
+        "conclusion-FOL": "\u2200x (Manager(x) \u2227 InOtherCountries(x) \u2192 (HasLunchAtHome(x) \u2227 WorksRemotelyFromHome(x) \u2228 (\u00acHasLunchAtHome(x) \u2227 \u00acWorksRemotelyFromHome(x))))"
+    },
+    {
+        "premises-FOL": [
+            "Monkeypox(m) \u2227 InfectiousDisease(m) \u2227 CausedBy(m, monkeypoxVirus)",
+            "\u2200x (MonkeypoxVirus(x) \u2192 (OccursInAnimal(x) \u2227 (OccursInHuman(x) \u2228 \u00acOccursInHuman(x))))",
+            "\u2200x (Human(x) \u2192 Mammal(x))",
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Symptom(x) \u2227 Monkeypox(x) \u2192 (Fever(x) \u2227 Headache(x) \u2227 MusclePains(x) \u2227 FeelingTired(x)))",
+            "\u2200x (Glu(x) \u2192 FeelsTired(x))"
+        ],
+        "conclusion-FOL": "\u2203x (Animal(x))"
+    },
+    {
+        "premises-FOL": [
+            "Monkeypox(m) \u2227 InfectiousDisease(m) \u2227 CausedBy(m, monkeypoxVirus)",
+            "\u2200x (MonkeypoxVirus(x) \u2192 (OccursInAnimal(x) \u2227 (OccursInHuman(x) \u2228 \u00acOccursInHuman(x))))",
+            "\u2200x (Human(x) \u2192 Mammal(x))",
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Symptom(x) \u2227 Monkeypox(x) \u2192 (Fever(x) \u2227 Headache(x) \u2227 MusclePains(x) \u2227 FeelingTired(x)))",
+            "\u2200x (Glu(x) \u2192 FeelsTired(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Person(x) \u2192 \u00acGetsFlu(x))"
+    },
+    {
+        "premises-FOL": [
+            "Monkeypox(m) \u2227 InfectiousDisease(m) \u2227 CausedBy(m, monkeypoxVirus)",
+            "\u2200x (MonkeypoxVirus(x) \u2192 (OccursInAnimal(x) \u2227 (OccursInHuman(x) \u2228 \u00acOccursInHuman(x))))",
+            "\u2200x (Human(x) \u2192 Mammal(x))",
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Symptom(x) \u2227 Monkeypox(x) \u2192 (Fever(x) \u2227 Headache(x) \u2227 MusclePains(x) \u2227 FeelingTired(x)))",
+            "\u2200x (Glu(x) \u2192 FeelsTired(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Monkeypox(x) \u2192 Coughing(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x \u2200y \u2200z (WildTurkey(x) \u2227 EasternWildTurkey(x) \u2227 OsceolaWildTurkey(y) \u2227 GouldsWildTurkey(z) \u2192 (Type(x, y) \u2227 Type(x, z)))",
+            "\u2200x \u2200y \u2200z (Turkey(x) \u2227 RioGrandeWildTurkey(y) \u2227 OcellatedWildTurkey(z) \u2192 (Turkey(x) \u2227 WildTurkey(y) \u2227 WildTurkey(z)))",
+            "\u00ac(EasternWildTurkey(tom))",
+            "\u00ac(OsceolaWildTurkey(tom))",
+            "\u00ac(Tom(t) \u2227 GouldsWildTurkey(t) \u2228 MerriamsWildTurkey(t) \u2228 RioGrandeWildTurkey(t))",
+            "\u2200x (WildTurkey(x) \u2194 Tom(x))"
+        ],
+        "conclusion-FOL": "\u2200x (OcellatedWildTurkey(x) \u2194 Tom(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x \u2200y \u2200z (WildTurkey(x) \u2227 EasternWildTurkey(x) \u2227 OsceolaWildTurkey(y) \u2227 GouldsWildTurkey(z) \u2192 (Type(x, y) \u2227 Type(x, z)))",
+            "\u2200x \u2200y \u2200z (Turkey(x) \u2227 RioGrandeWildTurkey(y) \u2227 OcellatedWildTurkey(z) \u2192 (Turkey(x) \u2227 WildTurkey(y) \u2227 WildTurkey(z)))",
+            "\u00ac(EasternWildTurkey(tom))",
+            "\u00ac(OsceolaWildTurkey(tom))",
+            "\u00ac(Tom(t) \u2227 GouldsWildTurkey(t) \u2228 MerriamsWildTurkey(t) \u2228 RioGrandeWildTurkey(t))",
+            "\u2200x (WildTurkey(x) \u2194 Tom(x))"
+        ],
+        "conclusion-FOL": "Person(tom) \u2227 WildTurkey(tom) \u2227 Eastern(tom)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x \u2200y \u2200z (WildTurkey(x) \u2227 EasternWildTurkey(x) \u2227 OsceolaWildTurkey(y) \u2227 GouldsWildTurkey(z) \u2192 (Type(x, y) \u2227 Type(x, z)))",
+            "\u2200x \u2200y \u2200z (Turkey(x) \u2227 RioGrandeWildTurkey(y) \u2227 OcellatedWildTurkey(z) \u2192 (Turkey(x) \u2227 WildTurkey(y) \u2227 WildTurkey(z)))",
+            "\u00ac(EasternWildTurkey(tom))",
+            "\u00ac(OsceolaWildTurkey(tom))",
+            "\u00ac(Tom(t) \u2227 GouldsWildTurkey(t) \u2228 MerriamsWildTurkey(t) \u2228 RioGrandeWildTurkey(t))",
+            "\u2200x (WildTurkey(x) \u2194 Tom(x))"
+        ],
+        "conclusion-FOL": "\u2200x (WildTurkey(x) \u2194 Joey(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (JapaneseGameCompany(x) \u2227 Created(x, LegendOfZelda))",
+            "\u2200x (Game(x) \u2227 InTop10(x) \u2192 MadeByJapaneseCompany(x))",
+            "\u2200x (Game(x) \u2227 SellsMoreThanOneMillionCopies(x) \u2192 SelectedIntoTop10List(x))",
+            "\u2203x (Game(x) \u2227 Zelda(x) \u2227 SoldMoreThanOneMillion(x))"
+        ],
+        "conclusion-FOL": "\u2203x (Game(x) \u2227 LegendOfZelda(x) \u2227 InTop10(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (JapaneseGameCompany(x) \u2227 Created(x, LegendOfZelda))",
+            "\u2200x (Game(x) \u2227 InTop10(x) \u2192 MadeByJapaneseCompany(x))",
+            "\u2200x (Game(x) \u2227 SellsMoreThanOneMillionCopies(x) \u2192 SelectedIntoTop10List(x))",
+            "\u2203x (Game(x) \u2227 Zelda(x) \u2227 SoldMoreThanOneMillion(x))"
+        ],
+        "conclusion-FOL": "JapaneseVideoGameCompany(FIFA22)"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (JapaneseGameCompany(x) \u2227 Created(x, LegendOfZelda))",
+            "\u2200x (Game(x) \u2227 InTop10(x) \u2192 MadeByJapaneseCompany(x))",
+            "\u2200x (Game(x) \u2227 SellsMoreThanOneMillionCopies(x) \u2192 SelectedIntoTop10List(x))",
+            "\u2203x (Game(x) \u2227 Zelda(x) \u2227 SoldMoreThanOneMillion(x))"
+        ],
+        "conclusion-FOL": "\u00ac(LegendOfZeldaInTop10(n))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Square(x) \u2192 HasFourSides(x))",
+            "\u2200x (FourSided(x) \u2192 Shape(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Square(x) \u2192 Shape(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Rock(x) \u2192 Turtle(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Rock(x) \u2192 \u00acTurtle(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Rock(x) \u2192 (Turtle(x) \u2228 Cute(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Rock(x) \u2227 \u00ac(Turtle(x) \u2227 Squirrel(x)) \u2192 (Cute(x) \u2228 Skittish(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ],
+        "conclusion-FOL": "\u2200x ((Cute(x) \u2227 Still(x)) \u2192 (Turtle(x) \u2227 Skittish(x)))"
+    },
+    {
+        "premises-FOL": [
+            "PopularNetflixShow(StrangerThings)",
+            "\u2200x (NetflixShow(x) \u2227 Popular(x) \u2192 BingeWatch(Karen, x))",
+            "\u2200x (BingeWatchesNetflixShow(x) \u2192 DownloadsShow(x))",
+            "\u00ac(KarenDownloads(BlackMirror))",
+            "\u2203x (NetflixShow(x) \u2227 Name(x, \"Black Mirror\"))",
+            "\u2200x\u2200y (BingeWatchesNetflixShow(x) \u2192 SharesTo(x, y, Lisa))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y (Karen(x) \u2227 Lisa(y) \u2227 Shares(x, y, \"Stranger Things\"))"
+    },
+    {
+        "premises-FOL": [
+            "PopularNetflixShow(StrangerThings)",
+            "\u2200x (NetflixShow(x) \u2227 Popular(x) \u2192 BingeWatch(Karen, x))",
+            "\u2200x (BingeWatchesNetflixShow(x) \u2192 DownloadsShow(x))",
+            "\u00ac(KarenDownloads(BlackMirror))",
+            "\u2203x (NetflixShow(x) \u2227 Name(x, \"Black Mirror\"))",
+            "\u2200x\u2200y (BingeWatchesNetflixShow(x) \u2192 SharesTo(x, y, Lisa))"
+        ],
+        "conclusion-FOL": "Popular(BlackMirror)"
+    },
+    {
+        "premises-FOL": [
+            "PopularNetflixShow(StrangerThings)",
+            "\u2200x (NetflixShow(x) \u2227 Popular(x) \u2192 BingeWatch(Karen, x))",
+            "\u2200x (BingeWatchesNetflixShow(x) \u2192 DownloadsShow(x))",
+            "\u00ac(KarenDownloads(BlackMirror))",
+            "\u2203x (NetflixShow(x) \u2227 Name(x, \"Black Mirror\"))",
+            "\u2200x\u2200y (BingeWatchesNetflixShow(x) \u2192 SharesTo(x, y, Lisa))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y (Karen(x) \u2227 Lisa(y) \u2227 SharesBlackMirror(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, 2008SummerOlympics) \u2227 Hosted(Beijing, 2008SummerParalympics)",
+            "\u2200x (City(x) \u2227 HostedSummerOlympics(x) \u2227 HostedWinterOlympics(x) \u2227 HostedSummerParalympics(x) \u2227 HostedWinterParalympics(x))",
+            "\u2200x (UniversityInBeijing(x) \u2227 RankAmongBestInAsiaPacific(x) \u2227 RankAmongBestInWorld(x) \u2192 ConsistentlyRanked(x))"
+        ],
+        "conclusion-FOL": "Hosted(Beijing, 2008SummerOlympics) \u2227 Hosted(Beijing, WinterOlympics)"
+    },
+    {
+        "premises-FOL": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, 2008SummerOlympics) \u2227 Hosted(Beijing, 2008SummerParalympics)",
+            "\u2200x (City(x) \u2227 HostedSummerOlympics(x) \u2227 HostedWinterOlympics(x) \u2227 HostedSummerParalympics(x) \u2227 HostedWinterParalympics(x))",
+            "\u2200x (UniversityInBeijing(x) \u2227 RankAmongBestInAsiaPacific(x) \u2227 RankAmongBestInWorld(x) \u2192 ConsistentlyRanked(x))"
+        ],
+        "conclusion-FOL": "SouthernChina(Beijing)"
+    },
+    {
+        "premises-FOL": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, 2008SummerOlympics) \u2227 Hosted(Beijing, 2008SummerParalympics)",
+            "\u2200x (City(x) \u2227 HostedSummerOlympics(x) \u2227 HostedWinterOlympics(x) \u2227 HostedSummerParalympics(x) \u2227 HostedWinterParalympics(x))",
+            "\u2200x (UniversityInBeijing(x) \u2227 RankAmongBestInAsiaPacific(x) \u2227 RankAmongBestInWorld(x) \u2192 ConsistentlyRanked(x))"
+        ],
+        "conclusion-FOL": "SecondLargestChineseCityByUrbanPopulation(Beijing)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Alien(x) \u2192 Extraterrestrial(x))",
+            "\u2200x (FromMars(x) \u2192 Alien(x))",
+            "\u00ac\u2203x (Extraterrestrial(x) \u2227 Human(x))",
+            "\u2200x (Earthian(x) \u2192 Human(x))",
+            "\u2200x (Marvin(x) \u2192 (\u00acFromEarth(x) \u2227 \u00acFromMars(x)))",
+            "\u2200x (Marvin(x) \u2227 \u00acFromEarth(x) \u2192 Extraterrestrial(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Alien(x) \u2192 Marvin(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Alien(x) \u2192 Extraterrestrial(x))",
+            "\u2200x (FromMars(x) \u2192 Alien(x))",
+            "\u00ac\u2203x (Extraterrestrial(x) \u2227 Human(x))",
+            "\u2200x (Earthian(x) \u2192 Human(x))",
+            "\u2200x (Marvin(x) \u2192 (\u00acFromEarth(x) \u2227 \u00acFromMars(x)))",
+            "\u2200x (Marvin(x) \u2227 \u00acFromEarth(x) \u2192 Extraterrestrial(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Marvin(x) \u2192 \u00ac(Human(x) \u2228 FromMars(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Alien(x) \u2192 Extraterrestrial(x))",
+            "\u2200x (FromMars(x) \u2192 Alien(x))",
+            "\u00ac\u2203x (Extraterrestrial(x) \u2227 Human(x))",
+            "\u2200x (Earthian(x) \u2192 Human(x))",
+            "\u2200x (Marvin(x) \u2192 (\u00acFromEarth(x) \u2227 \u00acFromMars(x)))",
+            "\u2200x (Marvin(x) \u2227 \u00acFromEarth(x) \u2192 Extraterrestrial(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Marvin(x) \u2227 \u00acFromMars(x) \u2192 Human(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2192 (GrandSlamChampion(x) \u2295 OscarNominatedActor(x)))",
+            "\u2200x (GrandSlamChampion(x) \u2192 ProfessionalTennisPlayer(x))",
+            "\u2200x (OscarNominatedActor(x) \u2192 Celebrity(x))",
+            "\u2200x (ProfessionalTennisPlayer(x) \u2192 Athlete(x))",
+            "\u2200x (Celebrity(x) \u2192 WellPaid(x))",
+            "\u2200x (Athlete(x) \u2192 Famous(x))",
+            "\u2200x (WellPaid(x) \u2192 LivesInTaxHaven(x))",
+            "\u2200x (Famous(x) \u2227 Athlete(x) \u2192 WellPaid(x))"
+        ],
+        "conclusion-FOL": "GrandSlamChampion(djokovic)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2192 (GrandSlamChampion(x) \u2295 OscarNominatedActor(x)))",
+            "\u2200x (GrandSlamChampion(x) \u2192 ProfessionalTennisPlayer(x))",
+            "\u2200x (OscarNominatedActor(x) \u2192 Celebrity(x))",
+            "\u2200x (ProfessionalTennisPlayer(x) \u2192 Athlete(x))",
+            "\u2200x (Celebrity(x) \u2192 WellPaid(x))",
+            "\u2200x (Athlete(x) \u2192 Famous(x))",
+            "\u2200x (WellPaid(x) \u2192 LivesInTaxHaven(x))",
+            "\u2200x (Famous(x) \u2227 Athlete(x) \u2192 WellPaid(x))"
+        ],
+        "conclusion-FOL": "\u2203x (TennisPlayer(x) \u2227 Djokovic(x) \u2227 LivesInTaxHaven(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2192 (GrandSlamChampion(x) \u2295 OscarNominatedActor(x)))",
+            "\u2200x (GrandSlamChampion(x) \u2192 ProfessionalTennisPlayer(x))",
+            "\u2200x (OscarNominatedActor(x) \u2192 Celebrity(x))",
+            "\u2200x (ProfessionalTennisPlayer(x) \u2192 Athlete(x))",
+            "\u2200x (Celebrity(x) \u2192 WellPaid(x))",
+            "\u2200x (Athlete(x) \u2192 Famous(x))",
+            "\u2200x (WellPaid(x) \u2192 LivesInTaxHaven(x))",
+            "\u2200x (Famous(x) \u2227 Athlete(x) \u2192 WellPaid(x))"
+        ],
+        "conclusion-FOL": "\u00ac(DjokovicLivesInTaxHaven(Djokovic))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DiamondMine(x) \u2192 (ProfessionalWrestlingStable(x) \u2227 FormedInWWE(x)))",
+            "\u2200x \u2200y (RoderickStrong(x) \u2227 DiamondMine(y) \u2192 Leads(x, y))",
+            "\u2200x\u2200y\u2200z (DiamondMine(x) \u2227 CreedBrothers(y) \u2227 IvyNile(z) \u2192 Includes(x, y) \u2227 Includes(x, z))",
+            "\u2203x \u2203y (Imperium(x) \u2227 DiamondMine(y) \u2227 Feud(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x (Roderick(x) \u2227 ProfessionalWrestling(y) \u2227 Stable(z) \u2227 Leads(x, y, z) \u2192 Strong(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DiamondMine(x) \u2192 (ProfessionalWrestlingStable(x) \u2227 FormedInWWE(x)))",
+            "\u2200x \u2200y (RoderickStrong(x) \u2227 DiamondMine(y) \u2192 Leads(x, y))",
+            "\u2200x\u2200y\u2200z (DiamondMine(x) \u2227 CreedBrothers(y) \u2227 IvyNile(z) \u2192 Includes(x, y) \u2227 Includes(x, z))",
+            "\u2203x \u2203y (Imperium(x) \u2227 DiamondMine(y) \u2227 Feud(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y (Roderick(x) \u2227 CreedBrothers(y) \u2192 StrongLeads(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DiamondMine(x) \u2192 (ProfessionalWrestlingStable(x) \u2227 FormedInWWE(x)))",
+            "\u2200x \u2200y (RoderickStrong(x) \u2227 DiamondMine(y) \u2192 Leads(x, y))",
+            "\u2200x\u2200y\u2200z (DiamondMine(x) \u2227 CreedBrothers(y) \u2227 IvyNile(z) \u2192 Includes(x, y) \u2227 Includes(x, z))",
+            "\u2203x \u2203y (Imperium(x) \u2227 DiamondMine(y) \u2227 Feud(x, y))"
+        ],
+        "conclusion-FOL": "\u00ac(Imperium(x) \u2227 FeudWith(x, y) \u2227 ProfessionalWrestlingStable(y) \u2227 Includes(y, ivy_nile))"
+    },
+    {
+        "premises-FOL": [
+            "SymphonyNo9(musicPiece)",
+            "\u2200x (Composer(x) \u2192 WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNo9)",
+            "\u2200x \u2200y (ViennaMusicSociety(x) \u2227 SymphonyNo9(y) \u2192 Premiered(x, y))",
+            "\u2200x (ViennaMusicSociety(x) \u2192 Orchestra(x))",
+            "\u2200x (Beethoven(x) \u2192 LeadsViennaMusicSociety(x))",
+            "\u2200x \u2200y (Orchestra(x) \u2227 Conductor(y) \u2192 LedBy(x, y))"
+        ],
+        "conclusion-FOL": "\u2203x (Composer(x) \u2227 Beethoven(x))"
+    },
+    {
+        "premises-FOL": [
+            "SymphonyNo9(musicPiece)",
+            "\u2200x (Composer(x) \u2192 WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNo9)",
+            "\u2200x \u2200y (ViennaMusicSociety(x) \u2227 SymphonyNo9(y) \u2192 Premiered(x, y))",
+            "\u2200x (ViennaMusicSociety(x) \u2192 Orchestra(x))",
+            "\u2200x (Beethoven(x) \u2192 LeadsViennaMusicSociety(x))",
+            "\u2200x \u2200y (Orchestra(x) \u2227 Conductor(y) \u2192 LedBy(x, y))"
+        ],
+        "conclusion-FOL": "\u2203x\u2203y (Orchestra(x) \u2227 MusicPiece(y) \u2227 Premiered(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "SymphonyNo9(musicPiece)",
+            "\u2200x (Composer(x) \u2192 WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNo9)",
+            "\u2200x \u2200y (ViennaMusicSociety(x) \u2227 SymphonyNo9(y) \u2192 Premiered(x, y))",
+            "\u2200x (ViennaMusicSociety(x) \u2192 Orchestra(x))",
+            "\u2200x (Beethoven(x) \u2192 LeadsViennaMusicSociety(x))",
+            "\u2200x \u2200y (Orchestra(x) \u2227 Conductor(y) \u2192 LedBy(x, y))"
+        ],
+        "conclusion-FOL": "\u00ac(Conductor(beethoven))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, ZahaHadid) \u2192 Timeless(x))",
+            "\u00ac\u2203x (MassProductDesign(x) \u2227 Timeless(x))",
+            "Either(DesignStyle(zahaHadid) \u2228 DesignStyle(kellyWearstler))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Evocative(x))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Dreamy(x))",
+            "\u2200x (Design(x) \u2227 DesignByMax(x) \u2227 Timeless(x) \u2192 (MassProductDesign(x) \u2227 Evocative(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Design(x) \u2227 DesignedBy(x, \"Max\") \u2192 MassProductDesign(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, ZahaHadid) \u2192 Timeless(x))",
+            "\u00ac\u2203x (MassProductDesign(x) \u2227 Timeless(x))",
+            "Either(DesignStyle(zahaHadid) \u2228 DesignStyle(kellyWearstler))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Evocative(x))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Dreamy(x))",
+            "\u2200x (Design(x) \u2227 DesignByMax(x) \u2227 Timeless(x) \u2192 (MassProductDesign(x) \u2227 Evocative(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Design(x) \u2227 DesignedBy(x, \"Max\") \u2192 (Evocative(x) \u2227 Dreamy(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, ZahaHadid) \u2192 Timeless(x))",
+            "\u00ac\u2203x (MassProductDesign(x) \u2227 Timeless(x))",
+            "Either(DesignStyle(zahaHadid) \u2228 DesignStyle(kellyWearstler))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Evocative(x))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Dreamy(x))",
+            "\u2200x (Design(x) \u2227 DesignByMax(x) \u2227 Timeless(x) \u2192 (MassProductDesign(x) \u2227 Evocative(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Design(x) \u2227 DesignedBy(x, \"Max\") \u2192 (Evocative(x) \u2295 Dreamy(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (RankedHighlyByWTA(x) \u2192 MostActiveMajorTennisPlayer(x))",
+            "\u2200x (LostToIgaSwietek(x) \u2192 HighlyRankedByWTA(x))",
+            "\u2200x (FemaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2192 LostToIgaSwietek(x))",
+            "Either (FemaleTennisPlayers(2022, RolandGarros) \u2228 MaleTennisPlayers(2022, RolandGarros))",
+            "\u2200x (MaleTennisPlayer(x) \u2227 AtRolandGarros2022(x) \u2192 LostToRafaelNadal(x))",
+            "\u2200x (CocoGauff(x) \u2227 (HighlyRankedByWTA(x) \u2228 LostToRafaelNadal(x)) \u2192 \u00acMaleTennisPlayerAtRolandGarros2022(x))"
+        ],
+        "conclusion-FOL": "\u2203x (MostActivePlayerInMajorTennis(x) \u2227 CocoGauff(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (RankedHighlyByWTA(x) \u2192 MostActiveMajorTennisPlayer(x))",
+            "\u2200x (LostToIgaSwietek(x) \u2192 HighlyRankedByWTA(x))",
+            "\u2200x (FemaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2192 LostToIgaSwietek(x))",
+            "Either (FemaleTennisPlayers(2022, RolandGarros) \u2228 MaleTennisPlayers(2022, RolandGarros))",
+            "\u2200x (MaleTennisPlayer(x) \u2227 AtRolandGarros2022(x) \u2192 LostToRafaelNadal(x))",
+            "\u2200x (CocoGauff(x) \u2227 (HighlyRankedByWTA(x) \u2228 LostToRafaelNadal(x)) \u2192 \u00acMaleTennisPlayerAtRolandGarros2022(x))"
+        ],
+        "conclusion-FOL": "\u2203x \u2203y (CocoGauff(x) \u2227 RafaelNadal(y) \u2227 LostTo(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (RankedHighlyByWTA(x) \u2192 MostActiveMajorTennisPlayer(x))",
+            "\u2200x (LostToIgaSwietek(x) \u2192 HighlyRankedByWTA(x))",
+            "\u2200x (FemaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2192 LostToIgaSwietek(x))",
+            "Either (FemaleTennisPlayers(2022, RolandGarros) \u2228 MaleTennisPlayers(2022, RolandGarros))",
+            "\u2200x (MaleTennisPlayer(x) \u2227 AtRolandGarros2022(x) \u2192 LostToRafaelNadal(x))",
+            "\u2200x (CocoGauff(x) \u2227 (HighlyRankedByWTA(x) \u2228 LostToRafaelNadal(x)) \u2192 \u00acMaleTennisPlayerAtRolandGarros2022(x))"
+        ],
+        "conclusion-FOL": "\u00ac(CocoGauffLostToIgaSwietekOrMostActiveMajorTennisPlayer(CocoGauff))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Cat(x) \u2192 Mammal(x))",
+            "\u2203x (Pet(x) \u2227 \u00acMammal(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Pet(x) \u2227 \u00acCat(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Year(x) \u2192 (Season(x, spring) \u2228 Season(x, summer) \u2228 Season(x, fall) \u2228 Season(x, winter)))",
+            "\u2200x (Student(x) \u2227 WantsLongVacation(x) \u2192 LovesSummer(x))",
+            "\u2203x (FavoriteSeason(x, Emma) \u2227 Season(x, Summer))",
+            "\u2203x \u2203y (Person(x) \u2227 Person(y) \u2227 FavoriteSeason(x, y) \u2227 Mia(x) \u2227 Emma(y) \u2227 \u00ac(FavoriteSeason(x, y)))",
+            "\u2203x (Person(x) \u2227 WantsLongVacation(x))"
+        ],
+        "conclusion-FOL": "FavoriteSeason(james, summer)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Year(x) \u2192 (Season(x, spring) \u2228 Season(x, summer) \u2228 Season(x, fall) \u2228 Season(x, winter)))",
+            "\u2200x (Student(x) \u2227 WantsLongVacation(x) \u2192 LovesSummer(x))",
+            "\u2203x (FavoriteSeason(x, Emma) \u2227 Season(x, Summer))",
+            "\u2203x \u2203y (Person(x) \u2227 Person(y) \u2227 FavoriteSeason(x, y) \u2227 Mia(x) \u2227 Emma(y) \u2227 \u00ac(FavoriteSeason(x, y)))",
+            "\u2203x (Person(x) \u2227 WantsLongVacation(x))"
+        ],
+        "conclusion-FOL": "FavoriteSeason(james, fall)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Year(x) \u2192 (Season(x, spring) \u2228 Season(x, summer) \u2228 Season(x, fall) \u2228 Season(x, winter)))",
+            "\u2200x (Student(x) \u2227 WantsLongVacation(x) \u2192 LovesSummer(x))",
+            "\u2203x (FavoriteSeason(x, Emma) \u2227 Season(x, Summer))",
+            "\u2203x \u2203y (Person(x) \u2227 Person(y) \u2227 FavoriteSeason(x, y) \u2227 Mia(x) \u2227 Emma(y) \u2227 \u00ac(FavoriteSeason(x, y)))",
+            "\u2203x (Person(x) \u2227 WantsLongVacation(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Person(x) \u2227 FavoriteSeason(x, spring) \u2192 Mia(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DigitalMedia(x) \u2192 \u00acAnalog(x))",
+            "\u2200x (PrintedText(x) \u2192 Analog(x))",
+            "\u2200x (StreamingService(x) \u2192 Digital(x))",
+            "\u2200x (HardcoverBook(x) \u2192 PrintedText(x))",
+            "\u2200x (StreamingService(x) \u2192 HardcoverBook(x))"
+        ],
+        "conclusion-FOL": "PrintedText(1984)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DigitalMedia(x) \u2192 \u00acAnalog(x))",
+            "\u2200x (PrintedText(x) \u2192 Analog(x))",
+            "\u2200x (StreamingService(x) \u2192 Digital(x))",
+            "\u2200x (HardcoverBook(x) \u2192 PrintedText(x))",
+            "\u2200x (StreamingService(x) \u2192 HardcoverBook(x))"
+        ],
+        "conclusion-FOL": "StreamingService(1984)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DigitalMedia(x) \u2192 \u00acAnalog(x))",
+            "\u2200x (PrintedText(x) \u2192 Analog(x))",
+            "\u2200x (StreamingService(x) \u2192 Digital(x))",
+            "\u2200x (HardcoverBook(x) \u2192 PrintedText(x))",
+            "\u2200x (StreamingService(x) \u2192 HardcoverBook(x))"
+        ],
+        "conclusion-FOL": "\u00ac(StreamingService(1984))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (RomanceLanguage(x) \u2192 IndoEuropean(x))",
+            "\u2200x (RomanceLanguage(x) \u2192 LanguageFamily(x))",
+            "\u2200x\u2200y (Language(x) \u2227 Language(y) \u2227 LanguageFamily(x, y) \u2192 Related(x, y))",
+            "\u2200x\u2200y (French(x) \u2227 Spanish(y) \u2192 RomanceLanguage(x) \u2227 RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "\u2200x (Basque(x) \u2192 \u00acRelatedToAnyLanguage(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Language(x) \u2227 Basque(x) \u2192 Romance(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (RomanceLanguage(x) \u2192 IndoEuropean(x))",
+            "\u2200x (RomanceLanguage(x) \u2192 LanguageFamily(x))",
+            "\u2200x\u2200y (Language(x) \u2227 Language(y) \u2227 LanguageFamily(x, y) \u2192 Related(x, y))",
+            "\u2200x\u2200y (French(x) \u2227 Spanish(y) \u2192 RomanceLanguage(x) \u2227 RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "\u2200x (Basque(x) \u2192 \u00acRelatedToAnyLanguage(x))"
+        ],
+        "conclusion-FOL": "\u2200x (German(x) \u2192 RomanceLanguage(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (RomanceLanguage(x) \u2192 IndoEuropean(x))",
+            "\u2200x (RomanceLanguage(x) \u2192 LanguageFamily(x))",
+            "\u2200x\u2200y (Language(x) \u2227 Language(y) \u2227 LanguageFamily(x, y) \u2192 Related(x, y))",
+            "\u2200x\u2200y (French(x) \u2227 Spanish(y) \u2192 RomanceLanguage(x) \u2227 RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "\u2200x (Basque(x) \u2192 \u00acRelatedToAnyLanguage(x))"
+        ],
+        "conclusion-FOL": "\u2200x (French(x) \u2192 Indo-European(x))"
+    },
+    {
+        "premises-FOL": [
+            "Player(robert_lewandowski) \u2227 Position(striker)",
+            "\u2200x (Striker(x) \u2192 SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "\u2200x\u2200y (Player(x) \u2227 Team(y) \u2227 LeftTeam(x, y) \u2192 \u00acPlayForTeam(x, y))"
+        ],
+        "conclusion-FOL": "SoccerPlayer(lewandowski)"
+    },
+    {
+        "premises-FOL": [
+            "Player(robert_lewandowski) \u2227 Position(striker)",
+            "\u2200x (Striker(x) \u2192 SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "\u2200x\u2200y (Player(x) \u2227 Team(y) \u2227 LeftTeam(x, y) \u2192 \u00acPlayForTeam(x, y))"
+        ],
+        "conclusion-FOL": "Player(robert_lewandowski) \u2227 Club(BayernMunchen)"
+    },
+    {
+        "premises-FOL": [
+            "Player(robert_lewandowski) \u2227 Position(striker)",
+            "\u2200x (Striker(x) \u2192 SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "\u2200x\u2200y (Player(x) \u2227 Team(y) \u2227 LeftTeam(x, y) \u2192 \u00acPlayForTeam(x, y))"
+        ],
+        "conclusion-FOL": "Player(robert_lewandowski) \u2227 Star(robert_lewandowski)"
+    },
+    {
+        "premises-FOL": [
+            "City(billings) \u2227 In(billings, montana)",
+            "\u2200x (City(x) \u2227 InMontana(x) \u2192 (Butte(x) \u2228 Helena(x) \u2228 Missoula(x)))",
+            "\u2200x\u2200y (City(x) \u2227 City(y) \u2227 InState(x, y) \u2192 (WhiteSulphurSprings(x) \u2227 Butte(y)))",
+            "\u00ac(PierreCity(pierre) \u2227 InMontana(pierre))",
+            "\u2200x (City(x) \u2227 InButte(x) \u2192 \u00acInPierre(x))"
+        ],
+        "conclusion-FOL": "\u2200x\u2200y (Butte(x) \u2227 Pierre(y) \u2192 InState(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "City(billings) \u2227 In(billings, montana)",
+            "\u2200x (City(x) \u2227 InMontana(x) \u2192 (Butte(x) \u2228 Helena(x) \u2228 Missoula(x)))",
+            "\u2200x\u2200y (City(x) \u2227 City(y) \u2227 InState(x, y) \u2192 (WhiteSulphurSprings(x) \u2227 Butte(y)))",
+            "\u00ac(PierreCity(pierre) \u2227 InMontana(pierre))",
+            "\u2200x (City(x) \u2227 InButte(x) \u2192 \u00acInPierre(x))"
+        ],
+        "conclusion-FOL": "\u2200x\u2200y (Pierre(x) \u2227 Bismarck(y) \u2192 InState(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "City(billings) \u2227 In(billings, montana)",
+            "\u2200x (City(x) \u2227 InMontana(x) \u2192 (Butte(x) \u2228 Helena(x) \u2228 Missoula(x)))",
+            "\u2200x\u2200y (City(x) \u2227 City(y) \u2227 InState(x, y) \u2192 (WhiteSulphurSprings(x) \u2227 Butte(y)))",
+            "\u00ac(PierreCity(pierre) \u2227 InMontana(pierre))",
+            "\u2200x (City(x) \u2227 InButte(x) \u2192 \u00acInPierre(x))"
+        ],
+        "conclusion-FOL": "Home(montana, missoula)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (InternationalStudent(x) \u2227 InUS(x) \u2192 (F1Visa(x) \u2295 J1Visa(x)))",
+            "\u2200x (InternationalStudent(x) \u2227 InUS(x) \u2227 HasF1Visa(x) \u2192 (ApplyCPT(x) \u2228 ApplyOPT(x)))",
+            "\u2203x (Student(x) \u2227 International(x))",
+            "\u2200x (Mike(x) \u2227 WantsToWorkInUS(x) \u2192 ApplyForCPT(x))"
+        ],
+        "conclusion-FOL": "\u2203x (Person(x) \u2227 HasF1Visa(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (InternationalStudent(x) \u2227 InUS(x) \u2192 (F1Visa(x) \u2295 J1Visa(x)))",
+            "\u2200x (InternationalStudent(x) \u2227 InUS(x) \u2227 HasF1Visa(x) \u2192 (ApplyCPT(x) \u2228 ApplyOPT(x)))",
+            "\u2203x (Student(x) \u2227 International(x))",
+            "\u2200x (Mike(x) \u2227 WantsToWorkInUS(x) \u2192 ApplyForCPT(x))"
+        ],
+        "conclusion-FOL": "HasJ1Visa(mike)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Cow(x) \u2192 Bovine(x))",
+            "\u2203x (Pet(x) \u2227 Cow(x))",
+            "\u2200x (Bovine(x) \u2192 Domesticated(x))",
+            "\u2200x (DomesticatedAnimal(x) \u2192 \u00acAlligator(x))",
+            "\u2200x (Aligator(x) \u2194 Ted(x))"
+        ],
+        "conclusion-FOL": "Pet(ted)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Cow(x) \u2192 Bovine(x))",
+            "\u2203x (Pet(x) \u2227 Cow(x))",
+            "\u2200x (Bovine(x) \u2192 Domesticated(x))",
+            "\u2200x (DomesticatedAnimal(x) \u2192 \u00acAlligator(x))",
+            "\u2200x (Aligator(x) \u2194 Ted(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Pet(x) \u2227 Cow(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Cow(x) \u2192 Bovine(x))",
+            "\u2203x (Pet(x) \u2227 Cow(x))",
+            "\u2200x (Bovine(x) \u2192 Domesticated(x))",
+            "\u2200x (DomesticatedAnimal(x) \u2192 \u00acAlligator(x))",
+            "\u2200x (Aligator(x) \u2194 Ted(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Cow(x) \u2192 \u00acPet(x))"
+    },
+    {
+        "premises-FOL": [
+            "PrivateIvyLeagueResearchUniversity(yale)",
+            "Moved(yale, new_haven, 1716)",
+            "423000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "\u2200x (YaleUniversity(x) \u2192 (OrganizedInto(x, 27) \u2227 (ResidentialColleges(x) \u2228 YaleGraduateSchoolOfArtsAndSciences(x) \u2228 ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ],
+        "conclusion-FOL": "\u2203x (PrivateIvyLeagueResearchUniversity(x) \u2227 MovedToNewHaven(x))"
+    },
+    {
+        "premises-FOL": [
+            "PrivateIvyLeagueResearchUniversity(yale)",
+            "Moved(yale, new_haven, 1716)",
+            "423000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "\u2200x (YaleUniversity(x) \u2192 (OrganizedInto(x, 27) \u2227 (ResidentialColleges(x) \u2228 YaleGraduateSchoolOfArtsAndSciences(x) \u2228 ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ],
+        "conclusion-FOL": "\u2200x (EducationalInstitution(x) \u2227 University(x) \u2227 Endowment(x) \u2227 Largest(x) \u2192 YaleUniversity(x))"
+    },
+    {
+        "premises-FOL": [
+            "PrivateIvyLeagueResearchUniversity(yale)",
+            "Moved(yale, new_haven, 1716)",
+            "423000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "\u2200x (YaleUniversity(x) \u2192 (OrganizedInto(x, 27) \u2227 (ResidentialColleges(x) \u2228 YaleGraduateSchoolOfArtsAndSciences(x) \u2228 ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ],
+        "conclusion-FOL": "ResidentialCollege(PiersonCollege, Yale)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x\u2200y (Badults(x) \u2227 Pappys(y) \u2192 (BritishSitcomSeries(x) \u2227 StarringMembers(x, y)))",
+            "\u2200x (Badults(x) \u2227 PilotedIn(x, July 2013) \u2227 OnBBCThree(x))",
+            "\u2203x (WorkingTitle(x) \u2227 SecretDudeSociety(x) \u2227 UsedFor(x, Badults))",
+            "\u2200x (AndrewCollins(x) \u2227 ScriptEditor(x, Badults))"
+        ],
+        "conclusion-FOL": "AndrewCollins(a) \u2227 ScriptEditor(a) \u2227 Series(a) \u2227 WorkingTitle(a, \"TheSecretDudeSociety\")"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x\u2200y (Badults(x) \u2227 Pappys(y) \u2192 (BritishSitcomSeries(x) \u2227 StarringMembers(x, y)))",
+            "\u2200x (Badults(x) \u2227 PilotedIn(x, July 2013) \u2227 OnBBCThree(x))",
+            "\u2203x (WorkingTitle(x) \u2227 SecretDudeSociety(x) \u2227 UsedFor(x, Badults))",
+            "\u2200x (AndrewCollins(x) \u2227 ScriptEditor(x, Badults))"
+        ],
+        "conclusion-FOL": "\u00ac(\u2203x (MemberOfPappys(x) \u2227 StarredForShow(x) \u2227 PilotsOnBBCTwo(x) \u2228 PilotsOnBBCThree(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (GrowthCompany(x) \u2192 VolatileStock(x))",
+            "\u2200x (StockPrice(x) \u2227 Volatile(x) \u2192 \u00acSuitableForRetirementFund(x))",
+            "\u2203x (Company(x) \u2227 GrowthCompanyStock(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 SuitableForRetirementFund(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 Stock(x, KO))"
+        ],
+        "conclusion-FOL": "CompanyStock(KO)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (GrowthCompany(x) \u2192 VolatileStock(x))",
+            "\u2200x (StockPrice(x) \u2227 Volatile(x) \u2192 \u00acSuitableForRetirementFund(x))",
+            "\u2203x (Company(x) \u2227 GrowthCompanyStock(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 SuitableForRetirementFund(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 Stock(x, KO))"
+        ],
+        "conclusion-FOL": "\u2200x (Company(x) \u2227 KO(x) \u2192 (Stock(x) \u2227 GrowthCompanyStock(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (GrowthCompany(x) \u2192 VolatileStock(x))",
+            "\u2200x (StockPrice(x) \u2227 Volatile(x) \u2192 \u00acSuitableForRetirementFund(x))",
+            "\u2203x (Company(x) \u2227 GrowthCompanyStock(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 SuitableForRetirementFund(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 Stock(x, KO))"
+        ],
+        "conclusion-FOL": "\u2200x (GrowthCompanyStock(x) \u2227 (Stock(x) \u2227 VolatilePrice(x)) \u2192 (\u00acCompanyStock(x) \u2227 \u00acVolatilePrice(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (VehicleRegistrationPlate(x) \u2227 InIstanbul(x) \u2192 BeginsWithNumber34(x))",
+            "\u2200x (Plate(x) \u2227 \u00acBeginsWith(x, 34) \u2192 \u00acFromIstanbul(x))",
+            "VehicleRegistrationPlate(joe, istanbul)",
+            "HasLicensePlateNumber(Tom, 35)",
+            "\u2200x (LicensePlate(x) \u2227 BeginsWithNumber(x, 35) \u2192 \u00acBeginsWithNumber(x, 34))"
+        ],
+        "conclusion-FOL": "HasLicensePlateNumber(Joe, 34)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (VehicleRegistrationPlate(x) \u2227 InIstanbul(x) \u2192 BeginsWithNumber34(x))",
+            "\u2200x (Plate(x) \u2227 \u00acBeginsWith(x, 34) \u2192 \u00acFromIstanbul(x))",
+            "VehicleRegistrationPlate(joe, istanbul)",
+            "HasLicensePlateNumber(Tom, 35)",
+            "\u2200x (LicensePlate(x) \u2227 BeginsWithNumber(x, 35) \u2192 \u00acBeginsWithNumber(x, 34))"
+        ],
+        "conclusion-FOL": "LicensePlate(tom, istanbul)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2192 NeedsToEarnMoneyToPayForCollegeTuition(x))",
+            "\u2200x (FrequentTakeoutInCollege(x) \u2192 StudentJobOnCampus(x))",
+            "\u2200x (Person(x) \u2192 (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) \u2227 EnjoysRecipes(x))))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 \u00acPickyEater(x))",
+            "\u2200x\u2200y (EnjoyDiningHallMealsAndRecipes(x) \u2227 SpendTimeEatingAndCatchingUp(x, y) \u2192 EatInCampusDiningHalls(y))",
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2227 NeedsToEarnMoneyForCollegeTuition(x) \u2192 (\u00acPicky(x) \u2227 \u00acNeedsToEarnMoneyForCollegeTuition(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Mary(x) \u2227 NeedsMoney(x) \u2192 HelpPayForCollegeTuition(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2192 NeedsToEarnMoneyToPayForCollegeTuition(x))",
+            "\u2200x (FrequentTakeoutInCollege(x) \u2192 StudentJobOnCampus(x))",
+            "\u2200x (Person(x) \u2192 (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) \u2227 EnjoysRecipes(x))))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 \u00acPickyEater(x))",
+            "\u2200x\u2200y (EnjoyDiningHallMealsAndRecipes(x) \u2227 SpendTimeEatingAndCatchingUp(x, y) \u2192 EatInCampusDiningHalls(y))",
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2227 NeedsToEarnMoneyForCollegeTuition(x) \u2192 (\u00acPicky(x) \u2227 \u00acNeedsToEarnMoneyForCollegeTuition(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Mary(x) \u2192 (\u00acPickyEater(x) \u2227 SpendsTimeEating(x) \u2227 SpendsTimeCatchingUpWithFriends(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2192 NeedsToEarnMoneyToPayForCollegeTuition(x))",
+            "\u2200x (FrequentTakeoutInCollege(x) \u2192 StudentJobOnCampus(x))",
+            "\u2200x (Person(x) \u2192 (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) \u2227 EnjoysRecipes(x))))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 \u00acPickyEater(x))",
+            "\u2200x\u2200y (EnjoyDiningHallMealsAndRecipes(x) \u2227 SpendTimeEatingAndCatchingUp(x, y) \u2192 EatInCampusDiningHalls(y))",
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2227 NeedsToEarnMoneyForCollegeTuition(x) \u2192 (\u00acPicky(x) \u2227 \u00acNeedsToEarnMoneyForCollegeTuition(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Student(x) \u2227 Mary(x) \u2192 (\u00acPickyEater(x) \u2228 (PickyEater(x) \u2227 SpendsTimeInDiningHalls(x))))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Bakery(x) \u2192 \u00acSpicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (DriedThaiChilies(x) \u2192 BakedByMelissa(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Bakery(x) \u2192 \u00acSpicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (DriedThaiChili(x) \u2192 \u00acProductOf(x, BakedByMelissa))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Bakery(x) \u2192 \u00acSpicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (DriedThaiChili(x) \u2192 Hotpot(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Bakery(x) \u2192 \u00acSpicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (DriedThaiChili(x) \u2192 \u00ac(BakedByMelissa(x) \u2228 Bakery(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Bakery(x) \u2192 \u00acSpicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (DriedThaiChili(x) \u2192 (Cupcake(x) \u2227 ProductOf(x, BakedByMelissa)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Restaurant(x) \u2227 ListedInYelpsRecommendations(x) \u2192 \u00acManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 RatingGreaterThan(x, 9) \u2192 ListedInRecommendations(x))",
+            "\u2203x (Restaurant(x) \u2227 \u00acProvidesTakeOutService(x) \u2227 ReceivesManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 PopularAmongLocalResidents(x) \u2192 RatingGreaterThan9(x))",
+            "\u2203x (Subway(x) \u2227 (RatingGreaterThan(x, 9) \u2228 PopularAmongLocalResidents(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Subway(x) \u2227 TakeOutService(x) \u2227 ManyNegativeReviews(x) \u2192 (RatingGreaterThan9(x) \u2227 \u00acTakeOutService(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Restaurant(x) \u2227 ListedInYelpsRecommendations(x) \u2192 \u00acManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 RatingGreaterThan(x, 9) \u2192 ListedInRecommendations(x))",
+            "\u2203x (Restaurant(x) \u2227 \u00acProvidesTakeOutService(x) \u2227 ReceivesManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 PopularAmongLocalResidents(x) \u2192 RatingGreaterThan9(x))",
+            "\u2203x (Subway(x) \u2227 (RatingGreaterThan(x, 9) \u2228 PopularAmongLocalResidents(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Subway(x) \u2192 (TakeOutService(x) \u2227 \u00acManyNegativeReviews(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Restaurant(x) \u2227 ListedInYelpsRecommendations(x) \u2192 \u00acManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 RatingGreaterThan(x, 9) \u2192 ListedInRecommendations(x))",
+            "\u2203x (Restaurant(x) \u2227 \u00acProvidesTakeOutService(x) \u2227 ReceivesManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 PopularAmongLocalResidents(x) \u2192 RatingGreaterThan9(x))",
+            "\u2203x (Subway(x) \u2227 (RatingGreaterThan(x, 9) \u2228 PopularAmongLocalResidents(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Subway(x) \u2192 \u00acProvidesTakeOutService(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (SuperheroMovie(x) \u2192 GoodGuysWin(x))",
+            "\u2200x (SuperheroMovie(x) \u2194 (SirDigbyChickenCaesar(x) \u2227 Movie(x)))",
+            "\u2200x\u2200y (GoodGuy(x) \u2227 BadGuy(y) \u2192 Fights(x, y))",
+            "SirDigby(n) \u2227 Nemesis(m) \u2192 Fights(n, m)",
+            "\u2200x (SuperheroMovie(x) \u2227 NamedAfterCharacter(x) \u2192 GoodGuy(x))",
+            "SirDigbyChickenCaesar(n) \u2194 NamedAfter(n, SirDigby)",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 WinsFight(x, y) \u2192 LosesFight(y, x))",
+            "\u2200x\u2200y (SuperheroMovie(x) \u2227 NamedAfterCharacter(x, y) \u2192 AppearsInMovie(y, x))"
+        ],
+        "conclusion-FOL": "\u2203x (Nemesis(x, SirDigby) \u2227 Loses(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Book(x) \u2192 ContainsTonsOfKnowledge(x))",
+            "\u2200x (ReadsBook(x) \u2192 GainsKnowledge(x))",
+            "\u2200x (GainsKnowledge(x) \u2192 BecomesSmarter(x))",
+            "\u2200x\u2200y (Harry(x) \u2227 Book(y) \u2227 Walden(y) \u2227 ByHenryThoreau(y) \u2192 Read(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x (Walden(x) \u2192 ContainsKnowledge(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Book(x) \u2192 ContainsTonsOfKnowledge(x))",
+            "\u2200x (ReadsBook(x) \u2192 GainsKnowledge(x))",
+            "\u2200x (GainsKnowledge(x) \u2192 BecomesSmarter(x))",
+            "\u2200x\u2200y (Harry(x) \u2227 Book(y) \u2227 Walden(y) \u2227 ByHenryThoreau(y) \u2192 Read(x, y))"
+        ],
+        "conclusion-FOL": "Smarter(Harry)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Book(x) \u2192 ContainsTonsOfKnowledge(x))",
+            "\u2200x (ReadsBook(x) \u2192 GainsKnowledge(x))",
+            "\u2200x (GainsKnowledge(x) \u2192 BecomesSmarter(x))",
+            "\u2200x\u2200y (Harry(x) \u2227 Book(y) \u2227 Walden(y) \u2227 ByHenryThoreau(y) \u2192 Read(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x (Person(x) \u2227 Smarter(x) \u2192 GainedKnowledge(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (NaturalLanguageProcessingTask(x) \u2192 (LanguageGenerationTask(x) \u2295 LanguageUnderstandingTask(x)))",
+            "\u2200x (OutputOfNLPTask(x) \u2227 TextSequence(x) \u2192 LanguageGenerationTask(x))",
+            "\u2200x (MachineTranslation(x) \u2192 NaturalLanguageProcessingTask(x))",
+            "\u2200x (MachineTranslationOutput(x) \u2192 TextSequence(x))"
+        ],
+        "conclusion-FOL": "\u2200x (MachineTranslation(x) \u2192 LanguageGenerationTask(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (NaturalLanguageProcessingTask(x) \u2192 (LanguageGenerationTask(x) \u2295 LanguageUnderstandingTask(x)))",
+            "\u2200x (OutputOfNLPTask(x) \u2227 TextSequence(x) \u2192 LanguageGenerationTask(x))",
+            "\u2200x (MachineTranslation(x) \u2192 NaturalLanguageProcessingTask(x))",
+            "\u2200x (MachineTranslationOutput(x) \u2192 TextSequence(x))"
+        ],
+        "conclusion-FOL": "\u2200x (MachineTranslation(x) \u2192 LanguageUnderstandingTask(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Pet(x) \u2227 ManagedBuilding(y) \u2227 AllowedIn(x, y) \u2192 AllowedIn(x, y))",
+            "\u2200x\u2200y (ManagedBuilding(x) \u2227 Apartment(y) \u2227 Rent(y) \u2192 DepositRequired(y))",
+            "\u2200x (SecurityDeposit(x) \u2192 (EqualToMonthsRent(x) \u2228 MoreThanMonthsRent(x)))",
+            "Cat(fluffy) \u2227 Owns(tom, fluffy)",
+            "\u2200x (Cat(x) \u2192 Pet(x))",
+            "ManagedBuilding(olive_garden)",
+            "MonthlyRent(olive_garden, 2000)",
+            "\u2200x\u2200y\u2200z (RentApartment(x, y, z) \u2194 (ManagedBuilding(y) \u2227 AllowedToMoveInWithFluffy(x, y) \u2227 SecurityDepositNoMoreThan(z, 1500)))",
+            "\u2200x \u2200y (2000$ \u2192 MoreThan(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x (Tom(x) \u2227 RentsApartment(x, y) \u2227 InTheOliveGarden(y))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Pet(x) \u2227 ManagedBuilding(y) \u2227 AllowedIn(x, y) \u2192 AllowedIn(x, y))",
+            "\u2200x\u2200y (ManagedBuilding(x) \u2227 Apartment(y) \u2227 Rent(y) \u2192 DepositRequired(y))",
+            "\u2200x (SecurityDeposit(x) \u2192 (EqualToMonthsRent(x) \u2228 MoreThanMonthsRent(x)))",
+            "Cat(fluffy) \u2227 Owns(tom, fluffy)",
+            "\u2200x (Cat(x) \u2192 Pet(x))",
+            "ManagedBuilding(olive_garden)",
+            "MonthlyRent(olive_garden, 2000)",
+            "\u2200x\u2200y\u2200z (RentApartment(x, y, z) \u2194 (ManagedBuilding(y) \u2227 AllowedToMoveInWithFluffy(x, y) \u2227 SecurityDepositNoMoreThan(z, 1500)))",
+            "\u2200x \u2200y (2000$ \u2192 MoreThan(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x\u2200y\u2200z (Person(x) \u2227 Apartment(y) \u2227 TheOliveGarden(z) \u2227 InApartment(x, y) \u2227 HasCat(x, Fluffy) \u2192 AllowedToMove(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Pet(x) \u2227 ManagedBuilding(y) \u2227 AllowedIn(x, y) \u2192 AllowedIn(x, y))",
+            "\u2200x\u2200y (ManagedBuilding(x) \u2227 Apartment(y) \u2227 Rent(y) \u2192 DepositRequired(y))",
+            "\u2200x (SecurityDeposit(x) \u2192 (EqualToMonthsRent(x) \u2228 MoreThanMonthsRent(x)))",
+            "Cat(fluffy) \u2227 Owns(tom, fluffy)",
+            "\u2200x (Cat(x) \u2192 Pet(x))",
+            "ManagedBuilding(olive_garden)",
+            "MonthlyRent(olive_garden, 2000)",
+            "\u2200x\u2200y\u2200z (RentApartment(x, y, z) \u2194 (ManagedBuilding(y) \u2227 AllowedToMoveInWithFluffy(x, y) \u2227 SecurityDepositNoMoreThan(z, 1500)))",
+            "\u2200x \u2200y (2000$ \u2192 MoreThan(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x (SecurityDeposit(x) \u2227 OliveGarden(x) \u2192 (IsMoreThan(x, 2000)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Animal(x) \u2227 LovedByTourists(x) \u2192 MaxsFavorite(x))",
+            "\u2200x (Animal(x) \u2227 FromAustralia(x) \u2192 LovedByTourists(x))",
+            "\u2200x (Quokka(x) \u2192 FromAustralia(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(Max, x) \u2192 VeryFluffy(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(x, Max) \u2192 LovesToSleep(x))",
+            "\u2200x (Koala(x) \u2227 VeryFluffy(x) \u2192 \u00acQuokka(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Koala(x) \u2192 LovesToSleep(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Animal(x) \u2227 LovedByTourists(x) \u2192 MaxsFavorite(x))",
+            "\u2200x (Animal(x) \u2227 FromAustralia(x) \u2192 LovedByTourists(x))",
+            "\u2200x (Quokka(x) \u2192 FromAustralia(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(Max, x) \u2192 VeryFluffy(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(x, Max) \u2192 LovesToSleep(x))",
+            "\u2200x (Koala(x) \u2227 VeryFluffy(x) \u2192 \u00acQuokka(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Koala(x) \u2192 (LovesToSleep(x) \u2227 Quokka(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Animal(x) \u2227 LovedByTourists(x) \u2192 MaxsFavorite(x))",
+            "\u2200x (Animal(x) \u2227 FromAustralia(x) \u2192 LovedByTourists(x))",
+            "\u2200x (Quokka(x) \u2192 FromAustralia(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(Max, x) \u2192 VeryFluffy(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(x, Max) \u2192 LovesToSleep(x))",
+            "\u2200x (Koala(x) \u2227 VeryFluffy(x) \u2192 \u00acQuokka(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Koala(x) \u2227 Quokka(x) \u2192 (LovesToSleep(x) \u2295 VeryFluffy(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Man(x) \u2192 (Kind(x) \u2295 Evil(x)))",
+            "\u00ac\u2203x (Ugly(x) \u2227 Handsome(x))",
+            "\u2200x (Evil(x) \u2192 Ugly(x))",
+            "\u2200x (Gentleman(x) \u2192 Handsome(x))",
+            "\u2200x (CEO(x) \u2192 Gentleman(x))",
+            "\u2200x (Gentleman(x) \u2194 Harry(x))"
+        ],
+        "conclusion-FOL": "\u2203x (Person(x) \u2227 CEO(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Man(x) \u2192 (Kind(x) \u2295 Evil(x)))",
+            "\u00ac\u2203x (Ugly(x) \u2227 Handsome(x))",
+            "\u2200x (Evil(x) \u2192 Ugly(x))",
+            "\u2200x (Gentleman(x) \u2192 Handsome(x))",
+            "\u2200x (CEO(x) \u2192 Gentleman(x))",
+            "\u2200x (Gentleman(x) \u2194 Harry(x))"
+        ],
+        "conclusion-FOL": "Kind(harry) \u2228 CEO(harry)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Man(x) \u2192 (Kind(x) \u2295 Evil(x)))",
+            "\u00ac\u2203x (Ugly(x) \u2227 Handsome(x))",
+            "\u2200x (Evil(x) \u2192 Ugly(x))",
+            "\u2200x (Gentleman(x) \u2192 Handsome(x))",
+            "\u2200x (CEO(x) \u2192 Gentleman(x))",
+            "\u2200x (Gentleman(x) \u2194 Harry(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Harry(x) \u2227 (Evil(x) \u2227 Ugly(x)) \u2228 (\u00acEvil(x) \u2227 \u00acUgly(x)) \u2192 \u00acKind(x) \u2227 \u00acCEO(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2227 (Twin(x) \u2228 Triplet(x)) \u2192 SpendsTimeWithSiblings(x))",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 Siblings(x, y) \u2227 SameAge(x, y) \u2192 (Twins(x, y) \u2228 Triplets(x, y)))",
+            "\u2200x (PeopleComplainAboutAnnoyingSiblings(x) \u2192 SameAgeSiblings(x))",
+            "\u2200x (Person(x) \u2227 \u00acLiveAtHomeRegularly(x) \u2192 \u00acStrongBondsWithFamily(x))",
+            "\u2200x (SpendsA LotOfTimeWithSiblings(x) \u2227 PlaysWithSiblings(x) \u2192 DidNotLiveAtHomeRegularly(x))",
+            "\u2200x (Luke(x) \u2192 ((Twin(x) \u2228 Triplet(x)) \u2227 StrongBonds(x, FamilyMembers)))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y \u2200z (Luke(x) \u2227 Sibling(y) \u2227 Sibling(z) \u2192 (SpendsTimeHangingOut(x, y) \u2227 SpendsTimePlaying(x, z)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2227 (Twin(x) \u2228 Triplet(x)) \u2192 SpendsTimeWithSiblings(x))",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 Siblings(x, y) \u2227 SameAge(x, y) \u2192 (Twins(x, y) \u2228 Triplets(x, y)))",
+            "\u2200x (PeopleComplainAboutAnnoyingSiblings(x) \u2192 SameAgeSiblings(x))",
+            "\u2200x (Person(x) \u2227 \u00acLiveAtHomeRegularly(x) \u2192 \u00acStrongBondsWithFamily(x))",
+            "\u2200x (SpendsA LotOfTimeWithSiblings(x) \u2227 PlaysWithSiblings(x) \u2192 DidNotLiveAtHomeRegularly(x))",
+            "\u2200x (Luke(x) \u2192 ((Twin(x) \u2228 Triplet(x)) \u2227 StrongBonds(x, FamilyMembers)))"
+        ],
+        "conclusion-FOL": "\u2200x (Luke(x) \u2227 AnnoyingSiblings(x) \u2192 ComplainsOften(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2227 (Twin(x) \u2228 Triplet(x)) \u2192 SpendsTimeWithSiblings(x))",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 Siblings(x, y) \u2227 SameAge(x, y) \u2192 (Twins(x, y) \u2228 Triplets(x, y)))",
+            "\u2200x (PeopleComplainAboutAnnoyingSiblings(x) \u2192 SameAgeSiblings(x))",
+            "\u2200x (Person(x) \u2227 \u00acLiveAtHomeRegularly(x) \u2192 \u00acStrongBondsWithFamily(x))",
+            "\u2200x (SpendsA LotOfTimeWithSiblings(x) \u2227 PlaysWithSiblings(x) \u2192 DidNotLiveAtHomeRegularly(x))",
+            "\u2200x (Luke(x) \u2192 ((Twin(x) \u2228 Triplet(x)) \u2227 StrongBonds(x, FamilyMembers)))"
+        ],
+        "conclusion-FOL": "\u00ac(Twin(luke) \u2228 Triplet(luke) \u2228 ComplainsAboutAnnoyingSiblings(luke))"
+    },
+    {
+        "premises-FOL": [
+            "Cost(GRETest, 205)",
+            "\u2200x (GREApplicant(x) \u2227 ProvesEconomicHardship(x) \u2192 ReceivesFinancialAid(x))",
+            "\u2200x (EconomicHardship(x) \u2194 (DifficultyCausedByLackOfMoney(x) \u2228 DifficultyCausedByLackOfResources(x)))",
+            "\u2203x (Person(x) \u2227 SingleParentFamily(x))",
+            "\u2203x (Father(x) \u2227 OutOfWork(x) \u2227 MoreThanYear(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Student(x) \u2227 AppliesForFinancialAid(x, ETS) \u2192 CanTakeGRE(x))"
+    },
+    {
+        "premises-FOL": [
+            "Cost(GRETest, 205)",
+            "\u2200x (GREApplicant(x) \u2227 ProvesEconomicHardship(x) \u2192 ReceivesFinancialAid(x))",
+            "\u2200x (EconomicHardship(x) \u2194 (DifficultyCausedByLackOfMoney(x) \u2228 DifficultyCausedByLackOfResources(x)))",
+            "\u2203x (Person(x) \u2227 SingleParentFamily(x))",
+            "\u2203x (Father(x) \u2227 OutOfWork(x) \u2227 MoreThanYear(x))"
+        ],
+        "conclusion-FOL": "Cost(GRETest, BelowUS300)"
+    },
+    {
+        "premises-FOL": [
+            "Cost(GRETest, 205)",
+            "\u2200x (GREApplicant(x) \u2227 ProvesEconomicHardship(x) \u2192 ReceivesFinancialAid(x))",
+            "\u2200x (EconomicHardship(x) \u2194 (DifficultyCausedByLackOfMoney(x) \u2228 DifficultyCausedByLackOfResources(x)))",
+            "\u2203x (Person(x) \u2227 SingleParentFamily(x))",
+            "\u2203x (Father(x) \u2227 OutOfWork(x) \u2227 MoreThanYear(x))"
+        ],
+        "conclusion-FOL": "\u00ac\u2203x (FinancialAid(x) \u2227 AvailableFor(x, GRE))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (People(x) \u2227 SpillFoodOnClothing(x) \u2192 (\u00acTidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x (Foodie(x) \u2227 GoesOutFrequently(x) \u2227 FindsNewFoodRestaurants(x) \u2192 SpillsFoodOnClothing(x))",
+            "\u2200x (OnlyChildWithoutSiblings(x) \u2192 (TidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x\u2200y (Person(x) \u2227 Parent(y, x) \u2227 VeryBusyWithRegularJob(y) \u2192 OnlyChildWithoutSiblings(x))",
+            "\u2200x (Household(x) \u2227 HighNetIncome(x) \u2192 (\u2203y (Parent(y) \u2227 VeryBusyWithRegularJob(y))))",
+            "\u2200x (Person(x) \u2227 SpillsFoodOnClothing(x) \u2227 GrewUpAsOnlyChild(x) \u2192 (WithNoSiblings(x) \u2228 \u00acWithNoSiblings(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Person(x) \u2227 TidiesSpace(x) \u2227 CleaningProcess(x) \u2192 EnjoysProcess(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (People(x) \u2227 SpillFoodOnClothing(x) \u2192 (\u00acTidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x (Foodie(x) \u2227 GoesOutFrequently(x) \u2227 FindsNewFoodRestaurants(x) \u2192 SpillsFoodOnClothing(x))",
+            "\u2200x (OnlyChildWithoutSiblings(x) \u2192 (TidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x\u2200y (Person(x) \u2227 Parent(y, x) \u2227 VeryBusyWithRegularJob(y) \u2192 OnlyChildWithoutSiblings(x))",
+            "\u2200x (Household(x) \u2227 HighNetIncome(x) \u2192 (\u2203y (Parent(y) \u2227 VeryBusyWithRegularJob(y))))",
+            "\u2200x (Person(x) \u2227 SpillsFoodOnClothing(x) \u2227 GrewUpAsOnlyChild(x) \u2192 (WithNoSiblings(x) \u2228 \u00acWithNoSiblings(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Person(x) \u2227 (Foodie(x) \u2227 GoesOutFrequently(x) \u2227 FindsNewFoodRestaurants(x)) \u2228 (HighNetIncome(x) \u2227 Household(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (People(x) \u2227 SpillFoodOnClothing(x) \u2192 (\u00acTidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x (Foodie(x) \u2227 GoesOutFrequently(x) \u2227 FindsNewFoodRestaurants(x) \u2192 SpillsFoodOnClothing(x))",
+            "\u2200x (OnlyChildWithoutSiblings(x) \u2192 (TidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x\u2200y (Person(x) \u2227 Parent(y, x) \u2227 VeryBusyWithRegularJob(y) \u2192 OnlyChildWithoutSiblings(x))",
+            "\u2200x (Household(x) \u2227 HighNetIncome(x) \u2192 (\u2203y (Parent(y) \u2227 VeryBusyWithRegularJob(y))))",
+            "\u2200x (Person(x) \u2227 SpillsFoodOnClothing(x) \u2227 GrewUpAsOnlyChild(x) \u2192 (WithNoSiblings(x) \u2228 \u00acWithNoSiblings(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Peter(x) \u2192 ((FoodieWhoGoesOutFrequently(x) \u2227 FindsNewFoodRestaurants(x) \u2227 BelongsToHighNetIncomeHousehold(x)) \u2228 (FoodieWhoGoesOutFrequently(x) \u2227 \u00acFindsNewFoodRestaurants(x) \u2227 \u00acBelongsToHighNetIncomeHousehold(x))))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (FirTree(x) \u2192 Evergreen(x))",
+            "\u2203x (Worship(x) \u2227 FirTree(x))"
+        ],
+        "conclusion-FOL": "\u2203x (Evergreen(x) \u2227 \u00acObjectOfWorship(x))"
+    },
+    {
+        "premises-FOL": [
+            "MountainRange(picurisMountains, NewMexico, Texas)",
+            "\u2200x \u2200y (JuanDeOnate(x) \u2227 PicurisMountains(y) \u2192 Visited(x, y))",
+            "Donated(HardingPegmatiteMine)",
+            "\u00ac\u2203x \u2203y \u2203z (MountainRange(x) \u2227 Mine(y) \u2227 Donated(z) \u2227 LocatedIn(y, x) \u2227 DonatedBy(z, x))"
+        ],
+        "conclusion-FOL": "\u2200x\u2200y (JuanDeOnate(x) \u2227 MountainRange(y) \u2227 Visits(x, y) \u2227 InNewMexico(y))"
+    },
+    {
+        "premises-FOL": [
+            "MountainRange(picurisMountains, NewMexico, Texas)",
+            "\u2200x \u2200y (JuanDeOnate(x) \u2227 PicurisMountains(y) \u2192 Visited(x, y))",
+            "Donated(HardingPegmatiteMine)",
+            "\u00ac\u2203x \u2203y \u2203z (MountainRange(x) \u2227 Mine(y) \u2227 Donated(z) \u2227 LocatedIn(y, x) \u2227 DonatedBy(z, x))"
+        ],
+        "conclusion-FOL": "\u2200x\u2200y (JuanDeOnate(x) \u2227 MountainRange(y) \u2192 Visited(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "MountainRange(picurisMountains, NewMexico, Texas)",
+            "\u2200x \u2200y (JuanDeOnate(x) \u2227 PicurisMountains(y) \u2192 Visited(x, y))",
+            "Donated(HardingPegmatiteMine)",
+            "\u00ac\u2203x \u2203y \u2203z (MountainRange(x) \u2227 Mine(y) \u2227 Donated(z) \u2227 LocatedIn(y, x) \u2227 DonatedBy(z, x))"
+        ],
+        "conclusion-FOL": "\u00ac(HardingPegmatiteMine(x) \u2227 InMountainRange(x, NewMexico))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x \u2200y (Man(x) \u2227 Man(y) \u2227 Taller(x, y) \u2192 BlockShooting(x, y))",
+            "\u2200x (Man(x) \u2227 TallerThanClassmates(x))",
+            "\u2200x \u2200y \u2200z (Person(x) \u2227 Person(y) \u2227 Person(z) \u2227 Taller(x, y) \u2227 Taller(y, z) \u2192 Taller(x, z))",
+            "Man(Peter) \u2227 TallerThan(Peter, Michael)",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 BlocksShooting(x, y) \u2227 \u00acJumpsWhenShooting(y) \u2192 CanBlockShooting(x, y))",
+            "\u2200x \u2200y (Michael(x) \u2227 Windy(y) \u2192 \u00acBlockShooting(x, y))",
+            "\u2200x (Shooter(x) \u2227 CanJumpWhenShooting(x) \u2192 GreatShooter(x))"
+        ],
+        "conclusion-FOL": "Shorter(Peter, MichaelClassMan)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x \u2200y (Man(x) \u2227 Man(y) \u2227 Taller(x, y) \u2192 BlockShooting(x, y))",
+            "\u2200x (Man(x) \u2227 TallerThanClassmates(x))",
+            "\u2200x \u2200y \u2200z (Person(x) \u2227 Person(y) \u2227 Person(z) \u2227 Taller(x, y) \u2227 Taller(y, z) \u2192 Taller(x, z))",
+            "Man(Peter) \u2227 TallerThan(Peter, Michael)",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 BlocksShooting(x, y) \u2227 \u00acJumpsWhenShooting(y) \u2192 CanBlockShooting(x, y))",
+            "\u2200x \u2200y (Michael(x) \u2227 Windy(y) \u2192 \u00acBlockShooting(x, y))",
+            "\u2200x (Shooter(x) \u2227 CanJumpWhenShooting(x) \u2192 GreatShooter(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Windy(x) \u2192 GreatShooter(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x \u2200y (Man(x) \u2227 Man(y) \u2227 Taller(x, y) \u2192 BlockShooting(x, y))",
+            "\u2200x (Man(x) \u2227 TallerThanClassmates(x))",
+            "\u2200x \u2200y \u2200z (Person(x) \u2227 Person(y) \u2227 Person(z) \u2227 Taller(x, y) \u2227 Taller(y, z) \u2192 Taller(x, z))",
+            "Man(Peter) \u2227 TallerThan(Peter, Michael)",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 BlocksShooting(x, y) \u2227 \u00acJumpsWhenShooting(y) \u2192 CanBlockShooting(x, y))",
+            "\u2200x \u2200y (Michael(x) \u2227 Windy(y) \u2192 \u00acBlockShooting(x, y))",
+            "\u2200x (Shooter(x) \u2227 CanJumpWhenShooting(x) \u2192 GreatShooter(x))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y (Peter(x) \u2227 Windy(y) \u2192 CanBlockShooting(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "BarutinCove(barutinCove) \u2227 BulgarianSettlement(barutin) \u2227 NamedAfter(cove, barutin)",
+            "\u2200x (BarutinCove(x) \u2192 OnSouthwestCoastOfSnowIsland(x))",
+            "\u2200x\u2200y\u2200z (SouthShetlandIslands(x) \u2227 SnowIsland(y) \u2227 GreenwichIsland(z) \u2227 DeceptionIsland(x) \u2192 (Includes(x, y) \u2227 Includes(x, z)))",
+            "PartOf(SouthShetlandIslands, Antarctica)",
+            "\u2200x \u2200y \u2200z (LocatedIn(x, y) \u2227 LocatedIn(y, z) \u2192 LocatedIn(x, z))"
+        ],
+        "conclusion-FOL": "\u2200x (Barutin(x) \u2192 (NamedAfter(x, IslandsInAntarctica)))"
+    },
+    {
+        "premises-FOL": [
+            "BarutinCove(barutinCove) \u2227 BulgarianSettlement(barutin) \u2227 NamedAfter(cove, barutin)",
+            "\u2200x (BarutinCove(x) \u2192 OnSouthwestCoastOfSnowIsland(x))",
+            "\u2200x\u2200y\u2200z (SouthShetlandIslands(x) \u2227 SnowIsland(y) \u2227 GreenwichIsland(z) \u2227 DeceptionIsland(x) \u2192 (Includes(x, y) \u2227 Includes(x, z)))",
+            "PartOf(SouthShetlandIslands, Antarctica)",
+            "\u2200x \u2200y \u2200z (LocatedIn(x, y) \u2227 LocatedIn(y, z) \u2192 LocatedIn(x, z))"
+        ],
+        "conclusion-FOL": "\u2203x (Cove(x) \u2227 NamedAfterPlaceInBulgaria(x))"
+    },
+    {
+        "premises-FOL": [
+            "BarutinCove(barutinCove) \u2227 BulgarianSettlement(barutin) \u2227 NamedAfter(cove, barutin)",
+            "\u2200x (BarutinCove(x) \u2192 OnSouthwestCoastOfSnowIsland(x))",
+            "\u2200x\u2200y\u2200z (SouthShetlandIslands(x) \u2227 SnowIsland(y) \u2227 GreenwichIsland(z) \u2227 DeceptionIsland(x) \u2192 (Includes(x, y) \u2227 Includes(x, z)))",
+            "PartOf(SouthShetlandIslands, Antarctica)",
+            "\u2200x \u2200y \u2200z (LocatedIn(x, y) \u2227 LocatedIn(y, z) \u2192 LocatedIn(x, z))"
+        ],
+        "conclusion-FOL": "\u00ac(BarutinInAntarctica(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (Affection(x) \u2227 Love(x))",
+            "\u2203x (Love(x) \u2227 Positive(x))"
+        ],
+        "conclusion-FOL": "\u2203x (Affection(x) \u2227 Positive(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (CanTransportMultiplePassengers(x) \u2192 \u00acEmpty(x))",
+            "\u2200x (Airline(x) \u2192 CanTransportMultiplePassengers(x))",
+            "\u2200x (Plane(x) \u2192 Empty(x))",
+            "\u2200x (Boeing707(x) \u2192 Plane(x))",
+            "\u00ac(GreyhoundAirline \u2192 (\u2203x (GreyhoundPlane(x))))"
+        ],
+        "conclusion-FOL": "\u2200x (Greyhound(x) \u2192 Airline(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (CanTransportMultiplePassengers(x) \u2192 \u00acEmpty(x))",
+            "\u2200x (Airline(x) \u2192 CanTransportMultiplePassengers(x))",
+            "\u2200x (Plane(x) \u2192 Empty(x))",
+            "\u2200x (Boeing707(x) \u2192 Plane(x))",
+            "\u00ac(GreyhoundAirline \u2192 (\u2203x (GreyhoundPlane(x))))"
+        ],
+        "conclusion-FOL": "\u2200x (Greyhound(x) \u2192 Boeing707(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (CanTransportMultiplePassengers(x) \u2192 \u00acEmpty(x))",
+            "\u2200x (Airline(x) \u2192 CanTransportMultiplePassengers(x))",
+            "\u2200x (Plane(x) \u2192 Empty(x))",
+            "\u2200x (Boeing707(x) \u2192 Plane(x))",
+            "\u00ac(GreyhoundAirline \u2192 (\u2203x (GreyhoundPlane(x))))"
+        ],
+        "conclusion-FOL": "\u00ac(Greyhound(x) \u2227 Boeing707(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Monkey(x) \u2192 Mammal(x))",
+            "\u2200x (Animal(x) \u2192 (Monkey(x) \u2295 Bird(x)))",
+            "\u2200x (Bird(x) \u2192 Fly(x))",
+            "\u2200x (Animal(x) \u2192 Breathes(x))",
+            "\u2200x (CanFly(x) \u2192 HasWings(x))",
+            "\u2200x (Rock(x) \u2227 \u00ac(Fly(x) \u2228 Bird(x)) \u2192 \u00ac(Flies(x) \u2228 Breathes(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Rock(x) \u2192 Monkey(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Monkey(x) \u2192 Mammal(x))",
+            "\u2200x (Animal(x) \u2192 (Monkey(x) \u2295 Bird(x)))",
+            "\u2200x (Bird(x) \u2192 Fly(x))",
+            "\u2200x (Animal(x) \u2192 Breathes(x))",
+            "\u2200x (CanFly(x) \u2192 HasWings(x))",
+            "\u2200x (Rock(x) \u2227 \u00ac(Fly(x) \u2228 Bird(x)) \u2192 \u00ac(Flies(x) \u2228 Breathes(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Rock(x) \u2192 HasWings(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Monkey(x) \u2192 Mammal(x))",
+            "\u2200x (Animal(x) \u2192 (Monkey(x) \u2295 Bird(x)))",
+            "\u2200x (Bird(x) \u2192 Fly(x))",
+            "\u2200x (Animal(x) \u2192 Breathes(x))",
+            "\u2200x (CanFly(x) \u2192 HasWings(x))",
+            "\u2200x (Rock(x) \u2227 \u00ac(Fly(x) \u2228 Bird(x)) \u2192 \u00ac(Flies(x) \u2228 Breathes(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Rock(x) \u2192 \u00acHasWings(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (HasWedding(x) \u2192 \u2203y (Child(y) \u2227 HasChild(x, y)))",
+            "\u2200x (TravelsToParisForHoneymoon(x) \u2192 HasWedding(x))",
+            "\u2200x (Wedding(x) \u2227 OccursInJuly(x) \u2192 TravelsToParisForHoneymoon(x))",
+            "\u2203x (Wedding(x) \u2227 Month(x, July) \u2227 WellAttended(x))",
+            "\u2200x (Person(x) \u2227 HasAtLeastOneChild(x) \u2192 (\u00acTravelsToParisForHoneymoon(x) \u2227 \u00acHasWedding(x)))",
+            "\u2200x (Wedding(x) \u2227 WellAttended(x) \u2192 (WeddingInJuly(x) \u2228 TravelsToParisForHoneymoon(x)))"
+        ],
+        "conclusion-FOL": "\u2203x (Person(x) \u2227 Wedding(x) \u2227 WellAttended(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (HasWedding(x) \u2192 \u2203y (Child(y) \u2227 HasChild(x, y)))",
+            "\u2200x (TravelsToParisForHoneymoon(x) \u2192 HasWedding(x))",
+            "\u2200x (Wedding(x) \u2227 OccursInJuly(x) \u2192 TravelsToParisForHoneymoon(x))",
+            "\u2203x (Wedding(x) \u2227 Month(x, July) \u2227 WellAttended(x))",
+            "\u2200x (Person(x) \u2227 HasAtLeastOneChild(x) \u2192 (\u00acTravelsToParisForHoneymoon(x) \u2227 \u00acHasWedding(x)))",
+            "\u2200x (Wedding(x) \u2227 WellAttended(x) \u2192 (WeddingInJuly(x) \u2228 TravelsToParisForHoneymoon(x)))"
+        ],
+        "conclusion-FOL": "\u00ac\u2203x (Wedding(x) \u2227 WellAttended(x) \u2227 HasJohn(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (HasWedding(x) \u2192 \u2203y (Child(y) \u2227 HasChild(x, y)))",
+            "\u2200x (TravelsToParisForHoneymoon(x) \u2192 HasWedding(x))",
+            "\u2200x (Wedding(x) \u2227 OccursInJuly(x) \u2192 TravelsToParisForHoneymoon(x))",
+            "\u2203x (Wedding(x) \u2227 Month(x, July) \u2227 WellAttended(x))",
+            "\u2200x (Person(x) \u2227 HasAtLeastOneChild(x) \u2192 (\u00acTravelsToParisForHoneymoon(x) \u2227 \u00acHasWedding(x)))",
+            "\u2200x (Wedding(x) \u2227 WellAttended(x) \u2192 (WeddingInJuly(x) \u2228 TravelsToParisForHoneymoon(x)))"
+        ],
+        "conclusion-FOL": "\u2203x (Person(x) \u2227 Child(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (HasWedding(x) \u2192 \u2203y (Child(y) \u2227 HasChild(x, y)))",
+            "\u2200x (TravelsToParisForHoneymoon(x) \u2192 HasWedding(x))",
+            "\u2200x (Wedding(x) \u2227 OccursInJuly(x) \u2192 TravelsToParisForHoneymoon(x))",
+            "\u2203x (Wedding(x) \u2227 Month(x, July) \u2227 WellAttended(x))",
+            "\u2200x (Person(x) \u2227 HasAtLeastOneChild(x) \u2192 (\u00acTravelsToParisForHoneymoon(x) \u2227 \u00acHasWedding(x)))",
+            "\u2200x (Wedding(x) \u2227 WellAttended(x) \u2192 (WeddingInJuly(x) \u2228 TravelsToParisForHoneymoon(x)))"
+        ],
+        "conclusion-FOL": "\u00ac(WeddingWellAttended(john) \u2228 HoneymoonInParis(john))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (Mammal(x) \u2227 HasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 \u00acHasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 Mammal(x))",
+            "\u2200x (Human(x) \u2192 HasTeeth(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Platypus(x) \u2192 (Mammal(x) \u2227 \u00acHasTeeth(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (Mammal(x) \u2227 HasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 \u00acHasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 Mammal(x))",
+            "\u2200x (Human(x) \u2192 HasTeeth(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Platypus(x) \u2192 Reptile(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (Mammal(x) \u2227 HasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 \u00acHasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 Mammal(x))",
+            "\u2200x (Human(x) \u2192 HasTeeth(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Human(x) \u2192 Mammal(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Plunger(x) \u2192 Sucks(x))",
+            "\u2200x (Vacuum(x) \u2192 Sucks(x))",
+            "\u2200x (Vampire(x) \u2192 Sucks(x))",
+            "\u2200x (Space(x) \u2192 Vacuum(x))",
+            "\u2200x (Duster(x) \u2192 \u00acSucks(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Space(x) \u2192 Sucks(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Plunger(x) \u2192 Sucks(x))",
+            "\u2200x (Vacuum(x) \u2192 Sucks(x))",
+            "\u2200x (Vampire(x) \u2192 Sucks(x))",
+            "\u2200x (Space(x) \u2192 Vacuum(x))",
+            "\u2200x (Duster(x) \u2192 \u00acSucks(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Space(x) \u2192 Vampire(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Plunger(x) \u2192 Sucks(x))",
+            "\u2200x (Vacuum(x) \u2192 Sucks(x))",
+            "\u2200x (Vampire(x) \u2192 Sucks(x))",
+            "\u2200x (Space(x) \u2192 Vacuum(x))",
+            "\u2200x (Duster(x) \u2192 \u00acSucks(x))"
+        ],
+        "conclusion-FOL": "\u2200x (HouseholdAppliance(x) \u2192 Sucks(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (MachineLearningAlgorithm(x) \u2192 (SupervisedLearning(x) \u2228 UnsupervisedLearning(x) \u2228 ReinforcementLearning(x)))",
+            "\u2200x (UnsupervisedLearning(x) \u2192 \u00acRequiresLabelledData(x))",
+            "\u2200x (StateOfTheArtTextSummarizationModel(x) \u2192 TrainedWithMachineLearningAlgorithms(x))",
+            "\u00ac(ReinforcementLearning(r) \u2227 Train(r, sotasum))",
+            "\u2200x (MachineLearningAlgorithm(x) \u2227 TextSummarizationModel(y) \u2227 RequiresLabelledData(x, y) \u2192 Trains(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x (SupervisedLearning(x) \u2192 TrainStateOfTheArtTextSummarizationModel(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (MachineLearningAlgorithm(x) \u2192 (SupervisedLearning(x) \u2228 UnsupervisedLearning(x) \u2228 ReinforcementLearning(x)))",
+            "\u2200x (UnsupervisedLearning(x) \u2192 \u00acRequiresLabelledData(x))",
+            "\u2200x (StateOfTheArtTextSummarizationModel(x) \u2192 TrainedWithMachineLearningAlgorithms(x))",
+            "\u00ac(ReinforcementLearning(r) \u2227 Train(r, sotasum))",
+            "\u2200x (MachineLearningAlgorithm(x) \u2227 TextSummarizationModel(y) \u2227 RequiresLabelledData(x, y) \u2192 Trains(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x (UnsupervisedLearning(x) \u2192 TrainStateOfTheArtTextSummarizationModel(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (CartoonCharacter(x) \u2227 Funny(x) \u2192 Popular(x))",
+            "\u2200x (Ugly(x) \u2192 \u00acPopular(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 LovedByChildren(x) \u2192 Funny(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 FromSimpsons(x) \u2192 LovedByChildren(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 Yellow(x) \u2192 FromSimpsons(x))",
+            "\u2200x (Ben(x) \u2192 (FromSimpsons(x) \u2228 Funny(x)))"
+        ],
+        "conclusion-FOL": "\u2203x (Child(x) \u2227 LovedBy(Ben, x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (CartoonCharacter(x) \u2227 Funny(x) \u2192 Popular(x))",
+            "\u2200x (Ugly(x) \u2192 \u00acPopular(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 LovedByChildren(x) \u2192 Funny(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 FromSimpsons(x) \u2192 LovedByChildren(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 Yellow(x) \u2192 FromSimpsons(x))",
+            "\u2200x (Ben(x) \u2192 (FromSimpsons(x) \u2228 Funny(x)))"
+        ],
+        "conclusion-FOL": "Ugly(Ben) \u2295 Yellow(Ben)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (CartoonCharacter(x) \u2227 Funny(x) \u2192 Popular(x))",
+            "\u2200x (Ugly(x) \u2192 \u00acPopular(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 LovedByChildren(x) \u2192 Funny(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 FromSimpsons(x) \u2192 LovedByChildren(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 Yellow(x) \u2192 FromSimpsons(x))",
+            "\u2200x (Ben(x) \u2192 (FromSimpsons(x) \u2228 Funny(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Ben(x) \u2192 (Yellow(x) \u2227 Ugly(x) \u2228 (\u00acYellow(x) \u2227 \u00acUgly(x))))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x\u2200y (DomesticAnimal(x) \u2227 BreedingBack(y) \u2192 (DeliberateSelectiveBreeding(y) \u2227 DomesticAnimal(x)))",
+            "\u2200x (Cattle(x) \u2227 BredBackIn1920s(x) \u2227 ResemblesAurochs(x))",
+            "\u2200x (Cattle(x) \u2227 Heck(x) \u2192 Animal(x))",
+            "\u2200x (Auroch(x) \u2192 Animal(x))",
+            "\u2203x (Animal(x) \u2227 BredBack(x) \u2227 ResemblesExtinctAnimal(x))"
+        ],
+        "conclusion-FOL": "\u2203x (HeckCattle(x) \u2227 ArtificiallySelected(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x\u2200y (DomesticAnimal(x) \u2227 BreedingBack(y) \u2192 (DeliberateSelectiveBreeding(y) \u2227 DomesticAnimal(x)))",
+            "\u2200x (Cattle(x) \u2227 BredBackIn1920s(x) \u2227 ResemblesAurochs(x))",
+            "\u2200x (Cattle(x) \u2227 Heck(x) \u2192 Animal(x))",
+            "\u2200x (Auroch(x) \u2192 Animal(x))",
+            "\u2203x (Animal(x) \u2227 BredBack(x) \u2227 ResemblesExtinctAnimal(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Auroch(x) \u2192 Extinct(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u00ac(Teaches(jerry) \u2228 Manager(jerry))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ],
+        "conclusion-FOL": "Y(Jerry) \u2194 Young(Jerry)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u00ac(Teaches(jerry) \u2228 Manager(jerry))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ],
+        "conclusion-FOL": "\u00ac(Young(jerry))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u00ac(Teaches(jerry) \u2228 Manager(jerry))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (Rose(x) \u2192 (Human(x) \u2228 Manager(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u00ac(Teaches(jerry) \u2228 Manager(jerry))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ],
+        "conclusion-FOL": "(Human(Rose) \u2228 Manager(Jerry))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u00ac(Teaches(jerry) \u2228 Manager(jerry))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ],
+        "conclusion-FOL": "\u00ac(Student(Rose) \u2227 Human(Jerry))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (PublishingHouse(x) \u2227 TranslatesForeignLiterature(x) \u2227 English(x) \u2192 NewVesselPress(x))",
+            "\u2200x (PublishedBook(x) \u2227 FromNewVesselPress(x) \u2192 InEnglish(x))",
+            "Book(neapolitan_chronicles) \u2227 PublishedBy(neapolitan_chronicles, new_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(book) \u2227 NewVesselPress(publisher) \u2227 Published(book, publisher)"
+        ],
+        "conclusion-FOL": "Book(neapolitanChronicles)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (PublishingHouse(x) \u2227 TranslatesForeignLiterature(x) \u2227 English(x) \u2192 NewVesselPress(x))",
+            "\u2200x (PublishedBook(x) \u2227 FromNewVesselPress(x) \u2192 InEnglish(x))",
+            "Book(neapolitan_chronicles) \u2227 PublishedBy(neapolitan_chronicles, new_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(book) \u2227 NewVesselPress(publisher) \u2227 Published(book, publisher)"
+        ],
+        "conclusion-FOL": "PublishedBy(harrypotter, newvesselpress)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (PublishingHouse(x) \u2227 TranslatesForeignLiterature(x) \u2227 English(x) \u2192 NewVesselPress(x))",
+            "\u2200x (PublishedBook(x) \u2227 FromNewVesselPress(x) \u2192 InEnglish(x))",
+            "Book(neapolitan_chronicles) \u2227 PublishedBy(neapolitan_chronicles, new_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(book) \u2227 NewVesselPress(publisher) \u2227 Published(book, publisher)"
+        ],
+        "conclusion-FOL": "TranslatedFromItalian(PalaceOfFlies) \u2192 1"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (OwnsLargeDesktopMonitor(x) \u2192 (WorksRegularlyAtHome(x) \u2227 WorksOftenAtHome(x)))",
+            "\u2200x (Person(x) \u2227 FullyStockedHomeOffice(x) \u2227 ImpressiveHomeOffice(x) \u2192 OwnsLargeDesktopMonitor(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 SpendsFreeTimeTidyingAndOrganizing(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 VisitsOfficeSupplyStoreRegularly(x))",
+            "\u2200x (SpendsFreeTimeTidyingAndOrganizingHome(x) \u2192 (\u00acGoesToBedLate(x) \u2227 \u00acWakesUpEveryDayAfterNoon(x)))",
+            "\u2200x (Remy(x) \u2192 ((BedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 SpendsFreeTimeTidyingAndOrganizing(x)) \u2228 (\u00acBedsLate(x) \u2227 WakesUpEveryDayAfterNoon(x) \u2227 \u00acSpendsFreeTimeTidyingAndOrganizing(x))))"
+        ],
+        "conclusion-FOL": "\u2203x (Visits(Remy, OfficeSupplyStore) \u2227 Regularly(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (OwnsLargeDesktopMonitor(x) \u2192 (WorksRegularlyAtHome(x) \u2227 WorksOftenAtHome(x)))",
+            "\u2200x (Person(x) \u2227 FullyStockedHomeOffice(x) \u2227 ImpressiveHomeOffice(x) \u2192 OwnsLargeDesktopMonitor(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 SpendsFreeTimeTidyingAndOrganizing(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 VisitsOfficeSupplyStoreRegularly(x))",
+            "\u2200x (SpendsFreeTimeTidyingAndOrganizingHome(x) \u2192 (\u00acGoesToBedLate(x) \u2227 \u00acWakesUpEveryDayAfterNoon(x)))",
+            "\u2200x (Remy(x) \u2192 ((BedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 SpendsFreeTimeTidyingAndOrganizing(x)) \u2228 (\u00acBedsLate(x) \u2227 WakesUpEveryDayAfterNoon(x) \u2227 \u00acSpendsFreeTimeTidyingAndOrganizing(x))))"
+        ],
+        "conclusion-FOL": "\u2200x (Remy(x) \u2192 (HasFullyStockedHomeOffice(x) \u2227 ImpressiveHomeOffice(x) \u2227 VisitsOfficeSupplyStore(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (OwnsLargeDesktopMonitor(x) \u2192 (WorksRegularlyAtHome(x) \u2227 WorksOftenAtHome(x)))",
+            "\u2200x (Person(x) \u2227 FullyStockedHomeOffice(x) \u2227 ImpressiveHomeOffice(x) \u2192 OwnsLargeDesktopMonitor(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 SpendsFreeTimeTidyingAndOrganizing(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 VisitsOfficeSupplyStoreRegularly(x))",
+            "\u2200x (SpendsFreeTimeTidyingAndOrganizingHome(x) \u2192 (\u00acGoesToBedLate(x) \u2227 \u00acWakesUpEveryDayAfterNoon(x)))",
+            "\u2200x (Remy(x) \u2192 ((BedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 SpendsFreeTimeTidyingAndOrganizing(x)) \u2228 (\u00acBedsLate(x) \u2227 WakesUpEveryDayAfterNoon(x) \u2227 \u00acSpendsFreeTimeTidyingAndOrganizing(x))))"
+        ],
+        "conclusion-FOL": "\u2200x (Remy(x) \u2227 (GoesToBedLate(x) \u2227 WakesUpAfterNoon(x)) \u2228 VisitsOfficeSupplyStore(x) \u2192 (\u00ac(SpendsFreeTimeTidying(x) \u2227 OrganizingSpaces(x)) \u2227 \u00ac(FullyStockedHomeOffice(x))))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Human(x) \u2192 Mortal(x))",
+            "\u2200x (Greek(x) \u2192 Human(x))"
+        ],
+        "conclusion-FOL": "\u2203x (Greek(x) \u2227 Mortal(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u00ac\u2203x (Student(x) \u2227 WorksInLibrary(x) \u2227 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 PartTimeJobOfferedByUniversity(x) \u2192 WorksInLibrary(x))",
+            "\u2200x (Student(x) \u2227 TakesDatabaseCourse(x) \u2192 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 InstructedBy(x, David) \u2192 TakingDatabaseCourse(x))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x) \u2192 InstructedBy(x, David))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x))",
+            "\u00ac(PartTimeJobOfferedByUniversity(jack) \u2228 WorksInLab(jack))"
+        ],
+        "conclusion-FOL": "\u2203x (Person(x) \u2227 PartTimeJob(x) \u2227 University(y) \u2227 OffersJob(y, x))"
+    },
+    {
+        "premises-FOL": [
+            "\u00ac\u2203x (Student(x) \u2227 WorksInLibrary(x) \u2227 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 PartTimeJobOfferedByUniversity(x) \u2192 WorksInLibrary(x))",
+            "\u2200x (Student(x) \u2227 TakesDatabaseCourse(x) \u2192 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 InstructedBy(x, David) \u2192 TakingDatabaseCourse(x))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x) \u2192 InstructedBy(x, David))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x))",
+            "\u00ac(PartTimeJobOfferedByUniversity(jack) \u2228 WorksInLab(jack))"
+        ],
+        "conclusion-FOL": "\u00ac\u2203x (PartTimeJob(x) \u2227 University(y) \u2227 James(z) \u2227 JobOfferedBy(x, y, z))"
+    },
+    {
+        "premises-FOL": [
+            "\u00ac\u2203x (Student(x) \u2227 WorksInLibrary(x) \u2227 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 PartTimeJobOfferedByUniversity(x) \u2192 WorksInLibrary(x))",
+            "\u2200x (Student(x) \u2227 TakesDatabaseCourse(x) \u2192 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 InstructedBy(x, David) \u2192 TakingDatabaseCourse(x))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x) \u2192 InstructedBy(x, David))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x))",
+            "\u00ac(PartTimeJobOfferedByUniversity(jack) \u2228 WorksInLab(jack))"
+        ],
+        "conclusion-FOL": "\u2200x (Student(x) \u2227 James(x) \u2192 (DatabaseCourse(x) \u2295 PartTimeJob(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u00ac\u2203x (Student(x) \u2227 WorksInLibrary(x) \u2227 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 PartTimeJobOfferedByUniversity(x) \u2192 WorksInLibrary(x))",
+            "\u2200x (Student(x) \u2227 TakesDatabaseCourse(x) \u2192 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 InstructedBy(x, David) \u2192 TakingDatabaseCourse(x))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x) \u2192 InstructedBy(x, David))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x))",
+            "\u00ac(PartTimeJobOfferedByUniversity(jack) \u2228 WorksInLab(jack))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y (Jack(x) \u2227 DatabaseCourse(y) \u2192 Takes(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (LikesMusic(x) \u2192 WantsToCompose(x))",
+            "\u2200x (Program(x) \u2227 Access(x, George) \u2192 CanCompose(x))",
+            "\u2200x (Compose(x) \u2227 CanCompose(x) \u2227 WantsToCompose(x) \u2192 WillCompose(x))"
+        ],
+        "conclusion-FOL": "\u2200x (LikesMusic(x) \u2227 HasAccessToProgram(x) \u2192 Composes(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (LikesMusic(x) \u2192 WantsToCompose(x))",
+            "\u2200x (Program(x) \u2227 Access(x, George) \u2192 CanCompose(x))",
+            "\u2200x (Compose(x) \u2227 CanCompose(x) \u2227 WantsToCompose(x) \u2192 WillCompose(x))"
+        ],
+        "conclusion-FOL": "\u2200x (George(x) \u2227 \u00acCompose(x) \u2192 \u00acCompose(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Hawk(x) \u2192 \u00acLand(x))",
+            "\u2203x (Bird(x) \u2227 Hawk(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Bird(x) \u2192 Lands(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (Monday(x) \u2227 8PM(x) \u2227 RosesGivenOutOnTV(x))",
+            "\u2200x (Rose(x) \u2227 GivenOutOnTV(x) \u2192 OnBachelor(x))",
+            "\u2200x (OnBachelor(x) \u2192 PortraysRealPeople(x))",
+            "\u2200x (Show(x) \u2227 PortraysRealPeople(x) \u2192 RealityTVShow(x))",
+            "\u00ac(RealityTVShow(BreakingBad))"
+        ],
+        "conclusion-FOL": "Monday(8) \u2192 BreakingBad(8)"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (Monday(x) \u2227 8PM(x) \u2227 RosesGivenOutOnTV(x))",
+            "\u2200x (Rose(x) \u2227 GivenOutOnTV(x) \u2192 OnBachelor(x))",
+            "\u2200x (OnBachelor(x) \u2192 PortraysRealPeople(x))",
+            "\u2200x (Show(x) \u2227 PortraysRealPeople(x) \u2192 RealityTVShow(x))",
+            "\u00ac(RealityTVShow(BreakingBad))"
+        ],
+        "conclusion-FOL": "\u2200x\u2200y (BreakingBad(x) \u2227 Rose(y) \u2192 (GivenOutOnMondayAt8PM(x, y)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (Monday(x) \u2227 8PM(x) \u2227 RosesGivenOutOnTV(x))",
+            "\u2200x (Rose(x) \u2227 GivenOutOnTV(x) \u2192 OnBachelor(x))",
+            "\u2200x (OnBachelor(x) \u2192 PortraysRealPeople(x))",
+            "\u2200x (Show(x) \u2227 PortraysRealPeople(x) \u2192 RealityTVShow(x))",
+            "\u00ac(RealityTVShow(BreakingBad))"
+        ],
+        "conclusion-FOL": "\u2200x (RosesGivenOutDuringBreakingBad(x) \u2192 OnMondayAt8PM(x))"
+    },
+    {
+        "premises-FOL": [
+            "HeinrichScmidt(n) \u2227 NaziGermanPolitician(n)",
+            "\u2200x (HeinrichSchmidt(x) \u2192 (MemberOfPrussianStateParliament(x) \u2227 MemberOfNaziReichstag(x)))"
+        ],
+        "conclusion-FOL": "Either(German, HeinrichSchmidt) \u2295 Either(Russian, HeinrichSchmidt)"
+    },
+    {
+        "premises-FOL": [
+            "HeinrichScmidt(n) \u2227 NaziGermanPolitician(n)",
+            "\u2200x (HeinrichSchmidt(x) \u2192 (MemberOfPrussianStateParliament(x) \u2227 MemberOfNaziReichstag(x)))"
+        ],
+        "conclusion-FOL": "\u2203x (NaziGermanPolitician(x) \u2227 PartOfPrussianStateParliament(x) \u2227 PartOfNaziReichstag(x))"
+    },
+    {
+        "premises-FOL": [
+            "HeinrichScmidt(n) \u2227 NaziGermanPolitician(n)",
+            "\u2200x (HeinrichSchmidt(x) \u2192 (MemberOfPrussianStateParliament(x) \u2227 MemberOfNaziReichstag(x)))"
+        ],
+        "conclusion-FOL": "\u00ac\u2203x (Politician(x) \u2227 PartOfNaziReichstag(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DeadlyDisease(x) \u2192 LowSurvivalRate(x))",
+            "\u2200x (Cancer(x) \u2227 Severe(x) \u2192 DeadlyDisease(x))",
+            "\u2200x (BileDuctCancer(x) \u2192 SevereCancer(x))",
+            "\u2200x (Cholangiocarcinoma(x) \u2192 BileDuctCancer(x))",
+            "\u00ac(\u2203x (Person(x) \u2227 Flu(x) \u2227 Mild(x) \u2227 LowSurvivalRate(x)))",
+            "\u2200x (ColorectalCancer(x) \u2227 BileDuctCancer(x) \u2227 LowSurvivalRate(x) \u2192 \u00acBileDuctCancer(x))"
+        ],
+        "conclusion-FOL": "\u2200x (ColorectalCancer(x) \u2192 SevereCancer(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DeadlyDisease(x) \u2192 LowSurvivalRate(x))",
+            "\u2200x (Cancer(x) \u2227 Severe(x) \u2192 DeadlyDisease(x))",
+            "\u2200x (BileDuctCancer(x) \u2192 SevereCancer(x))",
+            "\u2200x (Cholangiocarcinoma(x) \u2192 BileDuctCancer(x))",
+            "\u00ac(\u2203x (Person(x) \u2227 Flu(x) \u2227 Mild(x) \u2227 LowSurvivalRate(x)))",
+            "\u2200x (ColorectalCancer(x) \u2227 BileDuctCancer(x) \u2227 LowSurvivalRate(x) \u2192 \u00acBileDuctCancer(x))"
+        ],
+        "conclusion-FOL": "\u2200x (ColorectalCancer(x) \u2227 (BileDuctCancer(x) \u2228 Cholangiocarcinoma(x)) \u2192 (BileDuctCancer(x) \u2227 MildFlu(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (DeadlyDisease(x) \u2192 LowSurvivalRate(x))",
+            "\u2200x (Cancer(x) \u2227 Severe(x) \u2192 DeadlyDisease(x))",
+            "\u2200x (BileDuctCancer(x) \u2192 SevereCancer(x))",
+            "\u2200x (Cholangiocarcinoma(x) \u2192 BileDuctCancer(x))",
+            "\u00ac(\u2203x (Person(x) \u2227 Flu(x) \u2227 Mild(x) \u2227 LowSurvivalRate(x)))",
+            "\u2200x (ColorectalCancer(x) \u2227 BileDuctCancer(x) \u2227 LowSurvivalRate(x) \u2192 \u00acBileDuctCancer(x))"
+        ],
+        "conclusion-FOL": "\u2200x (ColorectalCancer(x) \u2227 \u00ac(MildFlu(x) \u2227 Cholangiocarcinoma(x)) \u2192 (BileDuctCancer(x) \u2228 Cholangiocarcinoma(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2227 EatsSaladsRegularly(x) \u2192 VeryConsciousAboutHealthAndEatingHabits(x))",
+            "\u2200x (Person(x) \u2227 GrewUpInHealthConsciousChildhoodHome(x) \u2192 EatsSaladsRegularly(x))",
+            "\u2200x (Person(x) \u2227 FulfillsNutritionalDailyIntakes(x) \u2192 GrewUpInHealthConsciousChildhoodHomes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 FulfillsNutritionalDailyIntakes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 \u00acRegularEaterOfSalads(x))",
+            "\u2200x (VisitsGymAtLeastOnceDay(x) \u2192 FulfillsDailyNutritionalIntakes(x))",
+            "\u2200x (GrewUpInHealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x) \u2192 (True(x) \u2228 \u00ac(GrewUpInHealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x))))"
+        ],
+        "conclusion-FOL": "\u2200x (Taylor(x) \u2192 EatsSaladsRegularly(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2227 EatsSaladsRegularly(x) \u2192 VeryConsciousAboutHealthAndEatingHabits(x))",
+            "\u2200x (Person(x) \u2227 GrewUpInHealthConsciousChildhoodHome(x) \u2192 EatsSaladsRegularly(x))",
+            "\u2200x (Person(x) \u2227 FulfillsNutritionalDailyIntakes(x) \u2192 GrewUpInHealthConsciousChildhoodHomes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 FulfillsNutritionalDailyIntakes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 \u00acRegularEaterOfSalads(x))",
+            "\u2200x (VisitsGymAtLeastOnceDay(x) \u2192 FulfillsDailyNutritionalIntakes(x))",
+            "\u2200x (GrewUpInHealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x) \u2192 (True(x) \u2228 \u00ac(GrewUpInHealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x))))"
+        ],
+        "conclusion-FOL": "\u2203x (Taylor(x) \u2227 VisitsGym(x, y) \u2227 Day(y))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Person(x) \u2227 EatsSaladsRegularly(x) \u2192 VeryConsciousAboutHealthAndEatingHabits(x))",
+            "\u2200x (Person(x) \u2227 GrewUpInHealthConsciousChildhoodHome(x) \u2192 EatsSaladsRegularly(x))",
+            "\u2200x (Person(x) \u2227 FulfillsNutritionalDailyIntakes(x) \u2192 GrewUpInHealthConsciousChildhoodHomes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 FulfillsNutritionalDailyIntakes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 \u00acRegularEaterOfSalads(x))",
+            "\u2200x (VisitsGymAtLeastOnceDay(x) \u2192 FulfillsDailyNutritionalIntakes(x))",
+            "\u2200x (GrewUpInHealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x) \u2192 (True(x) \u2228 \u00ac(GrewUpInHealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x))))"
+        ],
+        "conclusion-FOL": "\u00ac(HealthConsciousChildhoodHome(taylor) \u2228 GymVisit(taylor, 1))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (OlympicGames(x) \u2192 SportingEvent(x))",
+            "LastOlympicGames(Tokyo)",
+            "\u2200x (UnitedStates(x) \u2227 WonMostMedals(x, Tokyo) \u2192 BestPerformance(x, Tokyo))"
+        ],
+        "conclusion-FOL": "\u2200x (WorldChampionships(x) \u2192 SportingEvent(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (OlympicGames(x) \u2192 SportingEvent(x))",
+            "LastOlympicGames(Tokyo)",
+            "\u2200x (UnitedStates(x) \u2227 WonMostMedals(x, Tokyo) \u2192 BestPerformance(x, Tokyo))"
+        ],
+        "conclusion-FOL": "\u00ac(OlympicGames(last) \u2227 InTokyo(last))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (OlympicGames(x) \u2192 SportingEvent(x))",
+            "LastOlympicGames(Tokyo)",
+            "\u2200x (UnitedStates(x) \u2227 WonMostMedals(x, Tokyo) \u2192 BestPerformance(x, Tokyo))"
+        ],
+        "conclusion-FOL": "MostMedals(UnitedStates, LastOlympicGames)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Horse(x) \u2192 HasHooves(x))",
+            "\u2200x (Human(x) \u2192 \u00acHasHooves(x))"
+        ],
+        "conclusion-FOL": "\u2203x (Human(x) \u2227 Horse(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x \u2200y (Susan(x) \u2227 LGAAirport(y) \u2192 FliesTo(x, y))",
+            "\u2200x\u2200y (Airport(x) \u2227 Airport(y) \u2192 (Departure(x, y) \u2227 Arrival(y, x) \u2192 \u00acSameAirport(x, y)))",
+            "\u2200x \u2200y (John(x) \u2227 LGAAirport(y) \u2192 FliesFrom(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y (Susan(x) \u2227 LGAAirport(y) \u2192 FliesFrom(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x \u2200y (Susan(x) \u2227 LGAAirport(y) \u2192 FliesTo(x, y))",
+            "\u2200x\u2200y (Airport(x) \u2227 Airport(y) \u2192 (Departure(x, y) \u2227 Arrival(y, x) \u2192 \u00acSameAirport(x, y)))",
+            "\u2200x \u2200y (John(x) \u2227 LGAAirport(y) \u2192 FliesFrom(x, y))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y (John(x) \u2227 LGAAirport(y) \u2192 FliesTo(x, y))"
+    },
+    {
+        "premises-FOL": [
+            "\u00ac(\u2203x (NiceToAnimals(x) \u2227 MeanToAnimals(x)))",
+            "\u2203x (Grumpy(x) \u2227 MeanToAnimals(x))",
+            "\u2200x (AnimalLover(x) \u2192 NiceToAnimals(x))",
+            "\u2200x (OwnsPet(x) \u2192 LovesAnimals(x))",
+            "\u2203x (PetOwner(x) \u2227 Tom(x))"
+        ],
+        "conclusion-FOL": "GrumpyPerson(tom)"
+    },
+    {
+        "premises-FOL": [
+            "\u00ac(\u2203x (NiceToAnimals(x) \u2227 MeanToAnimals(x)))",
+            "\u2203x (Grumpy(x) \u2227 MeanToAnimals(x))",
+            "\u2200x (AnimalLover(x) \u2192 NiceToAnimals(x))",
+            "\u2200x (OwnsPet(x) \u2192 LovesAnimals(x))",
+            "\u2203x (PetOwner(x) \u2227 Tom(x))"
+        ],
+        "conclusion-FOL": "\u00ac(GrumpyPerson(tom) \u2227 MeanToAnimals(tom))"
+    },
+    {
+        "premises-FOL": [
+            "\u00ac(\u2203x (NiceToAnimals(x) \u2227 MeanToAnimals(x)))",
+            "\u2203x (Grumpy(x) \u2227 MeanToAnimals(x))",
+            "\u2200x (AnimalLover(x) \u2192 NiceToAnimals(x))",
+            "\u2200x (OwnsPet(x) \u2192 LovesAnimals(x))",
+            "\u2203x (PetOwner(x) \u2227 Tom(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Person(x) \u2227 \u00acGrumpy(x) \u2227 \u00acMeanToAnimals(x) \u2192 (\u00acGrumpy(x) \u2227 \u00acAnimalLover(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Podcast(x) \u2192 \u00acNovel(x))",
+            "\u2200x (BornInAmericanCity(x) \u2192 American(x))",
+            "\u2200x (Book(x) \u2227 Novel(x) \u2227 WrittenByPerson(x) \u2192 NovelWriter(x))",
+            "W(DaniShapiro) \u2227 A(American) \u2227 Writer(Shapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(novel) \u2227 WrittenIn(2003)",
+            "\u2200x (DaniShapiro(x) \u2227 Podcast(y) \u2227 FamilySecrets(y) \u2192 Created(x, y))",
+            "City(boston) \u2227 American(boston)"
+        ],
+        "conclusion-FOL": "\u2200x (DaniShapiro(x) \u2192 NovelWriter(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Podcast(x) \u2192 \u00acNovel(x))",
+            "\u2200x (BornInAmericanCity(x) \u2192 American(x))",
+            "\u2200x (Book(x) \u2227 Novel(x) \u2227 WrittenByPerson(x) \u2192 NovelWriter(x))",
+            "W(DaniShapiro) \u2227 A(American) \u2227 Writer(Shapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(novel) \u2227 WrittenIn(2003)",
+            "\u2200x (DaniShapiro(x) \u2227 Podcast(y) \u2227 FamilySecrets(y) \u2192 Created(x, y))",
+            "City(boston) \u2227 American(boston)"
+        ],
+        "conclusion-FOL": "FamilySecrets(novel)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Podcast(x) \u2192 \u00acNovel(x))",
+            "\u2200x (BornInAmericanCity(x) \u2192 American(x))",
+            "\u2200x (Book(x) \u2227 Novel(x) \u2227 WrittenByPerson(x) \u2192 NovelWriter(x))",
+            "W(DaniShapiro) \u2227 A(American) \u2227 Writer(Shapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(novel) \u2227 WrittenIn(2003)",
+            "\u2200x (DaniShapiro(x) \u2227 Podcast(y) \u2227 FamilySecrets(y) \u2192 Created(x, y))",
+            "City(boston) \u2227 American(boston)"
+        ],
+        "conclusion-FOL": "BornIn(DaniShapiro, Boston)"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ],
+        "conclusion-FOL": "Person(yuri) \u2227 American(yuri)"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ],
+        "conclusion-FOL": "\u00ac(BasketballPlayer(yuri) \u2227 American(yuri))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ],
+        "conclusion-FOL": "BasketballPlayer(yuri)"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ],
+        "conclusion-FOL": "\u2200x (Yuri(x) \u2227 \u00acLargeShoes(x) \u2192 AmericanBasketballPlayer(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ],
+        "conclusion-FOL": "\u2200x (Yuri(x) \u2227 \u00acAmericanBasketballPlayer(x) \u2192 BasketballPlayer(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Event(x) \u2192 (Happy(x) \u2295 Sad(x)))",
+            "\u2203x (Event(x) \u2227 Happy(x))"
+        ],
+        "conclusion-FOL": "\u2200x (Event(x) \u2192 Sad(x))"
+    },
+    {
+        "premises-FOL": [
+            "Winner(Steinhauer, 1992)",
+            "Participated(Steinhauer, 1992DuMaurierClassic)",
+            "\u2203x (Leaderboard(x) \u2227 SixWayTie(x) \u2227 PersonFromBelgium(x))",
+            "Leaderboard(Descampe, 1992DuMaurierClassic)",
+            "\u2200x (LeaderboardOf(x, 1992DuMaurierClassic) \u2192 ParticipatedIn(x, 1992DuMaurierClassic))"
+        ],
+        "conclusion-FOL": "\u00ac(SteinhauerWinner(1992, duMaurierClassic))"
+    },
+    {
+        "premises-FOL": [
+            "Winner(Steinhauer, 1992)",
+            "Participated(Steinhauer, 1992DuMaurierClassic)",
+            "\u2203x (Leaderboard(x) \u2227 SixWayTie(x) \u2227 PersonFromBelgium(x))",
+            "Leaderboard(Descampe, 1992DuMaurierClassic)",
+            "\u2200x (LeaderboardOf(x, 1992DuMaurierClassic) \u2192 ParticipatedIn(x, 1992DuMaurierClassic))"
+        ],
+        "conclusion-FOL": "Leaderboard(Descampe, 1992, DuMaurierClassic)"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Animal(x) \u2227 Barks(x) \u2192 \u00acLikes(Jane, x))",
+            "\u2200x (Dog(x) \u2192 Barks(x))",
+            "\u2200x (Animal(x) \u2227 Jumps(x) \u2192 JaneLikes(x))",
+            "\u2200x (Animal(x) \u2227 HasLegs(x) \u2192 Jumps(x))",
+            "\u2200x (Terricolous(x) \u2192 HasLegs(x))",
+            "\u2200x (KiKi(x) \u2227 \u00ac(Jumps(x) \u2228 HasLegs(x)) \u2192 (Terricolous(x) \u2228 HasLegs(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (KiKi(x) \u2192 Terricolous(x))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Animal(x) \u2227 Barks(x) \u2192 \u00acLikes(Jane, x))",
+            "\u2200x (Dog(x) \u2192 Barks(x))",
+            "\u2200x (Animal(x) \u2227 Jumps(x) \u2192 JaneLikes(x))",
+            "\u2200x (Animal(x) \u2227 HasLegs(x) \u2192 Jumps(x))",
+            "\u2200x (Terricolous(x) \u2192 HasLegs(x))",
+            "\u2200x (KiKi(x) \u2227 \u00ac(Jumps(x) \u2228 HasLegs(x)) \u2192 (Terricolous(x) \u2228 HasLegs(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (KiKi(x) \u2192 (Barks(x) \u2227 Dog(x)))"
+    },
+    {
+        "premises-FOL": [
+            "\u2200x (Animal(x) \u2227 Barks(x) \u2192 \u00acLikes(Jane, x))",
+            "\u2200x (Dog(x) \u2192 Barks(x))",
+            "\u2200x (Animal(x) \u2227 Jumps(x) \u2192 JaneLikes(x))",
+            "\u2200x (Animal(x) \u2227 HasLegs(x) \u2192 Jumps(x))",
+            "\u2200x (Terricolous(x) \u2192 HasLegs(x))",
+            "\u2200x (KiKi(x) \u2227 \u00ac(Jumps(x) \u2228 HasLegs(x)) \u2192 (Terricolous(x) \u2228 HasLegs(x)))"
+        ],
+        "conclusion-FOL": "\u2200x (KiKi(x) \u2192 (\u00acBarks(x) \u2227 \u00acDog(x)))"
+    },
+    {
+        "premises-FOL": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 BasedIn(x, Brazil) \u2227 Name(x, \"Fluminense\") \u2227 YearFounded(x, 1902))))"
+        ],
+        "conclusion-FOL": "\u00ac\u2203x (Player(x) \u2227 Nautico(x) \u2227 Brazilian(x))"
+    },
+    {
+        "premises-FOL": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 BasedIn(x, Brazil) \u2227 Name(x, \"Fluminense\") \u2227 YearFounded(x, 1902))))"
+        ],
+        "conclusion-FOL": "\u2200x (AiltonSilva(x) \u2192 \u00acPlayForFootballClub(x))"
+    },
+    {
+        "premises-FOL": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 BasedIn(x, Brazil) \u2227 Name(x, \"Fluminense\") \u2227 YearFounded(x, 1902))))"
+        ],
+        "conclusion-FOL": "\u00ac(LoanedTo(Ailton, FootballClub))"
+    },
+    {
+        "premises-FOL": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 BasedIn(x, Brazil) \u2227 Name(x, \"Fluminense\") \u2227 YearFounded(x, 1902))))"
+        ],
+        "conclusion-FOL": "\u2203x (Player(x) \u2227 PlayedFor(x, Fluminense))"
+    },
+    {
+        "premises-FOL": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 BasedIn(x, Brazil) \u2227 Name(x, \"Fluminense\") \u2227 YearFounded(x, 1902))))"
+        ],
+        "conclusion-FOL": "\u2200x \u2200y (AiltonSilva(x) \u2227 FootballClub(y) \u2192 LoanedTo(x, y))"
+    }
+]

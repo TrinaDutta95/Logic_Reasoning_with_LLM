@@ -64,6 +64,7 @@ mace = Mace()
 q6 = read_expr('all x.(NaziGermanPolitician(x) -> German(x))')
 q7 = read_expr('NaziGermanPolitician(HeinrichSchmidt)')
 e = read_expr('German(HeinrichSchmidt)')
+print("Reading expression:", q6)
 print("##########-third-example-###########")
 # prove result from mace4
 print(mace.build_model(None, [q6,q7,e]))
