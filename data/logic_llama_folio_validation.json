@@ -1,0 +1,3402 @@
+[
+    {
+        "premise-fol": [
+            "If people perform in school talent shows often, then they attend and are very engaged with school events.",
+            "People either perform in school talent shows often or are inactive and disinterested members of their community.",
+            "If people chaperone high school dances, then they are not students who attend the school.",
+            "All people who are inactive and disinterested members of their community chaperone high school dances.",
+            "All young children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school.",
+            "Bonnie either both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (PerformsInSchoolTalentShowsOften(x) \u2192 (AttendsSchoolEvents(x) \u2227 EngagedWithSchoolEvents(x)))",
+            "\u2200x (Person(x) \u2192 (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) \u2227 Disinterested(x))))",
+            "\u2200x (ChaperoneHighSchoolDance(x) \u2192 \u00acStudentAtSchool(x))",
+            "\u2200x (Person(x) \u2227 Inactive(x) \u2227 Disinterested(x) \u2227 CommunityMember(x) \u2192 ChaperonesHighSchoolDances(x))",
+            "\u2200x (YoungChildOrTeenager(x) \u2227 WishesToFurtherAcademicCareer(x) \u2227 SeeksEducationalOpportunities(x) \u2192 Student(x) \u2227 AttendsSchool(x))",
+            "\u2200x (Bonnie(x) \u2192 ((AttendsSchoolEvents(x) \u2227 VeryEngaged(x)) \u2228 (\u00acAttendsSchoolEvents(x) \u2227 \u00acVeryEngaged(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people perform in school talent shows often, then they attend and are very engaged with school events.",
+            "People either perform in school talent shows often or are inactive and disinterested members of their community.",
+            "If people chaperone high school dances, then they are not students who attend the school.",
+            "All people who are inactive and disinterested members of their community chaperone high school dances.",
+            "All young children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school.",
+            "Bonnie either both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (PerformsInSchoolTalentShowsOften(x) \u2192 (AttendsSchoolEvents(x) \u2227 EngagedWithSchoolEvents(x)))",
+            "\u2200x (Person(x) \u2192 (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) \u2227 Disinterested(x))))",
+            "\u2200x (ChaperoneHighSchoolDance(x) \u2192 \u00acStudentAtSchool(x))",
+            "\u2200x (Person(x) \u2227 Inactive(x) \u2227 Disinterested(x) \u2227 CommunityMember(x) \u2192 ChaperonesHighSchoolDances(x))",
+            "\u2200x (YoungChildOrTeenager(x) \u2227 WishesToFurtherAcademicCareer(x) \u2227 SeeksEducationalOpportunities(x) \u2192 Student(x) \u2227 AttendsSchool(x))",
+            "\u2200x (Bonnie(x) \u2192 ((AttendsSchoolEvents(x) \u2227 VeryEngaged(x)) \u2228 (\u00acAttendsSchoolEvents(x) \u2227 \u00acVeryEngaged(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people perform in school talent shows often, then they attend and are very engaged with school events.",
+            "People either perform in school talent shows often or are inactive and disinterested members of their community.",
+            "If people chaperone high school dances, then they are not students who attend the school.",
+            "All people who are inactive and disinterested members of their community chaperone high school dances.",
+            "All young children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school.",
+            "Bonnie either both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (PerformsInSchoolTalentShowsOften(x) \u2192 (AttendsSchoolEvents(x) \u2227 EngagedWithSchoolEvents(x)))",
+            "\u2200x (Person(x) \u2192 (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) \u2227 Disinterested(x))))",
+            "\u2200x (ChaperoneHighSchoolDance(x) \u2192 \u00acStudentAtSchool(x))",
+            "\u2200x (Person(x) \u2227 Inactive(x) \u2227 Disinterested(x) \u2227 CommunityMember(x) \u2192 ChaperonesHighSchoolDances(x))",
+            "\u2200x (YoungChildOrTeenager(x) \u2227 WishesToFurtherAcademicCareer(x) \u2227 SeeksEducationalOpportunities(x) \u2192 Student(x) \u2227 AttendsSchool(x))",
+            "\u2200x (Bonnie(x) \u2192 ((AttendsSchoolEvents(x) \u2227 VeryEngaged(x)) \u2228 (\u00acAttendsSchoolEvents(x) \u2227 \u00acVeryEngaged(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All employees who schedule a meeting with their customers will appear in the company today. ",
+            "Everyone who has lunch in the company schedules meetings with their customers. ",
+            "Employees will either have lunch in the company or have lunch at home.",
+            "If an employee has lunch at home, then he/she is working remotely from home.",
+            "All employees who are in other countries work remotely from home. ",
+            "No managers work remotely from home. ",
+            "James is either a manager and appears in the company today or neither a manager nor appears in the company today."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (Employee(x) \u2227 Customer(y) \u2227 SchedulesMeeting(x, y) \u2192 AppearsInCompany(x))",
+            "\u2200x (HasLunchInCompany(x) \u2192 SchedulesMeetingsWithCustomers(x))",
+            "\u2200x (Employee(x) \u2192 (HasLunchInCompany(x) \u2295 HasLunchAtHome(x)))",
+            "\u2200x (Employee(x) \u2227 LunchAtHome(x) \u2192 WorkingRemotelyFromHome(x))",
+            "\u2200x (Employee(x) \u2227 InOtherCountries(x) \u2192 WorkRemotelyFromHome(x))",
+            "\u00ac\u2203x (Manager(x) \u2227 WorksRemotelyFromHome(x))",
+            "\u2200x (James(x) \u2192 (Manager(x) \u2227 AppearsInCompany(x, today) \u2228 (\u00acManager(x) \u2227 \u00acAppearsInCompany(x, today))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All employees who schedule a meeting with their customers will appear in the company today. ",
+            "Everyone who has lunch in the company schedules meetings with their customers. ",
+            "Employees will either have lunch in the company or have lunch at home.",
+            "If an employee has lunch at home, then he/she is working remotely from home.",
+            "All employees who are in other countries work remotely from home. ",
+            "No managers work remotely from home. ",
+            "James is either a manager and appears in the company today or neither a manager nor appears in the company today."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (Employee(x) \u2227 Customer(y) \u2227 SchedulesMeeting(x, y) \u2192 AppearsInCompany(x))",
+            "\u2200x (HasLunchInCompany(x) \u2192 SchedulesMeetingsWithCustomers(x))",
+            "\u2200x (Employee(x) \u2192 (HasLunchInCompany(x) \u2295 HasLunchAtHome(x)))",
+            "\u2200x (Employee(x) \u2227 LunchAtHome(x) \u2192 WorkingRemotelyFromHome(x))",
+            "\u2200x (Employee(x) \u2227 InOtherCountries(x) \u2192 WorkRemotelyFromHome(x))",
+            "\u00ac\u2203x (Manager(x) \u2227 WorksRemotelyFromHome(x))",
+            "\u2200x (James(x) \u2192 (Manager(x) \u2227 AppearsInCompany(x, today) \u2228 (\u00acManager(x) \u2227 \u00acAppearsInCompany(x, today))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All employees who schedule a meeting with their customers will appear in the company today. ",
+            "Everyone who has lunch in the company schedules meetings with their customers. ",
+            "Employees will either have lunch in the company or have lunch at home.",
+            "If an employee has lunch at home, then he/she is working remotely from home.",
+            "All employees who are in other countries work remotely from home. ",
+            "No managers work remotely from home. ",
+            "James is either a manager and appears in the company today or neither a manager nor appears in the company today."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (Employee(x) \u2227 Customer(y) \u2227 SchedulesMeeting(x, y) \u2192 AppearsInCompany(x))",
+            "\u2200x (HasLunchInCompany(x) \u2192 SchedulesMeetingsWithCustomers(x))",
+            "\u2200x (Employee(x) \u2192 (HasLunchInCompany(x) \u2295 HasLunchAtHome(x)))",
+            "\u2200x (Employee(x) \u2227 LunchAtHome(x) \u2192 WorkingRemotelyFromHome(x))",
+            "\u2200x (Employee(x) \u2227 InOtherCountries(x) \u2192 WorkRemotelyFromHome(x))",
+            "\u00ac\u2203x (Manager(x) \u2227 WorksRemotelyFromHome(x))",
+            "\u2200x (James(x) \u2192 (Manager(x) \u2227 AppearsInCompany(x, today) \u2228 (\u00acManager(x) \u2227 \u00acAppearsInCompany(x, today))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Monkeypox is an infectious disease caused by the monkeypox virus.",
+            "Monkeypox virus can occur in certain animals, including humans.",
+            "Humans are mammals.",
+            "Mammals are animals.",
+            "Symptons of Monkeypox include fever, headache, muscle pains, feeling tired, and so on.",
+            "People feel tired when they get a glu."
+        ],
+        "conclusion-fol": [
+            "Monkeypox(m) \u2227 InfectiousDisease(m) \u2227 CausedByMonkeypoxVirus(m)",
+            "\u2200x (MonkeypoxVirus(x) \u2192 (OccursInAnimal(x) \u2227 (OccursInHuman(x) \u2228 \u00acOccursInHuman(x))))",
+            "\u2200x (Human(x) \u2192 Mammal(x))",
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Symptom(x) \u2227 Monkeypox(x) \u2192 (Fever(x) \u2227 Headache(x) \u2227 MusclePains(x) \u2227 FeelingTired(x)))",
+            "\u2200x (Glu(x) \u2192 FeelsTired(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Monkeypox is an infectious disease caused by the monkeypox virus.",
+            "Monkeypox virus can occur in certain animals, including humans.",
+            "Humans are mammals.",
+            "Mammals are animals.",
+            "Symptons of Monkeypox include fever, headache, muscle pains, feeling tired, and so on.",
+            "People feel tired when they get a glu."
+        ],
+        "conclusion-fol": [
+            "Monkeypox(m) \u2227 InfectiousDisease(m) \u2227 CausedByMonkeypoxVirus(m)",
+            "\u2200x (MonkeypoxVirus(x) \u2192 (OccursInAnimal(x) \u2227 (OccursInHuman(x) \u2228 \u00acOccursInHuman(x))))",
+            "\u2200x (Human(x) \u2192 Mammal(x))",
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Symptom(x) \u2227 Monkeypox(x) \u2192 (Fever(x) \u2227 Headache(x) \u2227 MusclePains(x) \u2227 FeelingTired(x)))",
+            "\u2200x (Glu(x) \u2192 FeelsTired(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Monkeypox is an infectious disease caused by the monkeypox virus.",
+            "Monkeypox virus can occur in certain animals, including humans.",
+            "Humans are mammals.",
+            "Mammals are animals.",
+            "Symptons of Monkeypox include fever, headache, muscle pains, feeling tired, and so on.",
+            "People feel tired when they get a glu."
+        ],
+        "conclusion-fol": [
+            "Monkeypox(m) \u2227 InfectiousDisease(m) \u2227 CausedByMonkeypoxVirus(m)",
+            "\u2200x (MonkeypoxVirus(x) \u2192 (OccursInAnimal(x) \u2227 (OccursInHuman(x) \u2228 \u00acOccursInHuman(x))))",
+            "\u2200x (Human(x) \u2192 Mammal(x))",
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Symptom(x) \u2227 Monkeypox(x) \u2192 (Fever(x) \u2227 Headache(x) \u2227 MusclePains(x) \u2227 FeelingTired(x)))",
+            "\u2200x (Glu(x) \u2192 FeelsTired(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould\u2019s wild turkey, Merriam\u2019s wild",
+            "turkey, Rio Grande wild turkey, and Ocellated wild turkey.",
+            "Tom is not an Eastern wild turkey.",
+            "Tom is not an Osceola wild turkey.",
+            "Tom is also not a Gould's wild turkey, or a Merriam's wild turkey, or a Rio Grande wild turkey.",
+            "Tom is a wild turkey."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y\u2200z (WildTurkey(x) \u2227 EasternWildTurkey(y) \u2227 OsceolaWildTurkey(z) \u2192 (Type(x, y) \u2227 Type(x, z)))",
+            "\u2200x \u2200y \u2200z (Turkey(x) \u2227 RioGrandeWildTurkey(y) \u2227 OcellatedWildTurkey(z) \u2192 (Turkey(x) \u2227 WildTurkey(y) \u2227 WildTurkey(z)))",
+            "\u00ac(EasternWildTurkey(tom))",
+            "\u00ac(OsceolaWildTurkey(tom))",
+            "\u00ac(GouldsWildTurkey(tom) \u2228 MerriamsWildTurkey(tom) \u2228 RioGrandeWildTurkey(tom))",
+            "\u2200x (WildTurkey(x) \u2194 Tom(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould\u2019s wild turkey, Merriam\u2019s wild",
+            "turkey, Rio Grande wild turkey, and Ocellated wild turkey.",
+            "Tom is not an Eastern wild turkey.",
+            "Tom is not an Osceola wild turkey.",
+            "Tom is also not a Gould's wild turkey, or a Merriam's wild turkey, or a Rio Grande wild turkey.",
+            "Tom is a wild turkey."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y\u2200z (WildTurkey(x) \u2227 EasternWildTurkey(y) \u2227 OsceolaWildTurkey(z) \u2192 (Type(x, y) \u2227 Type(x, z)))",
+            "\u2200x \u2200y \u2200z (Turkey(x) \u2227 RioGrandeWildTurkey(y) \u2227 OcellatedWildTurkey(z) \u2192 (Turkey(x) \u2227 WildTurkey(y) \u2227 WildTurkey(z)))",
+            "\u00ac(EasternWildTurkey(tom))",
+            "\u00ac(OsceolaWildTurkey(tom))",
+            "\u00ac(GouldsWildTurkey(tom) \u2228 MerriamsWildTurkey(tom) \u2228 RioGrandeWildTurkey(tom))",
+            "\u2200x (WildTurkey(x) \u2194 Tom(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould\u2019s wild turkey, Merriam\u2019s wild",
+            "turkey, Rio Grande wild turkey, and Ocellated wild turkey.",
+            "Tom is not an Eastern wild turkey.",
+            "Tom is not an Osceola wild turkey.",
+            "Tom is also not a Gould's wild turkey, or a Merriam's wild turkey, or a Rio Grande wild turkey.",
+            "Tom is a wild turkey."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y\u2200z (WildTurkey(x) \u2227 EasternWildTurkey(y) \u2227 OsceolaWildTurkey(z) \u2192 (Type(x, y) \u2227 Type(x, z)))",
+            "\u2200x \u2200y \u2200z (Turkey(x) \u2227 RioGrandeWildTurkey(y) \u2227 OcellatedWildTurkey(z) \u2192 (Turkey(x) \u2227 WildTurkey(y) \u2227 WildTurkey(z)))",
+            "\u00ac(EasternWildTurkey(tom))",
+            "\u00ac(OsceolaWildTurkey(tom))",
+            "\u00ac(GouldsWildTurkey(tom) \u2228 MerriamsWildTurkey(tom) \u2228 RioGrandeWildTurkey(tom))",
+            "\u2200x (WildTurkey(x) \u2194 Tom(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A Japanese game company created the game the Legend of Zelda.",
+            "All games in the Top 10 list are made by Japanese game companies.",
+            "[BG] If a game sells more than one million copies, then it will be selected into the Top 10 list.",
+            "The Legend of Zelda sold more than one million copies."
+        ],
+        "conclusion-fol": [
+            "\u2203x (JapaneseGameCompany(x) \u2227 Created(x, LegendOfZelda))",
+            "\u2200x (Game(x) \u2227 InTop10(x) \u2192 MadeByJapaneseCompany(x))",
+            "\u2200x (Game(x) \u2227 SellsMoreThanOneMillionCopies(x) \u2192 SelectedIntoTop10List(x))",
+            "MoreThanOneMillionCopiesSold(LegendOfZelda)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A Japanese game company created the game the Legend of Zelda.",
+            "All games in the Top 10 list are made by Japanese game companies.",
+            "[BG] If a game sells more than one million copies, then it will be selected into the Top 10 list.",
+            "The Legend of Zelda sold more than one million copies."
+        ],
+        "conclusion-fol": [
+            "\u2203x (JapaneseGameCompany(x) \u2227 Created(x, LegendOfZelda))",
+            "\u2200x (Game(x) \u2227 InTop10(x) \u2192 MadeByJapaneseCompany(x))",
+            "\u2200x (Game(x) \u2227 SellsMoreThanOneMillionCopies(x) \u2192 SelectedIntoTop10List(x))",
+            "MoreThanOneMillionCopiesSold(LegendOfZelda)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A Japanese game company created the game the Legend of Zelda.",
+            "All games in the Top 10 list are made by Japanese game companies.",
+            "[BG] If a game sells more than one million copies, then it will be selected into the Top 10 list.",
+            "The Legend of Zelda sold more than one million copies."
+        ],
+        "conclusion-fol": [
+            "\u2203x (JapaneseGameCompany(x) \u2227 Created(x, LegendOfZelda))",
+            "\u2200x (Game(x) \u2227 InTop10(x) \u2192 MadeByJapaneseCompany(x))",
+            "\u2200x (Game(x) \u2227 SellsMoreThanOneMillionCopies(x) \u2192 SelectedIntoTop10List(x))",
+            "MoreThanOneMillionCopiesSold(LegendOfZelda)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All squares have four sides.",
+            "All four-sided things are shapes. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (Square(x) \u2192 HasFourSides(x))",
+            "\u2200x (FourSided(x) \u2192 Shape(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All rabbits are cute. ",
+            "Some turtles exist. ",
+            "An animal is either a rabbit or a squirrel.",
+            "If something is skittish, then it is not still.",
+            "All squirrels are skittish.",
+            "Rock is still."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All rabbits are cute. ",
+            "Some turtles exist. ",
+            "An animal is either a rabbit or a squirrel.",
+            "If something is skittish, then it is not still.",
+            "All squirrels are skittish.",
+            "Rock is still."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All rabbits are cute. ",
+            "Some turtles exist. ",
+            "An animal is either a rabbit or a squirrel.",
+            "If something is skittish, then it is not still.",
+            "All squirrels are skittish.",
+            "Rock is still."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All rabbits are cute. ",
+            "Some turtles exist. ",
+            "An animal is either a rabbit or a squirrel.",
+            "If something is skittish, then it is not still.",
+            "All squirrels are skittish.",
+            "Rock is still."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All rabbits are cute. ",
+            "Some turtles exist. ",
+            "An animal is either a rabbit or a squirrel.",
+            "If something is skittish, then it is not still.",
+            "All squirrels are skittish.",
+            "Rock is still."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Rabbit(x) \u2192 Cute(x))",
+            "\u2203x (Turtle(x))",
+            "\u2200x (Animal(x) \u2192 (Rabbit(x) \u2295 Squirrel(x)))",
+            "\u2200x (Skittish(x) \u2192 \u00acStill(x))",
+            "\u2200x (Squirrel(x) \u2192 Skittish(x))",
+            "\u2200x (Rock(x) \u2192 Still(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "\"Stranger Things\" is a popular Netflix show.",
+            "If a Netflix show is popular, Karen will binge-watch it.",
+            "If and only if Karen binge-watches a Netflix show, she will download it.",
+            "Karen does not download \"Black Mirror\".",
+            "\"Black Mirror\" is a Netflix show.",
+            "If Karen binge-watches a Netflix show, she will share it to Lisa."
+        ],
+        "conclusion-fol": [
+            "PopularNetflixShow(StrangerThings)",
+            "\u2200x (NetflixShow(x) \u2227 Popular(x) \u2192 BingeWatch(Karen, x))",
+            "\u2200x (BingeWatchesNetflixShow(x) \u2192 DownloadsShow(x))",
+            "\u00ac(KarenDownloads(BlackMirror))",
+            "\u2203x (NetflixShow(x) \u2227 Name(x, \"Black Mirror\") \u2227 Season(x, 1) \u2227 Season(x, 2) \u2227 Season(x, 3) \u2227 Season(x, 4))",
+            "\u2200x\u2200y (BingeWatchesNetflixShow(x) \u2227 Lisa(y) \u2192 SharesTo(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "\"Stranger Things\" is a popular Netflix show.",
+            "If a Netflix show is popular, Karen will binge-watch it.",
+            "If and only if Karen binge-watches a Netflix show, she will download it.",
+            "Karen does not download \"Black Mirror\".",
+            "\"Black Mirror\" is a Netflix show.",
+            "If Karen binge-watches a Netflix show, she will share it to Lisa."
+        ],
+        "conclusion-fol": [
+            "PopularNetflixShow(StrangerThings)",
+            "\u2200x (NetflixShow(x) \u2227 Popular(x) \u2192 BingeWatch(Karen, x))",
+            "\u2200x (BingeWatchesNetflixShow(x) \u2192 DownloadsShow(x))",
+            "\u00ac(KarenDownloads(BlackMirror))",
+            "\u2203x (NetflixShow(x) \u2227 Name(x, \"Black Mirror\") \u2227 Season(x, 1) \u2227 Season(x, 2) \u2227 Season(x, 3) \u2227 Season(x, 4))",
+            "\u2200x\u2200y (BingeWatchesNetflixShow(x) \u2227 Lisa(y) \u2192 SharesTo(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "\"Stranger Things\" is a popular Netflix show.",
+            "If a Netflix show is popular, Karen will binge-watch it.",
+            "If and only if Karen binge-watches a Netflix show, she will download it.",
+            "Karen does not download \"Black Mirror\".",
+            "\"Black Mirror\" is a Netflix show.",
+            "If Karen binge-watches a Netflix show, she will share it to Lisa."
+        ],
+        "conclusion-fol": [
+            "PopularNetflixShow(StrangerThings)",
+            "\u2200x (NetflixShow(x) \u2227 Popular(x) \u2192 BingeWatch(Karen, x))",
+            "\u2200x (BingeWatchesNetflixShow(x) \u2192 DownloadsShow(x))",
+            "\u00ac(KarenDownloads(BlackMirror))",
+            "\u2203x (NetflixShow(x) \u2227 Name(x, \"Black Mirror\") \u2227 Season(x, 1) \u2227 Season(x, 2) \u2227 Season(x, 3) \u2227 Season(x, 4))",
+            "\u2200x\u2200y (BingeWatchesNetflixShow(x) \u2227 Lisa(y) \u2192 SharesTo(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Beijing is the capital of the People's Republic of China. ",
+            "Beijing is the world's most populous national capital city.",
+            "Beijing is located in Northern China.",
+            "Beijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.",
+            "Beijing has hosted both the Summer and Winter Olympics, along with the Summer and Winter Paralympics",
+            "Many of Beijing's 91 universities consistently rank among the best in the Asia-Pacific and the world."
+        ],
+        "conclusion-fol": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, 2008SummerOlympics) \u2227 Hosted(Beijing, 2008SummerParalympics)",
+            "\u2200x (City(x) \u2227 HostedSummerOlympics(x) \u2227 HostedWinterOlympics(x) \u2227 HostedSummerParalympics(x) \u2227 HostedWinterParalympics(x))",
+            "\u2200x (UniversityInBeijing(x) \u2227 RankAmongBestInAsiaPacific(x) \u2227 RankAmongBestInWorld(x) \u2192 ConsistentlyRanked(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Beijing is the capital of the People's Republic of China. ",
+            "Beijing is the world's most populous national capital city.",
+            "Beijing is located in Northern China.",
+            "Beijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.",
+            "Beijing has hosted both the Summer and Winter Olympics, along with the Summer and Winter Paralympics",
+            "Many of Beijing's 91 universities consistently rank among the best in the Asia-Pacific and the world."
+        ],
+        "conclusion-fol": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, 2008SummerOlympics) \u2227 Hosted(Beijing, 2008SummerParalympics)",
+            "\u2200x (City(x) \u2227 HostedSummerOlympics(x) \u2227 HostedWinterOlympics(x) \u2227 HostedSummerParalympics(x) \u2227 HostedWinterParalympics(x))",
+            "\u2200x (UniversityInBeijing(x) \u2227 RankAmongBestInAsiaPacific(x) \u2227 RankAmongBestInWorld(x) \u2192 ConsistentlyRanked(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Beijing is the capital of the People's Republic of China. ",
+            "Beijing is the world's most populous national capital city.",
+            "Beijing is located in Northern China.",
+            "Beijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.",
+            "Beijing has hosted both the Summer and Winter Olympics, along with the Summer and Winter Paralympics",
+            "Many of Beijing's 91 universities consistently rank among the best in the Asia-Pacific and the world."
+        ],
+        "conclusion-fol": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, 2008SummerOlympics) \u2227 Hosted(Beijing, 2008SummerParalympics)",
+            "\u2200x (City(x) \u2227 HostedSummerOlympics(x) \u2227 HostedWinterOlympics(x) \u2227 HostedSummerParalympics(x) \u2227 HostedWinterParalympics(x))",
+            "\u2200x (UniversityInBeijing(x) \u2227 RankAmongBestInAsiaPacific(x) \u2227 RankAmongBestInWorld(x) \u2192 ConsistentlyRanked(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All aliens are extraterrestrial.",
+            "If someone is from Mars, then they are aliens.",
+            "No extraterrestrial is human.",
+            "Everyone from Earth is a human.",
+            "Marvin cannot be from Earth and from Mars.",
+            "If Marvin is not from Earth, then Marvin is an extraterrestrial."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Alien(x) \u2192 Extraterrestrial(x))",
+            "\u2200x (FromMars(x) \u2192 Alien(x))",
+            "\u2200x (Extraterrestrial(x) \u2192 \u00acHuman(x))",
+            "\u2200x (Earthian(x) \u2192 Human(x))",
+            "\u2200x (Marvin(x) \u2192 (\u00acFromEarth(x) \u2227 \u00acFromMars(x)))",
+            "\u2200x (Marvin(x) \u2227 \u00acFromEarth(x) \u2192 Extraterrestrial(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All aliens are extraterrestrial.",
+            "If someone is from Mars, then they are aliens.",
+            "No extraterrestrial is human.",
+            "Everyone from Earth is a human.",
+            "Marvin cannot be from Earth and from Mars.",
+            "If Marvin is not from Earth, then Marvin is an extraterrestrial."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Alien(x) \u2192 Extraterrestrial(x))",
+            "\u2200x (FromMars(x) \u2192 Alien(x))",
+            "\u2200x (Extraterrestrial(x) \u2192 \u00acHuman(x))",
+            "\u2200x (Earthian(x) \u2192 Human(x))",
+            "\u2200x (Marvin(x) \u2192 (\u00acFromEarth(x) \u2227 \u00acFromMars(x)))",
+            "\u2200x (Marvin(x) \u2227 \u00acFromEarth(x) \u2192 Extraterrestrial(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All aliens are extraterrestrial.",
+            "If someone is from Mars, then they are aliens.",
+            "No extraterrestrial is human.",
+            "Everyone from Earth is a human.",
+            "Marvin cannot be from Earth and from Mars.",
+            "If Marvin is not from Earth, then Marvin is an extraterrestrial."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Alien(x) \u2192 Extraterrestrial(x))",
+            "\u2200x (FromMars(x) \u2192 Alien(x))",
+            "\u2200x (Extraterrestrial(x) \u2192 \u00acHuman(x))",
+            "\u2200x (Earthian(x) \u2192 Human(x))",
+            "\u2200x (Marvin(x) \u2192 (\u00acFromEarth(x) \u2227 \u00acFromMars(x)))",
+            "\u2200x (Marvin(x) \u2227 \u00acFromEarth(x) \u2192 Extraterrestrial(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A person is either a Grand Slam champion or an Oscar-nominated actor.",
+            "All people who are Grand Slam champions are professional tennis players.",
+            "All Oscar-nominated actors are celebrities.",
+            "All professional tennis players are athletes.",
+            "If a person is a celebrity then they are well paid.",
+            "If a person is an athlete then they are famous.",
+            "All well-paid people live in tax havens.",
+            "If Djokovic is famous and is an athlete, then Djokovic lives in well paid."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2192 (GrandSlamChampion(x) \u2295 OscarNominatedActor(x)))",
+            "\u2200x (GrandSlamChampion(x) \u2192 ProfessionalTennisPlayer(x))",
+            "\u2200x (OscarNominated(x) \u2192 Celebrity(x))",
+            "\u2200x (ProfessionalTennisPlayer(x) \u2192 Athlete(x))",
+            "\u2200x (Celebrity(x) \u2192 WellPaid(x))",
+            "\u2200x (Athlete(x) \u2192 Famous(x))",
+            "\u2200x (WellPaid(x) \u2192 LivesInTaxHaven(x))",
+            "\u2200x (Famous(x) \u2227 Athlete(x) \u2192 WellPaid(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A person is either a Grand Slam champion or an Oscar-nominated actor.",
+            "All people who are Grand Slam champions are professional tennis players.",
+            "All Oscar-nominated actors are celebrities.",
+            "All professional tennis players are athletes.",
+            "If a person is a celebrity then they are well paid.",
+            "If a person is an athlete then they are famous.",
+            "All well-paid people live in tax havens.",
+            "If Djokovic is famous and is an athlete, then Djokovic lives in well paid."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2192 (GrandSlamChampion(x) \u2295 OscarNominatedActor(x)))",
+            "\u2200x (GrandSlamChampion(x) \u2192 ProfessionalTennisPlayer(x))",
+            "\u2200x (OscarNominated(x) \u2192 Celebrity(x))",
+            "\u2200x (ProfessionalTennisPlayer(x) \u2192 Athlete(x))",
+            "\u2200x (Celebrity(x) \u2192 WellPaid(x))",
+            "\u2200x (Athlete(x) \u2192 Famous(x))",
+            "\u2200x (WellPaid(x) \u2192 LivesInTaxHaven(x))",
+            "\u2200x (Famous(x) \u2227 Athlete(x) \u2192 WellPaid(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A person is either a Grand Slam champion or an Oscar-nominated actor.",
+            "All people who are Grand Slam champions are professional tennis players.",
+            "All Oscar-nominated actors are celebrities.",
+            "All professional tennis players are athletes.",
+            "If a person is a celebrity then they are well paid.",
+            "If a person is an athlete then they are famous.",
+            "All well-paid people live in tax havens.",
+            "If Djokovic is famous and is an athlete, then Djokovic lives in well paid."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2192 (GrandSlamChampion(x) \u2295 OscarNominatedActor(x)))",
+            "\u2200x (GrandSlamChampion(x) \u2192 ProfessionalTennisPlayer(x))",
+            "\u2200x (OscarNominated(x) \u2192 Celebrity(x))",
+            "\u2200x (ProfessionalTennisPlayer(x) \u2192 Athlete(x))",
+            "\u2200x (Celebrity(x) \u2192 WellPaid(x))",
+            "\u2200x (Athlete(x) \u2192 Famous(x))",
+            "\u2200x (WellPaid(x) \u2192 LivesInTaxHaven(x))",
+            "\u2200x (Famous(x) \u2227 Athlete(x) \u2192 WellPaid(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Diamond Mine is a professional wrestling stable, formed in WWE.",
+            "Roderick Strong leads Diamond Mine.",
+            "Diamond Mine includes the Creed Brothers, and Ivy Nile.",
+            "Imperium has a feud with Diamond Mine."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DiamondMine(x) \u2192 (ProfessionalWrestlingStable(x) \u2227 FormedInWWE(x)))",
+            "\u2200x \u2200y (RoderickStrong(x) \u2227 DiamondMine(y) \u2192 Leads(x, y))",
+            "\u2200x\u2200y\u2200z (DiamondMine(x) \u2227 CreedBrothers(y) \u2227 IvyNile(z) \u2192 Includes(x, y) \u2227 Includes(x, z))",
+            "\u2203x \u2203y (Imperium(x) \u2227 DiamondMine(y) \u2227 Feud(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Diamond Mine is a professional wrestling stable, formed in WWE.",
+            "Roderick Strong leads Diamond Mine.",
+            "Diamond Mine includes the Creed Brothers, and Ivy Nile.",
+            "Imperium has a feud with Diamond Mine."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DiamondMine(x) \u2192 (ProfessionalWrestlingStable(x) \u2227 FormedInWWE(x)))",
+            "\u2200x \u2200y (RoderickStrong(x) \u2227 DiamondMine(y) \u2192 Leads(x, y))",
+            "\u2200x\u2200y\u2200z (DiamondMine(x) \u2227 CreedBrothers(y) \u2227 IvyNile(z) \u2192 Includes(x, y) \u2227 Includes(x, z))",
+            "\u2203x \u2203y (Imperium(x) \u2227 DiamondMine(y) \u2227 Feud(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Diamond Mine is a professional wrestling stable, formed in WWE.",
+            "Roderick Strong leads Diamond Mine.",
+            "Diamond Mine includes the Creed Brothers, and Ivy Nile.",
+            "Imperium has a feud with Diamond Mine."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DiamondMine(x) \u2192 (ProfessionalWrestlingStable(x) \u2227 FormedInWWE(x)))",
+            "\u2200x \u2200y (RoderickStrong(x) \u2227 DiamondMine(y) \u2192 Leads(x, y))",
+            "\u2200x\u2200y\u2200z (DiamondMine(x) \u2227 CreedBrothers(y) \u2227 IvyNile(z) \u2192 Includes(x, y) \u2227 Includes(x, z))",
+            "\u2203x \u2203y (Imperium(x) \u2227 DiamondMine(y) \u2227 Feud(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Symphony No. 9 is a music piece.",
+            "Composers write music pieces.",
+            "Beethoven wrote Symphony No. 9.",
+            "Vienna Music Society premiered Symphony No. 9.",
+            "Vienna Music Society is an orchestra.",
+            "Beethoven leads the Vienna Music Society.",
+            "Orchestras are led by conductors."
+        ],
+        "conclusion-fol": [
+            "SymphonyNo9(musicPiece)",
+            "\u2200x (Composer(x) \u2192 WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNo9)",
+            "\u2200x\u2200y (ViennaMusicSociety(x) \u2227 SymphonyNo9(y) \u2192 Premiered(x, y))",
+            "\u2200x (ViennaMusicSociety(x) \u2192 Orchestra(x))",
+            "\u2200x (Beethoven(x) \u2192 LeadsViennaMusicSociety(x))",
+            "\u2200x \u2200y (Orchestra(x) \u2227 Conductor(y) \u2192 LedBy(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Symphony No. 9 is a music piece.",
+            "Composers write music pieces.",
+            "Beethoven wrote Symphony No. 9.",
+            "Vienna Music Society premiered Symphony No. 9.",
+            "Vienna Music Society is an orchestra.",
+            "Beethoven leads the Vienna Music Society.",
+            "Orchestras are led by conductors."
+        ],
+        "conclusion-fol": [
+            "SymphonyNo9(musicPiece)",
+            "\u2200x (Composer(x) \u2192 WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNo9)",
+            "\u2200x\u2200y (ViennaMusicSociety(x) \u2227 SymphonyNo9(y) \u2192 Premiered(x, y))",
+            "\u2200x (ViennaMusicSociety(x) \u2192 Orchestra(x))",
+            "\u2200x (Beethoven(x) \u2192 LeadsViennaMusicSociety(x))",
+            "\u2200x \u2200y (Orchestra(x) \u2227 Conductor(y) \u2192 LedBy(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Symphony No. 9 is a music piece.",
+            "Composers write music pieces.",
+            "Beethoven wrote Symphony No. 9.",
+            "Vienna Music Society premiered Symphony No. 9.",
+            "Vienna Music Society is an orchestra.",
+            "Beethoven leads the Vienna Music Society.",
+            "Orchestras are led by conductors."
+        ],
+        "conclusion-fol": [
+            "SymphonyNo9(musicPiece)",
+            "\u2200x (Composer(x) \u2192 WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNo9)",
+            "\u2200x\u2200y (ViennaMusicSociety(x) \u2227 SymphonyNo9(y) \u2192 Premiered(x, y))",
+            "\u2200x (ViennaMusicSociety(x) \u2192 Orchestra(x))",
+            "\u2200x (Beethoven(x) \u2192 LeadsViennaMusicSociety(x))",
+            "\u2200x \u2200y (Orchestra(x) \u2227 Conductor(y) \u2192 LedBy(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All of Zaha Hadid's design styles are timeless.",
+            "No mass product design is timeless.",
+            "Either Zaha Hadid's design style or Kelly Wearstler's design style. ",
+            "All of Kelly Wearstler's design styles are evocative.",
+            "All of Kelly Wearstler's design styles are dreamy.",
+            "If a design by Max is timeless, then a design by Max is a mass product design and evocative."
+        ],
+        "conclusion-fol": [
+            "\u2200x (ZahaHadidDesignStyle(x) \u2192 Timeless(x))",
+            "\u00ac\u2203x (MassProductDesign(x) \u2227 Timeless(x))",
+            "Either (DesignStyle(zahaHadid) \u2295 DesignStyle(kellyWearstler))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Evocative(x))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Dreamy(x))",
+            "\u2200x (Design(x) \u2227 DesignByMax(x) \u2227 Timeless(x) \u2192 (MassProductDesign(x) \u2227 Evocative(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All of Zaha Hadid's design styles are timeless.",
+            "No mass product design is timeless.",
+            "Either Zaha Hadid's design style or Kelly Wearstler's design style. ",
+            "All of Kelly Wearstler's design styles are evocative.",
+            "All of Kelly Wearstler's design styles are dreamy.",
+            "If a design by Max is timeless, then a design by Max is a mass product design and evocative."
+        ],
+        "conclusion-fol": [
+            "\u2200x (ZahaHadidDesignStyle(x) \u2192 Timeless(x))",
+            "\u00ac\u2203x (MassProductDesign(x) \u2227 Timeless(x))",
+            "Either (DesignStyle(zahaHadid) \u2295 DesignStyle(kellyWearstler))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Evocative(x))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Dreamy(x))",
+            "\u2200x (Design(x) \u2227 DesignByMax(x) \u2227 Timeless(x) \u2192 (MassProductDesign(x) \u2227 Evocative(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All of Zaha Hadid's design styles are timeless.",
+            "No mass product design is timeless.",
+            "Either Zaha Hadid's design style or Kelly Wearstler's design style. ",
+            "All of Kelly Wearstler's design styles are evocative.",
+            "All of Kelly Wearstler's design styles are dreamy.",
+            "If a design by Max is timeless, then a design by Max is a mass product design and evocative."
+        ],
+        "conclusion-fol": [
+            "\u2200x (ZahaHadidDesignStyle(x) \u2192 Timeless(x))",
+            "\u00ac\u2203x (MassProductDesign(x) \u2227 Timeless(x))",
+            "Either (DesignStyle(zahaHadid) \u2295 DesignStyle(kellyWearstler))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Evocative(x))",
+            "\u2200x (DesignStyle(x) \u2227 DesignedBy(x, KellyWearstler) \u2192 Dreamy(x))",
+            "\u2200x (Design(x) \u2227 DesignByMax(x) \u2227 Timeless(x) \u2192 (MassProductDesign(x) \u2227 Evocative(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a player is ranked highly by the Women's Tennis Association, then they are among the most active players in major tennis. ",
+            "Everyone who lost to Iga \u015awi\u0105tek is ranked highly by the Women's Tennis Association.",
+            "All female tennis players at Roland Garros 2022 lost to Iga \u015awi\u0105tek.",
+            "Either female tennis players at Roland Garros 2022 or male tennis players at Roland Garros 2022. ",
+            "All male tennis players at Roland Garros 2022 lost to Rafael Nadal.",
+            "If Coco Gauff is a player who is ranked highly by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022."
+        ],
+        "conclusion-fol": [
+            "\u2200x (RankedHighlyByWTA(x) \u2192 MostActiveMajorTennisPlayer(x))",
+            "\u2200x (LostToIgaSwietek(x) \u2192 HighlyRankedByWTA(x))",
+            "\u2200x (FemaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2227 LostToIgaSwietek(x))",
+            "(FemaleTennisPlayers(RolandGarros2022) \u2295 MaleTennisPlayers(RolandGarros2022))",
+            "\u2200x (MaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2192 LostToRafaelNadal(x))",
+            "\u2200x (CocoGauff(x) \u2227 (HighlyRankedByWTA(x) \u2228 LostToRafaelNadal(x)) \u2192 \u00acMaleTennisPlayerAtRolandGarros(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a player is ranked highly by the Women's Tennis Association, then they are among the most active players in major tennis. ",
+            "Everyone who lost to Iga \u015awi\u0105tek is ranked highly by the Women's Tennis Association.",
+            "All female tennis players at Roland Garros 2022 lost to Iga \u015awi\u0105tek.",
+            "Either female tennis players at Roland Garros 2022 or male tennis players at Roland Garros 2022. ",
+            "All male tennis players at Roland Garros 2022 lost to Rafael Nadal.",
+            "If Coco Gauff is a player who is ranked highly by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022."
+        ],
+        "conclusion-fol": [
+            "\u2200x (RankedHighlyByWTA(x) \u2192 MostActiveMajorTennisPlayer(x))",
+            "\u2200x (LostToIgaSwietek(x) \u2192 HighlyRankedByWTA(x))",
+            "\u2200x (FemaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2227 LostToIgaSwietek(x))",
+            "(FemaleTennisPlayers(RolandGarros2022) \u2295 MaleTennisPlayers(RolandGarros2022))",
+            "\u2200x (MaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2192 LostToRafaelNadal(x))",
+            "\u2200x (CocoGauff(x) \u2227 (HighlyRankedByWTA(x) \u2228 LostToRafaelNadal(x)) \u2192 \u00acMaleTennisPlayerAtRolandGarros(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a player is ranked highly by the Women's Tennis Association, then they are among the most active players in major tennis. ",
+            "Everyone who lost to Iga \u015awi\u0105tek is ranked highly by the Women's Tennis Association.",
+            "All female tennis players at Roland Garros 2022 lost to Iga \u015awi\u0105tek.",
+            "Either female tennis players at Roland Garros 2022 or male tennis players at Roland Garros 2022. ",
+            "All male tennis players at Roland Garros 2022 lost to Rafael Nadal.",
+            "If Coco Gauff is a player who is ranked highly by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022."
+        ],
+        "conclusion-fol": [
+            "\u2200x (RankedHighlyByWTA(x) \u2192 MostActiveMajorTennisPlayer(x))",
+            "\u2200x (LostToIgaSwietek(x) \u2192 HighlyRankedByWTA(x))",
+            "\u2200x (FemaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2227 LostToIgaSwietek(x))",
+            "(FemaleTennisPlayers(RolandGarros2022) \u2295 MaleTennisPlayers(RolandGarros2022))",
+            "\u2200x (MaleTennisPlayer(x) \u2227 ParticipatesInRolandGarros(x) \u2192 LostToRafaelNadal(x))",
+            "\u2200x (CocoGauff(x) \u2227 (HighlyRankedByWTA(x) \u2228 LostToRafaelNadal(x)) \u2192 \u00acMaleTennisPlayerAtRolandGarros(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All cats are mammals.",
+            "Some pets are not mammals."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Cat(x) \u2192 Mammal(x))",
+            "\u2203x (Pet(x) \u2227 \u00acMammal(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] There are four seasons in a year: Spring, Summer, Fall, and Winter.",
+            "All students who want to have a long vacation love summer the most.",
+            "Emma's favorite season is summer.",
+            "Mia's favorite season is not the same as Emma's. ",
+            "James wants to have a long vacation."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Year(x) \u2192 (Season(x, spring) \u2228 Season(x, summer) \u2228 Season(x, fall) \u2228 Season(x, winter)))",
+            "\u2200x (Student(x) \u2227 WantsLongVacation(x) \u2192 LovesSummer(x))",
+            "\u2203x (FavoriteSeason(x, Emma) \u2227 Season(x, Summer))",
+            "\u2200x \u2200y (Mia(x) \u2227 Emma(y) \u2192 (FavoriteSeason(x) \u2227 \u00acFavoriteSeason(y)))",
+            "\u2203x (Person(x) \u2227 WantsLongVacation(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] There are four seasons in a year: Spring, Summer, Fall, and Winter.",
+            "All students who want to have a long vacation love summer the most.",
+            "Emma's favorite season is summer.",
+            "Mia's favorite season is not the same as Emma's. ",
+            "James wants to have a long vacation."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Year(x) \u2192 (Season(x, spring) \u2228 Season(x, summer) \u2228 Season(x, fall) \u2228 Season(x, winter)))",
+            "\u2200x (Student(x) \u2227 WantsLongVacation(x) \u2192 LovesSummer(x))",
+            "\u2203x (FavoriteSeason(x, Emma) \u2227 Season(x, Summer))",
+            "\u2200x \u2200y (Mia(x) \u2227 Emma(y) \u2192 (FavoriteSeason(x) \u2227 \u00acFavoriteSeason(y)))",
+            "\u2203x (Person(x) \u2227 WantsLongVacation(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] There are four seasons in a year: Spring, Summer, Fall, and Winter.",
+            "All students who want to have a long vacation love summer the most.",
+            "Emma's favorite season is summer.",
+            "Mia's favorite season is not the same as Emma's. ",
+            "James wants to have a long vacation."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Year(x) \u2192 (Season(x, spring) \u2228 Season(x, summer) \u2228 Season(x, fall) \u2228 Season(x, winter)))",
+            "\u2200x (Student(x) \u2227 WantsLongVacation(x) \u2192 LovesSummer(x))",
+            "\u2203x (FavoriteSeason(x, Emma) \u2227 Season(x, Summer))",
+            "\u2200x \u2200y (Mia(x) \u2227 Emma(y) \u2192 (FavoriteSeason(x) \u2227 \u00acFavoriteSeason(y)))",
+            "\u2203x (Person(x) \u2227 WantsLongVacation(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No digital media are analog.",
+            "Every printed text is analog.",
+            "All streaming services are digital.",
+            "If an object is a hardcover book then it is printed text.",
+            "If 1984 is a streaming service, then 1984 is a hardcover book."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DigitalMedia(x) \u2192 \u00acAnalog(x))",
+            "\u2200x (PrintedText(x) \u2192 Analog(x))",
+            "\u2200x (StreamingService(x) \u2192 Digital(x))",
+            "\u2200x (HardcoverBook(x) \u2192 PrintedText(x))",
+            "\u2200x (StreamingService(x) \u2192 HardcoverBook(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No digital media are analog.",
+            "Every printed text is analog.",
+            "All streaming services are digital.",
+            "If an object is a hardcover book then it is printed text.",
+            "If 1984 is a streaming service, then 1984 is a hardcover book."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DigitalMedia(x) \u2192 \u00acAnalog(x))",
+            "\u2200x (PrintedText(x) \u2192 Analog(x))",
+            "\u2200x (StreamingService(x) \u2192 Digital(x))",
+            "\u2200x (HardcoverBook(x) \u2192 PrintedText(x))",
+            "\u2200x (StreamingService(x) \u2192 HardcoverBook(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No digital media are analog.",
+            "Every printed text is analog.",
+            "All streaming services are digital.",
+            "If an object is a hardcover book then it is printed text.",
+            "If 1984 is a streaming service, then 1984 is a hardcover book."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DigitalMedia(x) \u2192 \u00acAnalog(x))",
+            "\u2200x (PrintedText(x) \u2192 Analog(x))",
+            "\u2200x (StreamingService(x) \u2192 Digital(x))",
+            "\u2200x (HardcoverBook(x) \u2192 PrintedText(x))",
+            "\u2200x (StreamingService(x) \u2192 HardcoverBook(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All Romance languages are Indo-European languages.",
+            "The Romance languages are a language family.",
+            "All languages within a language family are related to each other.",
+            "French and Spanish are both Romance languages.",
+            "German is related to Spanish.",
+            "Basque is not related to any other language."
+        ],
+        "conclusion-fol": [
+            "\u2200x (RomanceLanguage(x) \u2192 IndoEuropean(x))",
+            "\u2200x (RomanceLanguage(x) \u2192 LanguageFamily(x))",
+            "\u2200x\u2200y (Language(x) \u2227 Language(y) \u2227 LanguageFamily(x, y) \u2192 Related(x, y))",
+            "\u2200x\u2200y (French(x) \u2227 Spanish(y) \u2192 RomanceLanguage(x) \u2227 RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "\u2200x (Language(x) \u2227 Basque(x) \u2192 \u00acRelatedToAnyOtherLanguage(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All Romance languages are Indo-European languages.",
+            "The Romance languages are a language family.",
+            "All languages within a language family are related to each other.",
+            "French and Spanish are both Romance languages.",
+            "German is related to Spanish.",
+            "Basque is not related to any other language."
+        ],
+        "conclusion-fol": [
+            "\u2200x (RomanceLanguage(x) \u2192 IndoEuropean(x))",
+            "\u2200x (RomanceLanguage(x) \u2192 LanguageFamily(x))",
+            "\u2200x\u2200y (Language(x) \u2227 Language(y) \u2227 LanguageFamily(x, y) \u2192 Related(x, y))",
+            "\u2200x\u2200y (French(x) \u2227 Spanish(y) \u2192 RomanceLanguage(x) \u2227 RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "\u2200x (Language(x) \u2227 Basque(x) \u2192 \u00acRelatedToAnyOtherLanguage(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All Romance languages are Indo-European languages.",
+            "The Romance languages are a language family.",
+            "All languages within a language family are related to each other.",
+            "French and Spanish are both Romance languages.",
+            "German is related to Spanish.",
+            "Basque is not related to any other language."
+        ],
+        "conclusion-fol": [
+            "\u2200x (RomanceLanguage(x) \u2192 IndoEuropean(x))",
+            "\u2200x (RomanceLanguage(x) \u2192 LanguageFamily(x))",
+            "\u2200x\u2200y (Language(x) \u2227 Language(y) \u2227 LanguageFamily(x, y) \u2192 Related(x, y))",
+            "\u2200x\u2200y (French(x) \u2227 Spanish(y) \u2192 RomanceLanguage(x) \u2227 RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "\u2200x (Language(x) \u2227 Basque(x) \u2192 \u00acRelatedToAnyOtherLanguage(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Robert Lewandowski is a striker.",
+            "[BG] Strikers are soccer players.",
+            "Robert Lewandowski left Bayern Munchen.",
+            "[BG] If a player left a team they no longer play for that team."
+        ],
+        "conclusion-fol": [
+            "Player(robert_lewandowski) \u2227 Striker(robert_lewandowski)",
+            "\u2200x (Striker(x) \u2192 SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "\u2200x\u2200y (Player(x) \u2227 Team(y) \u2227 LeftTeam(x, y) \u2192 \u00acPlayForTeam(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Robert Lewandowski is a striker.",
+            "[BG] Strikers are soccer players.",
+            "Robert Lewandowski left Bayern Munchen.",
+            "[BG] If a player left a team they no longer play for that team."
+        ],
+        "conclusion-fol": [
+            "Player(robert_lewandowski) \u2227 Striker(robert_lewandowski)",
+            "\u2200x (Striker(x) \u2192 SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "\u2200x\u2200y (Player(x) \u2227 Team(y) \u2227 LeftTeam(x, y) \u2192 \u00acPlayForTeam(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Robert Lewandowski is a striker.",
+            "[BG] Strikers are soccer players.",
+            "Robert Lewandowski left Bayern Munchen.",
+            "[BG] If a player left a team they no longer play for that team."
+        ],
+        "conclusion-fol": [
+            "Player(robert_lewandowski) \u2227 Striker(robert_lewandowski)",
+            "\u2200x (Striker(x) \u2192 SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "\u2200x\u2200y (Player(x) \u2227 Team(y) \u2227 LeftTeam(x, y) \u2192 \u00acPlayForTeam(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Billings is a city in Montana.",
+            "Montana includes the cities of Butte, Helena, and Missoula.",
+            "White Sulphur Springs and Butte are cities in the same state.",
+            "The city of Pierre is not in Montana.",
+            "Any city in Butte is not in Pierre."
+        ],
+        "conclusion-fol": [
+            "City(billings) \u2227 In(billings, montana)",
+            "\u2200x (City(x) \u2227 InMontana(x) \u2192 (Butte(x) \u2228 Helena(x) \u2228 Missoula(x)))",
+            "\u2203x \u2203y (City(x) \u2227 City(y) \u2227 State(x, y) \u2227 (WhiteSulphurSprings(x) \u2227 Butte(y)))",
+            "\u00ac(PierreCity(Montana) \u2192 False)",
+            "\u2200x (City(x) \u2227 InButte(x) \u2192 \u00acInPierre(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Billings is a city in Montana.",
+            "Montana includes the cities of Butte, Helena, and Missoula.",
+            "White Sulphur Springs and Butte are cities in the same state.",
+            "The city of Pierre is not in Montana.",
+            "Any city in Butte is not in Pierre."
+        ],
+        "conclusion-fol": [
+            "City(billings) \u2227 In(billings, montana)",
+            "\u2200x (City(x) \u2227 InMontana(x) \u2192 (Butte(x) \u2228 Helena(x) \u2228 Missoula(x)))",
+            "\u2203x \u2203y (City(x) \u2227 City(y) \u2227 State(x, y) \u2227 (WhiteSulphurSprings(x) \u2227 Butte(y)))",
+            "\u00ac(PierreCity(Montana) \u2192 False)",
+            "\u2200x (City(x) \u2227 InButte(x) \u2192 \u00acInPierre(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Billings is a city in Montana.",
+            "Montana includes the cities of Butte, Helena, and Missoula.",
+            "White Sulphur Springs and Butte are cities in the same state.",
+            "The city of Pierre is not in Montana.",
+            "Any city in Butte is not in Pierre."
+        ],
+        "conclusion-fol": [
+            "City(billings) \u2227 In(billings, montana)",
+            "\u2200x (City(x) \u2227 InMontana(x) \u2192 (Butte(x) \u2228 Helena(x) \u2228 Missoula(x)))",
+            "\u2203x \u2203y (City(x) \u2227 City(y) \u2227 State(x, y) \u2227 (WhiteSulphurSprings(x) \u2227 Butte(y)))",
+            "\u00ac(PierreCity(Montana) \u2192 False)",
+            "\u2200x (City(x) \u2227 InButte(x) \u2192 \u00acInPierre(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "International students in US have either an F1 visa or a J1 visa.",
+            "An international student in US with an F1 visa needs to apply for CPT or OPT if the student wants to work in the US.",
+            "Mike is an international student.",
+            "Mike needs to apply for CPT if he wants to work in the US."
+        ],
+        "conclusion-fol": [
+            "\u2200x (InternationalStudent(x) \u2227 InUS(x) \u2192 (F1Visa(x) \u2295 J1Visa(x)))",
+            "\u2200x (InternationalStudent(x) \u2227 InUS(x) \u2227 HasF1Visa(x) \u2192 (ApplyCPT(x) \u2228 ApplyOPT(x)))",
+            "\u2203x (Student(x) \u2227 International(x))",
+            "\u2200x (Mike(x) \u2227 WantsToWorkInUS(x) \u2192 ApplyForCPT(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "International students in US have either an F1 visa or a J1 visa.",
+            "An international student in US with an F1 visa needs to apply for CPT or OPT if the student wants to work in the US.",
+            "Mike is an international student.",
+            "Mike needs to apply for CPT if he wants to work in the US."
+        ],
+        "conclusion-fol": [
+            "\u2200x (InternationalStudent(x) \u2227 InUS(x) \u2192 (F1Visa(x) \u2295 J1Visa(x)))",
+            "\u2200x (InternationalStudent(x) \u2227 InUS(x) \u2227 HasF1Visa(x) \u2192 (ApplyCPT(x) \u2228 ApplyOPT(x)))",
+            "\u2203x (Student(x) \u2227 International(x))",
+            "\u2200x (Mike(x) \u2227 WantsToWorkInUS(x) \u2192 ApplyForCPT(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All cows are bovines.",
+            "Some pets are cows.",
+            "If something is a bovine, then it is domesticated.",
+            "No domesticated animals are alligators.",
+            "Ted is an aligator."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Cow(x) \u2192 Bovine(x))",
+            "\u2203x (Pet(x) \u2227 Cow(x))",
+            "\u2200x (Bovine(x) \u2192 Domesticated(x))",
+            "\u2200x (DomesticatedAnimal(x) \u2192 \u00acAlligator(x))",
+            "Aligator(ted)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All cows are bovines.",
+            "Some pets are cows.",
+            "If something is a bovine, then it is domesticated.",
+            "No domesticated animals are alligators.",
+            "Ted is an aligator."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Cow(x) \u2192 Bovine(x))",
+            "\u2203x (Pet(x) \u2227 Cow(x))",
+            "\u2200x (Bovine(x) \u2192 Domesticated(x))",
+            "\u2200x (DomesticatedAnimal(x) \u2192 \u00acAlligator(x))",
+            "Aligator(ted)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All cows are bovines.",
+            "Some pets are cows.",
+            "If something is a bovine, then it is domesticated.",
+            "No domesticated animals are alligators.",
+            "Ted is an aligator."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Cow(x) \u2192 Bovine(x))",
+            "\u2203x (Pet(x) \u2227 Cow(x))",
+            "\u2200x (Bovine(x) \u2192 Domesticated(x))",
+            "\u2200x (DomesticatedAnimal(x) \u2192 \u00acAlligator(x))",
+            "Aligator(ted)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Yale University is a private Ivy League research university.",
+            "Yale University moved to New Haven in 1716.",
+            "Yale university's endowment was valued at $42.3 billion.",
+            "Yale University has been organized into 27 constituent colleges and schools: the residential colleges, the Yale Graduate School of Arts and Sciences, and twelve professional schools.",
+            "A list of residential colleges at Yale: Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College."
+        ],
+        "conclusion-fol": [
+            "PrivateIvyLeagueResearchUniversity(yale)",
+            "Moved(yale, newhaven, 1716)",
+            "423000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "\u2200x (YaleUniversity(x) \u2192 (OrganizedInto(x, 27) \u2227 (ResidentialColleges(x) \u2228 YaleGraduateSchoolOfArtsAndSciences(x) \u2228 ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Yale University is a private Ivy League research university.",
+            "Yale University moved to New Haven in 1716.",
+            "Yale university's endowment was valued at $42.3 billion.",
+            "Yale University has been organized into 27 constituent colleges and schools: the residential colleges, the Yale Graduate School of Arts and Sciences, and twelve professional schools.",
+            "A list of residential colleges at Yale: Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College."
+        ],
+        "conclusion-fol": [
+            "PrivateIvyLeagueResearchUniversity(yale)",
+            "Moved(yale, newhaven, 1716)",
+            "423000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "\u2200x (YaleUniversity(x) \u2192 (OrganizedInto(x, 27) \u2227 (ResidentialColleges(x) \u2228 YaleGraduateSchoolOfArtsAndSciences(x) \u2228 ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Yale University is a private Ivy League research university.",
+            "Yale University moved to New Haven in 1716.",
+            "Yale university's endowment was valued at $42.3 billion.",
+            "Yale University has been organized into 27 constituent colleges and schools: the residential colleges, the Yale Graduate School of Arts and Sciences, and twelve professional schools.",
+            "A list of residential colleges at Yale: Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College."
+        ],
+        "conclusion-fol": [
+            "PrivateIvyLeagueResearchUniversity(yale)",
+            "Moved(yale, newhaven, 1716)",
+            "423000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "\u2200x (YaleUniversity(x) \u2192 (OrganizedInto(x, 27) \u2227 (ResidentialColleges(x) \u2228 YaleGraduateSchoolOfArtsAndSciences(x) \u2228 ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Badults is a British Sitcom series, starring members of Pappy's.",
+            "Badults piloted in July 2013 on BBC Three.",
+            "The Working title \"The Secret Dude Society\" was used for Badults.",
+            "Andrew Collins was the script editor for Badults"
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (Badults(x) \u2227 Pappys(y) \u2192 (BritishSitcomSeries(x) \u2227 StarringMembers(x, y)))",
+            "\u2200x (Badults(x) \u2227 PilotedIn(x, July 2013) \u2227 OnBBCThree(x))",
+            "\u2203x (WorkingTitle(x) \u2227 SecretDudeSociety(x) \u2227 UsedFor(x, Badults))",
+            "\u2200x (AndrewCollins(x) \u2227 ScriptEditor(x, Badults))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Badults is a British Sitcom series, starring members of Pappy's.",
+            "Badults piloted in July 2013 on BBC Three.",
+            "The Working title \"The Secret Dude Society\" was used for Badults.",
+            "Andrew Collins was the script editor for Badults"
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (Badults(x) \u2227 Pappys(y) \u2192 (BritishSitcomSeries(x) \u2227 StarringMembers(x, y)))",
+            "\u2200x (Badults(x) \u2227 PilotedIn(x, July 2013) \u2227 OnBBCThree(x))",
+            "\u2203x (WorkingTitle(x) \u2227 SecretDudeSociety(x) \u2227 UsedFor(x, Badults))",
+            "\u2200x (AndrewCollins(x) \u2227 ScriptEditor(x, Badults))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All growth companies\u2019 stocks are volatile.",
+            "If the stock price is volatile, then it is not suitable for a retirement fund.",
+            "Some companies\u2019 stocks are growth companies\u2019 stocks.",
+            "All mature companies\u2019 stocks are suitable for a retirement fund.",
+            "KO is a mature company\u2019s stock."
+        ],
+        "conclusion-fol": [
+            "\u2200x (GrowthCompany(x) \u2192 VolatileStock(x))",
+            "\u2200x (StockPrice(x) \u2227 Volatile(x) \u2192 \u00acSuitableForRetirementFund(x))",
+            "\u2203x (Company(x) \u2227 GrowthCompanyStock(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 SuitableForRetirementFund(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 Stock(x, KO))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All growth companies\u2019 stocks are volatile.",
+            "If the stock price is volatile, then it is not suitable for a retirement fund.",
+            "Some companies\u2019 stocks are growth companies\u2019 stocks.",
+            "All mature companies\u2019 stocks are suitable for a retirement fund.",
+            "KO is a mature company\u2019s stock."
+        ],
+        "conclusion-fol": [
+            "\u2200x (GrowthCompany(x) \u2192 VolatileStock(x))",
+            "\u2200x (StockPrice(x) \u2227 Volatile(x) \u2192 \u00acSuitableForRetirementFund(x))",
+            "\u2203x (Company(x) \u2227 GrowthCompanyStock(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 SuitableForRetirementFund(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 Stock(x, KO))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All growth companies\u2019 stocks are volatile.",
+            "If the stock price is volatile, then it is not suitable for a retirement fund.",
+            "Some companies\u2019 stocks are growth companies\u2019 stocks.",
+            "All mature companies\u2019 stocks are suitable for a retirement fund.",
+            "KO is a mature company\u2019s stock."
+        ],
+        "conclusion-fol": [
+            "\u2200x (GrowthCompany(x) \u2192 VolatileStock(x))",
+            "\u2200x (StockPrice(x) \u2227 Volatile(x) \u2192 \u00acSuitableForRetirementFund(x))",
+            "\u2203x (Company(x) \u2227 GrowthCompanyStock(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 SuitableForRetirementFund(x))",
+            "\u2200x (Company(x) \u2227 Mature(x) \u2192 Stock(x, KO))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All vehicle registration plates in Istanbul begin with the number 34.",
+            "Plates that do not begin with the number 34 are not from Istanbul. ",
+            "Joe's vehicle registration plate is from Istanbul. ",
+            "Tom's license plate begins with the number 35. ",
+            "[BG] If a license plate begins with the number 35, then it does not begin with the number 34."
+        ],
+        "conclusion-fol": [
+            "\u2200x (VehicleRegistrationPlate(x) \u2227 InIstanbul(x) \u2192 BeginsWithNumber34(x))",
+            "\u2200x (Plate(x) \u2227 \u00acBeginsWith(x, 34) \u2192 \u00acFromIstanbul(x))",
+            "VehicleRegistrationPlate(joe, istanbul)",
+            "HasLicensePlateNumber(Tom, 35)",
+            "\u2200x (LicensePlate(x) \u2227 BeginsWithNumber(x, 35) \u2192 \u00acBeginsWithNumber(x, 34))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All vehicle registration plates in Istanbul begin with the number 34.",
+            "Plates that do not begin with the number 34 are not from Istanbul. ",
+            "Joe's vehicle registration plate is from Istanbul. ",
+            "Tom's license plate begins with the number 35. ",
+            "[BG] If a license plate begins with the number 35, then it does not begin with the number 34."
+        ],
+        "conclusion-fol": [
+            "\u2200x (VehicleRegistrationPlate(x) \u2227 InIstanbul(x) \u2192 BeginsWithNumber34(x))",
+            "\u2200x (Plate(x) \u2227 \u00acBeginsWith(x, 34) \u2192 \u00acFromIstanbul(x))",
+            "VehicleRegistrationPlate(joe, istanbul)",
+            "HasLicensePlateNumber(Tom, 35)",
+            "\u2200x (LicensePlate(x) \u2227 BeginsWithNumber(x, 35) \u2192 \u00acBeginsWithNumber(x, 34))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people work in student jobs on campus, then they need to earn money to help pay for their college tuition.",
+            "If people order takeout frequently in college, then they work in student jobs on campus.",
+            "People either order takeout frequently in college or enjoy the dining hall meals and recipes.",
+            "If people enjoy the dining hall meals and recipes, then they are not picky eaters.",
+            "If people enjoy the dining hall meals and recipes, then they spend a lot of their time eating and catching up with friends in the campus dining halls.",
+            "If Mary works in student jobs on campus and needs to earn money to help pay for her college tuition, then Mary is neither picky nor needs to earn money to help pay for her college tuition."
+        ],
+        "conclusion-fol": [
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2192 NeedsMoneyToPayForCollegeTuition(x))",
+            "\u2200x (FrequentTakeoutInCollege(x) \u2192 StudentJobOnCampus(x))",
+            "\u2200x (Person(x) \u2227 CollegeStudent(x) \u2192 (OrderTakeoutFrequently(x) \u2295 (DiningHallMeals(x) \u2227 EnjoyRecipes(x))))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 \u00acPickyEater(x))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 SpendTimeEatingAndCatchingUpWithFriends(x))",
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2227 NeedsToEarnMoneyToHelpPayForCollegeTuition(x) \u2192 (\u00acPicky(x) \u2227 \u00acNeedsToEarnMoneyToHelpPayForCollegeTuition(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people work in student jobs on campus, then they need to earn money to help pay for their college tuition.",
+            "If people order takeout frequently in college, then they work in student jobs on campus.",
+            "People either order takeout frequently in college or enjoy the dining hall meals and recipes.",
+            "If people enjoy the dining hall meals and recipes, then they are not picky eaters.",
+            "If people enjoy the dining hall meals and recipes, then they spend a lot of their time eating and catching up with friends in the campus dining halls.",
+            "If Mary works in student jobs on campus and needs to earn money to help pay for her college tuition, then Mary is neither picky nor needs to earn money to help pay for her college tuition."
+        ],
+        "conclusion-fol": [
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2192 NeedsMoneyToPayForCollegeTuition(x))",
+            "\u2200x (FrequentTakeoutInCollege(x) \u2192 StudentJobOnCampus(x))",
+            "\u2200x (Person(x) \u2227 CollegeStudent(x) \u2192 (OrderTakeoutFrequently(x) \u2295 (DiningHallMeals(x) \u2227 EnjoyRecipes(x))))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 \u00acPickyEater(x))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 SpendTimeEatingAndCatchingUpWithFriends(x))",
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2227 NeedsToEarnMoneyToHelpPayForCollegeTuition(x) \u2192 (\u00acPicky(x) \u2227 \u00acNeedsToEarnMoneyToHelpPayForCollegeTuition(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people work in student jobs on campus, then they need to earn money to help pay for their college tuition.",
+            "If people order takeout frequently in college, then they work in student jobs on campus.",
+            "People either order takeout frequently in college or enjoy the dining hall meals and recipes.",
+            "If people enjoy the dining hall meals and recipes, then they are not picky eaters.",
+            "If people enjoy the dining hall meals and recipes, then they spend a lot of their time eating and catching up with friends in the campus dining halls.",
+            "If Mary works in student jobs on campus and needs to earn money to help pay for her college tuition, then Mary is neither picky nor needs to earn money to help pay for her college tuition."
+        ],
+        "conclusion-fol": [
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2192 NeedsMoneyToPayForCollegeTuition(x))",
+            "\u2200x (FrequentTakeoutInCollege(x) \u2192 StudentJobOnCampus(x))",
+            "\u2200x (Person(x) \u2227 CollegeStudent(x) \u2192 (OrderTakeoutFrequently(x) \u2295 (DiningHallMeals(x) \u2227 EnjoyRecipes(x))))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 \u00acPickyEater(x))",
+            "\u2200x (EnjoyDiningHallMealsAndRecipes(x) \u2192 SpendTimeEatingAndCatchingUpWithFriends(x))",
+            "\u2200x (WorksInStudentJobsOnCampus(x) \u2227 NeedsToEarnMoneyToHelpPayForCollegeTuition(x) \u2192 (\u00acPicky(x) \u2227 \u00acNeedsToEarnMoneyToHelpPayForCollegeTuition(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No bakery is spicy.",
+            "All cupcakes are bakeries.",
+            "All hotpots are spicy.",
+            "All products of Baked by Melissa are cupcakes.",
+            "If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy."
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Bakery(x) \u2227 Spicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No bakery is spicy.",
+            "All cupcakes are bakeries.",
+            "All hotpots are spicy.",
+            "All products of Baked by Melissa are cupcakes.",
+            "If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy."
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Bakery(x) \u2227 Spicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No bakery is spicy.",
+            "All cupcakes are bakeries.",
+            "All hotpots are spicy.",
+            "All products of Baked by Melissa are cupcakes.",
+            "If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy."
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Bakery(x) \u2227 Spicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No bakery is spicy.",
+            "All cupcakes are bakeries.",
+            "All hotpots are spicy.",
+            "All products of Baked by Melissa are cupcakes.",
+            "If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy."
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Bakery(x) \u2227 Spicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No bakery is spicy.",
+            "All cupcakes are bakeries.",
+            "All hotpots are spicy.",
+            "All products of Baked by Melissa are cupcakes.",
+            "If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy."
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Bakery(x) \u2227 Spicy(x))",
+            "\u2200x (Cupcake(x) \u2192 Bakes(x))",
+            "\u2200x (Hotpot(x) \u2192 Spicy(x))",
+            "\u2200x (ProductOfBakedByMelissa(x) \u2192 Cupcake(x))",
+            "\u2200x (DriedThaiChilies(x) \u2227 (Spicy(x) \u2228 Bakery(x)) \u2192 (Hotpot(x) \u2228 Spicy(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If the restaurant is listed in Yelp\u2019s recommendations, then the restaurant does not receive many negative reviews.",
+            "All restaurants with a rating greater than 9 are listed in Yelp\u2019s recommendations.",
+            "Some restaurants that do not provide take-out service receive many negative reviews.",
+            "All restaurants that are popular among local residents have ratings greater than 9.",
+            "Subway has a rating greater than 9 or is popular among local residents."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Restaurant(x) \u2227 ListedInYelpsRecommendations(x) \u2192 \u00acManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 RatingGreaterThan(x, 9) \u2192 ListedInRecommendations(x))",
+            "\u2203x (Restaurant(x) \u2227 \u00acProvidesTakeOutService(x) \u2227 ReceivesManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 PopularAmongLocalResidents(x) \u2192 RatingGreaterThan9(x))",
+            "\u2200x (Subway(x) \u2192 (RatingGreaterThan9(x) \u2228 PopularAmongLocalResidents(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If the restaurant is listed in Yelp\u2019s recommendations, then the restaurant does not receive many negative reviews.",
+            "All restaurants with a rating greater than 9 are listed in Yelp\u2019s recommendations.",
+            "Some restaurants that do not provide take-out service receive many negative reviews.",
+            "All restaurants that are popular among local residents have ratings greater than 9.",
+            "Subway has a rating greater than 9 or is popular among local residents."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Restaurant(x) \u2227 ListedInYelpsRecommendations(x) \u2192 \u00acManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 RatingGreaterThan(x, 9) \u2192 ListedInRecommendations(x))",
+            "\u2203x (Restaurant(x) \u2227 \u00acProvidesTakeOutService(x) \u2227 ReceivesManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 PopularAmongLocalResidents(x) \u2192 RatingGreaterThan9(x))",
+            "\u2200x (Subway(x) \u2192 (RatingGreaterThan9(x) \u2228 PopularAmongLocalResidents(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If the restaurant is listed in Yelp\u2019s recommendations, then the restaurant does not receive many negative reviews.",
+            "All restaurants with a rating greater than 9 are listed in Yelp\u2019s recommendations.",
+            "Some restaurants that do not provide take-out service receive many negative reviews.",
+            "All restaurants that are popular among local residents have ratings greater than 9.",
+            "Subway has a rating greater than 9 or is popular among local residents."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Restaurant(x) \u2227 ListedInYelpsRecommendations(x) \u2192 \u00acManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 RatingGreaterThan(x, 9) \u2192 ListedInRecommendations(x))",
+            "\u2203x (Restaurant(x) \u2227 \u00acProvidesTakeOutService(x) \u2227 ReceivesManyNegativeReviews(x))",
+            "\u2200x (Restaurant(x) \u2227 PopularAmongLocalResidents(x) \u2192 RatingGreaterThan9(x))",
+            "\u2200x (Subway(x) \u2192 (RatingGreaterThan9(x) \u2228 PopularAmongLocalResidents(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "In superhero movies, the good guys always win.",
+            "The Surprising Adventures of Sir Digby Chicken Caesar is a superhero movie.",
+            "Good guys fight bad guys and vice versa.",
+            "Sir Digby fights his nemesis.",
+            "If a superhero movie is named after a character, that character is a good guy.",
+            "The Surprising Adventures of Sir Digby Chicken Caesar is named after Sir Digby.",
+            "If somebody wins a fight, the person they are fighting loses.",
+            "If a superhero movie is named after a character, that character appears in the movie."
+        ],
+        "conclusion-fol": [
+            "\u2200x (SuperheroMovie(x) \u2192 GoodGuysWin(x))",
+            "\u2200x (SuperheroMovie(x) \u2194 (SirDigbyChickenCaesar(x) \u2227 Movie(x)))",
+            "\u2200x\u2200y (GoodGuy(x) \u2227 BadGuy(y) \u2192 Fights(x, y))",
+            "SirDigbyFightsNemesis(sirDigby, nemesis)",
+            "\u2200x (SuperheroMovie(x) \u2227 NamedAfterCharacter(x) \u2192 GoodGuy(x))",
+            "Nam(sirDigby) \u2227 NamedAfter(sirDigby) \u2227 Adventures(sirDigbyChickenCaesar)",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 WinsFight(x, y) \u2192 LosesFight(y, x))",
+            "\u2200x\u2200y (SuperheroMovie(x) \u2227 NamedAfterCharacter(x, y) \u2192 AppearsInMovie(y, x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] Books contain tons of knowledge.",
+            "[BG] When a person reads a book, that person gains knowledge. ",
+            "[BG] If a person gains knowledge, they become smarter.",
+            "Harry read the book \u201cWalden\u201d by Henry Thoreau."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Book(x) \u2192 ContainsTonsOfKnowledge(x))",
+            "\u2200x (ReadsBook(x) \u2192 GainsKnowledge(x))",
+            "\u2200x (GainsKnowledge(x) \u2192 BecomesSmarter(x))",
+            "\u2200x\u2200y (Harry(x) \u2227 Book(y) \u2227 Walden(y) \u2227 ByHenryThoreau(y) \u2192 Read(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] Books contain tons of knowledge.",
+            "[BG] When a person reads a book, that person gains knowledge. ",
+            "[BG] If a person gains knowledge, they become smarter.",
+            "Harry read the book \u201cWalden\u201d by Henry Thoreau."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Book(x) \u2192 ContainsTonsOfKnowledge(x))",
+            "\u2200x (ReadsBook(x) \u2192 GainsKnowledge(x))",
+            "\u2200x (GainsKnowledge(x) \u2192 BecomesSmarter(x))",
+            "\u2200x\u2200y (Harry(x) \u2227 Book(y) \u2227 Walden(y) \u2227 ByHenryThoreau(y) \u2192 Read(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] Books contain tons of knowledge.",
+            "[BG] When a person reads a book, that person gains knowledge. ",
+            "[BG] If a person gains knowledge, they become smarter.",
+            "Harry read the book \u201cWalden\u201d by Henry Thoreau."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Book(x) \u2192 ContainsTonsOfKnowledge(x))",
+            "\u2200x (ReadsBook(x) \u2192 GainsKnowledge(x))",
+            "\u2200x (GainsKnowledge(x) \u2192 BecomesSmarter(x))",
+            "\u2200x\u2200y (Harry(x) \u2227 Book(y) \u2227 Walden(y) \u2227 ByHenryThoreau(y) \u2192 Read(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Natural language processing tasks can be categorized as either language generation task or language understanding task.",
+            "If the output of a natural language processing task is a text sequence, then it is a language generation task.",
+            "Machine translation is a natural language processing task.",
+            "The output of machine translation is a text sequence."
+        ],
+        "conclusion-fol": [
+            "\u2200x (NaturalLanguageProcessingTask(x) \u2192 (LanguageGenerationTask(x) \u2295 LanguageUnderstandingTask(x)))",
+            "\u2200x (OutputOfNLPTask(x) \u2227 TextSequence(x) \u2192 LanguageGenerationTask(x))",
+            "\u2200x (MachineTranslation(x) \u2192 NaturalLanguageProcessingTask(x))",
+            "\u2200x (MachineTranslationOutput(x) \u2192 TextSequence(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Natural language processing tasks can be categorized as either language generation task or language understanding task.",
+            "If the output of a natural language processing task is a text sequence, then it is a language generation task.",
+            "Machine translation is a natural language processing task.",
+            "The output of machine translation is a text sequence."
+        ],
+        "conclusion-fol": [
+            "\u2200x (NaturalLanguageProcessingTask(x) \u2192 (LanguageGenerationTask(x) \u2295 LanguageUnderstandingTask(x)))",
+            "\u2200x (OutputOfNLPTask(x) \u2227 TextSequence(x) \u2192 LanguageGenerationTask(x))",
+            "\u2200x (MachineTranslation(x) \u2192 NaturalLanguageProcessingTask(x))",
+            "\u2200x (MachineTranslationOutput(x) \u2192 TextSequence(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Pets are allowed in some managed buildings.",
+            "[BG] A deposit is required to rent an apartment in a managed building.",
+            "The security deposit can be either equal to one month's rent or more.",
+            "Fluffy is Tom's cat.",
+            "Cats are pets.",
+            "The Olive Garden is a managed building.",
+            "The monthly rent at the Olive Garden is $2000.",
+            "Tom will rent an apartment in a managed building if and only if he is allowed to move in with Fluffy, and the security deposit is no more than $1500.",
+            "2000$ is more than $1500."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Pet(x) \u2227 ManagedBuilding(y) \u2227 AllowedIn(x, y))",
+            "\u2200x\u2200y (Apartment(x) \u2227 ManagedBuilding(y) \u2227 Rent(x, y) \u2192 DepositRequired(x, y))",
+            "\u2200x (SecurityDeposit(x) \u2192 (EqualToMonthsRent(x) \u2228 More(x)))",
+            "Cat(tom, fluffy)",
+            "\u2200x (Cat(x) \u2192 Pet(x))",
+            "ManagedBuilding(OliveGarden)",
+            "MonthlyRent(olive_garden, 2000)",
+            "\u2200x\u2200y\u2200z (RentApartment(x, y) \u2227 ManagedBuilding(y) \u2227 AllowedToMoveInWithFluffy(x, z) \u2227 SecurityDepositNoMoreThan(x, $1500) \u2192 WillRent(x, y))",
+            "\u2200x \u2200y (2000(x) > 1500(y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Pets are allowed in some managed buildings.",
+            "[BG] A deposit is required to rent an apartment in a managed building.",
+            "The security deposit can be either equal to one month's rent or more.",
+            "Fluffy is Tom's cat.",
+            "Cats are pets.",
+            "The Olive Garden is a managed building.",
+            "The monthly rent at the Olive Garden is $2000.",
+            "Tom will rent an apartment in a managed building if and only if he is allowed to move in with Fluffy, and the security deposit is no more than $1500.",
+            "2000$ is more than $1500."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Pet(x) \u2227 ManagedBuilding(y) \u2227 AllowedIn(x, y))",
+            "\u2200x\u2200y (Apartment(x) \u2227 ManagedBuilding(y) \u2227 Rent(x, y) \u2192 DepositRequired(x, y))",
+            "\u2200x (SecurityDeposit(x) \u2192 (EqualToMonthsRent(x) \u2228 More(x)))",
+            "Cat(tom, fluffy)",
+            "\u2200x (Cat(x) \u2192 Pet(x))",
+            "ManagedBuilding(OliveGarden)",
+            "MonthlyRent(olive_garden, 2000)",
+            "\u2200x\u2200y\u2200z (RentApartment(x, y) \u2227 ManagedBuilding(y) \u2227 AllowedToMoveInWithFluffy(x, z) \u2227 SecurityDepositNoMoreThan(x, $1500) \u2192 WillRent(x, y))",
+            "\u2200x \u2200y (2000(x) > 1500(y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Pets are allowed in some managed buildings.",
+            "[BG] A deposit is required to rent an apartment in a managed building.",
+            "The security deposit can be either equal to one month's rent or more.",
+            "Fluffy is Tom's cat.",
+            "Cats are pets.",
+            "The Olive Garden is a managed building.",
+            "The monthly rent at the Olive Garden is $2000.",
+            "Tom will rent an apartment in a managed building if and only if he is allowed to move in with Fluffy, and the security deposit is no more than $1500.",
+            "2000$ is more than $1500."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Pet(x) \u2227 ManagedBuilding(y) \u2227 AllowedIn(x, y))",
+            "\u2200x\u2200y (Apartment(x) \u2227 ManagedBuilding(y) \u2227 Rent(x, y) \u2192 DepositRequired(x, y))",
+            "\u2200x (SecurityDeposit(x) \u2192 (EqualToMonthsRent(x) \u2228 More(x)))",
+            "Cat(tom, fluffy)",
+            "\u2200x (Cat(x) \u2192 Pet(x))",
+            "ManagedBuilding(OliveGarden)",
+            "MonthlyRent(olive_garden, 2000)",
+            "\u2200x\u2200y\u2200z (RentApartment(x, y) \u2227 ManagedBuilding(y) \u2227 AllowedToMoveInWithFluffy(x, z) \u2227 SecurityDepositNoMoreThan(x, $1500) \u2192 WillRent(x, y))",
+            "\u2200x \u2200y (2000(x) > 1500(y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If animals are loved by tourists, then they are Max's favorite animals. ",
+            "All animals from Australia are loved by tourists. ",
+            "All quokka are animals from Australia. ",
+            "All of Max's favorite animals are very fluffy.",
+            "All of Max's favorite animals love to sleep. ",
+            "If a koala is very fluffy, then the koala is not a quokka."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Animal(x) \u2227 LovedByTourists(x) \u2192 MaxsFavorite(x))",
+            "\u2200x (Animal(x) \u2227 FromAustralia(x) \u2192 LovedByTourists(x))",
+            "\u2200x (Quokka(x) \u2192 FromAustralia(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(Max, x) \u2192 VeryFluffy(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(x, Max) \u2192 LovesToSleep(x))",
+            "\u2200x (Koala(x) \u2227 VeryFluffy(x) \u2192 \u00acQuokka(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If animals are loved by tourists, then they are Max's favorite animals. ",
+            "All animals from Australia are loved by tourists. ",
+            "All quokka are animals from Australia. ",
+            "All of Max's favorite animals are very fluffy.",
+            "All of Max's favorite animals love to sleep. ",
+            "If a koala is very fluffy, then the koala is not a quokka."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Animal(x) \u2227 LovedByTourists(x) \u2192 MaxsFavorite(x))",
+            "\u2200x (Animal(x) \u2227 FromAustralia(x) \u2192 LovedByTourists(x))",
+            "\u2200x (Quokka(x) \u2192 FromAustralia(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(Max, x) \u2192 VeryFluffy(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(x, Max) \u2192 LovesToSleep(x))",
+            "\u2200x (Koala(x) \u2227 VeryFluffy(x) \u2192 \u00acQuokka(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If animals are loved by tourists, then they are Max's favorite animals. ",
+            "All animals from Australia are loved by tourists. ",
+            "All quokka are animals from Australia. ",
+            "All of Max's favorite animals are very fluffy.",
+            "All of Max's favorite animals love to sleep. ",
+            "If a koala is very fluffy, then the koala is not a quokka."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Animal(x) \u2227 LovedByTourists(x) \u2192 MaxsFavorite(x))",
+            "\u2200x (Animal(x) \u2227 FromAustralia(x) \u2192 LovedByTourists(x))",
+            "\u2200x (Quokka(x) \u2192 FromAustralia(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(Max, x) \u2192 VeryFluffy(x))",
+            "\u2200x (Animal(x) \u2227 FavoriteOf(x, Max) \u2192 LovesToSleep(x))",
+            "\u2200x (Koala(x) \u2227 VeryFluffy(x) \u2192 \u00acQuokka(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A man is either kind or evil.",
+            "No ugly person is handsome.",
+            "All evil people are ugly.",
+            "All gentlemen are handsome.",
+            "All CEOs are gentlemen.",
+            "Harry is a gentleman."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Man(x) \u2192 (Kind(x) \u2295 Evil(x)))",
+            "\u00ac\u2203x (Ugly(x) \u2227 Handsome(x))",
+            "\u2200x (Evil(x) \u2192 Ugly(x))",
+            "\u2200x (Gentleman(x) \u2192 Handsome(x))",
+            "\u2200x (CEO(x) \u2192 Gentleman(x))",
+            "\u2200x (Gentleman(x) \u2194 Harry(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A man is either kind or evil.",
+            "No ugly person is handsome.",
+            "All evil people are ugly.",
+            "All gentlemen are handsome.",
+            "All CEOs are gentlemen.",
+            "Harry is a gentleman."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Man(x) \u2192 (Kind(x) \u2295 Evil(x)))",
+            "\u00ac\u2203x (Ugly(x) \u2227 Handsome(x))",
+            "\u2200x (Evil(x) \u2192 Ugly(x))",
+            "\u2200x (Gentleman(x) \u2192 Handsome(x))",
+            "\u2200x (CEO(x) \u2192 Gentleman(x))",
+            "\u2200x (Gentleman(x) \u2194 Harry(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A man is either kind or evil.",
+            "No ugly person is handsome.",
+            "All evil people are ugly.",
+            "All gentlemen are handsome.",
+            "All CEOs are gentlemen.",
+            "Harry is a gentleman."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Man(x) \u2192 (Kind(x) \u2295 Evil(x)))",
+            "\u00ac\u2203x (Ugly(x) \u2227 Handsome(x))",
+            "\u2200x (Evil(x) \u2192 Ugly(x))",
+            "\u2200x (Gentleman(x) \u2192 Handsome(x))",
+            "\u2200x (CEO(x) \u2192 Gentleman(x))",
+            "\u2200x (Gentleman(x) \u2194 Harry(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people are twins or triplets, then they spend a lot of time hanging out with and playing with their siblings.",
+            "If people have siblings who are the same age, then they are twins or triplets.",
+            "If people complain often about annoying siblings, then they have siblings who are the same age.",
+            "If people do not live at home regularly, then they do not develop strong bonds with their family members.",
+            "If people spend a lot of time hanging out with and playing with their siblings, then they often did not live at home regularly.",
+            "Luke is either both a twin or triplet and develops strong bonds with his family members, or he neither is a twin or triplet nor develops strong bonds with his family members.   "
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2227 (Twin(x) \u2228 Triplet(x)) \u2192 SpendsTimeWithSiblings(x))",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 Siblings(x, y) \u2227 SameAge(x, y) \u2192 (Twins(x, y) \u2228 Triplets(x, y)))",
+            "\u2200x (OftenComplainsAboutAnnoyingSiblings(x) \u2192 SameAgeSiblings(x))",
+            "\u2200x (Person(x) \u2227 \u00acLiveAtHomeRegularly(x) \u2192 \u00acDevelopStrongBondsWithFamily(x))",
+            "\u2200x (SpendsTimeWithSiblings(x) \u2192 DidNotLiveAtHomeRegularly(x))",
+            "\u2200x (Luke(x) \u2192 ((Twin(x) \u2228 Triplet(x)) \u2227 StrongBonds(x, FamilyMembers)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people are twins or triplets, then they spend a lot of time hanging out with and playing with their siblings.",
+            "If people have siblings who are the same age, then they are twins or triplets.",
+            "If people complain often about annoying siblings, then they have siblings who are the same age.",
+            "If people do not live at home regularly, then they do not develop strong bonds with their family members.",
+            "If people spend a lot of time hanging out with and playing with their siblings, then they often did not live at home regularly.",
+            "Luke is either both a twin or triplet and develops strong bonds with his family members, or he neither is a twin or triplet nor develops strong bonds with his family members.   "
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2227 (Twin(x) \u2228 Triplet(x)) \u2192 SpendsTimeWithSiblings(x))",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 Siblings(x, y) \u2227 SameAge(x, y) \u2192 (Twins(x, y) \u2228 Triplets(x, y)))",
+            "\u2200x (OftenComplainsAboutAnnoyingSiblings(x) \u2192 SameAgeSiblings(x))",
+            "\u2200x (Person(x) \u2227 \u00acLiveAtHomeRegularly(x) \u2192 \u00acDevelopStrongBondsWithFamily(x))",
+            "\u2200x (SpendsTimeWithSiblings(x) \u2192 DidNotLiveAtHomeRegularly(x))",
+            "\u2200x (Luke(x) \u2192 ((Twin(x) \u2228 Triplet(x)) \u2227 StrongBonds(x, FamilyMembers)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people are twins or triplets, then they spend a lot of time hanging out with and playing with their siblings.",
+            "If people have siblings who are the same age, then they are twins or triplets.",
+            "If people complain often about annoying siblings, then they have siblings who are the same age.",
+            "If people do not live at home regularly, then they do not develop strong bonds with their family members.",
+            "If people spend a lot of time hanging out with and playing with their siblings, then they often did not live at home regularly.",
+            "Luke is either both a twin or triplet and develops strong bonds with his family members, or he neither is a twin or triplet nor develops strong bonds with his family members.   "
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2227 (Twin(x) \u2228 Triplet(x)) \u2192 SpendsTimeWithSiblings(x))",
+            "\u2200x\u2200y (Person(x) \u2227 Person(y) \u2227 Siblings(x, y) \u2227 SameAge(x, y) \u2192 (Twins(x, y) \u2228 Triplets(x, y)))",
+            "\u2200x (OftenComplainsAboutAnnoyingSiblings(x) \u2192 SameAgeSiblings(x))",
+            "\u2200x (Person(x) \u2227 \u00acLiveAtHomeRegularly(x) \u2192 \u00acDevelopStrongBondsWithFamily(x))",
+            "\u2200x (SpendsTimeWithSiblings(x) \u2192 DidNotLiveAtHomeRegularly(x))",
+            "\u2200x (Luke(x) \u2192 ((Twin(x) \u2228 Triplet(x)) \u2227 StrongBonds(x, FamilyMembers)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "It costs US $205 to take the GRE test.",
+            "ETS provides financial aid to those GRE applicants who prove economic hardship.",
+            "Economic hardship refers to difficulty caused by having too little money or too few resources.",
+            "Tom lives in a single-parent family.",
+            "His dad has been out of work for more than a year."
+        ],
+        "conclusion-fol": [
+            "Cost(GRETest, 205)",
+            "\u2200x (GREApplicant(x) \u2227 ProvesEconomicHardship(x) \u2192 ReceivesFinancialAid(x))",
+            "\u2200x (EconomicHardship(x) \u2194 (DifficultyCausedByLackOfMoney(x) \u2228 DifficultyCausedByLackOfResources(x)))",
+            "\u2203x (Person(x) \u2227 SingleParentFamily(x))",
+            "\u2203x (Father(y) \u2227 OutOfWork(y) \u2227 MoreThanYear(y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "It costs US $205 to take the GRE test.",
+            "ETS provides financial aid to those GRE applicants who prove economic hardship.",
+            "Economic hardship refers to difficulty caused by having too little money or too few resources.",
+            "Tom lives in a single-parent family.",
+            "His dad has been out of work for more than a year."
+        ],
+        "conclusion-fol": [
+            "Cost(GRETest, 205)",
+            "\u2200x (GREApplicant(x) \u2227 ProvesEconomicHardship(x) \u2192 ReceivesFinancialAid(x))",
+            "\u2200x (EconomicHardship(x) \u2194 (DifficultyCausedByLackOfMoney(x) \u2228 DifficultyCausedByLackOfResources(x)))",
+            "\u2203x (Person(x) \u2227 SingleParentFamily(x))",
+            "\u2203x (Father(y) \u2227 OutOfWork(y) \u2227 MoreThanYear(y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "It costs US $205 to take the GRE test.",
+            "ETS provides financial aid to those GRE applicants who prove economic hardship.",
+            "Economic hardship refers to difficulty caused by having too little money or too few resources.",
+            "Tom lives in a single-parent family.",
+            "His dad has been out of work for more than a year."
+        ],
+        "conclusion-fol": [
+            "Cost(GRETest, 205)",
+            "\u2200x (GREApplicant(x) \u2227 ProvesEconomicHardship(x) \u2192 ReceivesFinancialAid(x))",
+            "\u2200x (EconomicHardship(x) \u2194 (DifficultyCausedByLackOfMoney(x) \u2228 DifficultyCausedByLackOfResources(x)))",
+            "\u2203x (Person(x) \u2227 SingleParentFamily(x))",
+            "\u2203x (Father(y) \u2227 OutOfWork(y) \u2227 MoreThanYear(y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people spill a lot of food on their clothing, then they do not tidy their spaces consistently and enjoy the process of cleaning.",
+            "All foodies who go out frequently to find new food restaurants to try are people who spill a lot of food on their clothing.",
+            "If people grew up as only children with no siblings, then they tidy their spaces consistently and enjoy the process of cleaning.",
+            "If people have parents who are very busy with their regular jobs, then they grew up as only children with no siblings.",
+            "All households with a high net income have people who have parents who are very busy with their regular jobs.",
+            "Peter is either both a person who spills a lot of food on his clothing and grew up as an only child with no siblings, or he is neither a person who spills a lot of food on his clothing nor grew up as an only child with no siblings. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (People(x) \u2227 SpillFoodOnClothing(x) \u2192 (\u00acTidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x (Foodie(x) \u2227 GoesOutFrequently(x) \u2227 FindsNewFoodRestaurants(x) \u2192 SpillsFoodOnClothing(x))",
+            "\u2200x (OnlyChildWithoutSiblings(x) \u2192 (TidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x\u2200y (Person(x) \u2227 Parent(y, x) \u2227 VeryBusyWithRegularJob(y) \u2192 OnlyChildWithNoSiblings(x))",
+            "\u2200x (Household(x) \u2227 HighNetIncome(x) \u2192 (\u2203y (Parent(y) \u2227 VeryBusyWithRegularJob(y))))",
+            "\u2200x (Person(x) \u2227 SpillsFoodOnClothing(x) \u2227 GrewUpAsOnlyChild(x) \u2227 NoSiblings(x) \u2192 (Both(x) \u2228 \u00ac(Both(x) \u2227 GrewUpAsOnlyChild(x) \u2227 NoSiblings(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people spill a lot of food on their clothing, then they do not tidy their spaces consistently and enjoy the process of cleaning.",
+            "All foodies who go out frequently to find new food restaurants to try are people who spill a lot of food on their clothing.",
+            "If people grew up as only children with no siblings, then they tidy their spaces consistently and enjoy the process of cleaning.",
+            "If people have parents who are very busy with their regular jobs, then they grew up as only children with no siblings.",
+            "All households with a high net income have people who have parents who are very busy with their regular jobs.",
+            "Peter is either both a person who spills a lot of food on his clothing and grew up as an only child with no siblings, or he is neither a person who spills a lot of food on his clothing nor grew up as an only child with no siblings. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (People(x) \u2227 SpillFoodOnClothing(x) \u2192 (\u00acTidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x (Foodie(x) \u2227 GoesOutFrequently(x) \u2227 FindsNewFoodRestaurants(x) \u2192 SpillsFoodOnClothing(x))",
+            "\u2200x (OnlyChildWithoutSiblings(x) \u2192 (TidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x\u2200y (Person(x) \u2227 Parent(y, x) \u2227 VeryBusyWithRegularJob(y) \u2192 OnlyChildWithNoSiblings(x))",
+            "\u2200x (Household(x) \u2227 HighNetIncome(x) \u2192 (\u2203y (Parent(y) \u2227 VeryBusyWithRegularJob(y))))",
+            "\u2200x (Person(x) \u2227 SpillsFoodOnClothing(x) \u2227 GrewUpAsOnlyChild(x) \u2227 NoSiblings(x) \u2192 (Both(x) \u2228 \u00ac(Both(x) \u2227 GrewUpAsOnlyChild(x) \u2227 NoSiblings(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people spill a lot of food on their clothing, then they do not tidy their spaces consistently and enjoy the process of cleaning.",
+            "All foodies who go out frequently to find new food restaurants to try are people who spill a lot of food on their clothing.",
+            "If people grew up as only children with no siblings, then they tidy their spaces consistently and enjoy the process of cleaning.",
+            "If people have parents who are very busy with their regular jobs, then they grew up as only children with no siblings.",
+            "All households with a high net income have people who have parents who are very busy with their regular jobs.",
+            "Peter is either both a person who spills a lot of food on his clothing and grew up as an only child with no siblings, or he is neither a person who spills a lot of food on his clothing nor grew up as an only child with no siblings. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (People(x) \u2227 SpillFoodOnClothing(x) \u2192 (\u00acTidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x (Foodie(x) \u2227 GoesOutFrequently(x) \u2227 FindsNewFoodRestaurants(x) \u2192 SpillsFoodOnClothing(x))",
+            "\u2200x (OnlyChildWithoutSiblings(x) \u2192 (TidySpacesConsistently(x) \u2227 EnjoyCleaningProcess(x)))",
+            "\u2200x\u2200y (Person(x) \u2227 Parent(y, x) \u2227 VeryBusyWithRegularJob(y) \u2192 OnlyChildWithNoSiblings(x))",
+            "\u2200x (Household(x) \u2227 HighNetIncome(x) \u2192 (\u2203y (Parent(y) \u2227 VeryBusyWithRegularJob(y))))",
+            "\u2200x (Person(x) \u2227 SpillsFoodOnClothing(x) \u2227 GrewUpAsOnlyChild(x) \u2227 NoSiblings(x) \u2192 (Both(x) \u2228 \u00ac(Both(x) \u2227 GrewUpAsOnlyChild(x) \u2227 NoSiblings(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All fir trees are evergreens.",
+            "Some objects of worship are fir trees."
+        ],
+        "conclusion-fol": [
+            "\u2200x (FirTree(x) \u2192 Evergreen(x))",
+            "\u2203x (Worship(x) \u2227 FirTree(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "The Picuris Mountains are a mountain range in New Mexico or Texas.",
+            "Juan de Onate visited the Picuris Mountains.",
+            "The Harding Pegmatite Mine, located in the Picuris Mountains, was donated.",
+            "There are no mountain ranges in texas that have mines which have been donated."
+        ],
+        "conclusion-fol": [
+            "\u2203x (MountainRange(x) \u2227 LocatedIn(x, NewMexico) \u2228 LocatedIn(x, Texas))",
+            "\u2200x \u2200y (JuanDeOnate(x) \u2227 PicurisMountains(y) \u2192 Visited(x, y))",
+            "Donated(HardingPegmatiteMine)",
+            "\u00ac\u2203x (MountainRange(x) \u2227 Mines(y) \u2227 Donated(y) \u2227 InTexas(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "The Picuris Mountains are a mountain range in New Mexico or Texas.",
+            "Juan de Onate visited the Picuris Mountains.",
+            "The Harding Pegmatite Mine, located in the Picuris Mountains, was donated.",
+            "There are no mountain ranges in texas that have mines which have been donated."
+        ],
+        "conclusion-fol": [
+            "\u2203x (MountainRange(x) \u2227 LocatedIn(x, NewMexico) \u2228 LocatedIn(x, Texas))",
+            "\u2200x \u2200y (JuanDeOnate(x) \u2227 PicurisMountains(y) \u2192 Visited(x, y))",
+            "Donated(HardingPegmatiteMine)",
+            "\u00ac\u2203x (MountainRange(x) \u2227 Mines(y) \u2227 Donated(y) \u2227 InTexas(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "The Picuris Mountains are a mountain range in New Mexico or Texas.",
+            "Juan de Onate visited the Picuris Mountains.",
+            "The Harding Pegmatite Mine, located in the Picuris Mountains, was donated.",
+            "There are no mountain ranges in texas that have mines which have been donated."
+        ],
+        "conclusion-fol": [
+            "\u2203x (MountainRange(x) \u2227 LocatedIn(x, NewMexico) \u2228 LocatedIn(x, Texas))",
+            "\u2200x \u2200y (JuanDeOnate(x) \u2227 PicurisMountains(y) \u2192 Visited(x, y))",
+            "Donated(HardingPegmatiteMine)",
+            "\u00ac\u2203x (MountainRange(x) \u2227 Mines(y) \u2227 Donated(y) \u2227 InTexas(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a man is taller than another man, the taller one can block the other's shooting.",
+            "Michael is a man who is taller than everyone else in his class.",
+            "If person x is taller than person y, and person y is taller than person z, than x is taller than z",
+            "Peter is a man who is taller than Michael.",
+            "Michael can block any shooting from a person as long as the person does not jump when shooting.",
+            "Michael cannot block Windy's shooting.",
+            "Every shooter who can jump when shooting is a great shooter."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (Man(x) \u2227 Man(y) \u2227 Taller(x, y) \u2192 BlockShooting(x, y))",
+            "\u2200x (Man(x) \u2227 TallerThanClassmates(x))",
+            "\u2200x \u2200y \u2200z (Person(x) \u2227 Person(y) \u2227 Person(z) \u2227 Taller(x, y) \u2227 Taller(y, z) \u2192 Taller(x, z))",
+            "Man(Peter) \u2227 TallerThan(Peter, Michael)",
+            "\u2200x \u2200y (Person(x) \u2227 Person(y) \u2227 \u00acJumping(y) \u2192 BlocksShooting(Michael, x, y))",
+            "\u2200x \u2200y (Michael(x) \u2227 Windy(y) \u2192 \u00acBlockShooting(x, y))",
+            "\u2200x (Shooter(x) \u2227 CanJumpWhenShooting(x) \u2192 GreatShooter(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a man is taller than another man, the taller one can block the other's shooting.",
+            "Michael is a man who is taller than everyone else in his class.",
+            "If person x is taller than person y, and person y is taller than person z, than x is taller than z",
+            "Peter is a man who is taller than Michael.",
+            "Michael can block any shooting from a person as long as the person does not jump when shooting.",
+            "Michael cannot block Windy's shooting.",
+            "Every shooter who can jump when shooting is a great shooter."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (Man(x) \u2227 Man(y) \u2227 Taller(x, y) \u2192 BlockShooting(x, y))",
+            "\u2200x (Man(x) \u2227 TallerThanClassmates(x))",
+            "\u2200x \u2200y \u2200z (Person(x) \u2227 Person(y) \u2227 Person(z) \u2227 Taller(x, y) \u2227 Taller(y, z) \u2192 Taller(x, z))",
+            "Man(Peter) \u2227 TallerThan(Peter, Michael)",
+            "\u2200x \u2200y (Person(x) \u2227 Person(y) \u2227 \u00acJumping(y) \u2192 BlocksShooting(Michael, x, y))",
+            "\u2200x \u2200y (Michael(x) \u2227 Windy(y) \u2192 \u00acBlockShooting(x, y))",
+            "\u2200x (Shooter(x) \u2227 CanJumpWhenShooting(x) \u2192 GreatShooter(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a man is taller than another man, the taller one can block the other's shooting.",
+            "Michael is a man who is taller than everyone else in his class.",
+            "If person x is taller than person y, and person y is taller than person z, than x is taller than z",
+            "Peter is a man who is taller than Michael.",
+            "Michael can block any shooting from a person as long as the person does not jump when shooting.",
+            "Michael cannot block Windy's shooting.",
+            "Every shooter who can jump when shooting is a great shooter."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (Man(x) \u2227 Man(y) \u2227 Taller(x, y) \u2192 BlockShooting(x, y))",
+            "\u2200x (Man(x) \u2227 TallerThanClassmates(x))",
+            "\u2200x \u2200y \u2200z (Person(x) \u2227 Person(y) \u2227 Person(z) \u2227 Taller(x, y) \u2227 Taller(y, z) \u2192 Taller(x, z))",
+            "Man(Peter) \u2227 TallerThan(Peter, Michael)",
+            "\u2200x \u2200y (Person(x) \u2227 Person(y) \u2227 \u00acJumping(y) \u2192 BlocksShooting(Michael, x, y))",
+            "\u2200x \u2200y (Michael(x) \u2227 Windy(y) \u2192 \u00acBlockShooting(x, y))",
+            "\u2200x (Shooter(x) \u2227 CanJumpWhenShooting(x) \u2192 GreatShooter(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Barutin Cove is named after the Bulgarian settlement of Barutin.",
+            "Barutin Cove is on the southwest coast of Snow Island.",
+            "The South Shetland Islands include Snow Island, Greenwich Island, and Deception Island.",
+            "The South Shetland Islands are considered part of Antarctica.",
+            "If A is located in B and B is located in C, then A is located in C."
+        ],
+        "conclusion-fol": [
+            "\u2200x (BarutinCove(x) \u2192 NamedAfter(x, Barutin))",
+            "\u2200x (BarutinCove(x) \u2192 OnSouthwestCoastOfSnowIsland(x))",
+            "\u2200x (SouthShetlandIslands(x) \u2192 (Includes(x, SnowIsland) \u2227 Includes(x, GreenwichIsland) \u2227 Includes(x, DeceptionIsland)))",
+            "\u2200x (SouthShetlandIslands(x) \u2192 PartOfAntarctica(x))",
+            "\u2200x \u2200y \u2200z (LocatedIn(x, y) \u2227 LocatedIn(y, z) \u2192 LocatedIn(x, z))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Barutin Cove is named after the Bulgarian settlement of Barutin.",
+            "Barutin Cove is on the southwest coast of Snow Island.",
+            "The South Shetland Islands include Snow Island, Greenwich Island, and Deception Island.",
+            "The South Shetland Islands are considered part of Antarctica.",
+            "If A is located in B and B is located in C, then A is located in C."
+        ],
+        "conclusion-fol": [
+            "\u2200x (BarutinCove(x) \u2192 NamedAfter(x, Barutin))",
+            "\u2200x (BarutinCove(x) \u2192 OnSouthwestCoastOfSnowIsland(x))",
+            "\u2200x (SouthShetlandIslands(x) \u2192 (Includes(x, SnowIsland) \u2227 Includes(x, GreenwichIsland) \u2227 Includes(x, DeceptionIsland)))",
+            "\u2200x (SouthShetlandIslands(x) \u2192 PartOfAntarctica(x))",
+            "\u2200x \u2200y \u2200z (LocatedIn(x, y) \u2227 LocatedIn(y, z) \u2192 LocatedIn(x, z))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Barutin Cove is named after the Bulgarian settlement of Barutin.",
+            "Barutin Cove is on the southwest coast of Snow Island.",
+            "The South Shetland Islands include Snow Island, Greenwich Island, and Deception Island.",
+            "The South Shetland Islands are considered part of Antarctica.",
+            "If A is located in B and B is located in C, then A is located in C."
+        ],
+        "conclusion-fol": [
+            "\u2200x (BarutinCove(x) \u2192 NamedAfter(x, Barutin))",
+            "\u2200x (BarutinCove(x) \u2192 OnSouthwestCoastOfSnowIsland(x))",
+            "\u2200x (SouthShetlandIslands(x) \u2192 (Includes(x, SnowIsland) \u2227 Includes(x, GreenwichIsland) \u2227 Includes(x, DeceptionIsland)))",
+            "\u2200x (SouthShetlandIslands(x) \u2192 PartOfAntarctica(x))",
+            "\u2200x \u2200y \u2200z (LocatedIn(x, y) \u2227 LocatedIn(y, z) \u2192 LocatedIn(x, z))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Some affection is love.",
+            "Some love is positive."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Affection(x) \u2227 Love(x))",
+            "\u2203x (Love(x) \u2227 Positive(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If something can transport multiple passengers, then they are not empty.",
+            "All airlines can transport multiple passengers.",
+            "All planes are empty.",
+            "All Boeing 707s are planes.",
+            "If Greyhound is not an airline, then there are no Greyhound planes."
+        ],
+        "conclusion-fol": [
+            "\u2200x (CanTransportMultiplePassengers(x) \u2192 \u00acEmpty(x))",
+            "\u2200x (Airline(x) \u2192 CanTransportMultiplePassengers(x))",
+            "\u2200x (Plane(x) \u2192 Empty(x))",
+            "\u2200x (Boeing707(x) \u2192 Plane(x))",
+            "\u2200x (Greyhound(x) \u2227 \u00acAirline(x) \u2192 \u00acPlane(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If something can transport multiple passengers, then they are not empty.",
+            "All airlines can transport multiple passengers.",
+            "All planes are empty.",
+            "All Boeing 707s are planes.",
+            "If Greyhound is not an airline, then there are no Greyhound planes."
+        ],
+        "conclusion-fol": [
+            "\u2200x (CanTransportMultiplePassengers(x) \u2192 \u00acEmpty(x))",
+            "\u2200x (Airline(x) \u2192 CanTransportMultiplePassengers(x))",
+            "\u2200x (Plane(x) \u2192 Empty(x))",
+            "\u2200x (Boeing707(x) \u2192 Plane(x))",
+            "\u2200x (Greyhound(x) \u2227 \u00acAirline(x) \u2192 \u00acPlane(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If something can transport multiple passengers, then they are not empty.",
+            "All airlines can transport multiple passengers.",
+            "All planes are empty.",
+            "All Boeing 707s are planes.",
+            "If Greyhound is not an airline, then there are no Greyhound planes."
+        ],
+        "conclusion-fol": [
+            "\u2200x (CanTransportMultiplePassengers(x) \u2192 \u00acEmpty(x))",
+            "\u2200x (Airline(x) \u2192 CanTransportMultiplePassengers(x))",
+            "\u2200x (Plane(x) \u2192 Empty(x))",
+            "\u2200x (Boeing707(x) \u2192 Plane(x))",
+            "\u2200x (Greyhound(x) \u2227 \u00acAirline(x) \u2192 \u00acPlane(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All mammals are animals.",
+            "All monkeys are mammals. ",
+            "An animal is either a monkey or a bird.",
+            "All birds fly.",
+            "All animals breathe.",
+            "If something can fly, then it has wings.",
+            "If Rock is neither a fly nor a bird, then Rock neither flies nor breathes."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Monkey(x) \u2192 Mammal(x))",
+            "\u2200x (Animal(x) \u2192 (Monkey(x) \u2295 Bird(x)))",
+            "\u2200x (Bird(x) \u2192 Fly(x))",
+            "\u2200x (Animal(x) \u2192 Breathes(x))",
+            "\u2200x (CanFly(x) \u2192 HasWings(x))",
+            "\u2200x (Rock(x) \u2227 \u00ac(Fly(x) \u2228 Bird(x)) \u2192 \u00ac(Flies(x) \u2228 Breathes(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All mammals are animals.",
+            "All monkeys are mammals. ",
+            "An animal is either a monkey or a bird.",
+            "All birds fly.",
+            "All animals breathe.",
+            "If something can fly, then it has wings.",
+            "If Rock is neither a fly nor a bird, then Rock neither flies nor breathes."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Monkey(x) \u2192 Mammal(x))",
+            "\u2200x (Animal(x) \u2192 (Monkey(x) \u2295 Bird(x)))",
+            "\u2200x (Bird(x) \u2192 Fly(x))",
+            "\u2200x (Animal(x) \u2192 Breathes(x))",
+            "\u2200x (CanFly(x) \u2192 HasWings(x))",
+            "\u2200x (Rock(x) \u2227 \u00ac(Fly(x) \u2228 Bird(x)) \u2192 \u00ac(Flies(x) \u2228 Breathes(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All mammals are animals.",
+            "All monkeys are mammals. ",
+            "An animal is either a monkey or a bird.",
+            "All birds fly.",
+            "All animals breathe.",
+            "If something can fly, then it has wings.",
+            "If Rock is neither a fly nor a bird, then Rock neither flies nor breathes."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Mammal(x) \u2192 Animal(x))",
+            "\u2200x (Monkey(x) \u2192 Mammal(x))",
+            "\u2200x (Animal(x) \u2192 (Monkey(x) \u2295 Bird(x)))",
+            "\u2200x (Bird(x) \u2192 Fly(x))",
+            "\u2200x (Animal(x) \u2192 Breathes(x))",
+            "\u2200x (CanFly(x) \u2192 HasWings(x))",
+            "\u2200x (Rock(x) \u2227 \u00ac(Fly(x) \u2228 Bird(x)) \u2192 \u00ac(Flies(x) \u2228 Breathes(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All people who have a wedding are people who have at least one child.",
+            "All people who travel to Paris for their honeymoon are people who have a wedding.",
+            "All weddings that occur in July belong to people who travel to Paris for their honeymoon.",
+            "Some weddings in July are well-attended.",
+            "If John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding.",
+            "If John has a wedding that is well-attended, then John has a wedding in July or, if not, then John travels to Paris for their honeymoon. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (HasWedding(x) \u2192 \u2203y (HasChild(y) \u2227 HasChild(x, y)))",
+            "\u2200x (TravelsToParisForHoneymoon(x) \u2192 HasWedding(x))",
+            "\u2200x (Wedding(x) \u2227 OccursInJuly(x) \u2192 TravelsToParisForHoneymoon(x))",
+            "\u2203x (Wedding(x) \u2227 Month(x, July) \u2227 WellAttended(x))",
+            "\u2200x (Person(x) \u2227 HasAtLeastOneChild(x) \u2192 (\u00acTravelsToParisForHoneymoon(x) \u2227 \u00acHasWedding(x)))",
+            "\u2200x (Wedding(x) \u2227 WellAttended(x) \u2192 (WeddingInJuly(x) \u2228 TravelsToParisForHoneymoon(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All people who have a wedding are people who have at least one child.",
+            "All people who travel to Paris for their honeymoon are people who have a wedding.",
+            "All weddings that occur in July belong to people who travel to Paris for their honeymoon.",
+            "Some weddings in July are well-attended.",
+            "If John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding.",
+            "If John has a wedding that is well-attended, then John has a wedding in July or, if not, then John travels to Paris for their honeymoon. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (HasWedding(x) \u2192 \u2203y (HasChild(y) \u2227 HasChild(x, y)))",
+            "\u2200x (TravelsToParisForHoneymoon(x) \u2192 HasWedding(x))",
+            "\u2200x (Wedding(x) \u2227 OccursInJuly(x) \u2192 TravelsToParisForHoneymoon(x))",
+            "\u2203x (Wedding(x) \u2227 Month(x, July) \u2227 WellAttended(x))",
+            "\u2200x (Person(x) \u2227 HasAtLeastOneChild(x) \u2192 (\u00acTravelsToParisForHoneymoon(x) \u2227 \u00acHasWedding(x)))",
+            "\u2200x (Wedding(x) \u2227 WellAttended(x) \u2192 (WeddingInJuly(x) \u2228 TravelsToParisForHoneymoon(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All people who have a wedding are people who have at least one child.",
+            "All people who travel to Paris for their honeymoon are people who have a wedding.",
+            "All weddings that occur in July belong to people who travel to Paris for their honeymoon.",
+            "Some weddings in July are well-attended.",
+            "If John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding.",
+            "If John has a wedding that is well-attended, then John has a wedding in July or, if not, then John travels to Paris for their honeymoon. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (HasWedding(x) \u2192 \u2203y (HasChild(y) \u2227 HasChild(x, y)))",
+            "\u2200x (TravelsToParisForHoneymoon(x) \u2192 HasWedding(x))",
+            "\u2200x (Wedding(x) \u2227 OccursInJuly(x) \u2192 TravelsToParisForHoneymoon(x))",
+            "\u2203x (Wedding(x) \u2227 Month(x, July) \u2227 WellAttended(x))",
+            "\u2200x (Person(x) \u2227 HasAtLeastOneChild(x) \u2192 (\u00acTravelsToParisForHoneymoon(x) \u2227 \u00acHasWedding(x)))",
+            "\u2200x (Wedding(x) \u2227 WellAttended(x) \u2192 (WeddingInJuly(x) \u2228 TravelsToParisForHoneymoon(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All people who have a wedding are people who have at least one child.",
+            "All people who travel to Paris for their honeymoon are people who have a wedding.",
+            "All weddings that occur in July belong to people who travel to Paris for their honeymoon.",
+            "Some weddings in July are well-attended.",
+            "If John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding.",
+            "If John has a wedding that is well-attended, then John has a wedding in July or, if not, then John travels to Paris for their honeymoon. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (HasWedding(x) \u2192 \u2203y (HasChild(y) \u2227 HasChild(x, y)))",
+            "\u2200x (TravelsToParisForHoneymoon(x) \u2192 HasWedding(x))",
+            "\u2200x (Wedding(x) \u2227 OccursInJuly(x) \u2192 TravelsToParisForHoneymoon(x))",
+            "\u2203x (Wedding(x) \u2227 Month(x, July) \u2227 WellAttended(x))",
+            "\u2200x (Person(x) \u2227 HasAtLeastOneChild(x) \u2192 (\u00acTravelsToParisForHoneymoon(x) \u2227 \u00acHasWedding(x)))",
+            "\u2200x (Wedding(x) \u2227 WellAttended(x) \u2192 (WeddingInJuly(x) \u2228 TravelsToParisForHoneymoon(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] Some mammals have teeth.",
+            "Platypus have no teeth.",
+            "Platypus are mammals. ",
+            "Humans have teeth."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Mammal(x) \u2227 HasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 \u00acHasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 Mammal(x))",
+            "\u2200x (Human(x) \u2192 HasTeeth(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] Some mammals have teeth.",
+            "Platypus have no teeth.",
+            "Platypus are mammals. ",
+            "Humans have teeth."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Mammal(x) \u2227 HasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 \u00acHasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 Mammal(x))",
+            "\u2200x (Human(x) \u2192 HasTeeth(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] Some mammals have teeth.",
+            "Platypus have no teeth.",
+            "Platypus are mammals. ",
+            "Humans have teeth."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Mammal(x) \u2227 HasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 \u00acHasTeeth(x))",
+            "\u2200x (Platypus(x) \u2192 Mammal(x))",
+            "\u2200x (Human(x) \u2192 HasTeeth(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Plungers suck.",
+            "Vacuums suck.",
+            "Vampires suck.",
+            "Space is a vacuum.",
+            "A duster is a household appliance that doesn't suck."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Plunger(x) \u2192 Sucks(x))",
+            "\u2200x (Vacuum(x) \u2192 Sucks(x))",
+            "\u2200x (Vampire(x) \u2192 Sucks(x))",
+            "\u2200x (Space(x) \u2192 Vacuum(x))",
+            "\u2200x (Duster(x) \u2192 \u00acSucks(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Plungers suck.",
+            "Vacuums suck.",
+            "Vampires suck.",
+            "Space is a vacuum.",
+            "A duster is a household appliance that doesn't suck."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Plunger(x) \u2192 Sucks(x))",
+            "\u2200x (Vacuum(x) \u2192 Sucks(x))",
+            "\u2200x (Vampire(x) \u2192 Sucks(x))",
+            "\u2200x (Space(x) \u2192 Vacuum(x))",
+            "\u2200x (Duster(x) \u2192 \u00acSucks(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Plungers suck.",
+            "Vacuums suck.",
+            "Vampires suck.",
+            "Space is a vacuum.",
+            "A duster is a household appliance that doesn't suck."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Plunger(x) \u2192 Sucks(x))",
+            "\u2200x (Vacuum(x) \u2192 Sucks(x))",
+            "\u2200x (Vampire(x) \u2192 Sucks(x))",
+            "\u2200x (Space(x) \u2192 Vacuum(x))",
+            "\u2200x (Duster(x) \u2192 \u00acSucks(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Machine Learning algorithms can be categorized as supervised learning, unsupervised learning, and reinforcement learning.",
+            "Unsupervised learning doesn't require labelled data.",
+            "The state-of-the-art text summarization model is trained with machine learning algorithms.",
+            "Reinforcement learning is not used to train the state-of-the-art text summarization model.",
+            "The Machine Learning algorithm for training text summarization model requires labelled data."
+        ],
+        "conclusion-fol": [
+            "\u2200x (MachineLearningAlgorithm(x) \u2192 (SupervisedLearning(x) \u2228 UnsupervisedLearning(x) \u2228 ReinforcementLearning(x)))",
+            "\u2200x (UnsupervisedLearning(x) \u2192 \u00acRequiresLabelledData(x))",
+            "\u2200x (StateOfTheArtTextSummarizationModel(x) \u2192 TrainedWithMachineLearningAlgorithms(x))",
+            "\u00ac(ReinforcementLearning(r) \u2227 Train(r, sotasum))",
+            "\u2200x (MachineLearningAlgorithm(x) \u2227 TextSummarizationModel(y) \u2227 RequiresLabelledData(x, y) \u2192 Trains(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Machine Learning algorithms can be categorized as supervised learning, unsupervised learning, and reinforcement learning.",
+            "Unsupervised learning doesn't require labelled data.",
+            "The state-of-the-art text summarization model is trained with machine learning algorithms.",
+            "Reinforcement learning is not used to train the state-of-the-art text summarization model.",
+            "The Machine Learning algorithm for training text summarization model requires labelled data."
+        ],
+        "conclusion-fol": [
+            "\u2200x (MachineLearningAlgorithm(x) \u2192 (SupervisedLearning(x) \u2228 UnsupervisedLearning(x) \u2228 ReinforcementLearning(x)))",
+            "\u2200x (UnsupervisedLearning(x) \u2192 \u00acRequiresLabelledData(x))",
+            "\u2200x (StateOfTheArtTextSummarizationModel(x) \u2192 TrainedWithMachineLearningAlgorithms(x))",
+            "\u00ac(ReinforcementLearning(r) \u2227 Train(r, sotasum))",
+            "\u2200x (MachineLearningAlgorithm(x) \u2227 TextSummarizationModel(y) \u2227 RequiresLabelledData(x, y) \u2192 Trains(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a cartoon character is funny, then it is popular.",
+            "If a cartoon character is ugly, then it is not popular.",
+            "If a cartoon character is loved by children, then it is funny.",
+            "If a cartoon character is from The Simpsons, then it is loved by children.",
+            "If a cartoon character is yellow, then it is from The Simpsons.",
+            "Ben is either from The Simpsons or funny."
+        ],
+        "conclusion-fol": [
+            "\u2200x (CartoonCharacter(x) \u2227 Funny(x) \u2192 Popular(x))",
+            "\u2200x (Ugly(x) \u2192 \u00acPopular(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 LovedByChildren(x) \u2192 Funny(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 FromTheSimpsons(x) \u2192 LovedByChildren(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 Yellow(x) \u2192 FromSimpsons(x))",
+            "\u2200x (Ben(x) \u2192 (FromSimpsons(x) \u2228 Funny(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a cartoon character is funny, then it is popular.",
+            "If a cartoon character is ugly, then it is not popular.",
+            "If a cartoon character is loved by children, then it is funny.",
+            "If a cartoon character is from The Simpsons, then it is loved by children.",
+            "If a cartoon character is yellow, then it is from The Simpsons.",
+            "Ben is either from The Simpsons or funny."
+        ],
+        "conclusion-fol": [
+            "\u2200x (CartoonCharacter(x) \u2227 Funny(x) \u2192 Popular(x))",
+            "\u2200x (Ugly(x) \u2192 \u00acPopular(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 LovedByChildren(x) \u2192 Funny(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 FromTheSimpsons(x) \u2192 LovedByChildren(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 Yellow(x) \u2192 FromSimpsons(x))",
+            "\u2200x (Ben(x) \u2192 (FromSimpsons(x) \u2228 Funny(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If a cartoon character is funny, then it is popular.",
+            "If a cartoon character is ugly, then it is not popular.",
+            "If a cartoon character is loved by children, then it is funny.",
+            "If a cartoon character is from The Simpsons, then it is loved by children.",
+            "If a cartoon character is yellow, then it is from The Simpsons.",
+            "Ben is either from The Simpsons or funny."
+        ],
+        "conclusion-fol": [
+            "\u2200x (CartoonCharacter(x) \u2227 Funny(x) \u2192 Popular(x))",
+            "\u2200x (Ugly(x) \u2192 \u00acPopular(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 LovedByChildren(x) \u2192 Funny(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 FromTheSimpsons(x) \u2192 LovedByChildren(x))",
+            "\u2200x (CartoonCharacter(x) \u2227 Yellow(x) \u2192 FromSimpsons(x))",
+            "\u2200x (Ben(x) \u2192 (FromSimpsons(x) \u2228 Funny(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals.",
+            "Heck cattle were bred-back in the 1920s to resemble the aurochs.",
+            "[BG] Heck cattle are animals.",
+            "[BG] Aurochs are animals.",
+            "Some animals to be bred-back resemble animals that are extinct."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (DomesticAnimal(x) \u2227 BreedingBack(y) \u2192 (DeliberateSelectiveBreeding(y) \u2227 DomesticAnimal(x)))",
+            "\u2200x (Cattle(x) \u2227 BredBackIn1920s(x) \u2227 ResemblesAurochs(x))",
+            "\u2200x (Cattle(x) \u2227 Heck(x) \u2192 Animal(x))",
+            "\u2200x (Auroch(x) \u2192 Animal(x))",
+            "\u2203x (Animal(x) \u2227 BredBack(x) \u2227 ResemblesExtinctAnimal(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals.",
+            "Heck cattle were bred-back in the 1920s to resemble the aurochs.",
+            "[BG] Heck cattle are animals.",
+            "[BG] Aurochs are animals.",
+            "Some animals to be bred-back resemble animals that are extinct."
+        ],
+        "conclusion-fol": [
+            "\u2200x\u2200y (DomesticAnimal(x) \u2227 BreedingBack(y) \u2192 (DeliberateSelectiveBreeding(y) \u2227 DomesticAnimal(x)))",
+            "\u2200x (Cattle(x) \u2227 BredBackIn1920s(x) \u2227 ResemblesAurochs(x))",
+            "\u2200x (Cattle(x) \u2227 Heck(x) \u2192 Animal(x))",
+            "\u2200x (Auroch(x) \u2192 Animal(x))",
+            "\u2203x (Animal(x) \u2227 BredBack(x) \u2227 ResemblesExtinctAnimal(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All students are humans. ",
+            "If someone studies, then they are a student.",
+            "A person either studys or teaches.",
+            "No young person teaches.",
+            "Jerry neither teaches nor is a manager.",
+            "Rose is young or a student."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u2200x (Person(x) \u2227 Jerry(x) \u2192 (\u00acTeaches(x) \u2227 \u00acManager(x)))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All students are humans. ",
+            "If someone studies, then they are a student.",
+            "A person either studys or teaches.",
+            "No young person teaches.",
+            "Jerry neither teaches nor is a manager.",
+            "Rose is young or a student."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u2200x (Person(x) \u2227 Jerry(x) \u2192 (\u00acTeaches(x) \u2227 \u00acManager(x)))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All students are humans. ",
+            "If someone studies, then they are a student.",
+            "A person either studys or teaches.",
+            "No young person teaches.",
+            "Jerry neither teaches nor is a manager.",
+            "Rose is young or a student."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u2200x (Person(x) \u2227 Jerry(x) \u2192 (\u00acTeaches(x) \u2227 \u00acManager(x)))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All students are humans. ",
+            "If someone studies, then they are a student.",
+            "A person either studys or teaches.",
+            "No young person teaches.",
+            "Jerry neither teaches nor is a manager.",
+            "Rose is young or a student."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u2200x (Person(x) \u2227 Jerry(x) \u2192 (\u00acTeaches(x) \u2227 \u00acManager(x)))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All students are humans. ",
+            "If someone studies, then they are a student.",
+            "A person either studys or teaches.",
+            "No young person teaches.",
+            "Jerry neither teaches nor is a manager.",
+            "Rose is young or a student."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Student(x) \u2192 Human(x))",
+            "\u2200x (Studies(x) \u2192 Student(x))",
+            "\u2200x (Person(x) \u2192 (Studies(x) \u2295 Teaches(x)))",
+            "\u2200x (YoungPerson(x) \u2192 \u00acTeaches(x))",
+            "\u2200x (Person(x) \u2227 Jerry(x) \u2192 (\u00acTeaches(x) \u2227 \u00acManager(x)))",
+            "\u2203x (Rose(x) \u2227 (Young(x) \u2228 Student(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "New Vessel Press is a publishing house which specializes in translating foreign literature into English.",
+            "All of New Vessel Press's published books are in English.",
+            "Neapolitan Chronicles is a book published by New Vessel Press.",
+            "Neapolitan Chronicles was translated from Italian.",
+            "Palace of Flies is a book published by New Vessel Press."
+        ],
+        "conclusion-fol": [
+            "\u2200x (PublishingHouse(x) \u2227 TranslatesForeignLiterature(x) \u2227 English(x) \u2192 NewVesselPress(x))",
+            "\u2200x (PublishedBook(x) \u2227 FromNewVesselPress(x) \u2192 InEnglish(x))",
+            "Book(neapolitan_chronicles) \u2227 PublishedBy(neapolitan_chronicles, new_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(book) \u2227 NewVesselPress(publisher) \u2227 Published(book, publisher)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "New Vessel Press is a publishing house which specializes in translating foreign literature into English.",
+            "All of New Vessel Press's published books are in English.",
+            "Neapolitan Chronicles is a book published by New Vessel Press.",
+            "Neapolitan Chronicles was translated from Italian.",
+            "Palace of Flies is a book published by New Vessel Press."
+        ],
+        "conclusion-fol": [
+            "\u2200x (PublishingHouse(x) \u2227 TranslatesForeignLiterature(x) \u2227 English(x) \u2192 NewVesselPress(x))",
+            "\u2200x (PublishedBook(x) \u2227 FromNewVesselPress(x) \u2192 InEnglish(x))",
+            "Book(neapolitan_chronicles) \u2227 PublishedBy(neapolitan_chronicles, new_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(book) \u2227 NewVesselPress(publisher) \u2227 Published(book, publisher)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "New Vessel Press is a publishing house which specializes in translating foreign literature into English.",
+            "All of New Vessel Press's published books are in English.",
+            "Neapolitan Chronicles is a book published by New Vessel Press.",
+            "Neapolitan Chronicles was translated from Italian.",
+            "Palace of Flies is a book published by New Vessel Press."
+        ],
+        "conclusion-fol": [
+            "\u2200x (PublishingHouse(x) \u2227 TranslatesForeignLiterature(x) \u2227 English(x) \u2192 NewVesselPress(x))",
+            "\u2200x (PublishedBook(x) \u2227 FromNewVesselPress(x) \u2192 InEnglish(x))",
+            "Book(neapolitan_chronicles) \u2227 PublishedBy(neapolitan_chronicles, new_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(book) \u2227 NewVesselPress(publisher) \u2227 Published(book, publisher)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people own a large desktop monitor at their home, then they work regularly and often at home.",
+            "All people who have a fully stocked and impressive home office are people who own a large desktop monitor at their home.",
+            "All people who work regularly and often at home spend their free time tidying and organizing the spaces in their homes.",
+            "All people who work regularly and often at home visit the office supply store regularly.",
+            "If people spend their free time tidying and organizing the spaces in their home, then they do not go to bed late and wake up every day after noon. ",
+            "Remy either both goes to bed late and wakes up every day after noon and spends their free time tidying and organizing the spaces in their home, or they do not go to bed late and wake up every day after noon nor spend their free time tidying and organizing the spaces in their home. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (OwnsLargeDesktopMonitor(x) \u2192 (WorksRegularly(x) \u2227 WorksOften(x)))",
+            "\u2200x (Person(x) \u2227 FullyStockedHomeOffice(x) \u2227 ImpressiveHomeOffice(x) \u2192 OwnsLargeDesktopMonitor(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 SpendsFreeTimeTidyingAndOrganizing(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 VisitsOfficeSupplyStoreRegularly(x))",
+            "\u2200x (SpendsFreeTimeTidyingAndOrganizingHome(x) \u2192 (\u00acGoesToBedLate(x) \u2227 \u00acWakesUpEveryDayAfterNoon(x)))",
+            "\u2200x (Remy(x) \u2192 ((BedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 SpendsFreeTimeTidyingAndOrganizing(x)) \u2228 (\u00acBedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 \u00acSpendsFreeTimeTidyingAndOrganizing(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people own a large desktop monitor at their home, then they work regularly and often at home.",
+            "All people who have a fully stocked and impressive home office are people who own a large desktop monitor at their home.",
+            "All people who work regularly and often at home spend their free time tidying and organizing the spaces in their homes.",
+            "All people who work regularly and often at home visit the office supply store regularly.",
+            "If people spend their free time tidying and organizing the spaces in their home, then they do not go to bed late and wake up every day after noon. ",
+            "Remy either both goes to bed late and wakes up every day after noon and spends their free time tidying and organizing the spaces in their home, or they do not go to bed late and wake up every day after noon nor spend their free time tidying and organizing the spaces in their home. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (OwnsLargeDesktopMonitor(x) \u2192 (WorksRegularly(x) \u2227 WorksOften(x)))",
+            "\u2200x (Person(x) \u2227 FullyStockedHomeOffice(x) \u2227 ImpressiveHomeOffice(x) \u2192 OwnsLargeDesktopMonitor(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 SpendsFreeTimeTidyingAndOrganizing(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 VisitsOfficeSupplyStoreRegularly(x))",
+            "\u2200x (SpendsFreeTimeTidyingAndOrganizingHome(x) \u2192 (\u00acGoesToBedLate(x) \u2227 \u00acWakesUpEveryDayAfterNoon(x)))",
+            "\u2200x (Remy(x) \u2192 ((BedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 SpendsFreeTimeTidyingAndOrganizing(x)) \u2228 (\u00acBedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 \u00acSpendsFreeTimeTidyingAndOrganizing(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If people own a large desktop monitor at their home, then they work regularly and often at home.",
+            "All people who have a fully stocked and impressive home office are people who own a large desktop monitor at their home.",
+            "All people who work regularly and often at home spend their free time tidying and organizing the spaces in their homes.",
+            "All people who work regularly and often at home visit the office supply store regularly.",
+            "If people spend their free time tidying and organizing the spaces in their home, then they do not go to bed late and wake up every day after noon. ",
+            "Remy either both goes to bed late and wakes up every day after noon and spends their free time tidying and organizing the spaces in their home, or they do not go to bed late and wake up every day after noon nor spend their free time tidying and organizing the spaces in their home. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (OwnsLargeDesktopMonitor(x) \u2192 (WorksRegularly(x) \u2227 WorksOften(x)))",
+            "\u2200x (Person(x) \u2227 FullyStockedHomeOffice(x) \u2227 ImpressiveHomeOffice(x) \u2192 OwnsLargeDesktopMonitor(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 SpendsFreeTimeTidyingAndOrganizing(x))",
+            "\u2200x (Person(x) \u2227 WorksRegularlyAndOftenAtHome(x) \u2192 VisitsOfficeSupplyStoreRegularly(x))",
+            "\u2200x (SpendsFreeTimeTidyingAndOrganizingHome(x) \u2192 (\u00acGoesToBedLate(x) \u2227 \u00acWakesUpEveryDayAfterNoon(x)))",
+            "\u2200x (Remy(x) \u2192 ((BedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 SpendsFreeTimeTidyingAndOrganizing(x)) \u2228 (\u00acBedsLate(x) \u2227 WakesUpAfterNoon(x) \u2227 \u00acSpendsFreeTimeTidyingAndOrganizing(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All humans are mortal.",
+            "All Greeks are humans."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Human(x) \u2192 Mortal(x))",
+            "\u2200x (Greek(x) \u2192 Human(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No students who work in the library are from the computer science department. ",
+            "All students who have part-time jobs offered by the university are students who work in the library. ",
+            "All students who take the database course are from the computer science department. ",
+            "All students instructed by professor David are taking the database course. ",
+            "All students working in the lab are instructed by professor David. ",
+            "James is a student working in the lab. ",
+            "Jack neither has a part-time job offered by the university nor works in the lab. "
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Student(x) \u2227 WorksInLibrary(x) \u2227 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 PartTimeJobOfferedByUniversity(x) \u2192 WorksInLibrary(x))",
+            "\u2200x (Student(x) \u2227 TakesDatabaseCourse(x) \u2192 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 InstructedBy(x, David) \u2192 TakingDatabaseCourse(x))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x) \u2192 InstructedBy(x, David))",
+            "Student(James) \u2227 WorksIn(James, lab)",
+            "\u00ac(PartTimeJobOfferedByUniversity(jack) \u2228 WorksInLab(jack))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No students who work in the library are from the computer science department. ",
+            "All students who have part-time jobs offered by the university are students who work in the library. ",
+            "All students who take the database course are from the computer science department. ",
+            "All students instructed by professor David are taking the database course. ",
+            "All students working in the lab are instructed by professor David. ",
+            "James is a student working in the lab. ",
+            "Jack neither has a part-time job offered by the university nor works in the lab. "
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Student(x) \u2227 WorksInLibrary(x) \u2227 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 PartTimeJobOfferedByUniversity(x) \u2192 WorksInLibrary(x))",
+            "\u2200x (Student(x) \u2227 TakesDatabaseCourse(x) \u2192 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 InstructedBy(x, David) \u2192 TakingDatabaseCourse(x))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x) \u2192 InstructedBy(x, David))",
+            "Student(James) \u2227 WorksIn(James, lab)",
+            "\u00ac(PartTimeJobOfferedByUniversity(jack) \u2228 WorksInLab(jack))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No students who work in the library are from the computer science department. ",
+            "All students who have part-time jobs offered by the university are students who work in the library. ",
+            "All students who take the database course are from the computer science department. ",
+            "All students instructed by professor David are taking the database course. ",
+            "All students working in the lab are instructed by professor David. ",
+            "James is a student working in the lab. ",
+            "Jack neither has a part-time job offered by the university nor works in the lab. "
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Student(x) \u2227 WorksInLibrary(x) \u2227 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 PartTimeJobOfferedByUniversity(x) \u2192 WorksInLibrary(x))",
+            "\u2200x (Student(x) \u2227 TakesDatabaseCourse(x) \u2192 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 InstructedBy(x, David) \u2192 TakingDatabaseCourse(x))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x) \u2192 InstructedBy(x, David))",
+            "Student(James) \u2227 WorksIn(James, lab)",
+            "\u00ac(PartTimeJobOfferedByUniversity(jack) \u2228 WorksInLab(jack))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No students who work in the library are from the computer science department. ",
+            "All students who have part-time jobs offered by the university are students who work in the library. ",
+            "All students who take the database course are from the computer science department. ",
+            "All students instructed by professor David are taking the database course. ",
+            "All students working in the lab are instructed by professor David. ",
+            "James is a student working in the lab. ",
+            "Jack neither has a part-time job offered by the university nor works in the lab. "
+        ],
+        "conclusion-fol": [
+            "\u00ac\u2203x (Student(x) \u2227 WorksInLibrary(x) \u2227 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 PartTimeJobOfferedByUniversity(x) \u2192 WorksInLibrary(x))",
+            "\u2200x (Student(x) \u2227 TakesDatabaseCourse(x) \u2192 FromComputerScienceDepartment(x))",
+            "\u2200x (Student(x) \u2227 InstructedBy(x, David) \u2192 TakingDatabaseCourse(x))",
+            "\u2200x (Student(x) \u2227 WorksInLab(x) \u2192 InstructedBy(x, David))",
+            "Student(James) \u2227 WorksIn(James, lab)",
+            "\u00ac(PartTimeJobOfferedByUniversity(jack) \u2228 WorksInLab(jack))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If George likes music, he wants to compose.",
+            "If George has access to a program, he can compose.",
+            "If George can compose and wants to compose, he will compose."
+        ],
+        "conclusion-fol": [
+            "\u2200x (George(x) \u2227 LikesMusic(x) \u2192 WantsToCompose(x))",
+            "\u2200x (Program(x) \u2227 Access(x, George) \u2192 CanCompose(x))",
+            "\u2200x (Compose(x) \u2227 CanCompose(x) \u2227 WantsToCompose(x) \u2192 WillCompose(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If George likes music, he wants to compose.",
+            "If George has access to a program, he can compose.",
+            "If George can compose and wants to compose, he will compose."
+        ],
+        "conclusion-fol": [
+            "\u2200x (George(x) \u2227 LikesMusic(x) \u2192 WantsToCompose(x))",
+            "\u2200x (Program(x) \u2227 Access(x, George) \u2192 CanCompose(x))",
+            "\u2200x (Compose(x) \u2227 CanCompose(x) \u2227 WantsToCompose(x) \u2192 WillCompose(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A hawk never lands. ",
+            "Some birds are hawks."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Hawk(x) \u2192 \u00acLand(x))",
+            "\u2203x (Bird(x) \u2227 Hawk(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "On some Mondays at 8 pm, roses are given out on TV.",
+            "Every rose given out on TV is on the Bachelor.",
+            "Everything on the Bachelor portrays the lives of real people.",
+            "All shows portraying the lives of real people are reality TV shows.",
+            "Breaking Bad is not a reality TV show."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Monday(x) \u2227 8Pm(x) \u2227 RosesGivenOutOnTV(x))",
+            "\u2200x (Rose(x) \u2227 GivenOutOnTV(x) \u2192 OnBachelor(x))",
+            "\u2200x (Bachelor(x) \u2192 PortraysRealPeople(x))",
+            "\u2200x (Show(x) \u2227 PortraysRealPeople(x) \u2192 RealityTVShow(x))",
+            "\u00ac(RealityTVShow(BreakingBad))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "On some Mondays at 8 pm, roses are given out on TV.",
+            "Every rose given out on TV is on the Bachelor.",
+            "Everything on the Bachelor portrays the lives of real people.",
+            "All shows portraying the lives of real people are reality TV shows.",
+            "Breaking Bad is not a reality TV show."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Monday(x) \u2227 8Pm(x) \u2227 RosesGivenOutOnTV(x))",
+            "\u2200x (Rose(x) \u2227 GivenOutOnTV(x) \u2192 OnBachelor(x))",
+            "\u2200x (Bachelor(x) \u2192 PortraysRealPeople(x))",
+            "\u2200x (Show(x) \u2227 PortraysRealPeople(x) \u2192 RealityTVShow(x))",
+            "\u00ac(RealityTVShow(BreakingBad))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "On some Mondays at 8 pm, roses are given out on TV.",
+            "Every rose given out on TV is on the Bachelor.",
+            "Everything on the Bachelor portrays the lives of real people.",
+            "All shows portraying the lives of real people are reality TV shows.",
+            "Breaking Bad is not a reality TV show."
+        ],
+        "conclusion-fol": [
+            "\u2203x (Monday(x) \u2227 8Pm(x) \u2227 RosesGivenOutOnTV(x))",
+            "\u2200x (Rose(x) \u2227 GivenOutOnTV(x) \u2192 OnBachelor(x))",
+            "\u2200x (Bachelor(x) \u2192 PortraysRealPeople(x))",
+            "\u2200x (Show(x) \u2227 PortraysRealPeople(x) \u2192 RealityTVShow(x))",
+            "\u00ac(RealityTVShow(BreakingBad))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Heinrich Scmidt was a Nazi German politician. ",
+            "Heeinrich Scmidt was also a member of the Prussian State Parliament and the Nazi Reichstag."
+        ],
+        "conclusion-fol": [
+            "HeinrichScmidt(n) \u2194 NaziGermanPolitician(n)",
+            "Member(HeinrichSchmidt, PrussianStateParliament) \u2227 Member(HeinrichSchmidt, NaziReichstag)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Heinrich Scmidt was a Nazi German politician. ",
+            "Heeinrich Scmidt was also a member of the Prussian State Parliament and the Nazi Reichstag."
+        ],
+        "conclusion-fol": [
+            "HeinrichScmidt(n) \u2194 NaziGermanPolitician(n)",
+            "Member(HeinrichSchmidt, PrussianStateParliament) \u2227 Member(HeinrichSchmidt, NaziReichstag)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Heinrich Scmidt was a Nazi German politician. ",
+            "Heeinrich Scmidt was also a member of the Prussian State Parliament and the Nazi Reichstag."
+        ],
+        "conclusion-fol": [
+            "HeinrichScmidt(n) \u2194 NaziGermanPolitician(n)",
+            "Member(HeinrichSchmidt, PrussianStateParliament) \u2227 Member(HeinrichSchmidt, NaziReichstag)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If something is a deadly disease, then its survival rate is low. ",
+            "All severe cancers are deadly diseases.",
+            "Bile duct cancer is a severe cancer. ",
+            "All Cholangiocarcinoma is bile duct cancer.",
+            "No one with mild flu has a low survival rate.",
+            "If colorectal cancer is a bile duct cancer and the survival rate is low, then colorectal cancer is not a bile duct cancer."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DeadlyDisease(x) \u2192 LowSurvivalRate(x))",
+            "\u2200x (Cancer(x) \u2227 Severe(x) \u2192 DeadlyDisease(x))",
+            "\u2200x (BileDuctCancer(x) \u2192 SevereCancer(x))",
+            "\u2200x (Cholangiocarcinoma(x) \u2192 BileDuctCancer(x))",
+            "\u00ac(\u2203x (Person(x) \u2227 Flu(x) \u2227 Mild(x) \u2227 LowSurvivalRate(x)))",
+            "\u2200x (ColorectalCancer(x) \u2227 BileDuctCancer(x) \u2227 LowSurvivalRate(x) \u2192 \u00acBileDuctCancer(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If something is a deadly disease, then its survival rate is low. ",
+            "All severe cancers are deadly diseases.",
+            "Bile duct cancer is a severe cancer. ",
+            "All Cholangiocarcinoma is bile duct cancer.",
+            "No one with mild flu has a low survival rate.",
+            "If colorectal cancer is a bile duct cancer and the survival rate is low, then colorectal cancer is not a bile duct cancer."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DeadlyDisease(x) \u2192 LowSurvivalRate(x))",
+            "\u2200x (Cancer(x) \u2227 Severe(x) \u2192 DeadlyDisease(x))",
+            "\u2200x (BileDuctCancer(x) \u2192 SevereCancer(x))",
+            "\u2200x (Cholangiocarcinoma(x) \u2192 BileDuctCancer(x))",
+            "\u00ac(\u2203x (Person(x) \u2227 Flu(x) \u2227 Mild(x) \u2227 LowSurvivalRate(x)))",
+            "\u2200x (ColorectalCancer(x) \u2227 BileDuctCancer(x) \u2227 LowSurvivalRate(x) \u2192 \u00acBileDuctCancer(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If something is a deadly disease, then its survival rate is low. ",
+            "All severe cancers are deadly diseases.",
+            "Bile duct cancer is a severe cancer. ",
+            "All Cholangiocarcinoma is bile duct cancer.",
+            "No one with mild flu has a low survival rate.",
+            "If colorectal cancer is a bile duct cancer and the survival rate is low, then colorectal cancer is not a bile duct cancer."
+        ],
+        "conclusion-fol": [
+            "\u2200x (DeadlyDisease(x) \u2192 LowSurvivalRate(x))",
+            "\u2200x (Cancer(x) \u2227 Severe(x) \u2192 DeadlyDisease(x))",
+            "\u2200x (BileDuctCancer(x) \u2192 SevereCancer(x))",
+            "\u2200x (Cholangiocarcinoma(x) \u2192 BileDuctCancer(x))",
+            "\u00ac(\u2203x (Person(x) \u2227 Flu(x) \u2227 Mild(x) \u2227 LowSurvivalRate(x)))",
+            "\u2200x (ColorectalCancer(x) \u2227 BileDuctCancer(x) \u2227 LowSurvivalRate(x) \u2192 \u00acBileDuctCancer(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All people who eat salads regularly are very conscious about their health and eating habits.",
+            "All people who grew up in health-conscious childhood homes eat salads regularly.",
+            "All people who fulfill their nutritional daily intakes grew up in health-conscious childhood homes.",
+            "If people have good relationships with their parents, then they fulfill their nutritional daily intakes.",
+            "If people have good relationships with their parents, then they do not eat salads regularly.",
+            "If people visit the gym at least once a day, then they always fulfill their daily nutritional intakes.",
+            "It is either both true that Taylor grew up in a health-conscious childhood home and she has a good relationship with her parents, or it is true that Taylor neither grew up in a health-conscious childhood home nor has a good relationship with her parents."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2227 EatsSaladsRegularly(x) \u2192 VeryConsciousAboutHealthAndEatingHabits(x))",
+            "\u2200x (Person(x) \u2227 GrewUpInHealthConsciousChildhoodHome(x) \u2192 EatsSaladsRegularly(x))",
+            "\u2200x (Person(x) \u2227 FulfillsNutritionalDailyIntakes(x) \u2192 GrewUpInHealthConsciousChildhoodHomes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 FulfillsNutritionalDailyIntakes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 \u00acRegularEaterOfSalads(x))",
+            "\u2200x (VisitsGymAtLeastOnceADay(x) \u2192 FulfillsDailyNutritionalIntakes(x))",
+            "\u2200x (Taylor(x) \u2192 ((HealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x)) \u2228 (\u00acHealthConsciousChildhoodHome(x) \u2227 \u00acGoodRelationshipWithParents(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All people who eat salads regularly are very conscious about their health and eating habits.",
+            "All people who grew up in health-conscious childhood homes eat salads regularly.",
+            "All people who fulfill their nutritional daily intakes grew up in health-conscious childhood homes.",
+            "If people have good relationships with their parents, then they fulfill their nutritional daily intakes.",
+            "If people have good relationships with their parents, then they do not eat salads regularly.",
+            "If people visit the gym at least once a day, then they always fulfill their daily nutritional intakes.",
+            "It is either both true that Taylor grew up in a health-conscious childhood home and she has a good relationship with her parents, or it is true that Taylor neither grew up in a health-conscious childhood home nor has a good relationship with her parents."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2227 EatsSaladsRegularly(x) \u2192 VeryConsciousAboutHealthAndEatingHabits(x))",
+            "\u2200x (Person(x) \u2227 GrewUpInHealthConsciousChildhoodHome(x) \u2192 EatsSaladsRegularly(x))",
+            "\u2200x (Person(x) \u2227 FulfillsNutritionalDailyIntakes(x) \u2192 GrewUpInHealthConsciousChildhoodHomes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 FulfillsNutritionalDailyIntakes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 \u00acRegularEaterOfSalads(x))",
+            "\u2200x (VisitsGymAtLeastOnceADay(x) \u2192 FulfillsDailyNutritionalIntakes(x))",
+            "\u2200x (Taylor(x) \u2192 ((HealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x)) \u2228 (\u00acHealthConsciousChildhoodHome(x) \u2227 \u00acGoodRelationshipWithParents(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All people who eat salads regularly are very conscious about their health and eating habits.",
+            "All people who grew up in health-conscious childhood homes eat salads regularly.",
+            "All people who fulfill their nutritional daily intakes grew up in health-conscious childhood homes.",
+            "If people have good relationships with their parents, then they fulfill their nutritional daily intakes.",
+            "If people have good relationships with their parents, then they do not eat salads regularly.",
+            "If people visit the gym at least once a day, then they always fulfill their daily nutritional intakes.",
+            "It is either both true that Taylor grew up in a health-conscious childhood home and she has a good relationship with her parents, or it is true that Taylor neither grew up in a health-conscious childhood home nor has a good relationship with her parents."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Person(x) \u2227 EatsSaladsRegularly(x) \u2192 VeryConsciousAboutHealthAndEatingHabits(x))",
+            "\u2200x (Person(x) \u2227 GrewUpInHealthConsciousChildhoodHome(x) \u2192 EatsSaladsRegularly(x))",
+            "\u2200x (Person(x) \u2227 FulfillsNutritionalDailyIntakes(x) \u2192 GrewUpInHealthConsciousChildhoodHomes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 FulfillsNutritionalDailyIntakes(x))",
+            "\u2200x (GoodRelationshipWithParents(x) \u2192 \u00acRegularEaterOfSalads(x))",
+            "\u2200x (VisitsGymAtLeastOnceADay(x) \u2192 FulfillsDailyNutritionalIntakes(x))",
+            "\u2200x (Taylor(x) \u2192 ((HealthConsciousChildhoodHome(x) \u2227 GoodRelationshipWithParents(x)) \u2228 (\u00acHealthConsciousChildhoodHome(x) \u2227 \u00acGoodRelationshipWithParents(x))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] The Olympic games is a sporting event. ",
+            "The last Olympic games was in Tokyo.",
+            "The United States won the most medals in Tokyo. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (OlympicGames(x) \u2192 SportingEvent(x))",
+            "\u2200x (OlympicGames(x) \u2227 Last(x) \u2192 HeldInTokyo(x))",
+            "\u2200x (UnitedStates(x) \u2227 WonMostMedals(x, Tokyo) \u2192 BestPerformance(x, Tokyo))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] The Olympic games is a sporting event. ",
+            "The last Olympic games was in Tokyo.",
+            "The United States won the most medals in Tokyo. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (OlympicGames(x) \u2192 SportingEvent(x))",
+            "\u2200x (OlympicGames(x) \u2227 Last(x) \u2192 HeldInTokyo(x))",
+            "\u2200x (UnitedStates(x) \u2227 WonMostMedals(x, Tokyo) \u2192 BestPerformance(x, Tokyo))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "[BG] The Olympic games is a sporting event. ",
+            "The last Olympic games was in Tokyo.",
+            "The United States won the most medals in Tokyo. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (OlympicGames(x) \u2192 SportingEvent(x))",
+            "\u2200x (OlympicGames(x) \u2227 Last(x) \u2192 HeldInTokyo(x))",
+            "\u2200x (UnitedStates(x) \u2227 WonMostMedals(x, Tokyo) \u2192 BestPerformance(x, Tokyo))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "All horses have hooves.",
+            "No humans have hooves."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Horse(x) \u2192 HasHooves(x))",
+            "\u2200x (Human(x) \u2192 \u00acHasHooves(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Susan flies to LGA airport.",
+            "The departure and arrival can not be the same airport.",
+            "John flies from LGA airport."
+        ],
+        "conclusion-fol": [
+            "\u2200x \u2200y (Susan(x) \u2227 LGAAirport(y) \u2192 FliesTo(x, y))",
+            "\u2200x\u2200y (Airport(x) \u2227 Airport(y) \u2227 Departure(x, y) \u2227 Arrival(x, y) \u2192 \u00acSameAirport(x, y))",
+            "\u2200x \u2200y (John(x) \u2227 LGAAirport(y) \u2192 FliesFrom(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Susan flies to LGA airport.",
+            "The departure and arrival can not be the same airport.",
+            "John flies from LGA airport."
+        ],
+        "conclusion-fol": [
+            "\u2200x \u2200y (Susan(x) \u2227 LGAAirport(y) \u2192 FliesTo(x, y))",
+            "\u2200x\u2200y (Airport(x) \u2227 Airport(y) \u2227 Departure(x, y) \u2227 Arrival(x, y) \u2192 \u00acSameAirport(x, y))",
+            "\u2200x \u2200y (John(x) \u2227 LGAAirport(y) \u2192 FliesFrom(x, y))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No one nice to animals is mean to animals.",
+            "Some grumpy people are mean to animals.",
+            "All animal lovers are nice to animals.",
+            "If someone owns a pet, then they love animals.",
+            "Tom is a pet owner."
+        ],
+        "conclusion-fol": [
+            "\u00ac(\u2203x (NiceToAnimals(x) \u2227 MeanToAnimals(x)))",
+            "\u2203x (Grumpy(x) \u2227 MeanToAnimals(x))",
+            "\u2200x (AnimalLover(x) \u2192 NiceToAnimals(x))",
+            "\u2200x (OwnsPet(x) \u2192 LovesAnimals(x))",
+            "OwnsPet(tom)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No one nice to animals is mean to animals.",
+            "Some grumpy people are mean to animals.",
+            "All animal lovers are nice to animals.",
+            "If someone owns a pet, then they love animals.",
+            "Tom is a pet owner."
+        ],
+        "conclusion-fol": [
+            "\u00ac(\u2203x (NiceToAnimals(x) \u2227 MeanToAnimals(x)))",
+            "\u2203x (Grumpy(x) \u2227 MeanToAnimals(x))",
+            "\u2200x (AnimalLover(x) \u2192 NiceToAnimals(x))",
+            "\u2200x (OwnsPet(x) \u2192 LovesAnimals(x))",
+            "OwnsPet(tom)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "No one nice to animals is mean to animals.",
+            "Some grumpy people are mean to animals.",
+            "All animal lovers are nice to animals.",
+            "If someone owns a pet, then they love animals.",
+            "Tom is a pet owner."
+        ],
+        "conclusion-fol": [
+            "\u00ac(\u2203x (NiceToAnimals(x) \u2227 MeanToAnimals(x)))",
+            "\u2203x (Grumpy(x) \u2227 MeanToAnimals(x))",
+            "\u2200x (AnimalLover(x) \u2192 NiceToAnimals(x))",
+            "\u2200x (OwnsPet(x) \u2192 LovesAnimals(x))",
+            "OwnsPet(tom)"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A podcast is not a novel.",
+            "[BG] If a person is born in American City, the person is American.",
+            "[BG] If a book is novel and it is written by a person, then the person is a novel writer.",
+            "Dani Shapiro is an American writer.",
+            "Family History is written by Dani Shapiro.",
+            "Family History is a novel written in 2003.",
+            "Dani Shapiro created a podcast called Family Secrets.",
+            "[BG] Boston is an American city."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Podcast(x) \u2192 \u00acNovel(x))",
+            "\u2200x (BornInAmericanCity(x) \u2192 American(x))",
+            "\u2200x (Book(x) \u2227 Novel(x) \u2227 WrittenBy(x, y) \u2192 NovelWriter(y))",
+            "W(DaniShapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(novel) \u2227 WrittenIn(2003)",
+            "CreatedPodcast(DaniShapiro, FamilySecrets)",
+            "\u2200x (City(x) \u2227 LocatedIn(x, Boston) \u2192 American(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A podcast is not a novel.",
+            "[BG] If a person is born in American City, the person is American.",
+            "[BG] If a book is novel and it is written by a person, then the person is a novel writer.",
+            "Dani Shapiro is an American writer.",
+            "Family History is written by Dani Shapiro.",
+            "Family History is a novel written in 2003.",
+            "Dani Shapiro created a podcast called Family Secrets.",
+            "[BG] Boston is an American city."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Podcast(x) \u2192 \u00acNovel(x))",
+            "\u2200x (BornInAmericanCity(x) \u2192 American(x))",
+            "\u2200x (Book(x) \u2227 Novel(x) \u2227 WrittenBy(x, y) \u2192 NovelWriter(y))",
+            "W(DaniShapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(novel) \u2227 WrittenIn(2003)",
+            "CreatedPodcast(DaniShapiro, FamilySecrets)",
+            "\u2200x (City(x) \u2227 LocatedIn(x, Boston) \u2192 American(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "A podcast is not a novel.",
+            "[BG] If a person is born in American City, the person is American.",
+            "[BG] If a book is novel and it is written by a person, then the person is a novel writer.",
+            "Dani Shapiro is an American writer.",
+            "Family History is written by Dani Shapiro.",
+            "Family History is a novel written in 2003.",
+            "Dani Shapiro created a podcast called Family Secrets.",
+            "[BG] Boston is an American city."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Podcast(x) \u2192 \u00acNovel(x))",
+            "\u2200x (BornInAmericanCity(x) \u2192 American(x))",
+            "\u2200x (Book(x) \u2227 Novel(x) \u2227 WrittenBy(x, y) \u2192 NovelWriter(y))",
+            "W(DaniShapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(novel) \u2227 WrittenIn(2003)",
+            "CreatedPodcast(DaniShapiro, FamilySecrets)",
+            "\u2200x (City(x) \u2227 LocatedIn(x, Boston) \u2192 American(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Some basketball players are not American.",
+            "All basketball players are tall.",
+            "If someone is tall, they wear large shoes.",
+            "If someone wears large shoes, they wear large-sized clothes.",
+            "Yuri does not wear large-size clothes."
+        ],
+        "conclusion-fol": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Some basketball players are not American.",
+            "All basketball players are tall.",
+            "If someone is tall, they wear large shoes.",
+            "If someone wears large shoes, they wear large-sized clothes.",
+            "Yuri does not wear large-size clothes."
+        ],
+        "conclusion-fol": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Some basketball players are not American.",
+            "All basketball players are tall.",
+            "If someone is tall, they wear large shoes.",
+            "If someone wears large shoes, they wear large-sized clothes.",
+            "Yuri does not wear large-size clothes."
+        ],
+        "conclusion-fol": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Some basketball players are not American.",
+            "All basketball players are tall.",
+            "If someone is tall, they wear large shoes.",
+            "If someone wears large shoes, they wear large-sized clothes.",
+            "Yuri does not wear large-size clothes."
+        ],
+        "conclusion-fol": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Some basketball players are not American.",
+            "All basketball players are tall.",
+            "If someone is tall, they wear large shoes.",
+            "If someone wears large shoes, they wear large-sized clothes.",
+            "Yuri does not wear large-size clothes."
+        ],
+        "conclusion-fol": [
+            "\u2203x (BasketballPlayer(x) \u2227 \u00acAmerican(x))",
+            "\u2200x (BasketballPlayer(x) \u2192 Tall(x))",
+            "\u2200x (Tall(x) \u2192 WearsLargeShoes(x))",
+            "\u2200x (WearsLargeShoes(x) \u2192 WearsLargeSizedClothes(x))",
+            "\u00ac(WearsLargeSizeClothes(yuri))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Events are either happy or sad.",
+            "At least one event is happy. "
+        ],
+        "conclusion-fol": [
+            "\u2200x (Event(x) \u2192 (Happy(x) \u2295 Sad(x)))",
+            "\u2203x (Event(x) \u2227 Happy(x))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "The winner of the 1992 du Maurier Classic was Steinhauer.",
+            "Steinhauer participated in the 1992 du Maurier Classic.",
+            "There was one six-way tie on the leaderboard and one person in the six-way tie was from Belgium.",
+            "Descampe is from Belgium and is on the leaderboard of the 1992 du Maurier Classic.",
+            "All people on the leaderboard of the 1992 du Maurier Classic participated in the 1992 du Maurier Classic."
+        ],
+        "conclusion-fol": [
+            "Winner(1992, Steinhauer)",
+            "Participated(Steinhauer, 1992DuMaurierClassic)",
+            "\u2203x (Leaderboard(x) \u2227 SixWayTie(x) \u2227 PersonFromBelgium(x))",
+            "Leaderboard(Descampe, 1992DuMaurierClassic)",
+            "\u2200x (Person(x) \u2227 LeaderboardOf(x, 1992_du_Maurier_Classic) \u2192 ParticipatedIn(x, 1992_du_Maurier_Classic))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "The winner of the 1992 du Maurier Classic was Steinhauer.",
+            "Steinhauer participated in the 1992 du Maurier Classic.",
+            "There was one six-way tie on the leaderboard and one person in the six-way tie was from Belgium.",
+            "Descampe is from Belgium and is on the leaderboard of the 1992 du Maurier Classic.",
+            "All people on the leaderboard of the 1992 du Maurier Classic participated in the 1992 du Maurier Classic."
+        ],
+        "conclusion-fol": [
+            "Winner(1992, Steinhauer)",
+            "Participated(Steinhauer, 1992DuMaurierClassic)",
+            "\u2203x (Leaderboard(x) \u2227 SixWayTie(x) \u2227 PersonFromBelgium(x))",
+            "Leaderboard(Descampe, 1992DuMaurierClassic)",
+            "\u2200x (Person(x) \u2227 LeaderboardOf(x, 1992_du_Maurier_Classic) \u2192 ParticipatedIn(x, 1992_du_Maurier_Classic))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If an animal barks, then Jane does not like it.",
+            "All dogs are animals that bark.",
+            "If an animal jumps, then Jane likes it.",
+            "If an animal has legs, then it jumps.",
+            "If an animal is terricolous, then it has legs. ",
+            "If KiKi neither jumps nor has legs, then KiKi is terricolous or has legs."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Animal(x) \u2227 Barks(x) \u2192 \u00acLikes(Jane, x))",
+            "\u2200x (Dog(x) \u2192 Barks(x))",
+            "\u2200x (Animal(x) \u2227 Jumps(x) \u2192 JaneLikes(x))",
+            "\u2200x (Animal(x) \u2227 HasLegs(x) \u2192 Jumps(x))",
+            "\u2200x (Animal(x) \u2227 Terricolous(x) \u2192 HasLegs(x))",
+            "\u2200x (KiKi(x) \u2227 \u00ac(Jumps(x) \u2228 HasLegs(x)) \u2192 (Terricolous(x) \u2228 HasLegs(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If an animal barks, then Jane does not like it.",
+            "All dogs are animals that bark.",
+            "If an animal jumps, then Jane likes it.",
+            "If an animal has legs, then it jumps.",
+            "If an animal is terricolous, then it has legs. ",
+            "If KiKi neither jumps nor has legs, then KiKi is terricolous or has legs."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Animal(x) \u2227 Barks(x) \u2192 \u00acLikes(Jane, x))",
+            "\u2200x (Dog(x) \u2192 Barks(x))",
+            "\u2200x (Animal(x) \u2227 Jumps(x) \u2192 JaneLikes(x))",
+            "\u2200x (Animal(x) \u2227 HasLegs(x) \u2192 Jumps(x))",
+            "\u2200x (Animal(x) \u2227 Terricolous(x) \u2192 HasLegs(x))",
+            "\u2200x (KiKi(x) \u2227 \u00ac(Jumps(x) \u2228 HasLegs(x)) \u2192 (Terricolous(x) \u2228 HasLegs(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "If an animal barks, then Jane does not like it.",
+            "All dogs are animals that bark.",
+            "If an animal jumps, then Jane likes it.",
+            "If an animal has legs, then it jumps.",
+            "If an animal is terricolous, then it has legs. ",
+            "If KiKi neither jumps nor has legs, then KiKi is terricolous or has legs."
+        ],
+        "conclusion-fol": [
+            "\u2200x (Animal(x) \u2227 Barks(x) \u2192 \u00acLikes(Jane, x))",
+            "\u2200x (Dog(x) \u2192 Barks(x))",
+            "\u2200x (Animal(x) \u2227 Jumps(x) \u2192 JaneLikes(x))",
+            "\u2200x (Animal(x) \u2227 HasLegs(x) \u2192 Jumps(x))",
+            "\u2200x (Animal(x) \u2227 Terricolous(x) \u2192 HasLegs(x))",
+            "\u2200x (KiKi(x) \u2227 \u00ac(Jumps(x) \u2228 HasLegs(x)) \u2192 (Terricolous(x) \u2228 HasLegs(x)))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Ailton Silva, born in 1995, is commonly known as Ailton.",
+            "Ailton is a football player who was loaned out to Braga.",
+            "Ailton Silva is a Brazillian footballer who plays for Nautico.",
+            "Nautico is a football club along with Braga.",
+            "Fluminense is a football club."
+        ],
+        "conclusion-fol": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 Name(x, \"Fluminense\") \u2227 City(x, Rio de Janeiro))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Ailton Silva, born in 1995, is commonly known as Ailton.",
+            "Ailton is a football player who was loaned out to Braga.",
+            "Ailton Silva is a Brazillian footballer who plays for Nautico.",
+            "Nautico is a football club along with Braga.",
+            "Fluminense is a football club."
+        ],
+        "conclusion-fol": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 Name(x, \"Fluminense\") \u2227 City(x, Rio de Janeiro))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Ailton Silva, born in 1995, is commonly known as Ailton.",
+            "Ailton is a football player who was loaned out to Braga.",
+            "Ailton Silva is a Brazillian footballer who plays for Nautico.",
+            "Nautico is a football club along with Braga.",
+            "Fluminense is a football club."
+        ],
+        "conclusion-fol": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 Name(x, \"Fluminense\") \u2227 City(x, Rio de Janeiro))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Ailton Silva, born in 1995, is commonly known as Ailton.",
+            "Ailton is a football player who was loaned out to Braga.",
+            "Ailton Silva is a Brazillian footballer who plays for Nautico.",
+            "Nautico is a football club along with Braga.",
+            "Fluminense is a football club."
+        ],
+        "conclusion-fol": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 Name(x, \"Fluminense\") \u2227 City(x, Rio de Janeiro))))"
+        ]
+    },
+    {
+        "premise-fol": [
+            "Ailton Silva, born in 1995, is commonly known as Ailton.",
+            "Ailton is a football player who was loaned out to Braga.",
+            "Ailton Silva is a Brazillian footballer who plays for Nautico.",
+            "Nautico is a football club along with Braga.",
+            "Fluminense is a football club."
+        ],
+        "conclusion-fol": [
+            "BornIn(AiltonSilva, 1995) \u2227 CommonlyKnownAs(AiltonSilva, Ailton)",
+            "\u2200x \u2200y (Ailton(x) \u2227 FootballPlayer(x) \u2227 Braga(y) \u2227 LoanedTo(x, y) \u2192 FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) \u2227 PlaysFor(AiltonSilva, Nautico)",
+            "\u2200x \u2200y (Nautico(x) \u2227 Braga(y) \u2192 FootballClubAlongWith(x, y))",
+            "\u2200x (FootballClub(x) \u2192 (Fluminense(x) \u2194 (Club(x) \u2227 Name(x, \"Fluminense\") \u2227 City(x, Rio de Janeiro))))"
+        ]
+    }
+]
