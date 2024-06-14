@@ -2,24 +2,24 @@ from nltk import *
 
 if __name__ == '__main__':
     read_expr = Expression.fromstring
-    a1 = read_expr("all x. (bakery(x) -> -spicy(x))")
-    a2 = read_expr("all x. (cupcake(x) -> bakery(x))")
-    a3 = read_expr("all x. (hotpot(x) -> spicy(x))")
-    a4 = read_expr("all x. (product_of_Baked_by_Melissa(x) -> cupcake(x))")
-    a5 = read_expr("all x. (dried_Thai_chili(x) & (spicy(x) | bakery(x)) -> (hotpot(x) | spicy(x)))")
-    a6 = read_expr("(AttendsSchoolEvents(Bonnie) & VeryEngagedWithSchoolEvents(Bonnie) & StudentAtSchool(Bonnie)) | (-AttendsSchoolEvents(Bonnie) & -VeryEngagedWithSchoolEvents(Bonnie) & -StudentAtSchool(Bonnie))")
+    a1 = read_expr("all x. (DesignStyle(x, Zaha_Hadid) -> Timeless(x))")
+    a2 = read_expr("all x. (MassProductDesign(x) -> -Timeless(x))")
+    a3 = read_expr("DesignStyle(Zaha_Hadid) | DesignStyle(Kelly_Wearstler)")
+    a4 = read_expr("all x. (DesignStyle(x, Kelly_Wearstler) -> Evocative(x))")
+    a5 = read_expr("all x. (DesignStyle(x, Kelly_Wearstler) -> Dreamy(x))")
+    a6 = read_expr("all x. (DesignBy(x, Max) & Timeless(x) -> (MassProductDesign(x) & Evocative(x)))")
     a7 = read_expr("EqualDouble(eight, four)")
     a8 = read_expr("EqualDouble(four, two)")
-    e = "exists x. (dried_Thai_chili(x) & product_of_Baked_by_Melissa(x))"
-    d = read_expr("-("+e+")")
+    e = read_expr("exists x. (DesignBy(x, Max) & MassProductDesign(x))")
+    # d = read_expr("-("+e+")")
     print([a1,a2,a3,a4,a5])
     mace = Mace()
     # first example
     print("##########-first-example-###########")
-    print("mace:", mace.build_model(d,[a1,a2,a3,a4,a5]))
-    q = Prover9().prove(d, [a1,a2,a3,a4,a5])
+    print("mace:", mace.build_model(e,[a1,a2,a3,a4,a5,a6]))
+    q = Prover9().prove(e, [a1,a2,a3,a4,a5,a6])
     print("prover:", q)
-    mb = MaceCommand(assumptions=[a1,a2,a3,a4,a5])
+    mb = MaceCommand(assumptions=[a1,a2,a3,a4,a5,a6])
     mb.build_model()
     print("mace model:", mb.model(format='cooked'))
 

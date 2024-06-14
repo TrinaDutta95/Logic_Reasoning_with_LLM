@@ -44,7 +44,7 @@ def amr_to_fol(amr):
     return logic
 
 
-def get_completion(prompt, model="gpt-4", temperature=0):
+def get_completion(prompt, model="gpt-4", temperature=0.2):
     """
     Generate a completion for the given prompt using the specified model.
 

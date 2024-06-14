@@ -1,0 +1,137 @@
+Error
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: Human/1, Human/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: Human/1, Human/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: Human/1, Human/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: Human/1, Human/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: Human/1, Human/0, Monkeypox/1, Monkeypox/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: Human/1, Human/0, Monkeypox/1, Monkeypox/0"
+"(FATAL)
+%%ERROR: The following symbols/arities are used as both relation and function symbols: from_earth/1, from_mars/1.
+
+
+Fatal error:  The following symbols/arities are used as both relation and function symbols: from_earth/1, from_mars/1"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: ProfessionalWrestlingStable/2, ProfessionalWrestlingStable/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: ProfessionalWrestlingStable/2, ProfessionalWrestlingStable/0"
+"(FATAL)
+%%ERROR: A term cannot be constructed from the marked string:
+
+
+    exists x (DesignBy(%%START ERROR%%x,'Max'%%END ERROR%%) & MassProductDesign(x)).
+
+Fatal error:  sread_term error"
+"(FATAL)
+%%ERROR: A term cannot be constructed from the marked string:
+
+
+    all x (design_style(%%START ERROR%%x,'Zaha_Hadid'%%END ERROR%%) -> timeless(x)).
+
+Fatal error:  sread_term error"
+"(FATAL)
+%%ERROR: A term cannot be constructed from the marked string:
+
+
+    all x (DesignStyleOf(%%START ERROR%%x,'Zaha_Hadid'%%END ERROR%%) -> Timeless(x)).
+
+Fatal error:  sread_term error"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: RomanceLanguage/1, RomanceLanguage/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: RomanceLanguage/1, RomanceLanguage/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: RomanceLanguage/1, RomanceLanguage/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: RomanceLanguage/1, RomanceLanguage/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: Related/2, Related/1, RomanceLanguage/1, RomanceLanguage/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: Related/2, Related/1, RomanceLanguage/1, RomanceLanguage/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: ResidentialColleges/2, ResidentialColleges/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: ResidentialColleges/2, ResidentialColleges/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: dried_Thai_chili/1, dried_Thai_chili/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: dried_Thai_chili/1, dried_Thai_chili/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: dried_Thai_chili/1, dried_Thai_chili/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: dried_Thai_chili/1, dried_Thai_chili/0"
+"(FATAL)
+%%ERROR: The following symbols/arities are used as both relation and function symbols: more/2, managed_building/1.
+
+
+Fatal error:  The following symbols/arities are used as both relation and function symbols: more/2, managed_building/1"
+"(FATAL)
+%%ERROR: The following symbols/arities are used as both relation and function symbols: SecurityDeposit/0, OneMonthRent/0.
+
+
+Fatal error:  The following symbols/arities are used as both relation and function symbols: SecurityDeposit/0, OneMonthRent/0"
+"(FATAL)
+%%ERROR: The following symbols/arities are used as both relation and function symbols: in_building/1.
+
+
+Fatal error:  The following symbols/arities are used as both relation and function symbols: in_building/1"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: LocatedAt/3, LocatedAt/2.
+
+
+Fatal error:  The following symbols are used with multiple arities: LocatedAt/3, LocatedAt/2"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: Greyhound/1, Greyhound/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: Greyhound/1, Greyhound/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: Greyhound/1, Greyhound/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: Greyhound/1, Greyhound/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: Greyhound/1, Greyhound/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: Greyhound/1, Greyhound/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: bred_back/1, bred_back/2, aurochs/1, aurochs/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: bred_back/1, bred_back/2, aurochs/1, aurochs/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: bred_back/1, bred_back/2, aurochs/1, aurochs/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: bred_back/1, bred_back/2, aurochs/1, aurochs/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: bile_duct_cancer/1, bile_duct_cancer/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: bile_duct_cancer/1, bile_duct_cancer/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: bile_duct_cancer/1, bile_duct_cancer/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: bile_duct_cancer/1, bile_duct_cancer/0"
+"(FATAL)
+%%ERROR: The following symbols are used with multiple arities: bile_duct_cancer/1, bile_duct_cancer/0.
+
+
+Fatal error:  The following symbols are used with multiple arities: bile_duct_cancer/1, bile_duct_cancer/0"

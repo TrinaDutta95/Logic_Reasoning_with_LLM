@@ -1,0 +1,912 @@
+[
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "True",
+        "error": "(FATAL)\n%%ERROR: The following symbols/arities are used as both relation and function symbols: earthling/1, marsAlien/1.\n\n\nFatal error:  The following symbols/arities are used as both relation and function symbols: earthling/1, marsAlien/1"
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "True",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: ResidentialColleges/2, ResidentialColleges/0.\n\n\nFatal error:  The following symbols are used with multiple arities: ResidentialColleges/2, ResidentialColleges/0"
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "False",
+        "error": "(FATAL)\n%%ERROR: The following symbols/arities are used as both relation and function symbols: GreaterThan/2, IsManagedBuilding/1.\n\n\nFatal error:  The following symbols/arities are used as both relation and function symbols: GreaterThan/2, IsManagedBuilding/1"
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "Uncertain",
+        "error": "(FATAL)\n%%ERROR: The following symbols/arities are used as both relation and function symbols: HasSecurityDeposit/2, OneMonthRent/2.\n\n\nFatal error:  The following symbols/arities are used as both relation and function symbols: HasSecurityDeposit/2, OneMonthRent/2"
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "False",
+        "error": "(MAX_SECONDS)"
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "True",
+        "error": "Unexpected token: ','.  Expression expected.\nall x, y, z. ((LocatedAt(x, y) & LocatedAt(y, z)) -> LocatedAt(x, z))\n     ^"
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "True",
+        "error": "(FATAL)\n%%ERROR: The following symbols/arities are used as both relation and function symbols: IsBird/1.\n\n\nFatal error:  The following symbols/arities are used as both relation and function symbols: IsBird/1"
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "False",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: BirdType/1, BirdType/0, CanFly/1, CanFly/0.\n\n\nFatal error:  The following symbols are used with multiple arities: BirdType/1, BirdType/0, CanFly/1, CanFly/0"
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "True",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Aurochs/1, Aurochs/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Aurochs/1, Aurochs/0"
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "True",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: bile_duct_cancer/1, bile_duct_cancer/0.\n\n\nFatal error:  The following symbols are used with multiple arities: bile_duct_cancer/1, bile_duct_cancer/0"
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "True",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "False",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "Uncertain",
+        "error": null
+    },
+    {
+        "predicted_label": "Uncertain",
+        "actual_label": "True",
+        "error": null
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "False",
+        "error": "(FATAL)\n%%ERROR: A term cannot be constructed from the marked string:\n\n\n    all x (DesignStyleOf(%%START ERROR%%x,'Zaha_Hadid'%%END ERROR%%) -> Timeless(x)).\n\nFatal error:  sread_term error"
+    },
+    {
+        "predicted_label": "ERROR",
+        "actual_label": "False",
+        "error": "(FATAL)\n%%ERROR: A term cannot be constructed from the marked string:\n\n\n    StreamingService(%%START ERROR%%'1984'%%END ERROR%%).\n\nFatal error:  sread_term error"
+    },
+    {
+        "predicted_label": "False",
+        "actual_label": "True",
+        "error": null
+    }
+]

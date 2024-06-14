@@ -81,14 +81,14 @@ def gen_updatednl(counter_example, premises, conclusion, api_key):
         "conclusion": "If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.",
         "conclusion-FOL": "((AcademicCareer(Bonnie) & -Chaperone(Bonnie)) | (-AcademicCareer(Bonnie) & Chaperone(Bonnie))) -> ((AcademicCareer(Bonnie) & -Inactive(Bonnie)) | (-AcademicCareer(Bonnie) & Inactive(Bonnie)))"
     Ensure that:
-    - Do not use symbols as both relation and function.
-    - Symbols are consistently used as either predicates or functions with consistent arities.
-    - Quantifiers are correctly placed 
-    - No quotations are required for any proper noun.
-    - Make sure your output has both premise and conclusion expressions
-    - The FOL expressions are valid and well-formed for use in theorem provers like Prover9.
-    - Make sure the FOL expressions are consistent, syntactically correct, and have balanced parentheses.
-    - Make sure the output is not like a chat response.
+    - You do not use symbols/arities as both relation and function.
+    - The FOL expressions are valid and well-formed for use in theorem provers like Prover9 with consistent arities.
+    - The FOL expressions are consistent, syntactically correct, and have balanced parentheses.
+    - You do not describe your answer like a chat.
+    - You do not put quotations around any proper nouns or person's names.
+    - You do not use decimal numbers
+    - You respond only with the JSON dictionary and nothing else.
+    - Your output includes both premise and conclusion expressions.
     
      Your output should be a dictionary with the keys "premises-FOL" for premises with all FOL expressions
     /in a single list and "conclusion-FOL" for conclusion with FOL expression in a single list.
@@ -112,8 +112,7 @@ def fix_error(premise_fol, conclusion_fol, error, api_key):
             """
     openai.api_key = api_key
     prompt_3 = f"""Your task is to fix some errors in first order logic statements. 
-    /I will provide you with the {error} and the first order logic {premise_fol} and 
-    /{conclusion_fol} such that they do not contain that error. 
+    I will provide you with the {error}, the {premise_fol}, and the {conclusion_fol} such that they do not contain that error.
     Follow the given examples for format and syntax:
     Example1:
     "premises-FOL": [
@@ -181,13 +180,15 @@ def fix_error(premise_fol, conclusion_fol, error, api_key):
     "conclusion-FOL": "Film(Hamilton)"
     
     Ensure that:
-    - Do not use symbols/arities as both relation and function.
-    - The FOL expressions are valid and well-formed for use in theorem provers like Prover9 with consistent arities..
-    - Make sure the FOL expressions are consistent, syntactically correct, and have balanced parentheses.
-    - Do not describe your answer like a chat response.
-    - Make sure your output has both premise and conclusion expressions
-    Your output should be a dictionary with the keys "premises-FOL" for premises with all FOL expressions
-    /in a single list and "conclusion-FOL" for conclusion with FOL expression in a single list.
+    - You use common sense and do not use symbols/arities as both relation and function.
+    - The FOL expressions are valid and well-formed for use in theorem provers like Prover9 with consistent arities.
+    - The FOL expressions are consistent, syntactically correct, and have balanced parentheses.
+    - You do not describe your answer like a chat.
+    - You do not use decimal numbers.
+    - You do not put quotations around any proper nouns or person's names.
+    - You respond only with the JSON dictionary and nothing else.
+    - Your output includes both premise and conclusion expressions.
+    Your output must be a JSON dictionary with the keys "premises-FOL" for premises (a single list of FOL expressions) and "conclusion-FOL" for the conclusion (a single list of FOL expressions).
 
         """
     response_t = get_completion(prompt_3)
@@ -198,6 +199,12 @@ def iter_inference_with_mace(premises, conclusion, premise_fol, conclusion_fol, 
     counter_example = gen_counterexample(premise_fol)
     print(counter_example)
     fol_dict = gen_updatednl(counter_example, premises, conclusion, api_key)
+    '''
+    if isinstance(fol_dict, str):
+        new_fol_dict = fol_dict.replace("'", '"')
+    print(new_fol_dict)
+    '''
+    print(type(fol_dict))
     fol_data = json.loads(fol_dict)
     print(type(fol_data))
     proof_result, premise_fol, conclusion_fol, error = get_result(fol_data, conclusion_fol)
@@ -228,6 +235,11 @@ def iter_inference_for_error(premise_fol, conclusion_fol, actual_label, predicte
     print(premise_fol, conclusion_fol, actual_label, predicted_label, error)
     print(type(error))
     fol_dict = fix_error(premise_fol, conclusion_fol, error, api_key)
+    '''
+        if isinstance(fol_dict, str):
+            new_fol_dict = fol_dict.replace("'", '"')
+        print(new_fol_dict)
+        '''
     print(type(fol_dict))
     fol_data = json.loads(fol_dict)
     print(type(fol_data))
@@ -273,9 +285,10 @@ def main(fol_data):
                 print("Pass3")
                 count = count + 1
                 proof_result = predicted_label
-            len_new_premise = len(premise_fol)
-            results.append({"predicted_label": proof_result, "actual_label": actual_label})
 
+            len_new_premise = len(premise_fol)
+
+        results.append({"predicted_label": proof_result, "actual_label": actual_label, "error": error})
     return results
 
 
