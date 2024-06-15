@@ -16,8 +16,8 @@ def read_json(filepath):
     extracted_data = []
     for obj in data:
         extracted_obj = {
-            "premise-fol": obj.get("premise-fol", []),
-            "conclusion-fol": obj.get("conclusion-fol", []),
+            "premise-fol": obj.get("premises-FOL", []),
+            "conclusion-fol": obj.get("conclusion-FOL", []),
             "premises": obj.get("premises", []),
             "conclusion": obj.get("conclusion", []),
             "label": obj.get("label", []),
@@ -34,13 +34,14 @@ def evaluate(conclusion, premises):
         # print(premise)
         premise_fol_data.append(premise)
 
-    conclusion_fol_data = read_expr(conclusion[0])
+    # conclusion_fol_data = read_expr(conclusion[0])
+    conclusion_fol_data = read_expr(conclusion)
 
     truth_value = prover.prove(conclusion_fol_data, premise_fol_data)
     if truth_value:
         return "True"
     else:
-        n_conclusion = (conclusion[0])
+        n_conclusion = conclusion
         neg_c = read_expr("-("+n_conclusion+")")
         print(neg_c)
         negation_true = prover.prove(neg_c, premise_fol_data)
@@ -50,16 +51,19 @@ def evaluate(conclusion, premises):
             return "Uncertain"
 
 
+
 def baseline_infer(fol_data):
     results = []  # Store results for each example
 
     for item in fol_data:
         # Accessing data from the dictionary
-        premises = item.get("premises", [])
-        conclusion = item.get("conclusion", [])
-        label = item.get("label", [])
+        # premises = item.get("premises", [])
+        # conclusion = item.get("conclusion", [])
+        # label = item.get("label", [])
         premise_fol = item.get("premise-fol", [])
+        print(premise_fol)
         conclusion_fol = item.get("conclusion-fol", [])
+        print(conclusion_fol)
         # print(premise_fol, "\n", conclusion_fol)
 
         try:
@@ -73,11 +77,11 @@ def baseline_infer(fol_data):
             error = str(e)
 
         results.append({
-            "premise": premises,
-            "conclusion": conclusion,
+            # "premise": premises,
+            # "conclusion": conclusion,
             "premise-fol": premise_fol,
             "conclusion-fol": conclusion_fol,
-            "actual_label": label,
+            # "actual_label": label,
             "predicted_label": proof_result,
             "error": error
         })
@@ -85,8 +89,8 @@ def baseline_infer(fol_data):
 
 
 if __name__ == '__main__':
-    with open('results/baseline_result.json', 'w', encoding='utf-8') as file:
-        fol_data = read_json("data/merged_file.json")
+    with open('results/logicllama_result.json', 'w', encoding='utf-8') as file:
+        fol_data = read_json("data/updated_logic_llama_folio_validation.json")
         results = baseline_infer(fol_data)
         results_json = json.dumps(results, indent=4)
         file.write(results_json)

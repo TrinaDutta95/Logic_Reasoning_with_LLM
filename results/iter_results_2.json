@@ -270,8 +270,8 @@
         "error": null
     },
     {
-        "predicted_label": "Uncertain",
-        "actual_label": "Uncertain",
+        "predicted_label": "True",
+        "actual_label": "True",
         "error": null
     },
     {

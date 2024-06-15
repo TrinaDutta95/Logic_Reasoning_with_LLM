@@ -1,5 +1,18 @@
 import requests
 
+"""
+FOLIO: Natural Language Reasoning with First-Order Logic
+https://arxiv.org/pdf/2209.00840.pdf
+"""
+
+_CITATION = """
+@article{han2022folio,
+  title={Folio: Natural language reasoning with first-order logic},
+  author={Han, Simeng and Schoelkopf, Hailey and Zhao, Yilun and Qi, Zhenting and Riddell, Martin and Benson, Luke and Sun, Lucy and Zubova, Ekaterina and Qiao, Yujie and Burtell, Matthew and others},
+  journal={arXiv preprint arXiv:2209.00840},
+  year={2022}
+}
+"""
 def preprocess():
     val_url = "https://raw.githubusercontent.com/Yale-LILY/FOLIO/main/data/v0.0/folio-validation.jsonl"
     train_url = "https://raw.githubusercontent.com/Yale-LILY/FOLIO/main/data/v0.0/folio-train.jsonl"

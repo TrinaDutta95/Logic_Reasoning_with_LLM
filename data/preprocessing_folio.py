@@ -22,10 +22,10 @@ class FolioDatasetUpdater:
                 print(sample)
                 count = count + 1
                 print(count)
-                sample["label"] = self.ERROR_TOKEN
+                # sample["label"] = self.ERROR_TOKEN
             return sample
 
-        return [reformat_fol_sample(sample) for sample in dataset if sample["label"] != self.ERROR_TOKEN]
+        return [reformat_fol_sample(sample) for sample in dataset]
 
     def load_dataset(self, file_path):
         dataset = []
@@ -43,15 +43,39 @@ class FolioDatasetUpdater:
         with open(file_path, 'w') as file:
             json.dump(dataset, file, indent=4)
 
+def remove_lines_from_file(input_file, output_file, lines_to_remove):
+    """
+    Remove specified lines from a file.
+
+    :param input_file: Path to the input file.
+    :param output_file: Path to the output file where the result will be saved.
+    :param lines_to_remove: List of line numbers to remove (1-based index).
+    """
+    with open(input_file, 'r') as file:
+        lines = file.readlines()
+
+    # Remove the specified lines (convert 1-based index to 0-based)
+    lines_to_remove = set(line - 1 for line in lines_to_remove)
+    filtered_lines = [line for index, line in enumerate(lines) if index not in lines_to_remove]
+
+    with open(output_file, 'w') as file:
+        file.writelines(filtered_lines)
+
 
 if __name__ == "__main__":
     # creating json files
     # preprocess()
+    input_file = 'new_logic_llama_folio_validation.json'
+    output_file = 'updated_logicllama_fol.json'
+    lines_to_remove = [3, 6, 10, 11, 12, 28, 30, 48, 88, 106, 107, 108, 109, 110, 111, 113, 115, 139, 140, 174, 175,
+                       176]  # specify the lines you want to remove
+
+    remove_lines_from_file(input_file, output_file, lines_to_remove)
     updater = FolioDatasetUpdater(error_token="ERROR")
     # input_train_path = 'folio_train.json'
     # output_train_path = 'updated_folio_train.json'
-    input_val_path = 'folio_validation.json'
-    output_val_path = 'updated_folio_validation.json'
+    input_val_path = 'updated_logicllama_fol.json'
+    output_val_path = 'updated_logic_llama_folio_validation.json'
 
     # Load the dataset
     # dataset_train = updater.load_dataset(input_train_path)

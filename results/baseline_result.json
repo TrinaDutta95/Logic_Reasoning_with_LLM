@@ -3849,6 +3849,36 @@
         "predicted_label": "True",
         "error": null
     },
+
+    {
+        "premise": [
+            "A podcast is not a novel.",
+            "[BG] If a person is born in American City, the person is American.",
+            "[BG] If a book is novel and it is written by a person, then the person is a novel writer.",
+            "Dani Shapiro is an American writer.",
+            "Family History is written by Dani Shapiro.",
+            "Family History is a novel written in 2003.",
+            "Dani Shapiro created a podcast called Family Secrets.",
+            "[BG] Boston is an American city."
+        ],
+        "conclusion": "Dani Shapiro is a novel writer.",
+        "premise-fol": [
+            "-novel(podcast)",
+            "all x. (born_in_american_city(x) -> american(x))",
+            "all x. all y. ((novel(y) & written_by(x, y)) -> novel_writer(x))",
+            "american(dani_shapiro) & writer(dani_shapiro)",
+            "written_by(dani_shapiro, family_history)",
+            "novel(family_history) & written_in(family_history, 2003)",
+            "created(dani_shapiro, family_secrets)",
+            "american_city(boston)"
+        ],
+        "conclusion-fol": [
+            "novel_writer(dani_shapiro)"
+        ],
+        "actual_label": "True",
+        "predicted_label": "True",
+        "error": null
+    },
     {
         "premise": [
             "A podcast is not a novel.",

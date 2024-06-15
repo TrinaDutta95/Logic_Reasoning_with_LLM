@@ -1,0 +1,2236 @@
+[
+    {
+        "premise-fol": [
+            "all x. (PerformsInSchoolTalentShowsOften(x) -> (AttendsSchoolEvents(x) & EngagedWithSchoolEvents(x)))",
+            "all x. (Person(x) -> (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) & Disinterested(x))))",
+            "all x. (ChaperoneHighSchoolDance(x) -> -StudentAtSchool(x))",
+            "all x. (Person(x) & Inactive(x) & Disinterested(x) & CommunityMember(x) -> ChaperonesHighSchoolDances(x))",
+            "all x. (YoungChildOrTeenager(x) & WishesToFurtherAcademicCareer(x) & SeeksEducationalOpportunities(x) -> StudentWhoAttendsSchool(x))",
+            "all x. (Bonnie(x) -> ((AttendsSchoolEvents(x) & VeryEngaged(x)) | (-AttendsSchoolEvents(x) & -VeryEngaged(x))))"
+        ],
+        "conclusion-fol": "exists x. (PerformsInSchoolTalentShows(x, Bonnie))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '\u2295'.  Expected token ')'.\nall x. (Person(x) -> (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) & Disinterested(x))))\n                                                     ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (PerformsInSchoolTalentShowsOften(x) -> (AttendsSchoolEvents(x) & EngagedWithSchoolEvents(x)))",
+            "all x. (Person(x) -> (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) & Disinterested(x))))",
+            "all x. (ChaperoneHighSchoolDance(x) -> -StudentAtSchool(x))",
+            "all x. (Person(x) & Inactive(x) & Disinterested(x) & CommunityMember(x) -> ChaperonesHighSchoolDances(x))",
+            "all x. (YoungChildOrTeenager(x) & WishesToFurtherAcademicCareer(x) & SeeksEducationalOpportunities(x) -> StudentWhoAttendsSchool(x))",
+            "all x. (Bonnie(x) -> ((AttendsSchoolEvents(x) & VeryEngaged(x)) | (-AttendsSchoolEvents(x) & -VeryEngaged(x))))"
+        ],
+        "conclusion-fol": "all x. (Bonnie(x) -> ((YoungChild(x) | Teenager(x)) & (FurtherAcademicCareer(x) & EducationalOpportunities(x)) & (ChaperonesHighSchoolDances(x) | -(YoungChild(x) | Teenager(x))) -> (Student(x) & AttendsSchool(x) | (Inactive(x) & Dis",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '\u2295'.  Expected token ')'.\nall x. (Person(x) -> (PerformsInSchoolTalentShows(x) \u2295 (Inactive(x) & Disinterested(x))))\n                                                     ^"
+    },
+    {
+        "premise-fol": [
+            "all xall y. (Employee(x) & Customer(y) & SchedulesMeeting(x, y) -> AppearsInCompany(x))",
+            "all x. (HasLunchInCompany(x) -> SchedulesMeetingsWithCustomers(x))",
+            "all x. (Employee(x) -> (((HasLunchInCompany(x) & -HasLunchAtHome(x)) | (-HasLunchInCompany(x) & HasLunchAtHome(x)))))",
+            "all x. (Employee(x) & LunchAtHome(x) -> WorkingRemotelyFromHome(x))",
+            "all x. (Employee(x) & -InHomeCountry(x) -> WorksRemotelyFromHome(x))",
+            "-exists x. (Manager(x) & WorksRemotelyFromHome(x))",
+            "all x. (James(x) -> (Manager(x) & AppearsInCompanyToday(x) | (-Manager(x) & -AppearsInCompanyToday(x))))"
+        ],
+        "conclusion-fol": "exists x. (Person(x) & Company(y) & LunchIn(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Employee(x) & Customer(y) & SchedulesMeeting(x, y) -> AppearsInCompany(x))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all xall y. (Employee(x) & Customer(y) & SchedulesMeeting(x, y) -> AppearsInCompany(x))",
+            "all x. (HasLunchInCompany(x) -> SchedulesMeetingsWithCustomers(x))",
+            "all x. (Employee(x) -> (((HasLunchInCompany(x) & -HasLunchAtHome(x)) | (-HasLunchInCompany(x) & HasLunchAtHome(x)))))",
+            "all x. (Employee(x) & LunchAtHome(x) -> WorkingRemotelyFromHome(x))",
+            "all x. (Employee(x) & -InHomeCountry(x) -> WorksRemotelyFromHome(x))",
+            "-exists x. (Manager(x) & WorksRemotelyFromHome(x))",
+            "all x. (James(x) -> (Manager(x) & AppearsInCompanyToday(x) | (-Manager(x) & -AppearsInCompanyToday(x))))"
+        ],
+        "conclusion-fol": "-exists x. (Company(x) & LunchIn(James, x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Employee(x) & Customer(y) & SchedulesMeeting(x, y) -> AppearsInCompany(x))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "Monkeypox(m) & InfectiousDisease(m) & CausedBy(m, MonkeypoxVirus)",
+            "all x. (MonkeypoxVirus(x) -> (OccursInAnimal(x) & (OccursInHuman(x) | -OccursInHuman(x))))",
+            "all x. (Human(x) -> Mammal(x))",
+            "all x. (Mammal(x) -> Animal(x))",
+            "all x. (Symptom(x) & Monkeypox(x) -> (Fever(x) & Headache(x) & MusclePains(x) & FeelingTired(x)))",
+            "all x. (Glu(x) -> FeelsTired(x))"
+        ],
+        "conclusion-fol": "exists x. (Animal(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: MonkeypoxVirus/1, MonkeypoxVirus/0.\n\n\nFatal error:  The following symbols are used with multiple arities: MonkeypoxVirus/1, MonkeypoxVirus/0"
+    },
+    {
+        "premise-fol": [
+            "Monkeypox(m) & InfectiousDisease(m) & CausedBy(m, MonkeypoxVirus)",
+            "all x. (MonkeypoxVirus(x) -> (OccursInAnimal(x) & (OccursInHuman(x) | -OccursInHuman(x))))",
+            "all x. (Human(x) -> Mammal(x))",
+            "all x. (Mammal(x) -> Animal(x))",
+            "all x. (Symptom(x) & Monkeypox(x) -> (Fever(x) & Headache(x) & MusclePains(x) & FeelingTired(x)))",
+            "all x. (Glu(x) -> FeelsTired(x))"
+        ],
+        "conclusion-fol": "all x. (Person(x) -> -GetsFlu(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: MonkeypoxVirus/1, MonkeypoxVirus/0.\n\n\nFatal error:  The following symbols are used with multiple arities: MonkeypoxVirus/1, MonkeypoxVirus/0"
+    },
+    {
+        "premise-fol": [
+            "Monkeypox(m) & InfectiousDisease(m) & CausedBy(m, MonkeypoxVirus)",
+            "all x. (MonkeypoxVirus(x) -> (OccursInAnimal(x) & (OccursInHuman(x) | -OccursInHuman(x))))",
+            "all x. (Human(x) -> Mammal(x))",
+            "all x. (Mammal(x) -> Animal(x))",
+            "all x. (Symptom(x) & Monkeypox(x) -> (Fever(x) & Headache(x) & MusclePains(x) & FeelingTired(x)))",
+            "all x. (Glu(x) -> FeelsTired(x))"
+        ],
+        "conclusion-fol": "all x. (Monkeypox(x) -> Coughing(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: MonkeypoxVirus/1, MonkeypoxVirus/0.\n\n\nFatal error:  The following symbols are used with multiple arities: MonkeypoxVirus/1, MonkeypoxVirus/0"
+    },
+    {
+        "premise-fol": [
+            "exists x. (JapaneseGameCompany(x) & Created(x, LegendOfZelda))",
+            "all x. (Game(x) & InTopOneZero(x) -> MadeByJapaneseCompany(x))",
+            "all x. (Game(x) & SellsMoreThanOneMillionCopies(x) -> SelectedIntoTopOneZeroList(x))",
+            "exists x. (Game(x) & Zelda(x) & SoldMoreThanOneMillion(x))"
+        ],
+        "conclusion-fol": "exists x. (Game(x) & LegendOfZelda(x) & InTopOneZero(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: LegendOfZelda/1, LegendOfZelda/0.\n\n\nFatal error:  The following symbols are used with multiple arities: LegendOfZelda/1, LegendOfZelda/0"
+    },
+    {
+        "premise-fol": [
+            "exists x. (JapaneseGameCompany(x) & Created(x, LegendOfZelda))",
+            "all x. (Game(x) & InTopOneZero(x) -> MadeByJapaneseCompany(x))",
+            "all x. (Game(x) & SellsMoreThanOneMillionCopies(x) -> SelectedIntoTopOneZeroList(x))",
+            "exists x. (Game(x) & Zelda(x) & SoldMoreThanOneMillion(x))"
+        ],
+        "conclusion-fol": "JapaneseVideoGameCompany(FIFATwoTwo)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "exists x. (JapaneseGameCompany(x) & Created(x, LegendOfZelda))",
+            "all x. (Game(x) & InTopOneZero(x) -> MadeByJapaneseCompany(x))",
+            "all x. (Game(x) & SellsMoreThanOneMillionCopies(x) -> SelectedIntoTopOneZeroList(x))",
+            "exists x. (Game(x) & Zelda(x) & SoldMoreThanOneMillion(x))"
+        ],
+        "conclusion-fol": "-(LegendOfZeldaInTopOneZero(n))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Square(x) -> HasFourSides(x))",
+            "all x. (FourSided(x) -> Shape(x))"
+        ],
+        "conclusion-fol": "all x. (Square(x) -> Shape(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Rabbit(x) -> Cute(x))",
+            "exists x. (Turtle(x))",
+            "all x. (Animal(x) -> (((Rabbit(x) & -Squirrel(x)) | (-Rabbit(x) & Squirrel(x)))))",
+            "all x. (Skittish(x) -> -Still(x))",
+            "all x. (Squirrel(x) -> Skittish(x))",
+            "all x. (Rock(x) -> Still(x))"
+        ],
+        "conclusion-fol": "all x. (Rock(x) -> Turtle(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Rabbit(x) -> Cute(x))",
+            "exists x. (Turtle(x))",
+            "all x. (Animal(x) -> (((Rabbit(x) & -Squirrel(x)) | (-Rabbit(x) & Squirrel(x)))))",
+            "all x. (Skittish(x) -> -Still(x))",
+            "all x. (Squirrel(x) -> Skittish(x))",
+            "all x. (Rock(x) -> Still(x))"
+        ],
+        "conclusion-fol": "all x. (Rock(x) -> -Turtle(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Rabbit(x) -> Cute(x))",
+            "exists x. (Turtle(x))",
+            "all x. (Animal(x) -> (((Rabbit(x) & -Squirrel(x)) | (-Rabbit(x) & Squirrel(x)))))",
+            "all x. (Skittish(x) -> -Still(x))",
+            "all x. (Squirrel(x) -> Skittish(x))",
+            "all x. (Rock(x) -> Still(x))"
+        ],
+        "conclusion-fol": "all x. (Rock(x) -> (Turtle(x) | Cute(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Rabbit(x) -> Cute(x))",
+            "exists x. (Turtle(x))",
+            "all x. (Animal(x) -> (((Rabbit(x) & -Squirrel(x)) | (-Rabbit(x) & Squirrel(x)))))",
+            "all x. (Skittish(x) -> -Still(x))",
+            "all x. (Squirrel(x) -> Skittish(x))",
+            "all x. (Rock(x) -> Still(x))"
+        ],
+        "conclusion-fol": "all x. (Rock(x) & -(Turtle(x) & Squirrel(x)) -> (Cute(x) | Skittish(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Rabbit(x) -> Cute(x))",
+            "exists x. (Turtle(x))",
+            "all x. (Animal(x) -> (((Rabbit(x) & -Squirrel(x)) | (-Rabbit(x) & Squirrel(x)))))",
+            "all x. (Skittish(x) -> -Still(x))",
+            "all x. (Squirrel(x) -> Skittish(x))",
+            "all x. (Rock(x) -> Still(x))"
+        ],
+        "conclusion-fol": "all x. ((Cute(x) & Still(x)) -> (Turtle(x) & Skittish(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "PopularNetflixShow(StrangerThings)",
+            "all x. (NetflixShow(x) & Popular(x) -> BingeWatch(Karen, x))",
+            "all x. (BingeWatchesNetflixShow(x) -> DownloadsShow(x))",
+            "-(KarenDownloads(BlackMirror))",
+            "exists x. (NetflixShow(x) & Name(x, \"Black Mirror\"))",
+            "all xall y. (BingeWatchesNetflixShow(x) -> SharesTo(x, y, Lisa))"
+        ],
+        "conclusion-fol": "all x. all y. (Karen(x) & Lisa(y) & Shares(x, y, \"Stranger Things\"))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: 'Mirror\"'.  Expected token ')'.\nexists x. (NetflixShow(x) & Name(x, \"Black Mirror\"))\n                                           ^"
+    },
+    {
+        "premise-fol": [
+            "PopularNetflixShow(StrangerThings)",
+            "all x. (NetflixShow(x) & Popular(x) -> BingeWatch(Karen, x))",
+            "all x. (BingeWatchesNetflixShow(x) -> DownloadsShow(x))",
+            "-(KarenDownloads(BlackMirror))",
+            "exists x. (NetflixShow(x) & Name(x, \"Black Mirror\"))",
+            "all xall y. (BingeWatchesNetflixShow(x) -> SharesTo(x, y, Lisa))"
+        ],
+        "conclusion-fol": "Popular(BlackMirror)",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: 'Mirror\"'.  Expected token ')'.\nexists x. (NetflixShow(x) & Name(x, \"Black Mirror\"))\n                                           ^"
+    },
+    {
+        "premise-fol": [
+            "PopularNetflixShow(StrangerThings)",
+            "all x. (NetflixShow(x) & Popular(x) -> BingeWatch(Karen, x))",
+            "all x. (BingeWatchesNetflixShow(x) -> DownloadsShow(x))",
+            "-(KarenDownloads(BlackMirror))",
+            "exists x. (NetflixShow(x) & Name(x, \"Black Mirror\"))",
+            "all xall y. (BingeWatchesNetflixShow(x) -> SharesTo(x, y, Lisa))"
+        ],
+        "conclusion-fol": "all x. all y. (Karen(x) & Lisa(y) & SharesBlackMirror(x, y))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: 'Mirror\"'.  Expected token ')'.\nexists x. (NetflixShow(x) & Name(x, \"Black Mirror\"))\n                                           ^"
+    },
+    {
+        "premise-fol": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, TwoZeroZeroEightSummerOlympics) & Hosted(Beijing, TwoZeroZeroEightSummerParalympics)",
+            "all x. (City(x) & HostedSummerOlympics(x) & HostedWinterOlympics(x) & HostedSummerParalympics(x) & HostedWinterParalympics(x))",
+            "all x. (UniversityInBeijing(x) & RankAmongBestInAsiaPacific(x) & RankAmongBestInWorld(x) -> ConsistentlyRanked(x))"
+        ],
+        "conclusion-fol": "Hosted(Beijing, TwoZeroZeroEightSummerOlympics) & Hosted(Beijing, WinterOlympics)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: A term cannot be constructed from the marked string:\n\n\n    CapitalOf(%%START ERROR%%Beijing,People'sRepublicOfChina%%END ERROR%%).\n\nFatal error:  sread_term error"
+    },
+    {
+        "premise-fol": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, TwoZeroZeroEightSummerOlympics) & Hosted(Beijing, TwoZeroZeroEightSummerParalympics)",
+            "all x. (City(x) & HostedSummerOlympics(x) & HostedWinterOlympics(x) & HostedSummerParalympics(x) & HostedWinterParalympics(x))",
+            "all x. (UniversityInBeijing(x) & RankAmongBestInAsiaPacific(x) & RankAmongBestInWorld(x) -> ConsistentlyRanked(x))"
+        ],
+        "conclusion-fol": "SouthernChina(Beijing)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: A term cannot be constructed from the marked string:\n\n\n    CapitalOf(%%START ERROR%%Beijing,People'sRepublicOfChina%%END ERROR%%).\n\nFatal error:  sread_term error"
+    },
+    {
+        "premise-fol": [
+            "CapitalOf(Beijing, People'sRepublicOfChina)",
+            "WorldMostPopulousNationalCapitalCity(Beijing)",
+            "LocatedIn(Beijing, NorthernChina)",
+            "Hosted(Beijing, TwoZeroZeroEightSummerOlympics) & Hosted(Beijing, TwoZeroZeroEightSummerParalympics)",
+            "all x. (City(x) & HostedSummerOlympics(x) & HostedWinterOlympics(x) & HostedSummerParalympics(x) & HostedWinterParalympics(x))",
+            "all x. (UniversityInBeijing(x) & RankAmongBestInAsiaPacific(x) & RankAmongBestInWorld(x) -> ConsistentlyRanked(x))"
+        ],
+        "conclusion-fol": "SecondLargestChineseCityByUrbanPopulation(Beijing)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: A term cannot be constructed from the marked string:\n\n\n    CapitalOf(%%START ERROR%%Beijing,People'sRepublicOfChina%%END ERROR%%).\n\nFatal error:  sread_term error"
+    },
+    {
+        "premise-fol": [
+            "all x. (Alien(x) -> Extraterrestrial(x))",
+            "all x. (FromMars(x) -> Alien(x))",
+            "-exists x. (Extraterrestrial(x) & Human(x))",
+            "all x. (Earthian(x) -> Human(x))",
+            "all x. (Marvin(x) -> (-FromEarth(x) & -FromMars(x)))",
+            "all x. (Marvin(x) & -FromEarth(x) -> Extraterrestrial(x))"
+        ],
+        "conclusion-fol": "all x. (Marvin(x) -> -(Human(x) | FromMars(x)))",
+        "predicted_label": "True",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Person(x) -> (((GrandSlamChampion(x) & -OscarNominatedActor(x)) | (-GrandSlamChampion(x) & OscarNominatedActor(x)))))",
+            "all x. (GrandSlamChampion(x) -> ProfessionalTennisPlayer(x))",
+            "all x. (OscarNominatedActor(x) -> Celebrity(x))",
+            "all x. (ProfessionalTennisPlayer(x) -> Athlete(x))",
+            "all x. (Celebrity(x) -> WellPaid(x))",
+            "all x. (Athlete(x) -> Famous(x))",
+            "all x. (WellPaid(x) -> LivesInTaxHaven(x))",
+            "all x. (Famous(x) & Athlete(x) -> WellPaid(x))"
+        ],
+        "conclusion-fol": "GrandSlamChampion(Djokovic)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Person(x) -> (((GrandSlamChampion(x) & -OscarNominatedActor(x)) | (-GrandSlamChampion(x) & OscarNominatedActor(x)))))",
+            "all x. (GrandSlamChampion(x) -> ProfessionalTennisPlayer(x))",
+            "all x. (OscarNominatedActor(x) -> Celebrity(x))",
+            "all x. (ProfessionalTennisPlayer(x) -> Athlete(x))",
+            "all x. (Celebrity(x) -> WellPaid(x))",
+            "all x. (Athlete(x) -> Famous(x))",
+            "all x. (WellPaid(x) -> LivesInTaxHaven(x))",
+            "all x. (Famous(x) & Athlete(x) -> WellPaid(x))"
+        ],
+        "conclusion-fol": "exists x. (TennisPlayer(x) & Djokovic(x) & LivesInTaxHaven(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Person(x) -> (((GrandSlamChampion(x) & -OscarNominatedActor(x)) | (-GrandSlamChampion(x) & OscarNominatedActor(x)))))",
+            "all x. (GrandSlamChampion(x) -> ProfessionalTennisPlayer(x))",
+            "all x. (OscarNominatedActor(x) -> Celebrity(x))",
+            "all x. (ProfessionalTennisPlayer(x) -> Athlete(x))",
+            "all x. (Celebrity(x) -> WellPaid(x))",
+            "all x. (Athlete(x) -> Famous(x))",
+            "all x. (WellPaid(x) -> LivesInTaxHaven(x))",
+            "all x. (Famous(x) & Athlete(x) -> WellPaid(x))"
+        ],
+        "conclusion-fol": "-(DjokovicLivesInTaxHaven(Djokovic))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (DiamondMine(x) -> (ProfessionalWrestlingStable(x) & FormedInWWE(x)))",
+            "all x. all y. (RoderickStrong(x) & DiamondMine(y) -> Leads(x, y))",
+            "all xall yall z. (DiamondMine(x) & CreedBrothers(y) & IvyNile(z) -> Includes(x, y) & Includes(x, z))",
+            "exists x. exists y. (Imperium(x) & DiamondMine(y) & Feud(x, y))"
+        ],
+        "conclusion-fol": "all x. (Roderick(x) & ProfessionalWrestling(y) & Stable(z) & Leads(x, y, z) -> Strong(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall yall z. (DiamondMine(x) & CreedBrothers(y) & IvyNile(z) -> Includes(x, y) & Includes(x, z))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (DiamondMine(x) -> (ProfessionalWrestlingStable(x) & FormedInWWE(x)))",
+            "all x. all y. (RoderickStrong(x) & DiamondMine(y) -> Leads(x, y))",
+            "all xall yall z. (DiamondMine(x) & CreedBrothers(y) & IvyNile(z) -> Includes(x, y) & Includes(x, z))",
+            "exists x. exists y. (Imperium(x) & DiamondMine(y) & Feud(x, y))"
+        ],
+        "conclusion-fol": "all x. all y. (Roderick(x) & CreedBrothers(y) -> StrongLeads(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall yall z. (DiamondMine(x) & CreedBrothers(y) & IvyNile(z) -> Includes(x, y) & Includes(x, z))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (DiamondMine(x) -> (ProfessionalWrestlingStable(x) & FormedInWWE(x)))",
+            "all x. all y. (RoderickStrong(x) & DiamondMine(y) -> Leads(x, y))",
+            "all xall yall z. (DiamondMine(x) & CreedBrothers(y) & IvyNile(z) -> Includes(x, y) & Includes(x, z))",
+            "exists x. exists y. (Imperium(x) & DiamondMine(y) & Feud(x, y))"
+        ],
+        "conclusion-fol": "-(Imperium(x) & FeudWith(x, y) & ProfessionalWrestlingStable(y) & Includes(y, Ivy_nile))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall yall z. (DiamondMine(x) & CreedBrothers(y) & IvyNile(z) -> Includes(x, y) & Includes(x, z))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "SymphonyNoNine(MusicPiece)",
+            "all x. (Composer(x) -> WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNoNine)",
+            "all x. all y. (ViennaMusicSociety(x) & SymphonyNoNine(y) -> Premiered(x, y))",
+            "all x. (ViennaMusicSociety(x) -> Orchestra(x))",
+            "all x. (Beethoven(x) -> LeadsViennaMusicSociety(x))",
+            "all x. all y. (Orchestra(x) & Conductor(y) -> LedBy(x, y))"
+        ],
+        "conclusion-fol": "exists x. (Composer(x) & Beethoven(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: SymphonyNoNine/1, SymphonyNoNine/0, Beethoven/1, Beethoven/0.\n\n\nFatal error:  The following symbols are used with multiple arities: SymphonyNoNine/1, SymphonyNoNine/0, Beethoven/1, Beethoven/0"
+    },
+    {
+        "premise-fol": [
+            "SymphonyNoNine(MusicPiece)",
+            "all x. (Composer(x) -> WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNoNine)",
+            "all x. all y. (ViennaMusicSociety(x) & SymphonyNoNine(y) -> Premiered(x, y))",
+            "all x. (ViennaMusicSociety(x) -> Orchestra(x))",
+            "all x. (Beethoven(x) -> LeadsViennaMusicSociety(x))",
+            "all x. all y. (Orchestra(x) & Conductor(y) -> LedBy(x, y))"
+        ],
+        "conclusion-fol": "exists xexists y. (Orchestra(x) & MusicPiece(y) & Premiered(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xexists' is an illegal variable name.  Constants may not be quantified.\nexists xexists y. (Orchestra(x) & MusicPiece(y) & Premiered(x, y))\n       ^"
+    },
+    {
+        "premise-fol": [
+            "SymphonyNoNine(MusicPiece)",
+            "all x. (Composer(x) -> WritesMusicPieces(x))",
+            "Wrote(Beethoven, SymphonyNoNine)",
+            "all x. all y. (ViennaMusicSociety(x) & SymphonyNoNine(y) -> Premiered(x, y))",
+            "all x. (ViennaMusicSociety(x) -> Orchestra(x))",
+            "all x. (Beethoven(x) -> LeadsViennaMusicSociety(x))",
+            "all x. all y. (Orchestra(x) & Conductor(y) -> LedBy(x, y))"
+        ],
+        "conclusion-fol": "-(Conductor(Beethoven))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: SymphonyNoNine/1, SymphonyNoNine/0, Beethoven/1, Beethoven/0.\n\n\nFatal error:  The following symbols are used with multiple arities: SymphonyNoNine/1, SymphonyNoNine/0, Beethoven/1, Beethoven/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (DesignStyle(x) & DesignedBy(x, ZahaHadid) -> Timeless(x))",
+            "-exists x. (MassProductDesign(x) & Timeless(x))",
+            "Either(DesignStyle(ZahaHadid) | DesignStyle(KellyWearstler))",
+            "all x. (DesignStyle(x) & DesignedBy(x, KellyWearstler) -> Evocative(x))",
+            "all x. (DesignStyle(x) & DesignedBy(x, KellyWearstler) -> Dreamy(x))",
+            "all x. (Design(x) & DesignByMax(x) & Timeless(x) -> (MassProductDesign(x) & Evocative(x)))"
+        ],
+        "conclusion-fol": "all x. (Design(x) & DesignedBy(x, \"Max\") -> MassProductDesign(x))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '|'.  Expected token ')'.\nEither(DesignStyle(ZahaHadid) | DesignStyle(KellyWearstler))\n                              ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (DesignStyle(x) & DesignedBy(x, ZahaHadid) -> Timeless(x))",
+            "-exists x. (MassProductDesign(x) & Timeless(x))",
+            "Either(DesignStyle(ZahaHadid) | DesignStyle(KellyWearstler))",
+            "all x. (DesignStyle(x) & DesignedBy(x, KellyWearstler) -> Evocative(x))",
+            "all x. (DesignStyle(x) & DesignedBy(x, KellyWearstler) -> Dreamy(x))",
+            "all x. (Design(x) & DesignByMax(x) & Timeless(x) -> (MassProductDesign(x) & Evocative(x)))"
+        ],
+        "conclusion-fol": "all x. (Design(x) & DesignedBy(x, \"Max\") -> (Evocative(x) & Dreamy(x)))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '|'.  Expected token ')'.\nEither(DesignStyle(ZahaHadid) | DesignStyle(KellyWearstler))\n                              ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (DesignStyle(x) & DesignedBy(x, ZahaHadid) -> Timeless(x))",
+            "-exists x. (MassProductDesign(x) & Timeless(x))",
+            "Either(DesignStyle(ZahaHadid) | DesignStyle(KellyWearstler))",
+            "all x. (DesignStyle(x) & DesignedBy(x, KellyWearstler) -> Evocative(x))",
+            "all x. (DesignStyle(x) & DesignedBy(x, KellyWearstler) -> Dreamy(x))",
+            "all x. (Design(x) & DesignByMax(x) & Timeless(x) -> (MassProductDesign(x) & Evocative(x)))"
+        ],
+        "conclusion-fol": "all x. (Design(x) & DesignedBy(x, \"Max\") -> (((Evocative(x) & -Dreamy(x)) | (-Evocative(x) & Dreamy(x)))))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '|'.  Expected token ')'.\nEither(DesignStyle(ZahaHadid) | DesignStyle(KellyWearstler))\n                              ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (RankedHighlyByWTA(x) -> MostActiveMajorTennisPlayer(x))",
+            "all x. (LostToIgaSwietek(x) -> HighlyRankedByWTA(x))",
+            "all x. (FemaleTennisPlayer(x) & ParticipatesInRolandGarros(x) -> LostToIgaSwietek(x))",
+            "Either (FemaleTennisPlayers(TwoZeroTwoTwo, RolandGarros) | MaleTennisPlayers(TwoZeroTwoTwo, RolandGarros))",
+            "all x. (MaleTennisPlayer(x) & AtRolandGarrosTwoZeroTwoTwo(x) -> LostToRafaelNadal(x))",
+            "all x. (CocoGauff(x) & (HighlyRankedByWTA(x) | LostToRafaelNadal(x)) -> -MaleTennisPlayerAtRolandGarrosTwoZeroTwoTwo(x))"
+        ],
+        "conclusion-fol": "exists x. (MostActivePlayerInMajorTennis(x) & CocoGauff(x))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '|'.  Expected token ')'.\nEither (FemaleTennisPlayers(TwoZeroTwoTwo, RolandGarros) | MaleTennisPlayers(TwoZeroTwoTwo, RolandGarros))\n                                                         ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (RankedHighlyByWTA(x) -> MostActiveMajorTennisPlayer(x))",
+            "all x. (LostToIgaSwietek(x) -> HighlyRankedByWTA(x))",
+            "all x. (FemaleTennisPlayer(x) & ParticipatesInRolandGarros(x) -> LostToIgaSwietek(x))",
+            "Either (FemaleTennisPlayers(TwoZeroTwoTwo, RolandGarros) | MaleTennisPlayers(TwoZeroTwoTwo, RolandGarros))",
+            "all x. (MaleTennisPlayer(x) & AtRolandGarrosTwoZeroTwoTwo(x) -> LostToRafaelNadal(x))",
+            "all x. (CocoGauff(x) & (HighlyRankedByWTA(x) | LostToRafaelNadal(x)) -> -MaleTennisPlayerAtRolandGarrosTwoZeroTwoTwo(x))"
+        ],
+        "conclusion-fol": "exists x. exists y. (CocoGauff(x) & RafaelNadal(y) & LostTo(x, y))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '|'.  Expected token ')'.\nEither (FemaleTennisPlayers(TwoZeroTwoTwo, RolandGarros) | MaleTennisPlayers(TwoZeroTwoTwo, RolandGarros))\n                                                         ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (RankedHighlyByWTA(x) -> MostActiveMajorTennisPlayer(x))",
+            "all x. (LostToIgaSwietek(x) -> HighlyRankedByWTA(x))",
+            "all x. (FemaleTennisPlayer(x) & ParticipatesInRolandGarros(x) -> LostToIgaSwietek(x))",
+            "Either (FemaleTennisPlayers(TwoZeroTwoTwo, RolandGarros) | MaleTennisPlayers(TwoZeroTwoTwo, RolandGarros))",
+            "all x. (MaleTennisPlayer(x) & AtRolandGarrosTwoZeroTwoTwo(x) -> LostToRafaelNadal(x))",
+            "all x. (CocoGauff(x) & (HighlyRankedByWTA(x) | LostToRafaelNadal(x)) -> -MaleTennisPlayerAtRolandGarrosTwoZeroTwoTwo(x))"
+        ],
+        "conclusion-fol": "-(CocoGauffLostToIgaSwietekOrMostActiveMajorTennisPlayer(CocoGauff))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '|'.  Expected token ')'.\nEither (FemaleTennisPlayers(TwoZeroTwoTwo, RolandGarros) | MaleTennisPlayers(TwoZeroTwoTwo, RolandGarros))\n                                                         ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Cat(x) -> Mammal(x))",
+            "exists x. (Pet(x) & -Mammal(x))"
+        ],
+        "conclusion-fol": "all x. (Pet(x) & -Cat(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Year(x) -> (Season(x, Spring) | Season(x, Summer) | Season(x, Fall) | Season(x, Winter)))",
+            "all x. (Student(x) & WantsLongVacation(x) -> LovesSummer(x))",
+            "exists x. (FavoriteSeason(x, Emma) & Season(x, Summer))",
+            "exists x. exists y. (Person(x) & Person(y) & FavoriteSeason(x, y) & Mia(x) & Emma(y) & -(FavoriteSeason(x, y)))",
+            "exists x. (Person(x) & WantsLongVacation(x))"
+        ],
+        "conclusion-fol": "FavoriteSeason(James, Summer)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Emma/1, Emma/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Emma/1, Emma/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Year(x) -> (Season(x, Spring) | Season(x, Summer) | Season(x, Fall) | Season(x, Winter)))",
+            "all x. (Student(x) & WantsLongVacation(x) -> LovesSummer(x))",
+            "exists x. (FavoriteSeason(x, Emma) & Season(x, Summer))",
+            "exists x. exists y. (Person(x) & Person(y) & FavoriteSeason(x, y) & Mia(x) & Emma(y) & -(FavoriteSeason(x, y)))",
+            "exists x. (Person(x) & WantsLongVacation(x))"
+        ],
+        "conclusion-fol": "all x. (Person(x) & FavoriteSeason(x, Spring) -> Mia(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Emma/1, Emma/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Emma/1, Emma/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (DigitalMedia(x) -> -Analog(x))",
+            "all x. (PrintedText(x) -> Analog(x))",
+            "all x. (StreamingService(x) -> Digital(x))",
+            "all x. (HardcoverBook(x) -> PrintedText(x))",
+            "all x. (StreamingService(x) -> HardcoverBook(x))"
+        ],
+        "conclusion-fol": "PrintedText(OneNineEightFour)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (DigitalMedia(x) -> -Analog(x))",
+            "all x. (PrintedText(x) -> Analog(x))",
+            "all x. (StreamingService(x) -> Digital(x))",
+            "all x. (HardcoverBook(x) -> PrintedText(x))",
+            "all x. (StreamingService(x) -> HardcoverBook(x))"
+        ],
+        "conclusion-fol": "StreamingService(OneNineEightFour)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (DigitalMedia(x) -> -Analog(x))",
+            "all x. (PrintedText(x) -> Analog(x))",
+            "all x. (StreamingService(x) -> Digital(x))",
+            "all x. (HardcoverBook(x) -> PrintedText(x))",
+            "all x. (StreamingService(x) -> HardcoverBook(x))"
+        ],
+        "conclusion-fol": "-(StreamingService(OneNineEightFour))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (RomanceLanguage(x) -> IndoEuropean(x))",
+            "all x. (RomanceLanguage(x) -> LanguageFamily(x))",
+            "all xall y. (Language(x) & Language(y) & LanguageFamily(x, y) -> Related(x, y))",
+            "all xall y. (French(x) & Spanish(y) -> RomanceLanguage(x) & RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "all x. (Basque(x) -> -RelatedToAnyLanguage(x))"
+        ],
+        "conclusion-fol": "all x. (Language(x) & Basque(x) -> Romance(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Language(x) & Language(y) & LanguageFamily(x, y) -> Related(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (RomanceLanguage(x) -> IndoEuropean(x))",
+            "all x. (RomanceLanguage(x) -> LanguageFamily(x))",
+            "all xall y. (Language(x) & Language(y) & LanguageFamily(x, y) -> Related(x, y))",
+            "all xall y. (French(x) & Spanish(y) -> RomanceLanguage(x) & RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "all x. (Basque(x) -> -RelatedToAnyLanguage(x))"
+        ],
+        "conclusion-fol": "all x. (German(x) -> RomanceLanguage(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Language(x) & Language(y) & LanguageFamily(x, y) -> Related(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (RomanceLanguage(x) -> IndoEuropean(x))",
+            "all x. (RomanceLanguage(x) -> LanguageFamily(x))",
+            "all xall y. (Language(x) & Language(y) & LanguageFamily(x, y) -> Related(x, y))",
+            "all xall y. (French(x) & Spanish(y) -> RomanceLanguage(x) & RomanceLanguage(y))",
+            "RelatedLanguage(German, Spanish)",
+            "all x. (Basque(x) -> -RelatedToAnyLanguage(x))"
+        ],
+        "conclusion-fol": "all x. (French(x) -> Indo-European(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Language(x) & Language(y) & LanguageFamily(x, y) -> Related(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "Player(Robert_lewandowski) & Position(Striker)",
+            "all x. (Striker(x) -> SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "all xall y. (Player(x) & Team(y) & LeftTeam(x, y) -> -PlayForTeam(x, y))"
+        ],
+        "conclusion-fol": "SoccerPlayer(Lewandowski)",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Player(x) & Team(y) & LeftTeam(x, y) -> -PlayForTeam(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "Player(Robert_lewandowski) & Position(Striker)",
+            "all x. (Striker(x) -> SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "all xall y. (Player(x) & Team(y) & LeftTeam(x, y) -> -PlayForTeam(x, y))"
+        ],
+        "conclusion-fol": "Player(Robert_lewandowski) & Club(BayernMunchen)",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Player(x) & Team(y) & LeftTeam(x, y) -> -PlayForTeam(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "Player(Robert_lewandowski) & Position(Striker)",
+            "all x. (Striker(x) -> SoccerPlayer(x))",
+            "Left(Lewandowski, BayernMunchen)",
+            "all xall y. (Player(x) & Team(y) & LeftTeam(x, y) -> -PlayForTeam(x, y))"
+        ],
+        "conclusion-fol": "Player(Robert_lewandowski) & Star(Robert_lewandowski)",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Player(x) & Team(y) & LeftTeam(x, y) -> -PlayForTeam(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "City(Billings) & In(Billings, Montana)",
+            "all x. (City(x) & InMontana(x) -> (Butte(x) | Helena(x) | Missoula(x)))",
+            "all xall y. (City(x) & City(y) & InState(x, y) -> (WhiteSulphurSprings(x) & Butte(y)))",
+            "-(PierreCity(Pierre) & InMontana(Pierre))",
+            "all x. (City(x) & InButte(x) -> -InPierre(x))"
+        ],
+        "conclusion-fol": "all xall y. (Butte(x) & Pierre(y) -> InState(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (City(x) & City(y) & InState(x, y) -> (WhiteSulphurSprings(x) & Butte(y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "City(Billings) & In(Billings, Montana)",
+            "all x. (City(x) & InMontana(x) -> (Butte(x) | Helena(x) | Missoula(x)))",
+            "all xall y. (City(x) & City(y) & InState(x, y) -> (WhiteSulphurSprings(x) & Butte(y)))",
+            "-(PierreCity(Pierre) & InMontana(Pierre))",
+            "all x. (City(x) & InButte(x) -> -InPierre(x))"
+        ],
+        "conclusion-fol": "all xall y. (Pierre(x) & Bismarck(y) -> InState(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (City(x) & City(y) & InState(x, y) -> (WhiteSulphurSprings(x) & Butte(y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "City(Billings) & In(Billings, Montana)",
+            "all x. (City(x) & InMontana(x) -> (Butte(x) | Helena(x) | Missoula(x)))",
+            "all xall y. (City(x) & City(y) & InState(x, y) -> (WhiteSulphurSprings(x) & Butte(y)))",
+            "-(PierreCity(Pierre) & InMontana(Pierre))",
+            "all x. (City(x) & InButte(x) -> -InPierre(x))"
+        ],
+        "conclusion-fol": "Home(Montana, Missoula)",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (City(x) & City(y) & InState(x, y) -> (WhiteSulphurSprings(x) & Butte(y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (InternationalStudent(x) & InUS(x) -> (((FOneVisa(x) & -JOneVisa(x)) | (-FOneVisa(x) & JOneVisa(x)))))",
+            "all x. (InternationalStudent(x) & InUS(x) & HasFOneVisa(x) -> (ApplyCPT(x) | ApplyOPT(x)))",
+            "exists x. (Student(x) & International(x))",
+            "all x. (Mike(x) & WantsToWorkInUS(x) -> ApplyForCPT(x))"
+        ],
+        "conclusion-fol": "exists x. (Person(x) & HasFOneVisa(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (InternationalStudent(x) & InUS(x) -> (((FOneVisa(x) & -JOneVisa(x)) | (-FOneVisa(x) & JOneVisa(x)))))",
+            "all x. (InternationalStudent(x) & InUS(x) & HasFOneVisa(x) -> (ApplyCPT(x) | ApplyOPT(x)))",
+            "exists x. (Student(x) & International(x))",
+            "all x. (Mike(x) & WantsToWorkInUS(x) -> ApplyForCPT(x))"
+        ],
+        "conclusion-fol": "HasJOneVisa(Mike)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Mike/1, Mike/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Mike/1, Mike/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Cow(x) -> Bovine(x))",
+            "exists x. (Pet(x) & Cow(x))",
+            "all x. (Bovine(x) -> Domesticated(x))",
+            "all x. (DomesticatedAnimal(x) -> -Alligator(x))",
+            "all x. (Aligator(x) <-> Ted(x))"
+        ],
+        "conclusion-fol": "Pet(Ted)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Ted/1, Ted/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Ted/1, Ted/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Cow(x) -> Bovine(x))",
+            "exists x. (Pet(x) & Cow(x))",
+            "all x. (Bovine(x) -> Domesticated(x))",
+            "all x. (DomesticatedAnimal(x) -> -Alligator(x))",
+            "all x. (Aligator(x) <-> Ted(x))"
+        ],
+        "conclusion-fol": "all x. (Pet(x) & Cow(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Cow(x) -> Bovine(x))",
+            "exists x. (Pet(x) & Cow(x))",
+            "all x. (Bovine(x) -> Domesticated(x))",
+            "all x. (DomesticatedAnimal(x) -> -Alligator(x))",
+            "all x. (Aligator(x) <-> Ted(x))"
+        ],
+        "conclusion-fol": "all x. (Cow(x) -> -Pet(x))",
+        "predicted_label": "False",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "PrivateIvyLeagueResearchUniversity(Yale)",
+            "Moved(Yale, New_haven, OneSevenOneSix)",
+            "FourTwoThreeZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZero",
+            "all x. (YaleUniversity(x) -> (OrganizedInto(x, TwoSeven) & (ResidentialColleges(x) | YaleGraduateSchoolOfArtsAndSciences(x) | ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ],
+        "conclusion-fol": "exists x. (PrivateIvyLeagueResearchUniversity(x) & MovedToNewHaven(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "PrivateIvyLeagueResearchUniversity(Yale)",
+            "Moved(Yale, New_haven, OneSevenOneSix)",
+            "FourTwoThreeZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZero",
+            "all x. (YaleUniversity(x) -> (OrganizedInto(x, TwoSeven) & (ResidentialColleges(x) | YaleGraduateSchoolOfArtsAndSciences(x) | ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ],
+        "conclusion-fol": "all x. (EducationalInstitution(x) & University(x) & Endowment(x) & Largest(x) -> YaleUniversity(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "PrivateIvyLeagueResearchUniversity(Yale)",
+            "Moved(Yale, New_haven, OneSevenOneSix)",
+            "FourTwoThreeZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZeroZero",
+            "all x. (YaleUniversity(x) -> (OrganizedInto(x, TwoSeven) & (ResidentialColleges(x) | YaleGraduateSchoolOfArtsAndSciences(x) | ProfessionalSchools(x))))",
+            "ResidentialCollegesAtYale(BenjaminFranklinCollege, BerkeleyCollege, BranfordCollege, DavenportCollege, EzraStilesCollege, GraceHopperCollege, JonathanEdwardsCollege, MorseCollege, PauliMurrayCollege, PiersonCollege, SaybrookCollege, SillimanCollege, TimothyDwightCollege, TrumbullCollege)"
+        ],
+        "conclusion-fol": "ResidentialCollege(PiersonCollege, Yale)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all xall y. (Badults(x) & Pappys(y) -> (BritishSitcomSeries(x) & StarringMembers(x, y)))",
+            "all x. (Badults(x) & PilotedIn(x, July TwoZeroOneThree) & OnBBCThree(x))",
+            "exists x. (WorkingTitle(x) & SecretDudeSociety(x) & UsedFor(x, Badults))",
+            "all x. (AndrewCollins(x) & ScriptEditor(x, Badults))"
+        ],
+        "conclusion-fol": "AndrewCollins(a) & ScriptEditor(a) & Series(a) & WorkingTitle(a, \"TheSecretDudeSociety\")",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Badults(x) & Pappys(y) -> (BritishSitcomSeries(x) & StarringMembers(x, y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all xall y. (Badults(x) & Pappys(y) -> (BritishSitcomSeries(x) & StarringMembers(x, y)))",
+            "all x. (Badults(x) & PilotedIn(x, July TwoZeroOneThree) & OnBBCThree(x))",
+            "exists x. (WorkingTitle(x) & SecretDudeSociety(x) & UsedFor(x, Badults))",
+            "all x. (AndrewCollins(x) & ScriptEditor(x, Badults))"
+        ],
+        "conclusion-fol": "-(exists x. (MemberOfPappys(x) & StarredForShow(x) & PilotsOnBBCTwo(x) | PilotsOnBBCThree(x)))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Badults(x) & Pappys(y) -> (BritishSitcomSeries(x) & StarringMembers(x, y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (GrowthCompany(x) -> VolatileStock(x))",
+            "all x. (StockPrice(x) & Volatile(x) -> -SuitableForRetirementFund(x))",
+            "exists x. (Company(x) & GrowthCompanyStock(x))",
+            "all x. (Company(x) & Mature(x) -> SuitableForRetirementFund(x))",
+            "all x. (Company(x) & Mature(x) -> Stock(x, KO))"
+        ],
+        "conclusion-fol": "CompanyStock(KO)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (GrowthCompany(x) -> VolatileStock(x))",
+            "all x. (StockPrice(x) & Volatile(x) -> -SuitableForRetirementFund(x))",
+            "exists x. (Company(x) & GrowthCompanyStock(x))",
+            "all x. (Company(x) & Mature(x) -> SuitableForRetirementFund(x))",
+            "all x. (Company(x) & Mature(x) -> Stock(x, KO))"
+        ],
+        "conclusion-fol": "all x. (Company(x) & KO(x) -> (Stock(x) & GrowthCompanyStock(x)))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Stock/2, Stock/1, KO/1, KO/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Stock/2, Stock/1, KO/1, KO/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (GrowthCompany(x) -> VolatileStock(x))",
+            "all x. (StockPrice(x) & Volatile(x) -> -SuitableForRetirementFund(x))",
+            "exists x. (Company(x) & GrowthCompanyStock(x))",
+            "all x. (Company(x) & Mature(x) -> SuitableForRetirementFund(x))",
+            "all x. (Company(x) & Mature(x) -> Stock(x, KO))"
+        ],
+        "conclusion-fol": "all x. (GrowthCompanyStock(x) & (Stock(x) & VolatilePrice(x)) -> (-CompanyStock(x) & -VolatilePrice(x)))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Stock/2, Stock/1.\n\n\nFatal error:  The following symbols are used with multiple arities: Stock/2, Stock/1"
+    },
+    {
+        "premise-fol": [
+            "all x. (VehicleRegistrationPlate(x) & InIstanbul(x) -> BeginsWithNumberThreeFour(x))",
+            "all x. (Plate(x) & -BeginsWith(x, ThreeFour) -> -FromIstanbul(x))",
+            "VehicleRegistrationPlate(Joe, Istanbul)",
+            "HasLicensePlateNumber(Tom, ThreeFive)",
+            "all x. (LicensePlate(x) & BeginsWithNumber(x, ThreeFive) -> -BeginsWithNumber(x, ThreeFour))"
+        ],
+        "conclusion-fol": "HasLicensePlateNumber(Joe, ThreeFour)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: VehicleRegistrationPlate/2, VehicleRegistrationPlate/1.\n\n\nFatal error:  The following symbols are used with multiple arities: VehicleRegistrationPlate/2, VehicleRegistrationPlate/1"
+    },
+    {
+        "premise-fol": [
+            "all x. (VehicleRegistrationPlate(x) & InIstanbul(x) -> BeginsWithNumberThreeFour(x))",
+            "all x. (Plate(x) & -BeginsWith(x, ThreeFour) -> -FromIstanbul(x))",
+            "VehicleRegistrationPlate(Joe, Istanbul)",
+            "HasLicensePlateNumber(Tom, ThreeFive)",
+            "all x. (LicensePlate(x) & BeginsWithNumber(x, ThreeFive) -> -BeginsWithNumber(x, ThreeFour))"
+        ],
+        "conclusion-fol": "LicensePlate(Tom, Istanbul)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: VehicleRegistrationPlate/2, VehicleRegistrationPlate/1, LicensePlate/1, LicensePlate/2.\n\n\nFatal error:  The following symbols are used with multiple arities: VehicleRegistrationPlate/2, VehicleRegistrationPlate/1, LicensePlate/1, LicensePlate/2"
+    },
+    {
+        "premise-fol": [
+            "all x. (WorksInStudentJobsOnCampus(x) -> NeedsToEarnMoneyToPayForCollegeTuition(x))",
+            "all x. (FrequentTakeoutInCollege(x) -> StudentJobOnCampus(x))",
+            "all x. (Person(x) -> (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) & EnjoysRecipes(x))))",
+            "all x. (EnjoyDiningHallMealsAndRecipes(x) -> -PickyEater(x))",
+            "all xall y. (EnjoyDiningHallMealsAndRecipes(x) & SpendTimeEatingAndCatchingUp(x, y) -> EatInCampusDiningHalls(y))",
+            "all x. (WorksInStudentJobsOnCampus(x) & NeedsToEarnMoneyForCollegeTuition(x) -> (-Picky(x) & -NeedsToEarnMoneyForCollegeTuition(x)))"
+        ],
+        "conclusion-fol": "all x. (Mary(x) & NeedsMoney(x) -> HelpPayForCollegeTuition(x))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '\u2295'.  Expected token ')'.\nall x. (Person(x) -> (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) & EnjoysRecipes(x))))\n                                                ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (WorksInStudentJobsOnCampus(x) -> NeedsToEarnMoneyToPayForCollegeTuition(x))",
+            "all x. (FrequentTakeoutInCollege(x) -> StudentJobOnCampus(x))",
+            "all x. (Person(x) -> (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) & EnjoysRecipes(x))))",
+            "all x. (EnjoyDiningHallMealsAndRecipes(x) -> -PickyEater(x))",
+            "all xall y. (EnjoyDiningHallMealsAndRecipes(x) & SpendTimeEatingAndCatchingUp(x, y) -> EatInCampusDiningHalls(y))",
+            "all x. (WorksInStudentJobsOnCampus(x) & NeedsToEarnMoneyForCollegeTuition(x) -> (-Picky(x) & -NeedsToEarnMoneyForCollegeTuition(x)))"
+        ],
+        "conclusion-fol": "all x. (Mary(x) -> (-PickyEater(x) & SpendsTimeEating(x) & SpendsTimeCatchingUpWithFriends(x)))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '\u2295'.  Expected token ')'.\nall x. (Person(x) -> (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) & EnjoysRecipes(x))))\n                                                ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (WorksInStudentJobsOnCampus(x) -> NeedsToEarnMoneyToPayForCollegeTuition(x))",
+            "all x. (FrequentTakeoutInCollege(x) -> StudentJobOnCampus(x))",
+            "all x. (Person(x) -> (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) & EnjoysRecipes(x))))",
+            "all x. (EnjoyDiningHallMealsAndRecipes(x) -> -PickyEater(x))",
+            "all xall y. (EnjoyDiningHallMealsAndRecipes(x) & SpendTimeEatingAndCatchingUp(x, y) -> EatInCampusDiningHalls(y))",
+            "all x. (WorksInStudentJobsOnCampus(x) & NeedsToEarnMoneyForCollegeTuition(x) -> (-Picky(x) & -NeedsToEarnMoneyForCollegeTuition(x)))"
+        ],
+        "conclusion-fol": "all x. (Student(x) & Mary(x) -> (-PickyEater(x) | (PickyEater(x) & SpendsTimeInDiningHalls(x))))",
+        "predicted_label": "ERROR",
+        "error": "Unexpected token: '\u2295'.  Expected token ')'.\nall x. (Person(x) -> (OrderTakeoutFrequently(x) \u2295 (EnjoysDiningHallMeals(x) & EnjoysRecipes(x))))\n                                                ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Bakery(x) -> -Spicy(x))",
+            "all x. (Cupcake(x) -> Bakes(x))",
+            "all x. (Hotpot(x) -> Spicy(x))",
+            "all x. (ProductOfBakedByMelissa(x) -> Cupcake(x))",
+            "all x. (DriedThaiChilies(x) & (Spicy(x) | Bakery(x)) -> (Hotpot(x) | Spicy(x)))"
+        ],
+        "conclusion-fol": "all x. (DriedThaiChilies(x) -> BakedByMelissa(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Bakery(x) -> -Spicy(x))",
+            "all x. (Cupcake(x) -> Bakes(x))",
+            "all x. (Hotpot(x) -> Spicy(x))",
+            "all x. (ProductOfBakedByMelissa(x) -> Cupcake(x))",
+            "all x. (DriedThaiChilies(x) & (Spicy(x) | Bakery(x)) -> (Hotpot(x) | Spicy(x)))"
+        ],
+        "conclusion-fol": "all x. (DriedThaiChili(x) -> -ProductOf(x, BakedByMelissa))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Bakery(x) -> -Spicy(x))",
+            "all x. (Cupcake(x) -> Bakes(x))",
+            "all x. (Hotpot(x) -> Spicy(x))",
+            "all x. (ProductOfBakedByMelissa(x) -> Cupcake(x))",
+            "all x. (DriedThaiChilies(x) & (Spicy(x) | Bakery(x)) -> (Hotpot(x) | Spicy(x)))"
+        ],
+        "conclusion-fol": "all x. (DriedThaiChili(x) -> Hotpot(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Bakery(x) -> -Spicy(x))",
+            "all x. (Cupcake(x) -> Bakes(x))",
+            "all x. (Hotpot(x) -> Spicy(x))",
+            "all x. (ProductOfBakedByMelissa(x) -> Cupcake(x))",
+            "all x. (DriedThaiChilies(x) & (Spicy(x) | Bakery(x)) -> (Hotpot(x) | Spicy(x)))"
+        ],
+        "conclusion-fol": "all x. (DriedThaiChili(x) -> -(BakedByMelissa(x) | Bakery(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Bakery(x) -> -Spicy(x))",
+            "all x. (Cupcake(x) -> Bakes(x))",
+            "all x. (Hotpot(x) -> Spicy(x))",
+            "all x. (ProductOfBakedByMelissa(x) -> Cupcake(x))",
+            "all x. (DriedThaiChilies(x) & (Spicy(x) | Bakery(x)) -> (Hotpot(x) | Spicy(x)))"
+        ],
+        "conclusion-fol": "all x. (DriedThaiChili(x) -> (Cupcake(x) & ProductOf(x, BakedByMelissa)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Restaurant(x) & ListedInYelpsRecommendations(x) -> -ManyNegativeReviews(x))",
+            "all x. (Restaurant(x) & RatingGreaterThan(x, Nine) -> ListedInRecommendations(x))",
+            "exists x. (Restaurant(x) & -ProvidesTakeOutService(x) & ReceivesManyNegativeReviews(x))",
+            "all x. (Restaurant(x) & PopularAmongLocalResidents(x) -> RatingGreaterThanNine(x))",
+            "exists x. (Subway(x) & (RatingGreaterThan(x, Nine) | PopularAmongLocalResidents(x)))"
+        ],
+        "conclusion-fol": "all x. (Subway(x) & TakeOutService(x) & ManyNegativeReviews(x) -> (RatingGreaterThanNine(x) & -TakeOutService(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Restaurant(x) & ListedInYelpsRecommendations(x) -> -ManyNegativeReviews(x))",
+            "all x. (Restaurant(x) & RatingGreaterThan(x, Nine) -> ListedInRecommendations(x))",
+            "exists x. (Restaurant(x) & -ProvidesTakeOutService(x) & ReceivesManyNegativeReviews(x))",
+            "all x. (Restaurant(x) & PopularAmongLocalResidents(x) -> RatingGreaterThanNine(x))",
+            "exists x. (Subway(x) & (RatingGreaterThan(x, Nine) | PopularAmongLocalResidents(x)))"
+        ],
+        "conclusion-fol": "all x. (Subway(x) -> (TakeOutService(x) & -ManyNegativeReviews(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Restaurant(x) & ListedInYelpsRecommendations(x) -> -ManyNegativeReviews(x))",
+            "all x. (Restaurant(x) & RatingGreaterThan(x, Nine) -> ListedInRecommendations(x))",
+            "exists x. (Restaurant(x) & -ProvidesTakeOutService(x) & ReceivesManyNegativeReviews(x))",
+            "all x. (Restaurant(x) & PopularAmongLocalResidents(x) -> RatingGreaterThanNine(x))",
+            "exists x. (Subway(x) & (RatingGreaterThan(x, Nine) | PopularAmongLocalResidents(x)))"
+        ],
+        "conclusion-fol": "all x. (Subway(x) -> -ProvidesTakeOutService(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Book(x) -> ContainsTonsOfKnowledge(x))",
+            "all x. (ReadsBook(x) -> GainsKnowledge(x))",
+            "all x. (GainsKnowledge(x) -> BecomesSmarter(x))",
+            "all xall y. (Harry(x) & Book(y) & Walden(y) & ByHenryThoreau(y) -> Read(x, y))"
+        ],
+        "conclusion-fol": "all x. (Walden(x) -> ContainsKnowledge(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Harry(x) & Book(y) & Walden(y) & ByHenryThoreau(y) -> Read(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Book(x) -> ContainsTonsOfKnowledge(x))",
+            "all x. (ReadsBook(x) -> GainsKnowledge(x))",
+            "all x. (GainsKnowledge(x) -> BecomesSmarter(x))",
+            "all xall y. (Harry(x) & Book(y) & Walden(y) & ByHenryThoreau(y) -> Read(x, y))"
+        ],
+        "conclusion-fol": "Smarter(Harry)",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Harry(x) & Book(y) & Walden(y) & ByHenryThoreau(y) -> Read(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Book(x) -> ContainsTonsOfKnowledge(x))",
+            "all x. (ReadsBook(x) -> GainsKnowledge(x))",
+            "all x. (GainsKnowledge(x) -> BecomesSmarter(x))",
+            "all xall y. (Harry(x) & Book(y) & Walden(y) & ByHenryThoreau(y) -> Read(x, y))"
+        ],
+        "conclusion-fol": "all x. (Person(x) & Smarter(x) -> GainedKnowledge(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Harry(x) & Book(y) & Walden(y) & ByHenryThoreau(y) -> Read(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (NaturalLanguageProcessingTask(x) -> (((LanguageGenerationTask(x) & -LanguageUnderstandingTask(x)) | (-LanguageGenerationTask(x) & LanguageUnderstandingTask(x)))))",
+            "all x. (OutputOfNLPTask(x) & TextSequence(x) -> LanguageGenerationTask(x))",
+            "all x. (MachineTranslation(x) -> NaturalLanguageProcessingTask(x))",
+            "all x. (MachineTranslationOutput(x) -> TextSequence(x))"
+        ],
+        "conclusion-fol": "all x. (MachineTranslation(x) -> LanguageGenerationTask(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (NaturalLanguageProcessingTask(x) -> (((LanguageGenerationTask(x) & -LanguageUnderstandingTask(x)) | (-LanguageGenerationTask(x) & LanguageUnderstandingTask(x)))))",
+            "all x. (OutputOfNLPTask(x) & TextSequence(x) -> LanguageGenerationTask(x))",
+            "all x. (MachineTranslation(x) -> NaturalLanguageProcessingTask(x))",
+            "all x. (MachineTranslationOutput(x) -> TextSequence(x))"
+        ],
+        "conclusion-fol": "all x. (MachineTranslation(x) -> LanguageUnderstandingTask(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Pet(x) & ManagedBuilding(y) & AllowedIn(x, y) -> AllowedIn(x, y))",
+            "all xall y. (ManagedBuilding(x) & Apartment(y) & Rent(y) -> DepositRequired(y))",
+            "all x. (SecurityDeposit(x) -> (EqualToMonthsRent(x) | MoreThanMonthsRent(x)))",
+            "Cat(Fluffy) & Owns(Tom, Fluffy)",
+            "all x. (Cat(x) -> Pet(x))",
+            "ManagedBuilding(Olive_garden)",
+            "MonthlyRent(Olive_garden, TwoZeroZeroZero)",
+            "all xall yall z. (RentApartment(x, y, z) <-> (ManagedBuilding(y) & AllowedToMoveInWithFluffy(x, y) & SecurityDepositNoMoreThan(z, OneFiveZeroZero)))",
+            "all x. all y. (TwoZeroZeroZero$ -> MoreThan(x, y))"
+        ],
+        "conclusion-fol": "all x. (Tom(x) & RentsApartment(x, y) & InTheOliveGarden(y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (ManagedBuilding(x) & Apartment(y) & Rent(y) -> DepositRequired(y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Pet(x) & ManagedBuilding(y) & AllowedIn(x, y) -> AllowedIn(x, y))",
+            "all xall y. (ManagedBuilding(x) & Apartment(y) & Rent(y) -> DepositRequired(y))",
+            "all x. (SecurityDeposit(x) -> (EqualToMonthsRent(x) | MoreThanMonthsRent(x)))",
+            "Cat(Fluffy) & Owns(Tom, Fluffy)",
+            "all x. (Cat(x) -> Pet(x))",
+            "ManagedBuilding(Olive_garden)",
+            "MonthlyRent(Olive_garden, TwoZeroZeroZero)",
+            "all xall yall z. (RentApartment(x, y, z) <-> (ManagedBuilding(y) & AllowedToMoveInWithFluffy(x, y) & SecurityDepositNoMoreThan(z, OneFiveZeroZero)))",
+            "all x. all y. (TwoZeroZeroZero$ -> MoreThan(x, y))"
+        ],
+        "conclusion-fol": "all xall yall z. (Person(x) & Apartment(y) & TheOliveGarden(z) & InApartment(x, y) & HasCat(x, Fluffy) -> AllowedToMove(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (ManagedBuilding(x) & Apartment(y) & Rent(y) -> DepositRequired(y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Pet(x) & ManagedBuilding(y) & AllowedIn(x, y) -> AllowedIn(x, y))",
+            "all xall y. (ManagedBuilding(x) & Apartment(y) & Rent(y) -> DepositRequired(y))",
+            "all x. (SecurityDeposit(x) -> (EqualToMonthsRent(x) | MoreThanMonthsRent(x)))",
+            "Cat(Fluffy) & Owns(Tom, Fluffy)",
+            "all x. (Cat(x) -> Pet(x))",
+            "ManagedBuilding(Olive_garden)",
+            "MonthlyRent(Olive_garden, TwoZeroZeroZero)",
+            "all xall yall z. (RentApartment(x, y, z) <-> (ManagedBuilding(y) & AllowedToMoveInWithFluffy(x, y) & SecurityDepositNoMoreThan(z, OneFiveZeroZero)))",
+            "all x. all y. (TwoZeroZeroZero$ -> MoreThan(x, y))"
+        ],
+        "conclusion-fol": "all x. (SecurityDeposit(x) & OliveGarden(x) -> (IsMoreThan(x, TwoZeroZeroZero)))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (ManagedBuilding(x) & Apartment(y) & Rent(y) -> DepositRequired(y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Animal(x) & LovedByTourists(x) -> MaxsFavorite(x))",
+            "all x. (Animal(x) & FromAustralia(x) -> LovedByTourists(x))",
+            "all x. (Quokka(x) -> FromAustralia(x))",
+            "all x. (Animal(x) & FavoriteOf(Max, x) -> VeryFluffy(x))",
+            "all x. (Animal(x) & FavoriteOf(x, Max) -> LovesToSleep(x))",
+            "all x. (Koala(x) & VeryFluffy(x) -> -Quokka(x))"
+        ],
+        "conclusion-fol": "all x. (Koala(x) -> LovesToSleep(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Animal(x) & LovedByTourists(x) -> MaxsFavorite(x))",
+            "all x. (Animal(x) & FromAustralia(x) -> LovedByTourists(x))",
+            "all x. (Quokka(x) -> FromAustralia(x))",
+            "all x. (Animal(x) & FavoriteOf(Max, x) -> VeryFluffy(x))",
+            "all x. (Animal(x) & FavoriteOf(x, Max) -> LovesToSleep(x))",
+            "all x. (Koala(x) & VeryFluffy(x) -> -Quokka(x))"
+        ],
+        "conclusion-fol": "all x. (Koala(x) -> (LovesToSleep(x) & Quokka(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Animal(x) & LovedByTourists(x) -> MaxsFavorite(x))",
+            "all x. (Animal(x) & FromAustralia(x) -> LovedByTourists(x))",
+            "all x. (Quokka(x) -> FromAustralia(x))",
+            "all x. (Animal(x) & FavoriteOf(Max, x) -> VeryFluffy(x))",
+            "all x. (Animal(x) & FavoriteOf(x, Max) -> LovesToSleep(x))",
+            "all x. (Koala(x) & VeryFluffy(x) -> -Quokka(x))"
+        ],
+        "conclusion-fol": "all x. (Koala(x) & Quokka(x) -> (((LovesToSleep(x) & -VeryFluffy(x)) | (-LovesToSleep(x) & VeryFluffy(x)))))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Man(x) -> (((Kind(x) & -Evil(x)) | (-Kind(x) & Evil(x)))))",
+            "-exists x. (Ugly(x) & Handsome(x))",
+            "all x. (Evil(x) -> Ugly(x))",
+            "all x. (Gentleman(x) -> Handsome(x))",
+            "all x. (CEO(x) -> Gentleman(x))",
+            "all x. (Gentleman(x) <-> Harry(x))"
+        ],
+        "conclusion-fol": "exists x. (Person(x) & CEO(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Man(x) -> (((Kind(x) & -Evil(x)) | (-Kind(x) & Evil(x)))))",
+            "-exists x. (Ugly(x) & Handsome(x))",
+            "all x. (Evil(x) -> Ugly(x))",
+            "all x. (Gentleman(x) -> Handsome(x))",
+            "all x. (CEO(x) -> Gentleman(x))",
+            "all x. (Gentleman(x) <-> Harry(x))"
+        ],
+        "conclusion-fol": "Kind(Harry) | CEO(Harry)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Harry/1, Harry/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Harry/1, Harry/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Man(x) -> (((Kind(x) & -Evil(x)) | (-Kind(x) & Evil(x)))))",
+            "-exists x. (Ugly(x) & Handsome(x))",
+            "all x. (Evil(x) -> Ugly(x))",
+            "all x. (Gentleman(x) -> Handsome(x))",
+            "all x. (CEO(x) -> Gentleman(x))",
+            "all x. (Gentleman(x) <-> Harry(x))"
+        ],
+        "conclusion-fol": "all x. (Harry(x) & (Evil(x) & Ugly(x)) | (-Evil(x) & -Ugly(x)) -> -Kind(x) & -CEO(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Person(x) & (Twin(x) | Triplet(x)) -> SpendsTimeWithSiblings(x))",
+            "all xall y. (Person(x) & Person(y) & Siblings(x, y) & SameAge(x, y) -> (Twins(x, y) | Triplets(x, y)))",
+            "all x. (PeopleComplainAboutAnnoyingSiblings(x) -> SameAgeSiblings(x))",
+            "all x. (Person(x) & -LiveAtHomeRegularly(x) -> -StrongBondsWithFamily(x))",
+            "all x. (SpendsA LotOfTimeWithSiblings(x) & PlaysWithSiblings(x) -> DidNotLiveAtHomeRegularly(x))",
+            "all x. (Luke(x) -> ((Twin(x) | Triplet(x)) & StrongBonds(x, FamilyMembers)))"
+        ],
+        "conclusion-fol": "all x. all y. all z. (Luke(x) & Sibling(y) & Sibling(z) -> (SpendsTimeHangingOut(x, y) & SpendsTimePlaying(x, z)))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Person(x) & Person(y) & Siblings(x, y) & SameAge(x, y) -> (Twins(x, y) | Triplets(x, y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Person(x) & (Twin(x) | Triplet(x)) -> SpendsTimeWithSiblings(x))",
+            "all xall y. (Person(x) & Person(y) & Siblings(x, y) & SameAge(x, y) -> (Twins(x, y) | Triplets(x, y)))",
+            "all x. (PeopleComplainAboutAnnoyingSiblings(x) -> SameAgeSiblings(x))",
+            "all x. (Person(x) & -LiveAtHomeRegularly(x) -> -StrongBondsWithFamily(x))",
+            "all x. (SpendsA LotOfTimeWithSiblings(x) & PlaysWithSiblings(x) -> DidNotLiveAtHomeRegularly(x))",
+            "all x. (Luke(x) -> ((Twin(x) | Triplet(x)) & StrongBonds(x, FamilyMembers)))"
+        ],
+        "conclusion-fol": "all x. (Luke(x) & AnnoyingSiblings(x) -> ComplainsOften(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Person(x) & Person(y) & Siblings(x, y) & SameAge(x, y) -> (Twins(x, y) | Triplets(x, y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Person(x) & (Twin(x) | Triplet(x)) -> SpendsTimeWithSiblings(x))",
+            "all xall y. (Person(x) & Person(y) & Siblings(x, y) & SameAge(x, y) -> (Twins(x, y) | Triplets(x, y)))",
+            "all x. (PeopleComplainAboutAnnoyingSiblings(x) -> SameAgeSiblings(x))",
+            "all x. (Person(x) & -LiveAtHomeRegularly(x) -> -StrongBondsWithFamily(x))",
+            "all x. (SpendsA LotOfTimeWithSiblings(x) & PlaysWithSiblings(x) -> DidNotLiveAtHomeRegularly(x))",
+            "all x. (Luke(x) -> ((Twin(x) | Triplet(x)) & StrongBonds(x, FamilyMembers)))"
+        ],
+        "conclusion-fol": "-(Twin(Luke) | Triplet(Luke) | ComplainsAboutAnnoyingSiblings(Luke))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Person(x) & Person(y) & Siblings(x, y) & SameAge(x, y) -> (Twins(x, y) | Triplets(x, y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (FirTree(x) -> Evergreen(x))",
+            "exists x. (Worship(x) & FirTree(x))"
+        ],
+        "conclusion-fol": "exists x. (Evergreen(x) & -ObjectOfWorship(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "MountainRange(PicurisMountains, NewMexico, Texas)",
+            "all x. all y. (JuanDeOnate(x) & PicurisMountains(y) -> Visited(x, y))",
+            "Donated(HardingPegmatiteMine)",
+            "-exists x. exists y. exists z. (MountainRange(x) & Mine(y) & Donated(z) & LocatedIn(y, x) & DonatedBy(z, x))"
+        ],
+        "conclusion-fol": "all xall y. (JuanDeOnate(x) & MountainRange(y) -> Visited(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (JuanDeOnate(x) & MountainRange(y) -> Visited(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. all y. (Man(x) & Man(y) & Taller(x, y) -> BlockShooting(x, y))",
+            "all x. (Man(x) & TallerThanClassmates(x))",
+            "all x. all y. all z. (Person(x) & Person(y) & Person(z) & Taller(x, y) & Taller(y, z) -> Taller(x, z))",
+            "Man(Peter) & TallerThan(Peter, Michael)",
+            "all xall y. (Person(x) & Person(y) & BlocksShooting(x, y) & -JumpsWhenShooting(y) -> CanBlockShooting(x, y))",
+            "all x. all y. (Michael(x) & Windy(y) -> -BlockShooting(x, y))",
+            "all x. (Shooter(x) & CanJumpWhenShooting(x) -> GreatShooter(x))"
+        ],
+        "conclusion-fol": "Shorter(Peter, MichaelClassMan)",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Person(x) & Person(y) & BlocksShooting(x, y) & -JumpsWhenShooting(y) -> CanBlockShooting(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. all y. (Man(x) & Man(y) & Taller(x, y) -> BlockShooting(x, y))",
+            "all x. (Man(x) & TallerThanClassmates(x))",
+            "all x. all y. all z. (Person(x) & Person(y) & Person(z) & Taller(x, y) & Taller(y, z) -> Taller(x, z))",
+            "Man(Peter) & TallerThan(Peter, Michael)",
+            "all xall y. (Person(x) & Person(y) & BlocksShooting(x, y) & -JumpsWhenShooting(y) -> CanBlockShooting(x, y))",
+            "all x. all y. (Michael(x) & Windy(y) -> -BlockShooting(x, y))",
+            "all x. (Shooter(x) & CanJumpWhenShooting(x) -> GreatShooter(x))"
+        ],
+        "conclusion-fol": "all x. (Windy(x) -> GreatShooter(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Person(x) & Person(y) & BlocksShooting(x, y) & -JumpsWhenShooting(y) -> CanBlockShooting(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. all y. (Man(x) & Man(y) & Taller(x, y) -> BlockShooting(x, y))",
+            "all x. (Man(x) & TallerThanClassmates(x))",
+            "all x. all y. all z. (Person(x) & Person(y) & Person(z) & Taller(x, y) & Taller(y, z) -> Taller(x, z))",
+            "Man(Peter) & TallerThan(Peter, Michael)",
+            "all xall y. (Person(x) & Person(y) & BlocksShooting(x, y) & -JumpsWhenShooting(y) -> CanBlockShooting(x, y))",
+            "all x. all y. (Michael(x) & Windy(y) -> -BlockShooting(x, y))",
+            "all x. (Shooter(x) & CanJumpWhenShooting(x) -> GreatShooter(x))"
+        ],
+        "conclusion-fol": "all x. all y. (Peter(x) & Windy(y) -> CanBlockShooting(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Person(x) & Person(y) & BlocksShooting(x, y) & -JumpsWhenShooting(y) -> CanBlockShooting(x, y))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "BarutinCove(BarutinCove) & BulgarianSettlement(Barutin) & NamedAfter(Cove, Barutin)",
+            "all x. (BarutinCove(x) -> OnSouthwestCoastOfSnowIsland(x))",
+            "all xall yall z. (SouthShetlandIslands(x) & SnowIsland(y) & GreenwichIsland(z) & DeceptionIsland(x) -> (Includes(x, y) & Includes(x, z)))",
+            "PartOf(SouthShetlandIslands, Antarctica)",
+            "all x. all y. all z. (LocatedIn(x, y) & LocatedIn(y, z) -> LocatedIn(x, z))"
+        ],
+        "conclusion-fol": "all x. (Barutin(x) -> (NamedAfter(x, IslandsInAntarctica)))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall yall z. (SouthShetlandIslands(x) & SnowIsland(y) & GreenwichIsland(z) & DeceptionIsland(x) -> (Includes(x, y) & Includes(x, z)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "BarutinCove(BarutinCove) & BulgarianSettlement(Barutin) & NamedAfter(Cove, Barutin)",
+            "all x. (BarutinCove(x) -> OnSouthwestCoastOfSnowIsland(x))",
+            "all xall yall z. (SouthShetlandIslands(x) & SnowIsland(y) & GreenwichIsland(z) & DeceptionIsland(x) -> (Includes(x, y) & Includes(x, z)))",
+            "PartOf(SouthShetlandIslands, Antarctica)",
+            "all x. all y. all z. (LocatedIn(x, y) & LocatedIn(y, z) -> LocatedIn(x, z))"
+        ],
+        "conclusion-fol": "exists x. (Cove(x) & NamedAfterPlaceInBulgaria(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall yall z. (SouthShetlandIslands(x) & SnowIsland(y) & GreenwichIsland(z) & DeceptionIsland(x) -> (Includes(x, y) & Includes(x, z)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "BarutinCove(BarutinCove) & BulgarianSettlement(Barutin) & NamedAfter(Cove, Barutin)",
+            "all x. (BarutinCove(x) -> OnSouthwestCoastOfSnowIsland(x))",
+            "all xall yall z. (SouthShetlandIslands(x) & SnowIsland(y) & GreenwichIsland(z) & DeceptionIsland(x) -> (Includes(x, y) & Includes(x, z)))",
+            "PartOf(SouthShetlandIslands, Antarctica)",
+            "all x. all y. all z. (LocatedIn(x, y) & LocatedIn(y, z) -> LocatedIn(x, z))"
+        ],
+        "conclusion-fol": "-(BarutinInAntarctica(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall yall z. (SouthShetlandIslands(x) & SnowIsland(y) & GreenwichIsland(z) & DeceptionIsland(x) -> (Includes(x, y) & Includes(x, z)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "exists x. (Affection(x) & Love(x))",
+            "exists x. (Love(x) & Positive(x))"
+        ],
+        "conclusion-fol": "exists x. (Affection(x) & Positive(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (CanTransportMultiplePassengers(x) -> -Empty(x))",
+            "all x. (Airline(x) -> CanTransportMultiplePassengers(x))",
+            "all x. (Plane(x) -> Empty(x))",
+            "all x. (BoeingSevenZeroSeven(x) -> Plane(x))",
+            "-(GreyhoundAirline -> (exists x. (GreyhoundPlane(x))))"
+        ],
+        "conclusion-fol": "all x. (Greyhound(x) -> Airline(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (CanTransportMultiplePassengers(x) -> -Empty(x))",
+            "all x. (Airline(x) -> CanTransportMultiplePassengers(x))",
+            "all x. (Plane(x) -> Empty(x))",
+            "all x. (BoeingSevenZeroSeven(x) -> Plane(x))",
+            "-(GreyhoundAirline -> (exists x. (GreyhoundPlane(x))))"
+        ],
+        "conclusion-fol": "all x. (Greyhound(x) -> BoeingSevenZeroSeven(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (CanTransportMultiplePassengers(x) -> -Empty(x))",
+            "all x. (Airline(x) -> CanTransportMultiplePassengers(x))",
+            "all x. (Plane(x) -> Empty(x))",
+            "all x. (BoeingSevenZeroSeven(x) -> Plane(x))",
+            "-(GreyhoundAirline -> (exists x. (GreyhoundPlane(x))))"
+        ],
+        "conclusion-fol": "-(Greyhound(x) & BoeingSevenZeroSeven(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Mammal(x) -> Animal(x))",
+            "all x. (Monkey(x) -> Mammal(x))",
+            "all x. (Animal(x) -> (((Monkey(x) & -Bird(x)) | (-Monkey(x) & Bird(x)))))",
+            "all x. (Bird(x) -> Fly(x))",
+            "all x. (Animal(x) -> Breathes(x))",
+            "all x. (CanFly(x) -> HasWings(x))",
+            "all x. (Rock(x) & -(Fly(x) | Bird(x)) -> -(Flies(x) | Breathes(x)))"
+        ],
+        "conclusion-fol": "all x. (Rock(x) -> Monkey(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Mammal(x) -> Animal(x))",
+            "all x. (Monkey(x) -> Mammal(x))",
+            "all x. (Animal(x) -> (((Monkey(x) & -Bird(x)) | (-Monkey(x) & Bird(x)))))",
+            "all x. (Bird(x) -> Fly(x))",
+            "all x. (Animal(x) -> Breathes(x))",
+            "all x. (CanFly(x) -> HasWings(x))",
+            "all x. (Rock(x) & -(Fly(x) | Bird(x)) -> -(Flies(x) | Breathes(x)))"
+        ],
+        "conclusion-fol": "all x. (Rock(x) -> HasWings(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Mammal(x) -> Animal(x))",
+            "all x. (Monkey(x) -> Mammal(x))",
+            "all x. (Animal(x) -> (((Monkey(x) & -Bird(x)) | (-Monkey(x) & Bird(x)))))",
+            "all x. (Bird(x) -> Fly(x))",
+            "all x. (Animal(x) -> Breathes(x))",
+            "all x. (CanFly(x) -> HasWings(x))",
+            "all x. (Rock(x) & -(Fly(x) | Bird(x)) -> -(Flies(x) | Breathes(x)))"
+        ],
+        "conclusion-fol": "all x. (Rock(x) -> -HasWings(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (HasWedding(x) -> exists y. (Child(y) & HasChild(x, y)))",
+            "all x. (TravelsToParisForHoneymoon(x) -> HasWedding(x))",
+            "all x. (Wedding(x) & OccursInJuly(x) -> TravelsToParisForHoneymoon(x))",
+            "exists x. (Wedding(x) & Month(x, July) & WellAttended(x))",
+            "all x. (Person(x) & HasAtLeastOneChild(x) -> (-TravelsToParisForHoneymoon(x) & -HasWedding(x)))",
+            "all x. (Wedding(x) & WellAttended(x) -> (WeddingInJuly(x) | TravelsToParisForHoneymoon(x)))"
+        ],
+        "conclusion-fol": "exists x. (Person(x) & Wedding(x) & WellAttended(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (HasWedding(x) -> exists y. (Child(y) & HasChild(x, y)))",
+            "all x. (TravelsToParisForHoneymoon(x) -> HasWedding(x))",
+            "all x. (Wedding(x) & OccursInJuly(x) -> TravelsToParisForHoneymoon(x))",
+            "exists x. (Wedding(x) & Month(x, July) & WellAttended(x))",
+            "all x. (Person(x) & HasAtLeastOneChild(x) -> (-TravelsToParisForHoneymoon(x) & -HasWedding(x)))",
+            "all x. (Wedding(x) & WellAttended(x) -> (WeddingInJuly(x) | TravelsToParisForHoneymoon(x)))"
+        ],
+        "conclusion-fol": "-exists x. (Wedding(x) & WellAttended(x) & HasJohn(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (HasWedding(x) -> exists y. (Child(y) & HasChild(x, y)))",
+            "all x. (TravelsToParisForHoneymoon(x) -> HasWedding(x))",
+            "all x. (Wedding(x) & OccursInJuly(x) -> TravelsToParisForHoneymoon(x))",
+            "exists x. (Wedding(x) & Month(x, July) & WellAttended(x))",
+            "all x. (Person(x) & HasAtLeastOneChild(x) -> (-TravelsToParisForHoneymoon(x) & -HasWedding(x)))",
+            "all x. (Wedding(x) & WellAttended(x) -> (WeddingInJuly(x) | TravelsToParisForHoneymoon(x)))"
+        ],
+        "conclusion-fol": "exists x. (Person(x) & Child(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (HasWedding(x) -> exists y. (Child(y) & HasChild(x, y)))",
+            "all x. (TravelsToParisForHoneymoon(x) -> HasWedding(x))",
+            "all x. (Wedding(x) & OccursInJuly(x) -> TravelsToParisForHoneymoon(x))",
+            "exists x. (Wedding(x) & Month(x, July) & WellAttended(x))",
+            "all x. (Person(x) & HasAtLeastOneChild(x) -> (-TravelsToParisForHoneymoon(x) & -HasWedding(x)))",
+            "all x. (Wedding(x) & WellAttended(x) -> (WeddingInJuly(x) | TravelsToParisForHoneymoon(x)))"
+        ],
+        "conclusion-fol": "-(WeddingWellAttended(John) | HoneymoonInParis(John))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "exists x. (Mammal(x) & HasTeeth(x))",
+            "all x. (Platypus(x) -> -HasTeeth(x))",
+            "all x. (Platypus(x) -> Mammal(x))",
+            "all x. (Human(x) -> HasTeeth(x))"
+        ],
+        "conclusion-fol": "all x. (Platypus(x) -> (Mammal(x) & -HasTeeth(x)))",
+        "predicted_label": "True",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "exists x. (Mammal(x) & HasTeeth(x))",
+            "all x. (Platypus(x) -> -HasTeeth(x))",
+            "all x. (Platypus(x) -> Mammal(x))",
+            "all x. (Human(x) -> HasTeeth(x))"
+        ],
+        "conclusion-fol": "all x. (Platypus(x) -> Reptile(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "exists x. (Mammal(x) & HasTeeth(x))",
+            "all x. (Platypus(x) -> -HasTeeth(x))",
+            "all x. (Platypus(x) -> Mammal(x))",
+            "all x. (Human(x) -> HasTeeth(x))"
+        ],
+        "conclusion-fol": "all x. (Human(x) -> Mammal(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Plunger(x) -> Sucks(x))",
+            "all x. (Vacuum(x) -> Sucks(x))",
+            "all x. (Vampire(x) -> Sucks(x))",
+            "all x. (Space(x) -> Vacuum(x))",
+            "all x. (Duster(x) -> -Sucks(x))"
+        ],
+        "conclusion-fol": "all x. (Space(x) -> Sucks(x))",
+        "predicted_label": "True",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Plunger(x) -> Sucks(x))",
+            "all x. (Vacuum(x) -> Sucks(x))",
+            "all x. (Vampire(x) -> Sucks(x))",
+            "all x. (Space(x) -> Vacuum(x))",
+            "all x. (Duster(x) -> -Sucks(x))"
+        ],
+        "conclusion-fol": "all x. (Space(x) -> Vampire(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Plunger(x) -> Sucks(x))",
+            "all x. (Vacuum(x) -> Sucks(x))",
+            "all x. (Vampire(x) -> Sucks(x))",
+            "all x. (Space(x) -> Vacuum(x))",
+            "all x. (Duster(x) -> -Sucks(x))"
+        ],
+        "conclusion-fol": "all x. (HouseholdAppliance(x) -> Sucks(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (CartoonCharacter(x) & Funny(x) -> Popular(x))",
+            "all x. (Ugly(x) -> -Popular(x))",
+            "all x. (CartoonCharacter(x) & LovedByChildren(x) -> Funny(x))",
+            "all x. (CartoonCharacter(x) & FromSimpsons(x) -> LovedByChildren(x))",
+            "all x. (CartoonCharacter(x) & Yellow(x) -> FromSimpsons(x))",
+            "all x. (Ben(x) -> (FromSimpsons(x) | Funny(x)))"
+        ],
+        "conclusion-fol": "exists x. (Child(x) & LovedBy(Ben, x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Ben/1, Ben/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Ben/1, Ben/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (CartoonCharacter(x) & Funny(x) -> Popular(x))",
+            "all x. (Ugly(x) -> -Popular(x))",
+            "all x. (CartoonCharacter(x) & LovedByChildren(x) -> Funny(x))",
+            "all x. (CartoonCharacter(x) & FromSimpsons(x) -> LovedByChildren(x))",
+            "all x. (CartoonCharacter(x) & Yellow(x) -> FromSimpsons(x))",
+            "all x. (Ben(x) -> (FromSimpsons(x) | Funny(x)))"
+        ],
+        "conclusion-fol": "((Ugly(Ben) & -Yellow(Ben)) | (-Ugly(Ben) & Yellow(Ben)))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Ben/1, Ben/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Ben/1, Ben/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (CartoonCharacter(x) & Funny(x) -> Popular(x))",
+            "all x. (Ugly(x) -> -Popular(x))",
+            "all x. (CartoonCharacter(x) & LovedByChildren(x) -> Funny(x))",
+            "all x. (CartoonCharacter(x) & FromSimpsons(x) -> LovedByChildren(x))",
+            "all x. (CartoonCharacter(x) & Yellow(x) -> FromSimpsons(x))",
+            "all x. (Ben(x) -> (FromSimpsons(x) | Funny(x)))"
+        ],
+        "conclusion-fol": "all x. (Ben(x) -> (Yellow(x) & Ugly(x) | (-Yellow(x) & -Ugly(x))))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all xall y. (DomesticAnimal(x) & BreedingBack(y) -> (DeliberateSelectiveBreeding(y) & DomesticAnimal(x)))",
+            "all x. (Cattle(x) & BredBackInOneNineTwoZeros(x) & ResemblesAurochs(x))",
+            "all x. (Cattle(x) & Heck(x) -> Animal(x))",
+            "all x. (Auroch(x) -> Animal(x))",
+            "exists x. (Animal(x) & BredBack(x) & ResemblesExtinctAnimal(x))"
+        ],
+        "conclusion-fol": "exists x. (HeckCattle(x) & ArtificiallySelected(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (DomesticAnimal(x) & BreedingBack(y) -> (DeliberateSelectiveBreeding(y) & DomesticAnimal(x)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all xall y. (DomesticAnimal(x) & BreedingBack(y) -> (DeliberateSelectiveBreeding(y) & DomesticAnimal(x)))",
+            "all x. (Cattle(x) & BredBackInOneNineTwoZeros(x) & ResemblesAurochs(x))",
+            "all x. (Cattle(x) & Heck(x) -> Animal(x))",
+            "all x. (Auroch(x) -> Animal(x))",
+            "exists x. (Animal(x) & BredBack(x) & ResemblesExtinctAnimal(x))"
+        ],
+        "conclusion-fol": "all x. (Auroch(x) -> Extinct(x))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (DomesticAnimal(x) & BreedingBack(y) -> (DeliberateSelectiveBreeding(y) & DomesticAnimal(x)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. (Student(x) -> Human(x))",
+            "all x. (Studies(x) -> Student(x))",
+            "all x. (Person(x) -> (((Studies(x) & -Teaches(x)) | (-Studies(x) & Teaches(x)))))",
+            "all x. (YoungPerson(x) -> -Teaches(x))",
+            "-(Teaches(Jerry) | Manager(Jerry))",
+            "exists x. (Rose(x) & (Young(x) | Student(x)))"
+        ],
+        "conclusion-fol": "Y(Jerry) <-> Young(Jerry)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Student(x) -> Human(x))",
+            "all x. (Studies(x) -> Student(x))",
+            "all x. (Person(x) -> (((Studies(x) & -Teaches(x)) | (-Studies(x) & Teaches(x)))))",
+            "all x. (YoungPerson(x) -> -Teaches(x))",
+            "-(Teaches(Jerry) | Manager(Jerry))",
+            "exists x. (Rose(x) & (Young(x) | Student(x)))"
+        ],
+        "conclusion-fol": "-(Young(Jerry))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Student(x) -> Human(x))",
+            "all x. (Studies(x) -> Student(x))",
+            "all x. (Person(x) -> (((Studies(x) & -Teaches(x)) | (-Studies(x) & Teaches(x)))))",
+            "all x. (YoungPerson(x) -> -Teaches(x))",
+            "-(Teaches(Jerry) | Manager(Jerry))",
+            "exists x. (Rose(x) & (Young(x) | Student(x)))"
+        ],
+        "conclusion-fol": "all x. (Rose(x) -> (Human(x) | Manager(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Student(x) -> Human(x))",
+            "all x. (Studies(x) -> Student(x))",
+            "all x. (Person(x) -> (((Studies(x) & -Teaches(x)) | (-Studies(x) & Teaches(x)))))",
+            "all x. (YoungPerson(x) -> -Teaches(x))",
+            "-(Teaches(Jerry) | Manager(Jerry))",
+            "exists x. (Rose(x) & (Young(x) | Student(x)))"
+        ],
+        "conclusion-fol": "(Human(Rose) | Manager(Jerry))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Rose/1, Rose/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Rose/1, Rose/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Student(x) -> Human(x))",
+            "all x. (Studies(x) -> Student(x))",
+            "all x. (Person(x) -> (((Studies(x) & -Teaches(x)) | (-Studies(x) & Teaches(x)))))",
+            "all x. (YoungPerson(x) -> -Teaches(x))",
+            "-(Teaches(Jerry) | Manager(Jerry))",
+            "exists x. (Rose(x) & (Young(x) | Student(x)))"
+        ],
+        "conclusion-fol": "-(Student(Rose) & Human(Jerry))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Rose/1, Rose/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Rose/1, Rose/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (PublishingHouse(x) & TranslatesForeignLiterature(x) & English(x) -> NewVesselPress(x))",
+            "all x. (PublishedBook(x) & FromNewVesselPress(x) -> InEnglish(x))",
+            "Book(Neapolitan_chronicles) & PublishedBy(Neapolitan_chronicles, New_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(Book) & NewVesselPress(Publisher) & Published(Book, Publisher)"
+        ],
+        "conclusion-fol": "Book(NeapolitanChronicles)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Book/1, Book/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Book/1, Book/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (PublishingHouse(x) & TranslatesForeignLiterature(x) & English(x) -> NewVesselPress(x))",
+            "all x. (PublishedBook(x) & FromNewVesselPress(x) -> InEnglish(x))",
+            "Book(Neapolitan_chronicles) & PublishedBy(Neapolitan_chronicles, New_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(Book) & NewVesselPress(Publisher) & Published(Book, Publisher)"
+        ],
+        "conclusion-fol": "PublishedBy(Harrypotter, Newvesselpress)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Book/1, Book/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Book/1, Book/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (PublishingHouse(x) & TranslatesForeignLiterature(x) & English(x) -> NewVesselPress(x))",
+            "all x. (PublishedBook(x) & FromNewVesselPress(x) -> InEnglish(x))",
+            "Book(Neapolitan_chronicles) & PublishedBy(Neapolitan_chronicles, New_vessel_press)",
+            "TranslatedFrom(NeapolitanChronicles, Italian)",
+            "PalaceOfFlies(Book) & NewVesselPress(Publisher) & Published(Book, Publisher)"
+        ],
+        "conclusion-fol": "TranslatedFromItalian(PalaceOfFlies) -> One",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Book/1, Book/0, PalaceOfFlies/1, PalaceOfFlies/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Book/1, Book/0, PalaceOfFlies/1, PalaceOfFlies/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (OwnsLargeDesktopMonitor(x) -> (WorksRegularlyAtHome(x) & WorksOftenAtHome(x)))",
+            "all x. (Person(x) & FullyStockedHomeOffice(x) & ImpressiveHomeOffice(x) -> OwnsLargeDesktopMonitor(x))",
+            "all x. (Person(x) & WorksRegularlyAndOftenAtHome(x) -> SpendsFreeTimeTidyingAndOrganizing(x))",
+            "all x. (Person(x) & WorksRegularlyAndOftenAtHome(x) -> VisitsOfficeSupplyStoreRegularly(x))",
+            "all x. (SpendsFreeTimeTidyingAndOrganizingHome(x) -> (-GoesToBedLate(x) & -WakesUpEveryDayAfterNoon(x)))",
+            "all x. (Remy(x) -> ((BedsLate(x) & WakesUpAfterNoon(x) & SpendsFreeTimeTidyingAndOrganizing(x)) | (-BedsLate(x) & WakesUpEveryDayAfterNoon(x) & -SpendsFreeTimeTidyingAndOrganizing(x))))"
+        ],
+        "conclusion-fol": "exists x. (Visits(Remy, OfficeSupplyStore) & Regularly(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Remy/1, Remy/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Remy/1, Remy/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (OwnsLargeDesktopMonitor(x) -> (WorksRegularlyAtHome(x) & WorksOftenAtHome(x)))",
+            "all x. (Person(x) & FullyStockedHomeOffice(x) & ImpressiveHomeOffice(x) -> OwnsLargeDesktopMonitor(x))",
+            "all x. (Person(x) & WorksRegularlyAndOftenAtHome(x) -> SpendsFreeTimeTidyingAndOrganizing(x))",
+            "all x. (Person(x) & WorksRegularlyAndOftenAtHome(x) -> VisitsOfficeSupplyStoreRegularly(x))",
+            "all x. (SpendsFreeTimeTidyingAndOrganizingHome(x) -> (-GoesToBedLate(x) & -WakesUpEveryDayAfterNoon(x)))",
+            "all x. (Remy(x) -> ((BedsLate(x) & WakesUpAfterNoon(x) & SpendsFreeTimeTidyingAndOrganizing(x)) | (-BedsLate(x) & WakesUpEveryDayAfterNoon(x) & -SpendsFreeTimeTidyingAndOrganizing(x))))"
+        ],
+        "conclusion-fol": "all x. (Remy(x) -> (HasFullyStockedHomeOffice(x) & ImpressiveHomeOffice(x) & VisitsOfficeSupplyStore(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (OwnsLargeDesktopMonitor(x) -> (WorksRegularlyAtHome(x) & WorksOftenAtHome(x)))",
+            "all x. (Person(x) & FullyStockedHomeOffice(x) & ImpressiveHomeOffice(x) -> OwnsLargeDesktopMonitor(x))",
+            "all x. (Person(x) & WorksRegularlyAndOftenAtHome(x) -> SpendsFreeTimeTidyingAndOrganizing(x))",
+            "all x. (Person(x) & WorksRegularlyAndOftenAtHome(x) -> VisitsOfficeSupplyStoreRegularly(x))",
+            "all x. (SpendsFreeTimeTidyingAndOrganizingHome(x) -> (-GoesToBedLate(x) & -WakesUpEveryDayAfterNoon(x)))",
+            "all x. (Remy(x) -> ((BedsLate(x) & WakesUpAfterNoon(x) & SpendsFreeTimeTidyingAndOrganizing(x)) | (-BedsLate(x) & WakesUpEveryDayAfterNoon(x) & -SpendsFreeTimeTidyingAndOrganizing(x))))"
+        ],
+        "conclusion-fol": "all x. (Remy(x) & (GoesToBedLate(x) & WakesUpAfterNoon(x)) | VisitsOfficeSupplyStore(x) -> (-(SpendsFreeTimeTidying(x) & OrganizingSpaces(x)) & -(FullyStockedHomeOffice(x))))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Human(x) -> Mortal(x))",
+            "all x. (Greek(x) -> Human(x))"
+        ],
+        "conclusion-fol": "exists x. (Greek(x) & Mortal(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "-exists x. (Student(x) & WorksInLibrary(x) & FromComputerScienceDepartment(x))",
+            "all x. (Student(x) & PartTimeJobOfferedByUniversity(x) -> WorksInLibrary(x))",
+            "all x. (Student(x) & TakesDatabaseCourse(x) -> FromComputerScienceDepartment(x))",
+            "all x. (Student(x) & InstructedBy(x, David) -> TakingDatabaseCourse(x))",
+            "all x. (Student(x) & WorksInLab(x) -> InstructedBy(x, David))",
+            "all x. (Student(x) & WorksInLab(x))",
+            "-(PartTimeJobOfferedByUniversity(Jack) | WorksInLab(Jack))"
+        ],
+        "conclusion-fol": "exists x. (Person(x) & PartTimeJob(x) & University(y) & OffersJob(y, x))",
+        "predicted_label": "True",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "-exists x. (Student(x) & WorksInLibrary(x) & FromComputerScienceDepartment(x))",
+            "all x. (Student(x) & PartTimeJobOfferedByUniversity(x) -> WorksInLibrary(x))",
+            "all x. (Student(x) & TakesDatabaseCourse(x) -> FromComputerScienceDepartment(x))",
+            "all x. (Student(x) & InstructedBy(x, David) -> TakingDatabaseCourse(x))",
+            "all x. (Student(x) & WorksInLab(x) -> InstructedBy(x, David))",
+            "all x. (Student(x) & WorksInLab(x))",
+            "-(PartTimeJobOfferedByUniversity(Jack) | WorksInLab(Jack))"
+        ],
+        "conclusion-fol": "-exists x. (PartTimeJob(x) & University(y) & James(z) & JobOfferedBy(x, y, z))",
+        "predicted_label": "True",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "-exists x. (Student(x) & WorksInLibrary(x) & FromComputerScienceDepartment(x))",
+            "all x. (Student(x) & PartTimeJobOfferedByUniversity(x) -> WorksInLibrary(x))",
+            "all x. (Student(x) & TakesDatabaseCourse(x) -> FromComputerScienceDepartment(x))",
+            "all x. (Student(x) & InstructedBy(x, David) -> TakingDatabaseCourse(x))",
+            "all x. (Student(x) & WorksInLab(x) -> InstructedBy(x, David))",
+            "all x. (Student(x) & WorksInLab(x))",
+            "-(PartTimeJobOfferedByUniversity(Jack) | WorksInLab(Jack))"
+        ],
+        "conclusion-fol": "all x. (Student(x) & James(x) -> (((DatabaseCourse(x) & -PartTimeJob(x)) | (-DatabaseCourse(x) & PartTimeJob(x)))))",
+        "predicted_label": "True",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "-exists x. (Student(x) & WorksInLibrary(x) & FromComputerScienceDepartment(x))",
+            "all x. (Student(x) & PartTimeJobOfferedByUniversity(x) -> WorksInLibrary(x))",
+            "all x. (Student(x) & TakesDatabaseCourse(x) -> FromComputerScienceDepartment(x))",
+            "all x. (Student(x) & InstructedBy(x, David) -> TakingDatabaseCourse(x))",
+            "all x. (Student(x) & WorksInLab(x) -> InstructedBy(x, David))",
+            "all x. (Student(x) & WorksInLab(x))",
+            "-(PartTimeJobOfferedByUniversity(Jack) | WorksInLab(Jack))"
+        ],
+        "conclusion-fol": "all x. all y. (Jack(x) & DatabaseCourse(y) -> Takes(x, y))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Jack/1, Jack/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Jack/1, Jack/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (LikesMusic(x) -> WantsToCompose(x))",
+            "all x. (Program(x) & Access(x, George) -> CanCompose(x))",
+            "all x. (Compose(x) & CanCompose(x) & WantsToCompose(x) -> WillCompose(x))"
+        ],
+        "conclusion-fol": "all x. (LikesMusic(x) & HasAccessToProgram(x) -> Composes(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (LikesMusic(x) -> WantsToCompose(x))",
+            "all x. (Program(x) & Access(x, George) -> CanCompose(x))",
+            "all x. (Compose(x) & CanCompose(x) & WantsToCompose(x) -> WillCompose(x))"
+        ],
+        "conclusion-fol": "all x. (George(x) & -Compose(x) -> -Compose(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: George/1, George/0.\n\n\nFatal error:  The following symbols are used with multiple arities: George/1, George/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Hawk(x) -> -Land(x))",
+            "exists x. (Bird(x) & Hawk(x))"
+        ],
+        "conclusion-fol": "all x. (Bird(x) -> Lands(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "exists x. (Monday(x) & EightPM(x) & RosesGivenOutOnTV(x))",
+            "all x. (Rose(x) & GivenOutOnTV(x) -> OnBachelor(x))",
+            "all x. (OnBachelor(x) -> PortraysRealPeople(x))",
+            "all x. (Show(x) & PortraysRealPeople(x) -> RealityTVShow(x))",
+            "-(RealityTVShow(BreakingBad))"
+        ],
+        "conclusion-fol": "Monday(Eight) -> BreakingBad(Eight)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: BreakingBad/1, BreakingBad/0.\n\n\nFatal error:  The following symbols are used with multiple arities: BreakingBad/1, BreakingBad/0"
+    },
+    {
+        "premise-fol": [
+            "exists x. (Monday(x) & EightPM(x) & RosesGivenOutOnTV(x))",
+            "all x. (Rose(x) & GivenOutOnTV(x) -> OnBachelor(x))",
+            "all x. (OnBachelor(x) -> PortraysRealPeople(x))",
+            "all x. (Show(x) & PortraysRealPeople(x) -> RealityTVShow(x))",
+            "-(RealityTVShow(BreakingBad))"
+        ],
+        "conclusion-fol": "all xall y. (BreakingBad(x) & Rose(y) -> (GivenOutOnMondayAtEightPM(x, y)))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (BreakingBad(x) & Rose(y) -> (GivenOutOnMondayAtEightPM(x, y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "exists x. (Monday(x) & EightPM(x) & RosesGivenOutOnTV(x))",
+            "all x. (Rose(x) & GivenOutOnTV(x) -> OnBachelor(x))",
+            "all x. (OnBachelor(x) -> PortraysRealPeople(x))",
+            "all x. (Show(x) & PortraysRealPeople(x) -> RealityTVShow(x))",
+            "-(RealityTVShow(BreakingBad))"
+        ],
+        "conclusion-fol": "all x. (RosesGivenOutDuringBreakingBad(x) -> OnMondayAtEightPM(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "HeinrichScmidt(n) & NaziGermanPolitician(n)",
+            "all x. (HeinrichSchmidt(x) -> (MemberOfPrussianStateParliament(x) & MemberOfNaziReichstag(x)))"
+        ],
+        "conclusion-fol": "((Either(German, HeinrichSchmidt) & -Either(Russian, HeinrichSchmidt)) | (-Either(German, HeinrichSchmidt) & Either(Russian, HeinrichSchmidt)))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: HeinrichSchmidt/1, HeinrichSchmidt/0.\n\n\nFatal error:  The following symbols are used with multiple arities: HeinrichSchmidt/1, HeinrichSchmidt/0"
+    },
+    {
+        "premise-fol": [
+            "HeinrichScmidt(n) & NaziGermanPolitician(n)",
+            "all x. (HeinrichSchmidt(x) -> (MemberOfPrussianStateParliament(x) & MemberOfNaziReichstag(x)))"
+        ],
+        "conclusion-fol": "exists x. (NaziGermanPolitician(x) & PartOfPrussianStateParliament(x) & PartOfNaziReichstag(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "HeinrichScmidt(n) & NaziGermanPolitician(n)",
+            "all x. (HeinrichSchmidt(x) -> (MemberOfPrussianStateParliament(x) & MemberOfNaziReichstag(x)))"
+        ],
+        "conclusion-fol": "-exists x. (Politician(x) & PartOfNaziReichstag(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (DeadlyDisease(x) -> LowSurvivalRate(x))",
+            "all x. (Cancer(x) & Severe(x) -> DeadlyDisease(x))",
+            "all x. (BileDuctCancer(x) -> SevereCancer(x))",
+            "all x. (Cholangiocarcinoma(x) -> BileDuctCancer(x))",
+            "-(exists x. (Person(x) & Flu(x) & Mild(x) & LowSurvivalRate(x)))",
+            "all x. (ColorectalCancer(x) & BileDuctCancer(x) & LowSurvivalRate(x) -> -BileDuctCancer(x))"
+        ],
+        "conclusion-fol": "all x. (ColorectalCancer(x) -> SevereCancer(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (DeadlyDisease(x) -> LowSurvivalRate(x))",
+            "all x. (Cancer(x) & Severe(x) -> DeadlyDisease(x))",
+            "all x. (BileDuctCancer(x) -> SevereCancer(x))",
+            "all x. (Cholangiocarcinoma(x) -> BileDuctCancer(x))",
+            "-(exists x. (Person(x) & Flu(x) & Mild(x) & LowSurvivalRate(x)))",
+            "all x. (ColorectalCancer(x) & BileDuctCancer(x) & LowSurvivalRate(x) -> -BileDuctCancer(x))"
+        ],
+        "conclusion-fol": "all x. (ColorectalCancer(x) & (BileDuctCancer(x) | Cholangiocarcinoma(x)) -> (BileDuctCancer(x) & MildFlu(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (DeadlyDisease(x) -> LowSurvivalRate(x))",
+            "all x. (Cancer(x) & Severe(x) -> DeadlyDisease(x))",
+            "all x. (BileDuctCancer(x) -> SevereCancer(x))",
+            "all x. (Cholangiocarcinoma(x) -> BileDuctCancer(x))",
+            "-(exists x. (Person(x) & Flu(x) & Mild(x) & LowSurvivalRate(x)))",
+            "all x. (ColorectalCancer(x) & BileDuctCancer(x) & LowSurvivalRate(x) -> -BileDuctCancer(x))"
+        ],
+        "conclusion-fol": "all x. (ColorectalCancer(x) & -(MildFlu(x) & Cholangiocarcinoma(x)) -> (BileDuctCancer(x) | Cholangiocarcinoma(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (OlympicGames(x) -> SportingEvent(x))",
+            "LastOlympicGames(Tokyo)",
+            "all x. (UnitedStates(x) & WonMostMedals(x, Tokyo) -> BestPerformance(x, Tokyo))"
+        ],
+        "conclusion-fol": "all x. (WorldChampionships(x) -> SportingEvent(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (OlympicGames(x) -> SportingEvent(x))",
+            "LastOlympicGames(Tokyo)",
+            "all x. (UnitedStates(x) & WonMostMedals(x, Tokyo) -> BestPerformance(x, Tokyo))"
+        ],
+        "conclusion-fol": "-(OlympicGames(Last) & InTokyo(Last))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (OlympicGames(x) -> SportingEvent(x))",
+            "LastOlympicGames(Tokyo)",
+            "all x. (UnitedStates(x) & WonMostMedals(x, Tokyo) -> BestPerformance(x, Tokyo))"
+        ],
+        "conclusion-fol": "MostMedals(UnitedStates, LastOlympicGames)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: LastOlympicGames/1, LastOlympicGames/0, UnitedStates/1, UnitedStates/0.\n\n\nFatal error:  The following symbols are used with multiple arities: LastOlympicGames/1, LastOlympicGames/0, UnitedStates/1, UnitedStates/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Horse(x) -> HasHooves(x))",
+            "all x. (Human(x) -> -HasHooves(x))"
+        ],
+        "conclusion-fol": "exists x. (Human(x) & Horse(x))",
+        "predicted_label": "False",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. all y. (Susan(x) & LGAAirport(y) -> FliesTo(x, y))",
+            "all xall y. (Airport(x) & Airport(y) -> (Departure(x, y) & Arrival(y, x) -> -SameAirport(x, y)))",
+            "all x. all y. (John(x) & LGAAirport(y) -> FliesFrom(x, y))"
+        ],
+        "conclusion-fol": "all x. all y. (Susan(x) & LGAAirport(y) -> FliesFrom(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Airport(x) & Airport(y) -> (Departure(x, y) & Arrival(y, x) -> -SameAirport(x, y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "all x. all y. (Susan(x) & LGAAirport(y) -> FliesTo(x, y))",
+            "all xall y. (Airport(x) & Airport(y) -> (Departure(x, y) & Arrival(y, x) -> -SameAirport(x, y)))",
+            "all x. all y. (John(x) & LGAAirport(y) -> FliesFrom(x, y))"
+        ],
+        "conclusion-fol": "all x. all y. (John(x) & LGAAirport(y) -> FliesTo(x, y))",
+        "predicted_label": "ERROR",
+        "error": "'xall' is an illegal variable name.  Constants may not be quantified.\nall xall y. (Airport(x) & Airport(y) -> (Departure(x, y) & Arrival(y, x) -> -SameAirport(x, y)))\n    ^"
+    },
+    {
+        "premise-fol": [
+            "-(exists x. (NiceToAnimals(x) & MeanToAnimals(x)))",
+            "exists x. (Grumpy(x) & MeanToAnimals(x))",
+            "all x. (AnimalLover(x) -> NiceToAnimals(x))",
+            "all x. (OwnsPet(x) -> LovesAnimals(x))",
+            "exists x. (PetOwner(x) & Tom(x))"
+        ],
+        "conclusion-fol": "GrumpyPerson(Tom)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Tom/1, Tom/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Tom/1, Tom/0"
+    },
+    {
+        "premise-fol": [
+            "-(exists x. (NiceToAnimals(x) & MeanToAnimals(x)))",
+            "exists x. (Grumpy(x) & MeanToAnimals(x))",
+            "all x. (AnimalLover(x) -> NiceToAnimals(x))",
+            "all x. (OwnsPet(x) -> LovesAnimals(x))",
+            "exists x. (PetOwner(x) & Tom(x))"
+        ],
+        "conclusion-fol": "-(GrumpyPerson(Tom) & MeanToAnimals(Tom))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Tom/1, Tom/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Tom/1, Tom/0"
+    },
+    {
+        "premise-fol": [
+            "-(exists x. (NiceToAnimals(x) & MeanToAnimals(x)))",
+            "exists x. (Grumpy(x) & MeanToAnimals(x))",
+            "all x. (AnimalLover(x) -> NiceToAnimals(x))",
+            "all x. (OwnsPet(x) -> LovesAnimals(x))",
+            "exists x. (PetOwner(x) & Tom(x))"
+        ],
+        "conclusion-fol": "all x. (Person(x) & -Grumpy(x) & -MeanToAnimals(x) -> (-Grumpy(x) & -AnimalLover(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Podcast(x) -> -Novel(x))",
+            "all x. (BornInAmericanCity(x) -> American(x))",
+            "all x. (Book(x) & Novel(x) & WrittenByPerson(x) -> NovelWriter(x))",
+            "W(DaniShapiro) & A(American) & Writer(Shapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(Novel) & WrittenIn(TwoZeroZeroThree)",
+            "all x. (DaniShapiro(x) & Podcast(y) & FamilySecrets(y) -> Created(x, y))",
+            "City(Boston) & American(Boston)"
+        ],
+        "conclusion-fol": "all x. (DaniShapiro(x) -> NovelWriter(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Novel/1, Novel/0, American/1, American/0, DaniShapiro/1, DaniShapiro/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Novel/1, Novel/0, American/1, American/0, DaniShapiro/1, DaniShapiro/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Podcast(x) -> -Novel(x))",
+            "all x. (BornInAmericanCity(x) -> American(x))",
+            "all x. (Book(x) & Novel(x) & WrittenByPerson(x) -> NovelWriter(x))",
+            "W(DaniShapiro) & A(American) & Writer(Shapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(Novel) & WrittenIn(TwoZeroZeroThree)",
+            "all x. (DaniShapiro(x) & Podcast(y) & FamilySecrets(y) -> Created(x, y))",
+            "City(Boston) & American(Boston)"
+        ],
+        "conclusion-fol": "FamilySecrets(Novel)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: American/1, American/0, DaniShapiro/1, DaniShapiro/0, Novel/1, Novel/0.\n\n\nFatal error:  The following symbols are used with multiple arities: American/1, American/0, DaniShapiro/1, DaniShapiro/0, Novel/1, Novel/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Podcast(x) -> -Novel(x))",
+            "all x. (BornInAmericanCity(x) -> American(x))",
+            "all x. (Book(x) & Novel(x) & WrittenByPerson(x) -> NovelWriter(x))",
+            "W(DaniShapiro) & A(American) & Writer(Shapiro)",
+            "FamilyHistory(DaniShapiro)",
+            "FamilyHistory(Novel) & WrittenIn(TwoZeroZeroThree)",
+            "all x. (DaniShapiro(x) & Podcast(y) & FamilySecrets(y) -> Created(x, y))",
+            "City(Boston) & American(Boston)"
+        ],
+        "conclusion-fol": "BornIn(DaniShapiro, Boston)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Novel/1, Novel/0, American/1, American/0, DaniShapiro/1, DaniShapiro/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Novel/1, Novel/0, American/1, American/0, DaniShapiro/1, DaniShapiro/0"
+    },
+    {
+        "premise-fol": [
+            "exists x. (BasketballPlayer(x) & -American(x))",
+            "all x. (BasketballPlayer(x) -> Tall(x))",
+            "all x. (Tall(x) -> WearsLargeShoes(x))",
+            "all x. (WearsLargeShoes(x) -> WearsLargeSizedClothes(x))",
+            "-(WearsLargeSizeClothes(Yuri))"
+        ],
+        "conclusion-fol": "Person(Yuri) & American(Yuri)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "exists x. (BasketballPlayer(x) & -American(x))",
+            "all x. (BasketballPlayer(x) -> Tall(x))",
+            "all x. (Tall(x) -> WearsLargeShoes(x))",
+            "all x. (WearsLargeShoes(x) -> WearsLargeSizedClothes(x))",
+            "-(WearsLargeSizeClothes(Yuri))"
+        ],
+        "conclusion-fol": "-(BasketballPlayer(Yuri) & American(Yuri))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "exists x. (BasketballPlayer(x) & -American(x))",
+            "all x. (BasketballPlayer(x) -> Tall(x))",
+            "all x. (Tall(x) -> WearsLargeShoes(x))",
+            "all x. (WearsLargeShoes(x) -> WearsLargeSizedClothes(x))",
+            "-(WearsLargeSizeClothes(Yuri))"
+        ],
+        "conclusion-fol": "BasketballPlayer(Yuri)",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "exists x. (BasketballPlayer(x) & -American(x))",
+            "all x. (BasketballPlayer(x) -> Tall(x))",
+            "all x. (Tall(x) -> WearsLargeShoes(x))",
+            "all x. (WearsLargeShoes(x) -> WearsLargeSizedClothes(x))",
+            "-(WearsLargeSizeClothes(Yuri))"
+        ],
+        "conclusion-fol": "all x. (Yuri(x) & -LargeShoes(x) -> AmericanBasketballPlayer(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Yuri/1, Yuri/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Yuri/1, Yuri/0"
+    },
+    {
+        "premise-fol": [
+            "exists x. (BasketballPlayer(x) & -American(x))",
+            "all x. (BasketballPlayer(x) -> Tall(x))",
+            "all x. (Tall(x) -> WearsLargeShoes(x))",
+            "all x. (WearsLargeShoes(x) -> WearsLargeSizedClothes(x))",
+            "-(WearsLargeSizeClothes(Yuri))"
+        ],
+        "conclusion-fol": "all x. (Yuri(x) & -AmericanBasketballPlayer(x) -> BasketballPlayer(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Yuri/1, Yuri/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Yuri/1, Yuri/0"
+    },
+    {
+        "premise-fol": [
+            "all x. (Event(x) -> (((Happy(x) & -Sad(x)) | (-Happy(x) & Sad(x)))))",
+            "exists x. (Event(x) & Happy(x))"
+        ],
+        "conclusion-fol": "all x. (Event(x) -> Sad(x))",
+        "predicted_label": "False",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "Winner(Steinhauer, OneNineNineTwo)",
+            "Participated(Steinhauer, OneNineNineTwoDuMaurierClassic)",
+            "exists x. (Leaderboard(x) & SixWayTie(x) & PersonFromBelgium(x))",
+            "Leaderboard(Descampe, OneNineNineTwoDuMaurierClassic)",
+            "all x. (LeaderboardOf(x, OneNineNineTwoDuMaurierClassic) -> ParticipatedIn(x, OneNineNineTwoDuMaurierClassic))"
+        ],
+        "conclusion-fol": "-(SteinhauerWinner(OneNineNineTwo, DuMaurierClassic))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Leaderboard/2, Leaderboard/1.\n\n\nFatal error:  The following symbols are used with multiple arities: Leaderboard/2, Leaderboard/1"
+    },
+    {
+        "premise-fol": [
+            "Winner(Steinhauer, OneNineNineTwo)",
+            "Participated(Steinhauer, OneNineNineTwoDuMaurierClassic)",
+            "exists x. (Leaderboard(x) & SixWayTie(x) & PersonFromBelgium(x))",
+            "Leaderboard(Descampe, OneNineNineTwoDuMaurierClassic)",
+            "all x. (LeaderboardOf(x, OneNineNineTwoDuMaurierClassic) -> ParticipatedIn(x, OneNineNineTwoDuMaurierClassic))"
+        ],
+        "conclusion-fol": "Leaderboard(Descampe, OneNineNineTwo, DuMaurierClassic)",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Leaderboard/2, Leaderboard/1, Leaderboard/3.\n\n\nFatal error:  The following symbols are used with multiple arities: Leaderboard/2, Leaderboard/1, Leaderboard/3"
+    },
+    {
+        "premise-fol": [
+            "all x. (Animal(x) & Barks(x) -> -Likes(Jane, x))",
+            "all x. (Dog(x) -> Barks(x))",
+            "all x. (Animal(x) & Jumps(x) -> JaneLikes(x))",
+            "all x. (Animal(x) & HasLegs(x) -> Jumps(x))",
+            "all x. (Terricolous(x) -> HasLegs(x))",
+            "all x. (KiKi(x) & -(Jumps(x) | HasLegs(x)) -> (Terricolous(x) | HasLegs(x)))"
+        ],
+        "conclusion-fol": "all x. (KiKi(x) -> Terricolous(x))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Animal(x) & Barks(x) -> -Likes(Jane, x))",
+            "all x. (Dog(x) -> Barks(x))",
+            "all x. (Animal(x) & Jumps(x) -> JaneLikes(x))",
+            "all x. (Animal(x) & HasLegs(x) -> Jumps(x))",
+            "all x. (Terricolous(x) -> HasLegs(x))",
+            "all x. (KiKi(x) & -(Jumps(x) | HasLegs(x)) -> (Terricolous(x) | HasLegs(x)))"
+        ],
+        "conclusion-fol": "all x. (KiKi(x) -> (Barks(x) & Dog(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "all x. (Animal(x) & Barks(x) -> -Likes(Jane, x))",
+            "all x. (Dog(x) -> Barks(x))",
+            "all x. (Animal(x) & Jumps(x) -> JaneLikes(x))",
+            "all x. (Animal(x) & HasLegs(x) -> Jumps(x))",
+            "all x. (Terricolous(x) -> HasLegs(x))",
+            "all x. (KiKi(x) & -(Jumps(x) | HasLegs(x)) -> (Terricolous(x) | HasLegs(x)))"
+        ],
+        "conclusion-fol": "all x. (KiKi(x) -> (-Barks(x) & -Dog(x)))",
+        "predicted_label": "Uncertain",
+        "error": null
+    },
+    {
+        "premise-fol": [
+            "BornIn(AiltonSilva, OneNineNineFive) & CommonlyKnownAs(AiltonSilva, Ailton)",
+            "all x. all y. (Ailton(x) & FootballPlayer(x) & Braga(y) & LoanedTo(x, y) -> FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) & PlaysFor(AiltonSilva, Nautico)",
+            "all x. all y. (Nautico(x) & Braga(y) -> FootballClubAlongWith(x, y))",
+            "all x. (FootballClub(x) -> (Fluminense(x) <-> (Club(x) & BasedIn(x, Brazil) & Name(x, \"Fluminense\") & YearFounded(x, OneNineZeroTwo))))"
+        ],
+        "conclusion-fol": "-exists x. (Player(x) & Nautico(x) & Brazilian(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Nautico/1, Nautico/0, Ailton/1, Ailton/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Nautico/1, Nautico/0, Ailton/1, Ailton/0"
+    },
+    {
+        "premise-fol": [
+            "BornIn(AiltonSilva, OneNineNineFive) & CommonlyKnownAs(AiltonSilva, Ailton)",
+            "all x. all y. (Ailton(x) & FootballPlayer(x) & Braga(y) & LoanedTo(x, y) -> FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) & PlaysFor(AiltonSilva, Nautico)",
+            "all x. all y. (Nautico(x) & Braga(y) -> FootballClubAlongWith(x, y))",
+            "all x. (FootballClub(x) -> (Fluminense(x) <-> (Club(x) & BasedIn(x, Brazil) & Name(x, \"Fluminense\") & YearFounded(x, OneNineZeroTwo))))"
+        ],
+        "conclusion-fol": "all x. (AiltonSilva(x) -> -PlayForFootballClub(x))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Nautico/1, Nautico/0, Ailton/1, Ailton/0, AiltonSilva/1, AiltonSilva/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Nautico/1, Nautico/0, Ailton/1, Ailton/0, AiltonSilva/1, AiltonSilva/0"
+    },
+    {
+        "premise-fol": [
+            "BornIn(AiltonSilva, OneNineNineFive) & CommonlyKnownAs(AiltonSilva, Ailton)",
+            "all x. all y. (Ailton(x) & FootballPlayer(x) & Braga(y) & LoanedTo(x, y) -> FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) & PlaysFor(AiltonSilva, Nautico)",
+            "all x. all y. (Nautico(x) & Braga(y) -> FootballClubAlongWith(x, y))",
+            "all x. (FootballClub(x) -> (Fluminense(x) <-> (Club(x) & BasedIn(x, Brazil) & Name(x, \"Fluminense\") & YearFounded(x, OneNineZeroTwo))))"
+        ],
+        "conclusion-fol": "-(LoanedTo(Ailton, FootballClub))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Nautico/1, Nautico/0, FootballClub/1, FootballClub/0, Ailton/1, Ailton/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Nautico/1, Nautico/0, FootballClub/1, FootballClub/0, Ailton/1, Ailton/0"
+    },
+    {
+        "premise-fol": [
+            "BornIn(AiltonSilva, OneNineNineFive) & CommonlyKnownAs(AiltonSilva, Ailton)",
+            "all x. all y. (Ailton(x) & FootballPlayer(x) & Braga(y) & LoanedTo(x, y) -> FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) & PlaysFor(AiltonSilva, Nautico)",
+            "all x. all y. (Nautico(x) & Braga(y) -> FootballClubAlongWith(x, y))",
+            "all x. (FootballClub(x) -> (Fluminense(x) <-> (Club(x) & BasedIn(x, Brazil) & Name(x, \"Fluminense\") & YearFounded(x, OneNineZeroTwo))))"
+        ],
+        "conclusion-fol": "exists x. (Player(x) & PlayedFor(x, Fluminense))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Nautico/1, Nautico/0, Ailton/1, Ailton/0, Fluminense/1, Fluminense/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Nautico/1, Nautico/0, Ailton/1, Ailton/0, Fluminense/1, Fluminense/0"
+    },
+    {
+        "premise-fol": [
+            "BornIn(AiltonSilva, OneNineNineFive) & CommonlyKnownAs(AiltonSilva, Ailton)",
+            "all x. all y. (Ailton(x) & FootballPlayer(x) & Braga(y) & LoanedTo(x, y) -> FootballPlayer(x))",
+            "BrazilianFootballer(AiltonSilva) & PlaysFor(AiltonSilva, Nautico)",
+            "all x. all y. (Nautico(x) & Braga(y) -> FootballClubAlongWith(x, y))",
+            "all x. (FootballClub(x) -> (Fluminense(x) <-> (Club(x) & BasedIn(x, Brazil) & Name(x, \"Fluminense\") & YearFounded(x, OneNineZeroTwo))))"
+        ],
+        "conclusion-fol": "all x. all y. (AiltonSilva(x) & FootballClub(y) -> LoanedTo(x, y))",
+        "predicted_label": "ERROR",
+        "error": "(FATAL)\n%%ERROR: The following symbols are used with multiple arities: Nautico/1, Nautico/0, Ailton/1, Ailton/0, AiltonSilva/1, AiltonSilva/0.\n\n\nFatal error:  The following symbols are used with multiple arities: Nautico/1, Nautico/0, Ailton/1, Ailton/0, AiltonSilva/1, AiltonSilva/0"
+    }
+]
