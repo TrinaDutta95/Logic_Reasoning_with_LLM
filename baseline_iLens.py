@@ -16,11 +16,11 @@ def read_json(filepath):
     extracted_data = []
     for obj in data:
         extracted_obj = {
-            "premise-fol": obj.get("premises-FOL", []),
-            "conclusion-fol": obj.get("conclusion-FOL", []),
-            "premises": obj.get("premises", []),
-            "conclusion": obj.get("conclusion", []),
-            "label": obj.get("label", []),
+            "premise-fol": obj.get("premise-fol", []),
+            "conclusion-fol": obj.get("conclusion-fol", []),
+            #"premises": obj.get("premises", []),
+            #"conclusion": obj.get("conclusion", []),
+            #"label": obj.get("label", []),
         }
         extracted_data.append(extracted_obj)
 
@@ -60,14 +60,23 @@ def baseline_infer(fol_data):
         # premises = item.get("premises", [])
         # conclusion = item.get("conclusion", [])
         # label = item.get("label", [])
+        #print(item)
         premise_fol = item.get("premise-fol", [])
         print(premise_fol)
         conclusion_fol = item.get("conclusion-fol", [])
         print(conclusion_fol)
         # print(premise_fol, "\n", conclusion_fol)
 
+        # Convert premise_fol and conclusion_fol lists into single strings
+        premise_fol_str = " ".join(premise_fol)
+        conclusion_fol_str = " ".join(conclusion_fol)
+
+        print(f"Premise FOL as string: {premise_fol_str}")
+        print(f"Conclusion FOL as string: {conclusion_fol_str}")
+
         try:
-            proof_result = evaluate(conclusion_fol, premise_fol)
+            #proof_result = evaluate(conclusion_fol, premise_fol)
+            proof_result = evaluate(conclusion_fol_str, premise_fol_str)
             print(proof_result)
             print("Proved successfully")
             error = None
@@ -89,8 +98,9 @@ def baseline_infer(fol_data):
 
 
 if __name__ == '__main__':
-    with open('results/logicllama_result.json', 'w', encoding='utf-8') as file:
-        fol_data = read_json("data/updated_logic_llama_folio_validation.json")
+    with open('results/logiqa_result.json', 'w', encoding='utf-8') as file:  # this file stores result
+        fol_data = read_json("data/fol_logiqa.json")   # this file is the one we are evaluating
+
         results = baseline_infer(fol_data)
         results_json = json.dumps(results, indent=4)
         file.write(results_json)

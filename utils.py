@@ -107,3 +107,4 @@ def validate_fol_statements(fol_statements):
             return False
         fol_statements[i] = fixed_statement
     return True
+
