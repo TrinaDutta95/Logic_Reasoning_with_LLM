@@ -44,21 +44,21 @@ if __name__ == "__main__":
     # creating json files
     # preprocess()
     updater = FolioDatasetUpdater(error_token="ERROR")
-    input_train_path = 'folio_train.json'
-    output_train_path = 'updated_folio_train.json'
-    input_val_path = 'folio_validation.json'
-    output_val_path = 'updated_folio_validation.json'
+    #input_train_path = 'folio_train.json'
+    #output_train_path = 'updated_folio_train.json'
+    input_val_path = 'logic_llama_folio_validation.json'
+    output_val_path = 'updated_logic_llama_folio_validation.json'
 
     # Load the dataset
-    dataset_train = updater.load_dataset(input_train_path)
+    #dataset_train = updater.load_dataset(input_train_path)
     dataset_val = updater.load_dataset(input_val_path)
 
     # Update the dataset
-    updated_train = updater.reformat_fol_samples(dataset_train)
+    #updated_train = updater.reformat_fol_samples(dataset_train)
     updated_val = updater.reformat_fol_samples(dataset_val)
 
     # Save the updated dataset
-    updater.save_dataset(updated_train, output_train_path)
+    #updater.save_dataset(updated_train, output_train_path)
     updater.save_dataset(updated_val, output_val_path)
 
-    print(f"Dataset has been updated and saved to {output_train_path}{output_val_path}")
+    print(f"Dataset has been updated and saved to {output_val_path}")
